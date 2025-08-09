@@ -1,0 +1,104 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+BASE
+--------------------------------------------------------------------------------------------------------------------------------*/
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	text-wrap: balance;
+}
+
+* {
+	&::-webkit-scrollbar {
+		inline-size: rem(10);
+		background-color: var(--scrollbar);
+	}
+
+	&::-webkit-scrollbar-track {
+		border-radius: var(--radius);
+		box-shadow: inset 0 0 rem(6) rgba(#000, 20%);
+		background: var(--scrollbar-track);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: var(--radius);
+		border: 0 none #fff;
+		background-color: var(--scrollbar-thumb);
+		cursor: pointer;
+
+		@include any-hover {
+			background-color: grey;
+		}
+	}
+}
+.container {
+	margin-inline: auto;
+	max-inline-size: var(--container-width);
+	padding-inline: var(--container-padding);
+}
+.container-full {
+	padding: 0 var(--container-padding);
+	max-width: 100%;
+}
+.img-responsive {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	overflow: hidden;
+}
+.img-reponsive-contain {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: hidden;
+}
+.image-bg {
+	position: relative;
+
+	img {
+		display: block;
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		object-fit: cover;
+		block-size: 100%;
+		inline-size: 100%;
+	}
+}
+
+.screen-reader-text {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  clip: auto;
+  background: #000; /* или другой фон для выделения */
+  color: #fff; /* цвет текста */
+  padding: 8px;
+  z-index: 1000;
+}
+
+.site-wrapper {
+	display: flex;
+	min-block-size: 100%;
+
+	/** Поменять на clip - если используется в проекте position: sticky */
+	overflow: hidden;
+	flex-direction: column;
+}
+
+.site-main {
+	position: relative;
+	flex: 1 1 auto;
+}

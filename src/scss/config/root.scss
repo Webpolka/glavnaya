@@ -1,0 +1,16 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ROOT
+--------------------------------------------------------------------------------------------------------------------------------*/
+:root {	
+	--container-width: 1030px;
+	--container-padding: 15px;
+
+	--bs-gutter-x: var(--container-padding); // For bootstrap if it is connected
+
+	--font-main: "Montserrat", sans-serif;
+	--font-title: 'Montserrat', sans-serif;
+
+	--scrollbar: gray;
+	--scrollbar-track: gray;
+	--scrollbar-thumb: blue;	
+}

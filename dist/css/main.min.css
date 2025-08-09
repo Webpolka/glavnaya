@@ -1,0 +1,299 @@
+@charset "UTF-8";
+@font-face {
+  font-family: HelveticaNeue;
+  font-display: swap;
+  src: url("../fonts/HelveticaNeue-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNeue;
+  font-display: swap;
+  src: url("../fonts/HelveticaNeue-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNeue;
+  font-display: swap;
+  src: url("../fonts/HelveticaNeue-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------
+ROOT
+--------------------------------------------------------------------------------------------------------------------------------*/
+:root {
+  --container-width: 1030px;
+  --container-padding: 15px;
+  --bs-gutter-x: var(--container-padding);
+  --font-main: "Montserrat", sans-serif;
+  --font-title: "Montserrat", sans-serif;
+  --scrollbar: gray;
+  --scrollbar-track: gray;
+  --scrollbar-thumb: blue;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+RESET
+--------------------------------------------------------------------------------------------------------------------------------*/
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+*:focus, *:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+body {
+  overscroll-behavior: none;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+a {
+  user-select: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus, a:active {
+  outline: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+sup {
+  color: inherit;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+TYPOGRAPHY
+--------------------------------------------------------------------------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+BASE
+--------------------------------------------------------------------------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-wrap: balance;
+}
+
+*::-webkit-scrollbar {
+  inline-size: 0.625rem;
+  background-color: var(--scrollbar);
+}
+*::-webkit-scrollbar-track {
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 0.375rem rgba(0, 0, 0, 0.2);
+  background: var(--scrollbar-track);
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: var(--radius);
+  border: 0 none #fff;
+  background-color: var(--scrollbar-thumb);
+  cursor: pointer;
+}
+@media (any-hover: hover) {
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: grey;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  max-inline-size: var(--container-width);
+  padding-inline: var(--container-padding);
+}
+
+.container-full {
+  padding: 0 var(--container-padding);
+  max-width: 100%;
+}
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.img-reponsive-contain {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.image-bg {
+  position: relative;
+}
+.image-bg img {
+  display: block;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  object-fit: cover;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.screen-reader-text {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  clip: auto;
+  background: #000; /* или другой фон для выделения */
+  color: #fff; /* цвет текста */
+  padding: 8px;
+  z-index: 1000;
+}
+
+.site-wrapper {
+  display: flex;
+  min-block-size: 100%;
+  /** Поменять на clip - если используется в проекте position: sticky */
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.site-main {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+COMPONENTS
+--------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------
+HEADER
+--------------------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------------------------------------------
+KEYFRAMES
+--------------------------------------------------------------------------------------------------------------------------------*/
+@keyframes show-header {
+  0% {
+    inset-block-start: -100%;
+  }
+  100% {
+    inset-block-start: 0;
+  }
+}
+@keyframes fade-up-big {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+/* ------------------------------------------------------------------------------------------------------------------------------
+MEDIAQUERIES 
+--------------------------------------------------------------------------------------------------------------------------------*/
+/*# sourceMappingURL=main.min.css.map */
