@@ -1,3 +1,84 @@
-<header id="masthead" class="site-header">
-    Header
+<header id="masthead" class="header">
+	<div class="container">
+		<!-- Верхняя часть хедера -->
+		<div class="header-top">
+			<!-- Верхнее меню -->
+			<nav class="header-top_nav" aria-label="Main menu">
+				<ul class="header-top_list">
+					<li><a href="#">Auto</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Real Estate</a></li>
+					<li><a href="#">Relax</a></li>
+					<li><a href="#">Rent</a></li>
+				</ul>
+			</nav>
+
+			<!-- Курс валюты -->
+			<div class="header-currency" data-euro="97.50" data-usd="110.50" role="button" tabindex="0" aria-label="Change currency">
+				<span class="header-currency_name">none</span>
+				<span class="header-currency_rate">none</span>
+			</div>
+		</div>
+
+		<!-- Вторая часть хедера -->
+		<div class="header-bottom">
+
+			<div class="header-bottom_intro">
+				<!-- Бургер -->
+				<button class="header-burger" id="burger">
+					<svg class="icon icon--burgersvg">
+						<use href="./icons/symbol/sprite.svg#burgersvg"></use>
+					</svg>
+				</button>
+
+				<!-- Лого -->
+				<a href="#" class="header-logo">
+					<span class="header-logo_icon">
+						<svg class="icon icon--eagle">
+							<use href="./icons/symbol/sprite.svg#eagle"></use>
+						</svg>
+					</span>
+					<span class="header-logo_name"> Abl.al </span>
+				</a>
+
+				<!-- Форма поиска -->
+				<form class="header-search-form" role="search" aria-label="Site Search">
+					<button type="submit" class="search-button">
+						<svg class="icon icon--searchsvg">
+							<use href="./icons/symbol/sprite.svg#searchsvg"></use>
+						</svg>
+					</button>
+					<input type="text" class="search-input" name="search" id="search" placeholder="Find an ad" aria-label="Search" />
+				</form>
+			</div>
+
+			<!-- Навигация второй части хедера -->
+			<nav class="header-bottom_nav">
+				<!-- Локация -->
+				<button class="header-location" aria-label="Change location">
+					<span class="header-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="header-location_name"> Tiana </span>
+				</button>
+
+				<!-- Добавить в список -->
+				<button class="header-add-listing" aria-label="Add listing">
+					<span class="header-add-listing_before">
+						<svg class="icon icon--plus">
+							<use href="./icons/symbol/sprite.svg#plus"></use>
+						</svg>
+					</span>
+					<span class="header-add-listing_name"> Add listing </span>
+				</button>
+
+				<!-- Кнопка войти -->
+				<button class="header-sign-in" aria-label="Sign in">
+					<span class="header-sign-in_name"> Sign in </span>
+				</button>
+			</nav>
+		</div>
+	</div>
 </header>

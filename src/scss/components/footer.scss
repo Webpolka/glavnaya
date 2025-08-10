@@ -1,3 +1,31 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 FOOTER
 --------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+	position: relative;
+
+	min-height: 320px;
+	display: flex;
+	align-items: center;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -100vw;
+		height: 1px;
+		width: 300vw;
+		border-top: 1px solid #efeaea;
+	}
+
+	&-text {
+		display: block;
+		text-transform: uppercase;
+		text-align: center;
+
+		font-weight: 400;
+		font-size: 80px;
+		line-height: 140%;
+		color: #c0c0c0;
+	}
+}

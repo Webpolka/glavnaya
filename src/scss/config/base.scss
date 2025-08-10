@@ -32,6 +32,17 @@ body {
 		}
 	}
 }
+.container-greyout {
+	margin-inline: auto;
+	max-inline-size: calc(var(--container-width) + 50px);	
+	background-color: rgb(0, 0, 0, 0.06);
+
+	border-radius: 10px;
+	
+	padding-inline: 40px;
+	padding-block: 40px;
+}
+
 .container {
 	margin-inline: auto;
 	max-inline-size: var(--container-width);
@@ -55,6 +66,10 @@ body {
 	object-fit: contain;
 	overflow: hidden;
 }
+.posar{
+	position: relative;
+}
+
 .image-bg {
 	position: relative;
 
@@ -70,26 +85,38 @@ body {
 }
 
 .screen-reader-text {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+	position: absolute;
+	left: -9999px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
 .screen-reader-text:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  clip: auto;
-  background: #000; /* или другой фон для выделения */
-  color: #fff; /* цвет текста */
-  padding: 8px;
-  z-index: 1000;
+	position: static;
+	width: auto;
+	height: auto;
+	clip: auto;
+	background: #000; /* или другой фон для выделения */
+	color: #fff; /* цвет текста */
+	padding: 8px;
+	z-index: 1000;
 }
 
-.site-wrapper {
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+	white-space: nowrap !important; /* предотвращает перенос текста */
+	border: 0 !important;
+}
+
+.wrapper {
 	display: flex;
 	min-block-size: 100%;
 
@@ -98,7 +125,7 @@ body {
 	flex-direction: column;
 }
 
-.site-main {
+.main {
 	position: relative;
 	flex: 1 1 auto;
 }

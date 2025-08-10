@@ -2,13 +2,17 @@
 ROOT
 --------------------------------------------------------------------------------------------------------------------------------*/
 :root {	
-	--container-width: 1030px;
+	--container-width: 1310px;
 	--container-padding: 15px;
 
 	--bs-gutter-x: var(--container-padding); // For bootstrap if it is connected
 
-	--font-main: "Montserrat", sans-serif;
-	--font-title: 'Montserrat', sans-serif;
+	--font-main: "HelveticaNeue", sans-serif;
+	--font-title: 'HelveticaNeue', sans-serif;
+
+	--white: white;
+	--black: #1a1a1a;
+	--accent: #e60000;
 
 	--scrollbar: gray;
 	--scrollbar-track: gray;

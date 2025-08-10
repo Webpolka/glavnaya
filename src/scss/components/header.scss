@@ -1,3 +1,258 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 HEADER
 --------------------------------------------------------------------------------------------------------------------------------*/
+.header {
+	margin-bottom: 25px;
+	// Верхняя часть хедера
+	&-top {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		padding-block: 16px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: -100vw;
+			height: 1px;
+			width: 300vw;
+			border-bottom: 1px solid #efeaea;
+		}
+
+		&_list {
+			display: inline-flex;
+			align-items: center;
+			gap: 40px;
+
+			@include sm {
+				gap: 20px;
+			}
+
+			@media (max-width: 440px) {
+				display: none;
+			}
+
+			a {
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 120%;
+				color: #3d3d3d;
+
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					color: var(--accent);
+				}
+			}
+		}
+	}
+
+	// Курс валют
+	&-currency {
+		display: inline-flex;
+		align-items: center;
+		gap: 5px;
+
+		cursor: pointer;
+		user-select: none;
+
+		&_name {
+			font-weight: 400;
+			font-size: 15px;
+			color: #b1b1b1;
+			text-transform: uppercase;
+		}
+		&_rate {
+			font-weight: 400;
+			font-size: 15px;
+			text-align: right;
+			color: #3d3d3d;
+		}
+	}
+
+	// Нижняя часть хедера
+	&-bottom {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		padding-block: 20px;
+
+		@include lg {
+			flex-wrap: wrap;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: -100vw;
+			height: 1px;
+			width: 300vw;
+			border-bottom: 1px solid #efeaea;
+		}
+		&_intro {
+			display: flex;
+			align-items: center;
+			flex-grow: 1;
+		}
+
+		&_nav {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			@include lg {
+				width: 100%;
+				margin-top: 20px;
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	// Бургер
+	&-burger {
+		margin-right: 20px;
+		flex-shrink: 0;
+	}
+
+	// Лого
+	&-logo {
+		display: inline-flex;
+		align-items: center;
+		gap: 15px;
+
+		margin-right: 35px;
+
+		&_icon {
+			flex-shrink: 0;
+		}
+
+		&_name {
+			font-family: var(--font-title);
+			font-weight: 700;
+			font-size: 26px;
+			color: var(--accent);
+		}
+	}
+
+	// Форма поиска
+	&-search-form {
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		gap: 10px;
+
+		background-color: #f8f8f8;
+		padding: 10px;
+
+		border-radius: 5px;
+
+		margin-right: 25px;
+        @include lg {
+            margin-right: 0;
+        }
+
+		.search-input {
+			width: 100%;
+			background-color: #f8f8f8;
+		}
+		.search-button {
+			flex-shrink: 0;
+		}
+	}
+
+	// Кнопка локация
+	&-location {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+
+		margin-right: 40px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+            opacity: 0.75;
+        }
+
+		&_icon {
+			flex-shrink: 0;
+		}
+
+		&_name {
+			font-weight: 500;
+			font-size: 16px;
+			color: var(--black);
+		}
+	}
+
+	// Кнопка добавть в список
+	&-add-listing {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 15px;
+
+		padding-inline: 30px;
+		min-height: 50px;
+
+		border-radius: 5px;
+
+		background: var(--accent);
+		transition: opacity 0.3s ease-in-out;
+
+		&:hover {
+			opacity: 0.75;
+		}
+
+		&_before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			flex-shrink: 0;
+
+			height: 20px;
+			width: 20px;
+
+			border-radius: 3px;
+			background-color: var(--white);
+		}
+
+		&_name {
+			font-weight: 500;
+			font-size: 16px;
+			color: var(--white);
+		}
+	}
+
+	// Кнопка войти
+	&-sign-in {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding-inline: 30px;
+		min-height: 50px;
+
+		border-radius: 5px;
+
+		background: #f0f0f0;
+
+		&:hover .header-sign-in_name {
+			color: var(--accent);
+		}
+
+		&_name {
+			font-weight: 500;
+			font-size: 16px;
+			color: #000;
+			transition: color 0.3s ease-in-out;
+		}
+	}
+}

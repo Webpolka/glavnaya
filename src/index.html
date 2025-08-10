@@ -3,10 +3,14 @@
 	@@include('html/components/head.html', { 'title': 'Главная' })
 
 	<body>
-		<div class="site-wrapper">			
+		<div class="wrapper">			
 			@@include('html/sections/header.html')
-			<main id="primary" class="site-main">
-				@@include('html/sections/content.html')
+			<main id="primary" class="main">
+				@@include('html/sections/main-1-first.html')
+				@@include('html/sections/main-2-featured.html')
+				@@include('html/sections/main-3-daily.html')
+				@@include('html/sections/main-4-products.html')
+				@@include('html/sections/main-5-recomendations.html')
 			</main>
 			@@include('html/sections/footer.html')
 		</div>

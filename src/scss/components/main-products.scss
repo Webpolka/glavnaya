@@ -1,0 +1,26 @@
+/*-----------------------------------------------------------------------------------------------------------------
+PAGE MAIN PRODUCTS SECTION
+ -------------------------------------------------------------------------------------------------------------------*/
+.main-products {
+	margin-bottom: 55px;
+
+	.container {
+		margin-bottom: 50px;
+	}
+	.section-header {
+		margin-bottom: 20px;
+	}
+
+	.product-card {
+		padding: 0;
+
+		&_spacebetween {
+			padding-inline: 0;
+		}
+	}
+
+	.product-card_meta {
+		justify-content: start;
+		gap: 20px;
+	}
+}

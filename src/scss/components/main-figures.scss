@@ -1,0 +1,49 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+PAGE MAIN FIGURES SECTION
+--------------------------------------------------------------------------------------------------------------------------------*/
+.main-figures {
+    margin-bottom: 50px;
+
+	&-card {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		border-radius: 10px;
+
+		&:hover img {
+			transform: scale(1.1);
+		}
+		&_image {
+			overflow: hidden;
+			img {
+				transition: all 0.3s ease-in-out;
+			}
+		}
+
+		&.light-figure {
+			background-color: #efeaea;
+		}
+
+		&.dark-figure {
+			background-color: var(--black) !important;
+			h3 {
+				color: var(--white) !important;
+			}
+		}
+
+		&_title {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			padding: 20px;
+
+			h3 {
+				font-family: var(--font-title);
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 120%;
+				color: var(--black);
+			}
+		}
+	}
+}

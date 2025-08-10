@@ -1,0 +1,96 @@
+/*-----------------------------------------------------------------------------------------------------------------
+PAGE MAIN ELLIPSES SECTION
+ -------------------------------------------------------------------------------------------------------------------*/
+
+.main-ellipses {
+	margin-bottom: 40px;
+
+	&-card {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+
+		max-width: 100px;
+
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}			
+			.main-ellipses-card_description p{
+				color: var(--accent);
+			}
+		}
+
+		&_image {
+			border: 3px solid var(--accent);
+			padding: 3px;
+			border-radius: 50%;
+			overflow: hidden;
+					
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				overflow: hidden;
+
+				transition: all 0.3s ease-in-out;
+			}
+		}
+
+		&_description {
+			text-align: center;
+
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 120%;
+			text-align: center;
+			color: var(--black);
+
+			padding-top: 5px;
+
+			transition: color 0.3s ease-in-out;
+		}
+	}
+
+	/* --------------------------------------- SWIPER EXTRA -----------------------------------*/
+	.swiper {
+		margin-right: 100px;
+	}
+	.swiper-button-prev {
+		display: none;
+	}
+	.swiper-button-next {
+		bottom: none;
+		left: none;
+		transform: translate(0, 0);
+		top: 32%;
+
+		display: block;
+
+		background-color: #f8f8f8;
+		background-image: none !important;
+		transition: all 0.3s ease-in-out;
+
+		border-radius: 50%;
+
+		margin: 0 !important;
+		padding: 30px;
+
+		svg.icon--next {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 20px;
+			height: 14px;
+		}
+		&:after {
+			content: "";
+		}
+
+		&:hover {
+			background-color: #c5c4c4;
+		}
+	}
+}

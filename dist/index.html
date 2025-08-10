@@ -6,27 +6,2123 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Главная</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="vendor/bootstrap-grid.css">
-  <link rel="stylesheet" href="./css/main.min.css">  
+  <link rel="stylesheet" href="postcss/main.min.css">  
 </head>
  
  
 
 	<body>
-		<div class="site-wrapper">			
-			<header id="masthead" class="site-header">
-    Header
-</header>
-			<main id="primary" class="site-main">
-				<section>
-    Content
-</section>
-			</main>
-			<footer id="colophon" class="site-footer">
-    Footer
-</footer>
+		<div class="wrapper">			
+			<header id="masthead" class="header">
+	<div class="container">
+		<!-- Верхняя часть хедера -->
+		<div class="header-top">
+			<!-- Верхнее меню -->
+			<nav class="header-top_nav" aria-label="Main menu">
+				<ul class="header-top_list">
+					<li><a href="#">Auto</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Real Estate</a></li>
+					<li><a href="#">Relax</a></li>
+					<li><a href="#">Rent</a></li>
+				</ul>
+			</nav>
+
+			<!-- Курс валюты -->
+			<div class="header-currency" data-euro="97.50" data-usd="110.50" role="button" tabindex="0" aria-label="Change currency">
+				<span class="header-currency_name">none</span>
+				<span class="header-currency_rate">none</span>
+			</div>
 		</div>
-		<script src="./js/main.min.js"></script>
+
+		<!-- Вторая часть хедера -->
+		<div class="header-bottom">
+
+			<div class="header-bottom_intro">
+				<!-- Бургер -->
+				<button class="header-burger" id="burger">
+					<svg class="icon icon--burgersvg">
+						<use href="./icons/symbol/sprite.svg#burgersvg"></use>
+					</svg>
+				</button>
+
+				<!-- Лого -->
+				<a href="#" class="header-logo">
+					<span class="header-logo_icon">
+						<svg class="icon icon--eagle">
+							<use href="./icons/symbol/sprite.svg#eagle"></use>
+						</svg>
+					</span>
+					<span class="header-logo_name"> Abl.al </span>
+				</a>
+
+				<!-- Форма поиска -->
+				<form class="header-search-form" role="search" aria-label="Site Search">
+					<button type="submit" class="search-button">
+						<svg class="icon icon--searchsvg">
+							<use href="./icons/symbol/sprite.svg#searchsvg"></use>
+						</svg>
+					</button>
+					<input type="text" class="search-input" name="search" id="search" placeholder="Find an ad" aria-label="Search">
+				</form>
+			</div>
+
+			<!-- Навигация второй части хедера -->
+			<nav class="header-bottom_nav">
+				<!-- Локация -->
+				<button class="header-location" aria-label="Change location">
+					<span class="header-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="header-location_name"> Tiana </span>
+				</button>
+
+				<!-- Добавить в список -->
+				<button class="header-add-listing" aria-label="Add listing">
+					<span class="header-add-listing_before">
+						<svg class="icon icon--plus">
+							<use href="./icons/symbol/sprite.svg#plus"></use>
+						</svg>
+					</span>
+					<span class="header-add-listing_name"> Add listing </span>
+				</button>
+
+				<!-- Кнопка войти -->
+				<button class="header-sign-in" aria-label="Sign in">
+					<span class="header-sign-in_name"> Sign in </span>
+				</button>
+			</nav>
+		</div>
+	</div>
+</header>
+
+			<main id="primary" class="main">
+				
+<section class="main-categories">
+	<h2 class="visually-hidden">Заголовок для категорий</h2>
+
+	<div class="container">
+		<nav class="main-categories_nav">
+			<ul class="row g-20">
+				<!-- 1 -->
+				<li class="custom-col-5">
+					<a href="#" class="main-categories-card">
+						<div class="main-categories-card_image">
+							<img src="./images/main-cats/pic-1.png" alt="Buying and Selling Cars" loading="lazy" decoding="async">
+						</div>
+						<div class="main-categories-card_text">
+							<div class="main-categories-card_title">Auto</div>
+							<div class="main-categories-card_description">Buying and Selling Cars</div>
+						</div>
+					</a>
+				</li>
+				<!-- 2 -->
+				<li class="custom-col-5">
+					<a href="#" class="main-categories-card">
+						<div class="main-categories-card_image">
+							<img src="./images/main-cats/pic-2.png" alt="Directory of Service Companies" loading="lazy" decoding="async">
+						</div>
+						<div class="main-categories-card_text">
+							<div class="main-categories-card_title">Services</div>
+							<div class="main-categories-card_description">Directory of Service Companies</div>
+						</div>
+					</a>
+				</li>
+				<!-- 3 -->
+				<li class="custom-col-5">
+					<a href="#" class="main-categories-card">
+						<div class="main-categories-card_image">
+							<img src="./images/main-cats/pic-3.png" alt="Buying, Selling and Renting" loading="lazy" decoding="async">
+						</div>
+						<div class="main-categories-card_text">
+							<div class="main-categories-card_title">Real Estate</div>
+							<div class="main-categories-card_description">Buying, Selling and Renting</div>
+						</div>
+					</a>
+				</li>
+				<!-- 4 -->
+				<li class="custom-col-5">
+					<a href="#" class="main-categories-card">
+						<div class="main-categories-card_image">
+							<img src="./images/main-cats/pic-4.png" alt="Entertainment & Leisure Directory" loading="lazy" decoding="async">
+						</div>
+						<div class="main-categories-card_text">
+							<div class="main-categories-card_title">Relax</div>
+							<div class="main-categories-card_description">Entertainment & Leisure Directory</div>
+						</div>
+					</a>
+				</li>
+				<!-- 5 -->
+				<li class="custom-col-5">
+					<a href="#" class="main-categories-card">
+						<div class="main-categories-card_image">
+							<img src="./images/main-cats/pic-5.png" alt="All Types of Rentals" loading="lazy" decoding="async">
+						</div>
+						<div class="main-categories-card_text">
+							<div class="main-categories-card_title">Rent</div>
+							<div class="main-categories-card_description">All Types of Rentals</div>
+						</div>
+					</a>
+				</li>
+				<!-- 6 -->
+				<li class="custom-col-5">
+					<a href="#" class="main-categories-card">
+						<div class="main-categories-card_image">
+							<img src="./images/main-cats/pic-6.png" alt="Health, Beauty & Wellness Directory" loading="lazy" decoding="async">
+						</div>
+						<div class="main-categories-card_text">
+							<div class="main-categories-card_title">Health</div>
+							<div class="main-categories-card_description">Health, Beauty & Wellness Directory</div>
+						</div>
+					</a>
+				</li>
+				<!-- 7 -->
+				<li class="custom-col-5">
+					<a href="#" class="main-categories-card">
+						<div class="main-categories-card_image">
+							<img src="./images/main-cats/pic-7.png" alt="Training & Development" loading="lazy" decoding="async">
+						</div>
+						<div class="main-categories-card_text">
+							<div class="main-categories-card_title">Education</div>
+							<div class="main-categories-card_description">Training & Development</div>
+						</div>
+					</a>
+				</li>
+				<!-- 8 -->
+				<li class="custom-col-5">
+					<a href="#" class="main-categories-card">
+						<div class="main-categories-card_image">
+							<img src="./images/main-cats/pic-8.png" alt="For Animals & Owners" loading="lazy" decoding="async">
+						</div>
+						<div class="main-categories-card_text">
+							<div class="main-categories-card_title">Animals</div>
+							<div class="main-categories-card_description">For Animals & Owners</div>
+						</div>
+					</a>
+				</li>
+				<!-- 9 -->
+				<li class="custom-col-5">
+					<a href="#" class="main-categories-card">
+						<div class="main-categories-card_image">
+							<img src="./images/main-cats/pic-9.png" alt="Travel, Tours & Leisure" loading="lazy" decoding="async">
+						</div>
+						<div class="main-categories-card_text">
+							<div class="main-categories-card_title">Tourism</div>
+							<div class="main-categories-card_description">Travel, Tours & Leisure</div>
+						</div>
+					</a>
+				</li>
+				<!-- 10 -->
+				<li class="custom-col-5">
+					<a href="#" class="main-categories-card">
+						<div class="main-categories-card_image">
+							<img src="./images/main-cats/pic-10.png" alt="Buy and sell everything" loading="lazy" decoding="async">
+						</div>
+						<div class="main-categories-card_text">
+							<div class="main-categories-card_title">Flea market</div>
+							<div class="main-categories-card_description">Buy and sell everything</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</section>
+
+<section class="main-ellipses">
+	<h2 class="visually-hidden">Заголовок для слайдера</h2>
+
+	<div class="container posar">
+		<div class="swiper" id="swiperEllipse">
+			<div class="swiper-wrapper">
+				<!-- 1 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>Car rentals for tourists</p>
+						</div>
+					</a>
+				</div>
+				<!-- 2 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-2.png" alt="New electric car">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>New electric car</p>
+						</div>
+					</a>
+				</div>
+				<!-- 3 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>Car rentals for tourists</p>
+						</div>
+					</a>
+				</div>
+				<!-- 4 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-2.png" alt="New electric car">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>New electric car</p>
+						</div>
+					</a>
+				</div>
+				<!-- 5 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>Car rentals for tourists</p>
+						</div>
+					</a>
+				</div>
+				<!-- 6 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-2.png" alt="New electric car">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>New electric car</p>
+						</div>
+					</a>
+				</div>
+				<!-- 7 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>Car rentals for tourists</p>
+						</div>
+					</a>
+				</div>
+				<!-- 8 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-2.png" alt="New electric car">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>New electric car</p>
+						</div>
+					</a>
+				</div>
+				<!-- 9 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>Car rentals for tourists</p>
+						</div>
+					</a>
+				</div>
+				<!-- 10 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-2.png" alt="New electric car">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>New electric car</p>
+						</div>
+					</a>
+				</div>
+				<!-- 11 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>Car rentals for tourists</p>
+						</div>
+					</a>
+				</div>
+				<!-- 12 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-2.png" alt="New electric car">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>New electric car</p>
+						</div>
+					</a>
+				</div>
+				<!-- 13 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>Car rentals for tourists</p>
+						</div>
+					</a>
+				</div>
+				<!-- 14 -->
+				<div class="swiper-slide">
+					<a href="#" class="main-ellipses-card">
+						<div class="main-ellipses-card_image">
+							<img src="./images/main-figs/img-2.png" alt="New electric car">
+						</div>
+						<div class="main-ellipses-card_description">
+							<p>New electric car</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Навигация, если нужна -->
+		<div class="ellipse-next-button swiper-button-next">
+			<svg class="icon icon--next">
+				<use href="./icons/symbol/sprite.svg#next"></use>
+			</svg>
+		</div>
+		<div class="swiper-button-prev"></div>
+	</div>
+</section>
+
+<section class="main-figures">
+	<h2 class="visually-hidden">Заголовок для секции</h2>
+
+	<div class="container">
+		<div class="row g-16">
+			<!-- 1 -->
+			<div class="col-6 col-md-2 col-sm-4">
+				<a href="#" class="main-figures-card light-figure">
+					<div class="main-figures-card_image">
+						<img src="./images/main-figs/fig-1.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
+					</div>
+					<div class="main-figures-card_title">
+						<h3><strong>Buy a new car</strong> for up to 70 000 €</h3>
+					</div>
+				</a>
+			</div>
+
+			<!-- 2 -->
+			<div class="col-6 col-md-2 col-sm-4">
+				<a href="#" class="main-figures-card dark-figure">
+					<div class="main-figures-card_image">
+						<img src="./images/main-figs/fig-2.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
+					</div>
+					<div class="main-figures-card_title">
+						<h3><strong>Rent real estate</strong> for up to 70 € per day</h3>
+					</div>
+				</a>
+			</div>
+
+			<!-- 3 -->
+			<div class="col-6 col-md-2 col-sm-4">
+				<a href="#" class="main-figures-card light-figure">
+					<div class="main-figures-card_image">
+						<img src="./images/main-figs/fig-3.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
+					</div>
+					<div class="main-figures-card_title">
+						<h3><strong>Find a reliable mover</strong> for your relocation</h3>
+					</div>
+				</a>
+			</div>
+
+			<!-- 4 -->
+			<div class="col-6 col-md-2 col-sm-4">
+				<a href="#" class="main-figures-card dark-figure">
+					<div class="main-figures-card_image">
+						<img src="./images/main-figs/fig-4.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
+					</div>
+					<div class="main-figures-card_title">
+						<h3><strong>Order apartment</strong> renovation from professionals</h3>
+					</div>
+				</a>
+			</div>
+
+			<!-- 5 -->
+			<div class="col-6 col-md-2 col-sm-4">
+				<a href="#" class="main-figures-card light-figure">
+					<div class="main-figures-card_image">
+						<img src="./images/main-figs/fig-5.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
+					</div>
+					<div class="main-figures-card_title">
+						<h3><strong>Find your dream job</strong> near home</h3>
+					</div>
+				</a>
+			</div>
+
+			<!-- 6 -->
+			<div class="col-6 col-md-2 col-sm-4">
+				<a href="#" class="main-figures-card dark-figure">
+					<div class="main-figures-card_image">
+						<img src="./images/main-figs/fig-6.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
+					</div>
+					<div class="main-figures-card_title">
+						<h3><strong>Rent a car</strong> up to 40 € per day</h3>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+			
+				<section class="main-featured">
+	<h2 class="visually-hidden">Заголовок для секции</h2>
+
+	<div class="container-greyout">
+		<!-- Заголовок -->
+		<div class="section-header">
+			<p class="section-header_title">Featured listing</p>
+			<a href="#" class="section-header_link"> How to get here? </a>
+		</div>
+
+		<!-- Карточки -->
+		<div class="row g-20">
+			<!-- 1 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/featured/pic-1.png" alt="Chevrolet Corvette Stingray C7" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+						<!-- Рейтинг -->
+						<div class="product-card_rating">
+							<svg class="icon icon--star">
+								<use href="./icons/symbol/sprite.svg#star"></use>
+							</svg>
+							<span> top </span>
+						</div>
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 805 500 ALL</strong>
+								<small>≈ 69 800 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Chevrolet Corvette Stingray C7</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<span class="meta-timeago">4 hours ago</span>
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 2 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+					<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/featured/pic-2.png" alt="Chevrolet Corvette Stingray C7" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+						<!-- Рейтинг -->
+						<div class="product-card_rating">
+							<svg class="icon icon--star">
+								<use href="./icons/symbol/sprite.svg#star"></use>
+							</svg>
+							<span> top </span>
+						</div>
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>20 962 500 ALL</strong>
+								<small>≈ 215 000 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Apartment for sale near the city center with a sea view</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<span class="meta-timeago">10 hours ago</span>
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 3 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/featured/pic-3.png" alt="Chevrolet Corvette Stingray C7" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+						<!-- Рейтинг -->
+						<div class="product-card_rating">
+							<svg class="icon icon--star">
+								<use href="./icons/symbol/sprite.svg#star"></use>
+							</svg>
+							<span> top </span>
+						</div>
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>8 970 000 ALL</strong>
+								<small>≈ 92 000 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">BMW X5M F95</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<span class="meta-timeago">3 days ago</span>
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 4 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/featured/pic-4.png" alt="Chevrolet Corvette Stingray C7" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+						<!-- Рейтинг -->
+						<div class="product-card_rating">
+							<svg class="icon icon--star">
+								<use href="./icons/symbol/sprite.svg#star"></use>
+							</svg>
+							<span> top </span>
+						</div>
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>8 287 500 ALL</strong>
+								<small>≈ 85 000 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2><a href="#">Audi RS6 C7</a></h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<span class="meta-timeago">7 hours ago</span>
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+						</div>
+						<!-- card meta -->
+					</div>
+					<!-- product spacebetween -->
+				</div>
+				<!-- product card -->
+			</div>
+			<!-- col-sm-6 -->
+		</div>
+		<!-- row -->
+	</div>
+	<!-- container-greyout -->
+
+	<!-- Банер-плейхолдер -->
+	<div class="container">
+		<div class="section-banner">
+			<img class="img-responsive" src="./images/banner-placeholder.png" alt="Banner">
+		</div>
+	</div>
+</section>
+
+				<section class="main-daily">
+	<h2 class="visually-hidden">Daily rentals of apartments in Albania</h2>
+
+	<div class="container">
+		<!-- Заголовок -->
+		<div class="section-header">
+			<p class="section-header_title">Daily rentals of apartments in Albania</p>
+			<a href="#" class="section-header_link"> Show all listings </a>
+		</div>
+
+		<!-- Карточки -->
+		<div class="row gx-20 gy-30">
+			<!-- 1 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- SWIPER SLIDER -->
+						<div class="swiper" id="swiper-inner-1">
+							<div class="swiper-wrapper">
+								<!-- 1 -->
+								<div class="swiper-slide">
+									<!-- Ссылка -->
+									<a href="#" class="product-card_image">
+										<!-- Изображение -->
+										<img src="./images/daily-rental/pic-1.png" alt="pic-1 title" class="img-responsive" loading="lazy" decoding="async">
+									</a>
+								</div>
+
+								<!-- 2 -->
+								<div class="swiper-slide">
+									<!-- Ссылка -->
+									<a href="#" class="product-card_image">
+										<!-- Изображение -->
+										<img src="./images/daily-rental/pic-2.png" alt="pic-2 title" class="img-responsive" loading="lazy" decoding="async">
+									</a>
+								</div>
+
+								<!-- 3 -->
+								<div class="swiper-slide">
+									<!-- Ссылка -->
+									<a href="#" class="product-card_image">
+										<!-- Изображение -->
+										<img src="./images/daily-rental/pic-3.png" alt="pic-3 title" class="img-responsive" loading="lazy" decoding="async">
+									</a>
+								</div>
+
+								<!-- 4 -->
+								<div class="swiper-slide">
+									<!-- Ссылка -->
+									<a href="#" class="product-card_image">
+										<!-- Изображение -->
+										<img src="./images/daily-rental/pic-4.png" alt="pic-4 title" class="img-responsive" loading="lazy" decoding="async">
+									</a>
+								</div>
+
+								<!-- 5 -->
+								<div class="swiper-slide">
+									<!-- Ссылка -->
+									<a href="#" class="product-card_image">
+										<!-- Изображение -->
+										<img src="./images/daily-rental/pic-5.png" alt="pic-5 title" class="img-responsive" loading="lazy" decoding="async">
+									</a>
+								</div>
+							</div>
+
+							<!-- контейнер для пагинации -->
+							<div class="swiper-pagination"></div>
+						</div>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 532 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Apartment 56 m², 2 rooms, 3 beds</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 2 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/daily-rental/pic-2.png" alt="Apartment 56 m², 2 rooms, 3 beds" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>5 460 ALL</strong>
+								<small>≈ 56 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Apartment 56 m², 2 rooms, 3 beds</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">11 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 3 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- SWIPER SLIDER -->
+						<div class="swiper" id="swiper-inner-2">
+							<div class="swiper-wrapper">
+								<!-- 1 -->
+								<div class="swiper-slide">
+									<!-- Ссылка -->
+									<a href="#" class="product-card_image">
+										<!-- Изображение -->
+										<img src="./images/daily-rental/pic-1.png" alt="pic-1 title" class="img-responsive" loading="lazy" decoding="async">
+									</a>
+								</div>
+
+								<!-- 2 -->
+								<div class="swiper-slide">
+									<!-- Ссылка -->
+									<a href="#" class="product-card_image">
+										<!-- Изображение -->
+										<img src="./images/daily-rental/pic-2.png" alt="pic-2 title" class="img-responsive" loading="lazy" decoding="async">
+									</a>
+								</div>
+
+								<!-- 3 -->
+								<div class="swiper-slide">
+									<!-- Ссылка -->
+									<a href="#" class="product-card_image">
+										<!-- Изображение -->
+										<img src="./images/daily-rental/pic-3.png" alt="pic-3 title" class="img-responsive" loading="lazy" decoding="async">
+									</a>
+								</div>
+
+								<!-- 4 -->
+								<div class="swiper-slide">
+									<!-- Ссылка -->
+									<a href="#" class="product-card_image">
+										<!-- Изображение -->
+										<img src="./images/daily-rental/pic-4.png" alt="pic-4 title" class="img-responsive" loading="lazy" decoding="async">
+									</a>
+								</div>
+
+								<!-- 5 -->
+								<div class="swiper-slide">
+									<!-- Ссылка -->
+									<a href="#" class="product-card_image">
+										<!-- Изображение -->
+										<img src="./images/daily-rental/pic-5.png" alt="pic-5 title" class="img-responsive" loading="lazy" decoding="async">
+									</a>
+								</div>
+							</div>
+
+							<!-- контейнер для пагинации -->
+							<div class="swiper-pagination"></div>
+						</div>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 922 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Apartment 56 m², 2 rooms, 3 beds</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 4 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/daily-rental/pic-4.png" alt="Apartment 56 m², 2 rooms, 3 beds" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 532 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Apartment 56 m², 2 rooms, 3 beds</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 5 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/daily-rental/pic-5.png" alt="Apartment 56 m², 2 rooms, 3 beds" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 532 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Apartment 56 m², 2 rooms, 3 beds</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 6 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/daily-rental/pic-6.png" alt="Apartment 56 m², 2 rooms, 3 beds" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 532 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Apartment 56 m², 2 rooms, 3 beds</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 7 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/daily-rental/pic-7.png" alt="Apartment 56 m², 2 rooms, 3 beds" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 532 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Apartment 56 m², 2 rooms, 3 beds</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 8 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/daily-rental/pic-8.png" alt="Apartment 56 m², 2 rooms, 3 beds" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 532 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Apartment 56 m², 2 rooms, 3 beds</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- row -->
+	</div>
+	<!-- container-greyout -->
+
+	<!-- Банер-плейхолдер -->
+	<div class="container">
+		<div class="section-banner">
+			<img class="img-responsive" src="./images/banner-placeholder.png" alt="Banner">
+		</div>
+	</div>
+</section>
+
+				<section class="main-products">
+	<h2 class="visually-hidden">Products and services from companies</h2>
+
+	<div class="container">
+		<!-- Заголовок -->
+		<div class="section-header">
+			<p class="section-header_title">Products and services from companies</p>
+			<a href="#" class="section-header_link">Show all companies and services </a>
+		</div>
+
+		<!-- Карточки -->
+		<div class="row gx-20 gy-30">
+			<!-- 1 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-1.png" alt="Loaders, loading and unloading services, cargo transportation" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+						<!-- Рейтинг -->
+						<div class="product-card_rating">
+							<svg class="icon icon--star">
+								<use href="./icons/symbol/sprite.svg#star"></use>
+							</svg>
+							<span> top </span>
+						</div>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 532 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Loaders, loading and unloading services, cargo transportation</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 2 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-2.png" alt="Removal of large and bulky waste" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Рейтинг -->
+						<div class="product-card_rating">
+							<svg class="icon icon--star">
+								<use href="./icons/symbol/sprite.svg#star"></use>
+							</svg>
+							<span> top </span>
+						</div>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>4 192 ALL</strong>
+								<small>≈ 56 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Removal of large and bulky waste</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">11 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 3 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-3.png" alt="Any types of construction and repair services" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Рейтинг -->
+						<div class="product-card_rating">
+							<svg class="icon icon--star">
+								<use href="./icons/symbol/sprite.svg#star"></use>
+							</svg>
+							<span> top </span>
+						</div>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>5 460 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Any types of construction and repair services</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 4 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-4.png" alt="Car repair, computer diagnostics, automotive electronics" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Рейтинг -->
+						<div class="product-card_rating">
+							<svg class="icon icon--star">
+								<use href="./icons/symbol/sprite.svg#star"></use>
+							</svg>
+							<span> top </span>
+						</div>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 922 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Car repair, computer diagnostics, automotive electronics</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 5 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-5.png" alt="Any types of construction and repair services" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>5 460 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Any types of construction and repair services</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 6 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-6.png" alt="Car repair, computer diagnostics, automotive electronics" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 922 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Car repair, computer diagnostics, automotive electronics</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 7 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-7.png" alt="Loaders, loading and unloading services, cargo transportation" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 532 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Loaders, loading and unloading services, cargo transportation</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 8 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-8.png" alt="Removal of large and bulky waste" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>4 192 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Removal of large and bulky waste</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- row -->
+	</div>
+	<!-- container-greyout -->
+
+	<!-- Банер-плейхолдер -->
+	<div class="container">
+		<div class="section-banner">
+			<img class="img-responsive" src="./images/banner-placeholder.png" alt="Banner">
+		</div>
+	</div>
+</section>
+
+				<section class="main-recomend">
+	<h2 class="visually-hidden">Recommendations for you</h2>
+
+	<div class="container">
+		<!-- Заголовок -->
+		<div class="section-header">
+			<p class="section-header_title">Recommendations for you</p>			
+		</div>
+
+		<!-- Карточки -->
+		<div class="row gx-20 gy-30">
+			<!-- 1 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-1.png" alt="Loaders, loading and unloading services, cargo transportation" class="img-responsive" loading="lazy" decoding="async">
+						</a>						
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 532 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Loaders, loading and unloading services, cargo transportation</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 2 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-2.png" alt="Removal of large and bulky waste" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>4 192 ALL</strong>
+								<small>≈ 56 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Removal of large and bulky waste</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">11 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 3 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-3.png" alt="Any types of construction and repair services" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>5 460 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Any types of construction and repair services</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 4 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-4.png" alt="Car repair, computer diagnostics, automotive electronics" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 922 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Car repair, computer diagnostics, automotive electronics</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 5 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-5.png" alt="Any types of construction and repair services" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>5 460 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Any types of construction and repair services</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 6 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-6.png" alt="Car repair, computer diagnostics, automotive electronics" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 922 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Car repair, computer diagnostics, automotive electronics</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 7 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-7.png" alt="Loaders, loading and unloading services, cargo transportation" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>6 532 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Loaders, loading and unloading services, cargo transportation</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 8 -->
+			<div class="col-md-3 col-sm-6">
+				<div class="product-card">
+					<div class="product-card_figure">
+						<!-- Ссылка -->
+						<a href="#" class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-8.png" alt="Removal of large and bulky waste" class="img-responsive" loading="lazy" decoding="async">
+						</a>
+
+						<!-- Избранное -->
+						<button class="product-card_favorites" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-card_spacebetween">
+						<div class="product-card_info">
+							<!--Цена -->
+							<div class="product-card_price">
+								<strong>4 192 ALL</strong>
+								<small>≈ 67 €</small>
+							</div>
+
+							<!-- Заголовок -->
+							<div class="product-card_title">
+								<h2>
+									<a href="#">Removal of large and bulky waste</a>
+								</h2>
+							</div>
+						</div>
+
+						<div class="product-card_meta">
+							<a href="#" class="meta-location" aria-label="Product location">
+								<span class="meta-location_icon">
+									<svg class="icon icon--map-pin">
+										<use href="./icons/symbol/sprite.svg#map-pin"></use>
+									</svg>
+								</span>
+								<span class="meta-location_name"> Tiana </span>
+							</a>
+							<span class="meta-timeago">4 hours ago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- row -->
+	</div>
+	<!-- container-greyout -->
+
+	<!-- Банер-плейхолдер -->
+	<div class="container container-75">
+		<button class="section-ajax" id="recomend-more">
+			<span class="section-ajax_icon">
+                <svg class="icon icon--refresh">
+                    <use href="./icons/symbol/sprite.svg#refresh"></use>
+                </svg>
+            </span>
+            <span class="section-ajax_name">
+                <span>Show more</span>
+            </span>
+		</button>
+	</div>
+</section>
+
+			</main>
+			<footer id="colophon" class="footer">
+	<div class="container">
+		<span class="footer-text">Подвал</span>
+	</div>
+</footer>
+
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="./js/main.min.js"></script>
 
 	</body>
 </html>
