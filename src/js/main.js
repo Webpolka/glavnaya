@@ -84,19 +84,19 @@ allInnerSwipers.forEach((swiper, index) => {
 /*--------------------------------------------------------------------------------------------------------------
 LOAD SVG SPRITE TO PAGE
 ----------------------------------------------------------------------------------------------------------------*/
-function loadSvgSprite(url) {
-  fetch(url)
-    .then(response => response.text())
-    .then(data => {
-      const div = document.createElement('div');
-      div.style.display = 'none'; // скрываем спрайт
-      div.innerHTML = data;
-      document.documentElement.appendChild(div);
-	  console.log('SPRITE OK !')
-    })
-    .catch(err => console.error('Ошибка загрузки SVG спрайта:', err));
-}
+// function loadSvgSprite(url) {
+//   fetch(url)
+//     .then(response => response.text())
+//     .then(data => {
+//       const div = document.createElement('div');
+//       div.style.display = 'none'; // скрываем спрайт
+//       div.innerHTML = data;
+//       document.documentElement.appendChild(div);
+// 	  console.log('SPRITE OK !')
+//     })
+//     .catch(err => console.error('Ошибка загрузки SVG спрайта:', err));
+// }
 
-// Использование:
-const spritePath = `${window.location.origin}/icons/symbol/sprite.svg`;
-loadSvgSprite(spritePath);
+// // Использование:
+// const spritePath = `${window.location.origin}/icons/symbol/sprite.svg`;
+// loadSvgSprite(spritePath);
