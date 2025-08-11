@@ -602,14 +602,18 @@ COMPONENTS
 
 .product-card_favorites svg {
   stroke: var(--white);
-  fill: red;
+  fill: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
+.product-card_favorites.liked svg {
+  stroke: var(--accent);
+  fill: var(--accent);
+}
+
 .product-card_favorites:hover svg {
-  stroke: var(--black);
-  fill: green;
+  stroke: var(--accent);
 }
 
 .product-card_spacebetween {
