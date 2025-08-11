@@ -67,36 +67,34 @@ const swiper = new Swiper("#swiperEllipse", {
 /*--------------------------------------------------------------------------------------------------------------
 INIT ALL INNER SWIPER SLIDERS
 ----------------------------------------------------------------------------------------------------------------*/
-const allInnerSwipers = document.querySelectorAll('[id^="swiper-inner-"]');
-allInnerSwipers.forEach((swiper, index) => {
-	new Swiper(swiper, {
-		slidesPerView: 1,
-		loop: true,
-		pagination: {
-			el: ".swiper-pagination", // элемент, в который будет вставляться пагинация
-			clickable: true, // чтобы кликать по пагинации
-		},
-	});
+
+const allProductCards = document.querySelectorAll(".product-card");
+
+allProductCards.forEach((card) => {
+	const innerSwiper = card.querySelector('[id^="swiper-inner-"]');
+	const overlayCard = card.querySelector(".product-card_overlay");
+
+	innerSwiper &&
+		new Swiper(innerSwiper, {
+			slidesPerView: 1,
+			loop: true,
+			pagination: {
+				el: ".swiper-pagination", // элемент, в который будет вставляться пагинация
+				clickable: true, // чтобы кликать по пагинации
+			},
+		});
+
+	if (overlayCard) {
+		const slides = card.querySelectorAll(".product-card_image");
+		const totalSlides = slides.length;
+		const imageCountSpan = overlayCard.querySelector(".product-card_count");
+
+		if (totalSlides > 1) {
+			imageCountSpan.textContent = `Another ${totalSlides} photos`;
+		} else if (totalSlides == 1) {
+			imageCountSpan.textContent = `Only ${totalSlides} photo`;
+		}
+
+		console.log(totalSlides)
+	}
 });
-
-
-
-/*--------------------------------------------------------------------------------------------------------------
-LOAD SVG SPRITE TO PAGE
-----------------------------------------------------------------------------------------------------------------*/
-// function loadSvgSprite(url) {
-//   fetch(url)
-//     .then(response => response.text())
-//     .then(data => {
-//       const div = document.createElement('div');
-//       div.style.display = 'none'; // скрываем спрайт
-//       div.innerHTML = data;
-//       document.documentElement.appendChild(div);
-// 	  console.log('SPRITE OK !')
-//     })
-//     .catch(err => console.error('Ошибка загрузки SVG спрайта:', err));
-// }
-
-// // Использование:
-// const spritePath = `${window.location.origin}/icons/symbol/sprite.svg`;
-// loadSvgSprite(spritePath);

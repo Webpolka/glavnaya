@@ -13,6 +13,7 @@ INNER SWIPER PAGINATION
 		position: absolute; /* или по вашему дизайну */
 		bottom: 10px; /* чуть ниже слайдов, по необходимости */
 		padding-inline: 10px;
+		z-index: 3;		
 	}
 
 	/* Стиль для точек */
