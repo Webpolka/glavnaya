@@ -82,8 +82,22 @@ allProductCards.forEach((card) => {
 				el: ".swiper-pagination", // элемент, в который будет вставляться пагинация
 				clickable: true, // чтобы кликать по пагинации
 			},
+			autoplay: {
+				delay: 1500,
+				disableOnInteraction: false,
+				enabled: false,
+			},
+			on: {
+				init: function () {
+					this.el.addEventListener("mouseenter", () => {
+						this.autoplay.start();
+					});
+					this.el.addEventListener("mouseleave", () => {
+						this.autoplay.stop();
+					});
+				},
+			},
 		});
-
 	if (overlayCard) {
 		const slides = card.querySelectorAll(".product-card_image");
 		const totalSlides = slides.length;
@@ -95,45 +109,40 @@ allProductCards.forEach((card) => {
 			imageCountSpan.textContent = `Only ${totalSlides} photo`;
 		}
 
-		console.log(totalSlides)
+		console.log(totalSlides);
 	}
 });
-
 
 /*--------------------------------------------------------------------------------------------------------------
 HEADER TRANSFER BLOCKS
 ----------------------------------------------------------------------------------------------------------------*/
 import TransferElements from "./modules/transfer";
 
-const headerLocationEl = document.querySelector('.header-location');
-const headerLocationPlace = document.querySelector('.header-bottom_intro');
-const headerSearchFormEl = document.querySelector('.header-search-form');
-const headerSearchFormPlace = document.querySelector('.header-bottom');
+const headerLocationEl = document.querySelector(".header-location");
+const headerLocationPlace = document.querySelector(".header-bottom_intro");
+const headerSearchFormEl = document.querySelector(".header-search-form");
+const headerSearchFormPlace = document.querySelector(".header-bottom");
 
 if (headerLocationEl && headerLocationPlace) {
-  new TransferElements(  
-    {
-      sourceElement: headerLocationEl,
-      breakpoints: {
-        576: {
-          targetElement: headerLocationPlace,
-          targetPosition: 2         
-        }
-      }
-    }   
-  )
+	new TransferElements({
+		sourceElement: headerLocationEl,
+		breakpoints: {
+			576: {
+				targetElement: headerLocationPlace,
+				targetPosition: 2,
+			},
+		},
+	});
 }
 
 if (headerSearchFormEl && headerSearchFormPlace) {
-  new TransferElements(  
-    {
-      sourceElement: headerSearchFormEl,
-      breakpoints: {
-        576: {
-          targetElement: headerSearchFormPlace,
-          targetPosition: 1         
-        }
-      }
-    }   
-  )
+	new TransferElements({
+		sourceElement: headerSearchFormEl,
+		breakpoints: {
+			576: {
+				targetElement: headerSearchFormPlace,
+				targetPosition: 1,
+			},
+		},
+	});
 }
