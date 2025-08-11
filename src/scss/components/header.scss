@@ -85,7 +85,7 @@ HEADER
 
 		@include lg {
 			flex-wrap: wrap;
-		}
+		}				
 
 		&:after {
 			content: "";
@@ -100,6 +100,12 @@ HEADER
 			display: flex;
 			align-items: center;
 			flex-grow: 1;
+
+			@include sm{
+				width: 100%;
+				margin-bottom: 12px;
+				justify-content: space-between;
+			}
 		}
 
 		&_nav {
@@ -128,6 +134,7 @@ HEADER
 		gap: 15px;
 
 		margin-right: 35px;
+	
 
 		&_icon {
 			flex-shrink: 0;
@@ -154,6 +161,7 @@ HEADER
 		border-radius: 5px;
 
 		margin-right: 25px;
+		
         @include lg {
             margin-right: 0;
         }
@@ -174,7 +182,11 @@ HEADER
 		gap: 10px;
 
 		margin-right: 40px;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;		
+
+		@include sm{
+			margin-right: 0;
+		}
 
         &:hover{
             opacity: 0.75;

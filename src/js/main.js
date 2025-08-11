@@ -98,3 +98,42 @@ allProductCards.forEach((card) => {
 		console.log(totalSlides)
 	}
 });
+
+
+/*--------------------------------------------------------------------------------------------------------------
+HEADER TRANSFER BLOCKS
+----------------------------------------------------------------------------------------------------------------*/
+import TransferElements from "./modules/transfer";
+
+const headerLocationEl = document.querySelector('.header-location');
+const headerLocationPlace = document.querySelector('.header-bottom_intro');
+const headerSearchFormEl = document.querySelector('.header-search-form');
+const headerSearchFormPlace = document.querySelector('.header-bottom');
+
+if (headerLocationEl && headerLocationPlace) {
+  new TransferElements(  
+    {
+      sourceElement: headerLocationEl,
+      breakpoints: {
+        576: {
+          targetElement: headerLocationPlace,
+          targetPosition: 2         
+        }
+      }
+    }   
+  )
+}
+
+if (headerSearchFormEl && headerSearchFormPlace) {
+  new TransferElements(  
+    {
+      sourceElement: headerSearchFormEl,
+      breakpoints: {
+        576: {
+          targetElement: headerSearchFormPlace,
+          targetPosition: 1         
+        }
+      }
+    }   
+  )
+}

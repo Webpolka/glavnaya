@@ -720,6 +720,13 @@ HEADER
   align-items: center;
   flex-grow: 1;
 }
+@media (max-width: 576px) {
+  .header-bottom_intro {
+    width: 100%;
+    margin-bottom: 12px;
+    justify-content: space-between;
+  }
+}
 .header-bottom_nav {
   display: flex;
   align-items: center;
@@ -779,6 +786,11 @@ HEADER
   gap: 10px;
   margin-right: 40px;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 576px) {
+  .header-location {
+    margin-right: 0;
+  }
 }
 .header-location:hover {
   opacity: 0.75;
