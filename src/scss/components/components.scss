@@ -176,11 +176,16 @@ COMPONENTS
 
 		svg {
 			stroke: var(--white);
+			fill: none;
 			transition: all 0.3s ease-in-out;
+		}
+		&.liked svg{
+			stroke: var(--accent);
+			fill: var(--accent);
 		}
 
 		&:hover svg {
-			stroke: var(--accent);
+			stroke: var(--accent);			
 		}
 	}
 

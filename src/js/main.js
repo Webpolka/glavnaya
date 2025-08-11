@@ -146,3 +146,13 @@ if (headerSearchFormEl && headerSearchFormPlace) {
 		},
 	});
 }
+
+/*--------------------------------------------------------------------------------------------------------------
+FAVOURS LIKED
+----------------------------------------------------------------------------------------------------------------*/
+const allFavoursLiked = document.querySelectorAll(".product-card_favorites");
+allFavoursLiked.forEach((like) => {
+	like.addEventListener("click", function () {
+		this.classList.toggle("liked");
+	});
+});

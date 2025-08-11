@@ -518,7 +518,12 @@ COMPONENTS
 }
 .product-card_favorites svg {
   stroke: var(--white);
+  fill: none;
   transition: all 0.3s ease-in-out;
+}
+.product-card_favorites.liked svg {
+  stroke: var(--accent);
+  fill: var(--accent);
 }
 .product-card_favorites:hover svg {
   stroke: var(--accent);
