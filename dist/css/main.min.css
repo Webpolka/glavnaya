@@ -527,17 +527,19 @@ COMPONENTS
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 7px 10px;
+  padding: 9px 10px;
   border-radius: 5px;
   color: var(--white);
   background-color: var(--accent);
   z-index: 3;
 }
 .product-card_rating svg {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
 }
 .product-card_rating span {
+  display: block;
+  max-height: 14px;
   font-family: var(--font-main);
   font-weight: 500;
   font-size: 14px;
