@@ -491,10 +491,7 @@ COMPONENTS
 /*---------------------------------------------- PRODUCT CARD ----------------------------------------------------*/
 
 .product-card {
-  cursor: pointer;
-  /* чтобы подсказать, что всё кликабельно */
-  pointer-events: none;
-  /* по умолчанию не перехватывает клики */
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -506,11 +503,6 @@ COMPONENTS
   padding: 10px 10px 20px 10px;
   border-radius: 10px;
   height: 100%;
-}
-
-.product-card * {
-  pointer-events: auto;
-  /* все внутри — кликабельны */
 }
 
 .product-card_preloader {
@@ -681,6 +673,9 @@ COMPONENTS
 
 .product-card_info {
   padding-top: 20px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .product-card_price {
@@ -1407,6 +1402,11 @@ PAGE MAIN FEATURED SECTION
 
 .main-featured .container-greyout {
   margin-bottom: 50px;
+}
+
+.main-featured .product-card_like {
+  top: 20px;
+  right: 20px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
