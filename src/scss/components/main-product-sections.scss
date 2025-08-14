@@ -1,17 +1,17 @@
 /*-----------------------------------------------------------------------------------------------------------------
-PAGE MAIN PRODUCTS SECTION
+PAGE MAIN RECOMEND SECTION
  -------------------------------------------------------------------------------------------------------------------*/
-.main-products {
-	margin-bottom: 55px;
+.product-section { 
+	 margin-bottom: 55px;
 
-	.container {
-		margin-bottom: 50px;
+	 .container {
+		margin-bottom: 50px;		
 	}
-	.section-header {
+	 .section-header {
 		margin-bottom: 20px;
 	}
 
-	.product-card {
+	 .product-card {
 		padding: 0;
 
 		&_spacebetween {
@@ -19,8 +19,10 @@ PAGE MAIN PRODUCTS SECTION
 		}
 	}
 
-	.product-card_meta {
-		justify-content: start;
-		gap: 20px;
+	 .product-card_meta {
+		display: block;
+		.meta-location{
+			margin-right: 15px;
+		}
 	}
 }

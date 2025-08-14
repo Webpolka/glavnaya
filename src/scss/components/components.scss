@@ -2,9 +2,13 @@
 COMPONENTS
 --------------------------------------------------------------------------------------------------------------------------------*/
 .section-banner {
+	
 	@include md {
 		aspect-ratio: 128/42;
 		img {
+			display: block;
+			border-radius: 10px;
+			overflow: hidden;
 			height: 100%;
 		}
 	}
@@ -25,11 +29,17 @@ COMPONENTS
 	background: var(--accent);
 	transition: opacity 0.3s ease-in-out;
 
+	margin-top: 50px;
+
+	@include sm{
+		margin-top: 30px;
+	}
+
 	&:hover {
 		opacity: 0.75;
 	}
 
-	&_icon{
+	&_icon {
 		display: block;
 		width: 16px;
 		height: 16px;
@@ -77,7 +87,11 @@ COMPONENTS
 }
 
 /*---------------------------------------------- PRODUCT CARD ----------------------------------------------------*/
-.product-card {
+
+.product-card{
+	cursor: pointer; /* чтобы подсказать, что всё кликабельно */
+	pointer-events: none; /* по умолчанию не перехватывает клики */
+
 	display: flex;
 	flex-direction: column;
 
@@ -86,25 +100,59 @@ COMPONENTS
 	border-radius: 10px;
 
 	height: 100%;
+	
+	* {
+		pointer-events: auto; /* все внутри — кликабельны */
+	}
 
-	cursor: pointer;
+	// Прелоадер
+	&_preloader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 
-	&_figure {
+		&_body {
+			display: block;
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			position: relative;
+			animation: rotate 1s linear infinite;
+
+			&::before {
+				content: "";
+				box-sizing: border-box;
+				position: absolute;
+				inset: 0px;
+				border-radius: 50%;
+				border: 5px solid rgb(230, 0, 0, 0.65);
+				animation: prixClipFix 2s linear infinite;
+			}
+		}
+	}
+
+	// Галлерея со слайдером
+	&_figure,
+	&_gallery {
 		position: relative;
 
+		aspect-ratio: 305/240;
 		border-radius: 10px;
 		overflow: hidden;
 
-		&:hover .product-card_overlay {
-			visibility: visible;
-			opacity: 1;
+		img{
+			transition: all 0.3s ease-in-out;
 		}
+
 		&:hover {
 			img {
 				transform: scale(1.1);
 			}
 		}
 	}
+
+	// Оверлэй с кол-вом доп. изображ
 	&_overlay {
 		display: flex;
 		justify-content: center;
@@ -128,22 +176,18 @@ COMPONENTS
 		z-index: 2; /* чтобы была сверху */
 		color: #fff;
 		font-size: 16px;
+
+		&.showed {
+			visibility: visible;
+			opacity: 1;
+		}
 	}
+	// Счетчик в оверлэе
 	&_count {
 		margin-top: 20%;
 	}
 
-	&_image {
-		position: relative;
-
-		display: block;
-		overflow: hidden;
-
-		img {
-			transition: all 0.3s ease-in-out;
-		}
-	}
-
+	// Рейтинг
 	&_rating {
 		position: absolute;
 		top: 10px;
@@ -175,7 +219,8 @@ COMPONENTS
 		}
 	}
 
-	&_favorites {
+	// В избранное
+	&_like {
 		position: absolute;
 		top: 10px;
 		right: 10px;
@@ -188,13 +233,13 @@ COMPONENTS
 			fill: none;
 			transition: all 0.3s ease-in-out;
 		}
-		&.liked svg{
+		&.liked svg {
 			stroke: var(--accent);
 			fill: var(--accent);
 		}
 
 		&:hover svg {
-			stroke: var(--accent);			
+			stroke: var(--accent);
 		}
 	}
 
@@ -212,8 +257,7 @@ COMPONENTS
 		padding-top: 20px;
 	}
 
-	&_price {					
-
+	&_price {
 		margin-bottom: 10px;
 
 		strong {
@@ -239,14 +283,12 @@ COMPONENTS
 			font-family: var(--font-title);
 			font-weight: 500;
 			font-size: 17px;
-			line-height: 120%;			
+			line-height: 120%;
 
-			a {
-				color: var(--black);
-				transition: color 0.3s ease-in-out;
-				&:hover {
-					color: var(--accent);
-				}
+			color: var(--black);
+			transition: color 0.3s ease-in-out;
+			&:hover {
+				color: var(--accent);
 			}
 		}
 	}

@@ -68,50 +68,50 @@ const swiper = new Swiper("#swiperEllipse", {
 INIT ALL INNER SWIPER SLIDERS
 ----------------------------------------------------------------------------------------------------------------*/
 
-const allProductCards = document.querySelectorAll(".product-card");
+// const allProductCards = document.querySelectorAll(".product-card");
 
-allProductCards.forEach((card) => {
-	const innerSwiper = card.querySelector('[id^="swiper-inner-"]');
-	const overlayCard = card.querySelector(".product-card_overlay");
+// allProductCards.forEach((card) => {
+// 	const innerSwiper = card.querySelector('[id^="swiper-inner-"]');
+// 	const overlayCard = card.querySelector(".product-card_overlay");
 
-	innerSwiper &&
-		new Swiper(innerSwiper, {
-			slidesPerView: 1,
-			loop: true,
-			pagination: {
-				el: ".swiper-pagination", // элемент, в который будет вставляться пагинация
-				clickable: true, // чтобы кликать по пагинации
-			},
-			autoplay: {
-				delay: 1500,
-				disableOnInteraction: false,
-				enabled: false,
-			},
-			on: {
-				init: function () {
-					this.el.addEventListener("mouseenter", () => {
-						this.autoplay.start();
-					});
-					this.el.addEventListener("mouseleave", () => {
-						this.autoplay.stop();
-					});
-				},
-			},
-		});
-	if (overlayCard) {
-		const slides = card.querySelectorAll(".product-card_image");
-		const totalSlides = slides.length;
-		const imageCountSpan = overlayCard.querySelector(".product-card_count");
+// 	innerSwiper &&
+// 		new Swiper(innerSwiper, {
+// 			slidesPerView: 1,
+// 			loop: true,
+// 			pagination: {
+// 				el: ".swiper-pagination", // элемент, в который будет вставляться пагинация
+// 				clickable: true, // чтобы кликать по пагинации
+// 			},
+// 			autoplay: {
+// 				delay: 1500,
+// 				disableOnInteraction: false,
+// 				enabled: false,
+// 			},
+// 			on: {
+// 				init: function () {
+// 					this.el.addEventListener("mouseenter", () => {
+// 						this.autoplay.start();
+// 					});
+// 					this.el.addEventListener("mouseleave", () => {
+// 						this.autoplay.stop();
+// 					});
+// 				},
+// 			},
+// 		});
+// 	if (overlayCard) {
+// 		const slides = card.querySelectorAll(".product-card_image");
+// 		const totalSlides = slides.length;
+// 		const imageCountSpan = overlayCard.querySelector(".product-card_count");
 
-		if (totalSlides > 1) {
-			imageCountSpan.textContent = `Another ${totalSlides} photos`;
-		} else if (totalSlides == 1) {
-			imageCountSpan.textContent = `Only ${totalSlides} photo`;
-		}
+// 		if (totalSlides > 1) {
+// 			imageCountSpan.textContent = `Another ${totalSlides} photos`;
+// 		} else if (totalSlides == 1) {
+// 			imageCountSpan.textContent = `Only ${totalSlides} photo`;
+// 		}
 
-		console.log(totalSlides);
-	}
-});
+// 		console.log(totalSlides);
+// 	}
+// });
 
 /*--------------------------------------------------------------------------------------------------------------
 HEADER TRANSFER BLOCKS
@@ -150,9 +150,29 @@ if (headerSearchFormEl && headerSearchFormPlace) {
 /*--------------------------------------------------------------------------------------------------------------
 FAVOURS LIKED
 ----------------------------------------------------------------------------------------------------------------*/
-const allFavoursLiked = document.querySelectorAll(".product-card_favorites");
+const allFavoursLiked = document.querySelectorAll(".product-card_like");
 allFavoursLiked.forEach((like) => {
-	like.addEventListener("click", function () {
+	like.addEventListener("click", function (e) {
+		e.preventDefault();
 		this.classList.toggle("liked");
 	});
+});
+
+/*--------------------------------------------------------------------------------------------------------------
+CARD GALLERY 
+----------------------------------------------------------------------------------------------------------------*/
+import ImageCardGallery from "./modules/gallery";
+
+const allProductCards = document.querySelectorAll(".product-card");
+
+allProductCards.forEach((card) => {
+	const productGallery = card.querySelector('[id^="product-gallery-"]');
+
+	productGallery &&
+		new ImageCardGallery(productGallery, {
+			imageSelector: ".product-image",
+			dotSelector: ".dot",
+			activeClass: "active",
+			lazyLoad: true,
+		});
 });
