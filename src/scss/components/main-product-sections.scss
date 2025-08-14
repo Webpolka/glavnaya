@@ -20,9 +20,8 @@ PAGE MAIN RECOMEND SECTION
 	}
 
 	 .product-card_meta {
-		display: block;
-		.meta-location{
-			margin-right: 15px;
-		}
+		display: inline-flex;
+		justify-content: start;
+		gap: 15px;
 	}
 }

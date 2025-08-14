@@ -1491,11 +1491,13 @@ PAGE MAIN RECOMEND SECTION
 }
 
 .product-section .product-card_meta {
-  display: block;
-}
-
-.product-section .product-card_meta .meta-location {
-  margin-right: 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  gap: 15px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------

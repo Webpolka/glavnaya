@@ -1191,10 +1191,9 @@ PAGE MAIN RECOMEND SECTION
   padding-inline: 0;
 }
 .product-section .product-card_meta {
-  display: block;
-}
-.product-section .product-card_meta .meta-location {
-  margin-right: 15px;
+  display: inline-flex;
+  justify-content: start;
+  gap: 15px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
