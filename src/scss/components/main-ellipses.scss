@@ -15,18 +15,52 @@ PAGE MAIN ELLIPSES SECTION
 		&:hover {
 			img {
 				transform: scale(1.1);
-			}			
-			.main-ellipses-card_description p{
+			}
+			.main-ellipses-card_description p {
 				color: var(--accent);
 			}
+			.main-ellipses-card_gradient:before {
+				animation: rotation 0.5s linear infinite;
+			}
 		}
-
-		&_image {
-			border: 3px solid var(--accent);
+		&_gradient {
+			position: relative;
+			display: inline-block;
 			padding: 3px;
 			border-radius: 50%;
 			overflow: hidden;
-					
+			height: 100%;
+			width: 100%;		
+
+			&:before {
+				content: "";
+
+				position: absolute;				
+				top: 0;
+				left: 0;
+
+				height: 100%;
+				width: 100%;				
+				z-index: -1;
+				
+				background: conic-gradient(
+					from 270deg,
+					rgba(255, 91, 91, 1) 0deg,
+					rgba(228, 27, 23, 1) 128.077deg,
+					rgba(255, 91, 91, 1) 360deg
+				);
+			}
+
+			
+		}
+
+		&_image {
+			border: 3px solid #ffffff;
+			overflow: hidden;
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+
 			img {
 				display: block;
 				width: 100%;

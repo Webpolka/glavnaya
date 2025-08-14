@@ -29,6 +29,12 @@ COMPONENTS
 		opacity: 0.75;
 	}
 
+	&_icon{
+		display: block;
+		width: 16px;
+		height: 16px;
+	}
+
 	&_name {
 		font-weight: 500;
 		font-size: 16px;
@@ -76,10 +82,12 @@ COMPONENTS
 	flex-direction: column;
 
 	background-color: var(--white);
-	padding: 10px;
+	padding: 10px 10px 20px 10px;
 	border-radius: 10px;
 
 	height: 100%;
+
+	cursor: pointer;
 
 	&_figure {
 		position: relative;
@@ -176,6 +184,7 @@ COMPONENTS
 
 		svg {
 			stroke: var(--white);
+			stroke-width: 2;
 			fill: none;
 			transition: all 0.3s ease-in-out;
 		}
@@ -203,19 +212,17 @@ COMPONENTS
 		padding-top: 20px;
 	}
 
-	&_price {
-		display: inline-flex;
-		align-items: flex-end;
-		flex-wrap: wrap;
-		gap: 15px;
+	&_price {					
 
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 
 		strong {
 			font-weight: 700;
 			font-size: 22px;
 			line-height: 120%;
 			color: var(--black);
+
+			margin-right: 7px;
 		}
 		small {
 			font-weight: 500;
@@ -226,13 +233,13 @@ COMPONENTS
 	}
 
 	&_title {
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 
 		h2 {
 			font-family: var(--font-title);
 			font-weight: 500;
 			font-size: 17px;
-			line-height: 120%;
+			line-height: 120%;			
 
 			a {
 				color: var(--black);
@@ -255,6 +262,7 @@ COMPONENTS
 			font-size: 15px;
 			line-height: 120%;
 			color: #3d3d3d;
+			opacity: 0.5;
 		}
 
 		.meta-location {

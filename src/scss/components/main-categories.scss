@@ -8,17 +8,17 @@ PAGE MAIN CATEGORIES SECTION
 		display: flex;
 		gap: 15px;
 
-        &:hover{
-            img {
+		&:hover {
+			img {
 				transform: scale(1.1);
-			}		
-            .main-categories-card_title {
-				color: var(--accent);
-			}	
-			.main-categories-card_description{
-				color: var(--accent);
 			}
-        }
+			.main-categories-card_title {
+				color: var(--black);
+			}
+			.main-categories-card_description {
+				color: rgb(0, 0, 0, 0.65);
+			}
+		}
 
 		&_image {
 			aspect-ratio: 1/1;
@@ -47,22 +47,22 @@ PAGE MAIN CATEGORIES SECTION
 			font-family: var(--font-title);
 			font-weight: 500;
 			font-size: 18px;
-			color: var(--black);
+			color: var(--accent);
 
-            transition: color 0.3s ease-in-out;
+			transition: color 0.3s ease-in-out;
 
-            margin-bottom: 5px;
+			margin-bottom: 5px;
 		}
 
-		&_description {		            
+		&_description {
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 120%;
-			color: #b1b1b1;      
-            
-            transition: color 0.3s ease-in-out;
+			color: rgb(230, 0, 0, 0.55);
 
-            max-width: 85%;	
+			transition: color 0.3s ease-in-out;
+
+			max-width: 85%;
 		}
 	}
 }
