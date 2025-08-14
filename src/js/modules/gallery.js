@@ -7,6 +7,7 @@ export default class ImageCardGallery {
 				activeClass: "active",
 				dotSelector: ".dot",
 				lazyLoad: true,
+				placeholderSrc: "./images/placeholder.png",
 				overlaySelector: ".product-card_overlay", // селектор для overlay
 				overlayActiveClass: "showed", // класс для overlay при наведении на последнюю картинку
 			},
@@ -33,9 +34,10 @@ export default class ImageCardGallery {
 		this.images.forEach((img, index) => {
 			if (index === 0) {
 				img.classList.add(this.options.activeClass);
+				img.src = img.dataset.src;
 			} else {
 				img.classList.remove(this.options.activeClass);
-				if (this.options.lazyLoad && !img.src && img.dataset.src) {
+				if (this.options.lazyLoad && img.src === this.options.placeholderSrc && img.dataset.src) {
 					img.src = img.dataset.src;
 				}
 			}
@@ -58,6 +60,9 @@ export default class ImageCardGallery {
 
 		this.images.forEach((img, i) => {
 			img.classList.toggle(this.options.activeClass, i === index);
+			if (i === index) {
+				img.src = img.dataset.src;
+			}
 		});
 		this.dots.forEach((dot, i) => {
 			dot.classList.toggle(this.options.activeClass, i === index);
