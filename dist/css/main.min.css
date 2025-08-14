@@ -434,7 +434,7 @@ COMPONENTS
   transition: all 0.3s ease-in-out;
 }
 .section-header_link:hover {
-  opacity: 0.75;
+  color: black;
 }
 
 /*---------------------------------------------- PRODUCT CARD ----------------------------------------------------*/

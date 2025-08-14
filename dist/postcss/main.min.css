@@ -484,7 +484,7 @@ COMPONENTS
 }
 
 .section-header_link:hover {
-  opacity: 0.75;
+  color: black;
 }
 
 /*---------------------------------------------- PRODUCT CARD ----------------------------------------------------*/
