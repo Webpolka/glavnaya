@@ -2,13 +2,13 @@
 PAGE MAIN RECOMEND SECTION
  -------------------------------------------------------------------------------------------------------------------*/
 .product-section { 
-	 margin-bottom: 55px;
+	 margin-bottom: rem(55);
 
 	 .container {
-		margin-bottom: 50px;		
+		margin-bottom: rem(50);		
 	}
 	 .section-header {
-		margin-bottom: 20px;
+		margin-bottom: rem(20);
 	}
 
 	 .product-card {
@@ -22,6 +22,6 @@ PAGE MAIN RECOMEND SECTION
 	 .product-card_meta {
 		display: inline-flex;
 		justify-content: start;
-		gap: 15px;
+		gap: rem(15);
 	}
 }

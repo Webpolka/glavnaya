@@ -2,7 +2,7 @@
 HEADER
 --------------------------------------------------------------------------------------------------------------------------------*/
 .header {
-	margin-bottom: 25px;
+	margin-bottom: rem(25);
 	// Верхняя часть хедера
 	&-top {
 		position: relative;
@@ -11,7 +11,7 @@ HEADER
 		align-items: center;
 		justify-content: space-between;
 
-		padding-block: 16px;
+		padding-block: rem(16);
 
 		&:after {
 			content: "";
@@ -26,10 +26,10 @@ HEADER
 		&_list {
 			display: inline-flex;
 			align-items: center;
-			gap: 40px;
+			gap: rem(40);
 
 			@include sm {
-				gap: 20px;
+				gap: rem(20);
 			}
 
 			@media (max-width: 440px) {
@@ -38,7 +38,7 @@ HEADER
 
 			a {
 				font-weight: 400;
-				font-size: 15px;
+				font-size: rem(15);
 				line-height: 120%;
 				color: #3d3d3d;
 
@@ -54,20 +54,20 @@ HEADER
 	&-currency {
 		display: inline-flex;
 		align-items: center;
-		gap: 5px;
+		gap: rem(5);
 
 		cursor: pointer;
 		user-select: none;
 
 		&_name {
 			font-weight: 400;
-			font-size: 15px;
+			font-size: rem(15);
 			color: #b1b1b1;
 			text-transform: uppercase;
 		}
 		&_rate {
 			font-weight: 400;
-			font-size: 15px;
+			font-size: rem(15);
 			text-align: right;
 			color: #3d3d3d;
 		}
@@ -81,7 +81,7 @@ HEADER
 		align-items: center;
 		justify-content: space-between;
 
-		padding-block: 20px;
+		padding-block: rem(20);
 
 		@include lg {
 			flex-wrap: wrap;
@@ -103,7 +103,7 @@ HEADER
 
 			@include sm{
 				width: 100%;
-				margin-bottom: 12px;
+				margin-bottom: rem(12);
 				justify-content: space-between;
 			}
 		}
@@ -111,11 +111,11 @@ HEADER
 		&_nav {
 			display: flex;
 			align-items: center;
-			gap: 20px;
+			gap: rem(20);
 
 			@include lg {
 				width: 100%;
-				margin-top: 20px;
+				margin-top: rem(20);
 				justify-content: flex-end;
 			}
 		}
@@ -123,7 +123,7 @@ HEADER
 
 	// Бургер
 	&-burger {
-		margin-right: 20px;
+		margin-right: rem(20);
 		flex-shrink: 0;
 	}
 
@@ -131,9 +131,9 @@ HEADER
 	&-logo {
 		display: inline-flex;
 		align-items: center;
-		gap: 15px;
+		gap: rem(15);
 
-		margin-right: 35px;
+		margin-right: rem(35);
 	
 
 		&_icon {
@@ -143,7 +143,7 @@ HEADER
 		&_name {
 			font-family: var(--font-title);
 			font-weight: 700;
-			font-size: 26px;
+			font-size: rem(26);
 			color: var(--accent);
 		}
 	}
@@ -153,27 +153,28 @@ HEADER
 		display: flex;
 		align-items: center;
 		flex-grow: 1;
-		gap: 10px;
-		min-height: 48px;
+		gap: rem(10);
+		min-height: rem(50);
 
-		background-color: #f8f8f8;
-		padding: 10px 20px;
+		border: 1px solid #efeaea;
+		
+		padding: rem(8) rem(20);
 
-		border-radius: 5px;
+		border-radius: rem(5);
 
-		margin-right: 25px;
+		margin-right: rem(25);
 		
         @include lg {
             margin-right: 0;
         }
 
 		.search-input {
-			width: 100%;
-			background-color: #f8f8f8;
+			width: 100%;	
+			font-size: rem(16);		
 		}
 		.search-button {
 			flex-shrink: 0;
-			margin-right: 10px;
+			margin-right: rem(8);
 		}
 	}
 
@@ -181,9 +182,9 @@ HEADER
 	&-location {
 		display: inline-flex;
 		align-items: center;
-		gap: 10px;
+		gap: rem(10);
 
-		margin-right: 40px;
+		margin-right: rem(40);
         transition: all 0.3s ease-in-out;		
 
 		@include sm{
@@ -200,7 +201,7 @@ HEADER
 
 		&_name {
 			font-weight: 500;
-			font-size: 16px;
+			font-size: rem(16);
 			color: var(--black);
 		}
 	}
@@ -210,12 +211,12 @@ HEADER
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 15px;
+		gap: rem(15);
 
-		padding-inline: 30px;
-		min-height: 50px;
+		padding-inline: rem(30);
+		min-height: rem(50);
 
-		border-radius: 5px;
+		border-radius: rem(5);
 
 		background: var(--accent);
 		transition: opacity 0.3s ease-in-out;
@@ -231,16 +232,16 @@ HEADER
 
 			flex-shrink: 0;
 
-			height: 20px;
-			width: 20px;
+			height: rem(20);
+			width: rem(20);
 
-			border-radius: 3px;
+			border-radius: rem(3);
 			background-color: var(--white);
 		}
 
 		&_name {
 			font-weight: 500;
-			font-size: 16px;
+			font-size: rem(16);
 			color: var(--white);
 		}
 	}
@@ -251,10 +252,10 @@ HEADER
 		align-items: center;
 		justify-content: center;
 
-		padding-inline: 30px;
-		min-height: 50px;
+		padding-inline: rem(30);
+		min-height: rem(50);
 
-		border-radius: 5px;
+		border-radius: rem(5);
 
 		background: #f0f0f0;
 
@@ -264,7 +265,7 @@ HEADER
 
 		&_name {
 			font-weight: 500;
-			font-size: 16px;
+			font-size: rem(16);
 			color: #000;
 			transition: color 0.3s ease-in-out;
 		}

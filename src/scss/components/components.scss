@@ -1,13 +1,33 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 COMPONENTS
 --------------------------------------------------------------------------------------------------------------------------------*/
+.shopBullet {
+	aspect-ratio: 305/240;
+	border-radius: rem(10);
+	&_dots{
+		padding-inline: 0.35rem;
+	}
+	&_dot:after {
+		height: rem(4);
+		margin-bottom: 0.35rem;
+	}
+
+	img{
+		transition: transform 0.3s ease-in-out;
+	}
+	&:hover {
+		img {
+			transform: scale(1.05);
+		}
+	}
+}
+
 .section-banner {
-	
 	@include md {
 		aspect-ratio: 128/42;
 		img {
 			display: block;
-			border-radius: 10px;
+			border-radius: rem(10);
 			overflow: hidden;
 			height: 100%;
 		}
@@ -17,22 +37,22 @@ COMPONENTS
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 15px;
+	gap: rem(15);
 
-	padding-inline: 30px;
-	min-height: 50px;
+	padding-inline: rem(30);
+	min-height: rem(50);
 
-	border-radius: 5px;
+	border-radius: rem(5);
 
 	margin-inline: auto;
 
 	background: var(--accent);
 	transition: opacity 0.3s ease-in-out;
 
-	margin-top: 50px;
+	margin-top: rem(50);
 
-	@include sm{
-		margin-top: 30px;
+	@include sm {
+		margin-top: rem(30);
 	}
 
 	&:hover {
@@ -41,13 +61,13 @@ COMPONENTS
 
 	&_icon {
 		display: block;
-		width: 16px;
-		height: 16px;
+		width: rem(16);
+		height: rem(16);
 	}
 
 	&_name {
 		font-weight: 500;
-		font-size: 16px;
+		font-size: rem(16);
 		color: var(--white);
 	}
 }
@@ -59,12 +79,12 @@ COMPONENTS
 	align-items: center;
 	justify-content: space-between;
 
-	margin-bottom: 30px;
+	margin-bottom: rem(30);
 
 	&_title {
 		font-family: var(--font-title);
 		font-weight: 700;
-		font-size: 28px;
+		font-size: rem(28);
 		line-height: 120%;
 		color: #1a1a1a;
 	}
@@ -73,7 +93,7 @@ COMPONENTS
 
 		font-family: var(--font-main);
 		font-weight: 500;
-		font-size: 16px;
+		font-size: rem(16);
 		line-height: 120%;
 		text-align: right;
 		color: var(--accent);
@@ -88,17 +108,17 @@ COMPONENTS
 
 /*---------------------------------------------- PRODUCT CARD ----------------------------------------------------*/
 
-.product-card{
-	position: relative;	
+.product-card {
+	position: relative;
 
 	display: flex;
 	flex-direction: column;
 
 	background-color: var(--white);
-	padding: 10px 10px 20px 10px;
-	border-radius: 10px;
+	padding: rem(10) rem(10) rem(20) rem(10);
+	border-radius: rem(10);
 
-	height: 100%;	
+	height: 100%;
 
 	// Прелоадер
 	&_preloader {
@@ -109,8 +129,8 @@ COMPONENTS
 
 		&_body {
 			display: block;
-			width: 48px;
-			height: 48px;
+			width: rem(48);
+			height: rem(48);
 			border-radius: 50%;
 			position: relative;
 			animation: rotate 1s linear infinite;
@@ -119,7 +139,7 @@ COMPONENTS
 				content: "";
 				box-sizing: border-box;
 				position: absolute;
-				inset: 0px;
+				inset: 0;
 				border-radius: 50%;
 				border: 5px solid rgb(230, 0, 0, 0.65);
 				animation: prixClipFix 2s linear infinite;
@@ -128,72 +148,42 @@ COMPONENTS
 	}
 
 	// Галлерея со слайдером
-	&_figure,
-	&_gallery {
+	&_image {
 		position: relative;
 
 		aspect-ratio: 305/240;
-		border-radius: 10px;
+		border-radius: rem(10);
 		overflow: hidden;
 
-		img{
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			overflow: hidden;
+
 			transition: all 0.3s ease-in-out;
 		}
 
 		&:hover {
 			img {
-				transform: scale(1.1);
+				transform: scale(1.05);
 			}
 		}
-	}
-
-	// Оверлэй с кол-вом доп. изображ
-	&_overlay {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		visibility: hidden;
-		opacity: 0;
-		transition: all 0.3s ease-in-out;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%; /* высота шторки */
-		background-color: rgb(0, 0, 0, 0.25);
-		background-image: url("../../icons/photo.svg");
-		background-repeat: no-repeat;
-		background-size: 22%;
-		background-position: center 43%;
-		pointer-events: none; /* чтобы не мешала листанию */
-		z-index: 2; /* чтобы была сверху */
-		color: #fff;
-		font-size: 16px;
-
-		&.showed {
-			visibility: visible;
-			opacity: 1;
-		}
-	}
-	// Счетчик в оверлэе
-	&_count {
-		margin-top: 20%;
 	}
 
 	// Рейтинг
 	&_rating {
 		position: absolute;
-		top: 10px;
-		left: 10px;
+		top: rem(20);
+		left: rem(20);
 
 		display: inline-flex;
 		align-items: center;
-		gap: 5px;
+		gap: rem(5);
 
-		padding: 9px 10px;
-		border-radius: 5px;
+		padding: rem(9) rem(10);
+		border-radius: rem(5);
 
 		color: var(--white);
 		background-color: var(--accent);
@@ -201,16 +191,16 @@ COMPONENTS
 		z-index: 3;
 
 		svg {
-			width: 14px;
-			height: 14px;
+			width: rem(14);
+			height: rem(14);
 		}
 
 		span {
 			display: block;
-			max-height: 14px;
+			max-height: rem(14);
 			font-family: var(--font-main);
 			font-weight: 500;
-			font-size: 14px;
+			font-size: rem(14);
 			line-height: 120%;
 			text-transform: uppercase;
 		}
@@ -219,8 +209,8 @@ COMPONENTS
 	// В избранное
 	&_like {
 		position: absolute;
-		top: 10px;
-		right: 10px;
+		top: rem(10);
+		right: rem(10);
 
 		z-index: 3;
 
@@ -247,40 +237,40 @@ COMPONENTS
 
 		flex-grow: 1;
 
-		padding-inline: 10px;		
+		padding-inline: rem(10);
 	}
 
 	&_info {
-		padding-top: 20px;
+		padding-top: rem(20);
 		flex-grow: 1;
 	}
 
 	&_price {
-		margin-bottom: 10px;
+		margin-bottom: rem(10);
 
 		strong {
 			font-weight: 700;
-			font-size: 22px;
+			font-size: rem(22);
 			line-height: 120%;
 			color: var(--black);
 
-			margin-right: 7px;
+			margin-right: rem(7);
 		}
 		small {
 			font-weight: 500;
-			font-size: 16px;
+			font-size: rem(16);
 			line-height: 120%;
 			color: #b1b1b1;
 		}
 	}
 
 	&_title {
-		margin-bottom: 20px;
+		margin-bottom: rem(20);
 
 		h2 {
 			font-family: var(--font-title);
 			font-weight: 500;
-			font-size: 17px;
+			font-size: rem(17);
 			line-height: 120%;
 
 			color: var(--black);
@@ -291,7 +281,7 @@ COMPONENTS
 		}
 	}
 
-	&_meta {		
+	&_meta {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -299,7 +289,7 @@ COMPONENTS
 		.meta-timeago {
 			font-family: var(--font-main);
 			font-weight: 400;
-			font-size: 15px;
+			font-size: rem(15);
 			line-height: 120%;
 			color: #3d3d3d;
 			opacity: 0.5;
@@ -308,7 +298,7 @@ COMPONENTS
 		.meta-location {
 			display: inline-flex;
 			align-items: center;
-			gap: 5px;
+			gap: rem(5);
 
 			transition: all 0.3s ease-in-out;
 
@@ -318,15 +308,15 @@ COMPONENTS
 
 			&_name {
 				font-weight: 400;
-				font-size: 15px;
+				font-size: rem(15);
 				line-height: 120%;
 				color: var(--black);
 			}
 		}
 
 		.icon--map-pin {
-			width: 14px;
-			height: 18px;
+			width: rem(14);
+			height: rem(18);
 		}
 	}
 }

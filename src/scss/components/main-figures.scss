@@ -2,13 +2,13 @@
 PAGE MAIN FIGURES SECTION
 --------------------------------------------------------------------------------------------------------------------------------*/
 .main-figures {
-    margin-bottom: 50px;
+    margin-bottom: rem(50);
 
 	&-card {
 		display: block;
 		position: relative;
 		overflow: hidden;
-		border-radius: 10px;
+		border-radius: rem(10);
 
 		&:hover img {
 			transform: scale(1.1);
@@ -35,12 +35,12 @@ PAGE MAIN FIGURES SECTION
 			position: absolute;
 			top: 0px;
 			left: 0px;
-			padding: 20px;
+			padding: rem(20);
 
 			h3 {
 				font-family: var(--font-title);
 				font-weight: 400;
-				font-size: 18px;
+				font-size: rem(18);
 				line-height: 120%;
 				color: var(--black);
 			}

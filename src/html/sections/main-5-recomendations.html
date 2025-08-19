@@ -11,996 +11,788 @@
 		<div class="row gx-20 gy-30">
 			<!-- 1 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<!-- ВНИМАНИЕ В КАРТОЧКЕ ДВЕ ССЫЛКИ НА ПРОДУКТ -->
-					<!-- Ссылка 1-->
-					<a href="#product-link" class="product_link">
-						<!-- Галлерея -->
-						<div class="product-card_gallery" id="product-gallery-21">
-							<!-- Прелоадер -->
-							<span class="product-card_preloader">
-								<span class="product-card_preloader_body"></span>
-							</span>
-
-							<!-- Контейнер со слайдами -->
-							<div class="gallery-wrapper">
-								<img
-									src="./images/placeholder.png"
-									data-src="../../images/products/pic-1.png"
-									alt="Описание"
-									loading="lazy"
-									class="product-image img-responsive"
-								/>
-								<img
-									src="./images/placeholder.png"
-									data-src="../../images/products/pic-2.png"
-									alt="Описание"
-									loading="lazy"
-									class="product-image img-responsive"
-								/>
-								<img
-									src="./images/placeholder.png"
-									data-src="../../images/products/pic-3.png"
-									alt="Описание"
-									loading="lazy"
-									class="product-image img-responsive"
-								/>
-								<img
-									src="./images/placeholder.png"
-									data-src="../../images/products/pic-4.png"
-									alt="Описание"
-									loading="lazy"
-									class="product-image img-responsive"
-								/>
-								<img
-									src="./images/placeholder.png"
-									data-src="../../images/products/pic-5.png"
-									alt="Описание"
-									loading="lazy"
-									class="product-image img-responsive"
-								/>
-							</div>
-							<!-- Контейнер пагинации -->
-							<div class="gallery-dots">
-								<span class="dot active" data-index="0"></span>
-								<span class="dot" data-index="1"></span>
-								<span class="dot" data-index="2"></span>
-								<span class="dot" data-index="3"></span>
-								<span class="dot" data-index="4"></span>
-							</div>
-
-							<!-- OVERLAY -->
-							<div class="product-card_overlay">
-								<span class="product-card_count">Another 12 images</span>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<img src="../../images/products/pic-1.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-liked="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<!-- Ссылка 2 -->
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 532 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>5 460 ALL</strong>
+									<small>≈ 56 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<!-- Ссылка на локацию -->
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
 
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">11 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 2 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<!-- ВНИМАНИЕ В карточке 2 ссылки #product-link чтобы не нарушать семантику и для валидного кода -->
-					<!-- Ссылка 1 -->
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/daily-rental/pic-2.png"
-									alt="Apartment 56 m², 2 rooms, 3 beds"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<!-- Галлерея -->
+						<div class="shopBullet">
+							<!-- Контейнер со слайдами -->
+							<div class="shopBullet_images">
+								<img data-src="./images/products/pic-1.png" alt="Описание 1" />
+								<img data-src="./images/products/pic-2.png" alt="Описание 2" />
+								<img data-src="./images/products/pic-3.png" alt="Описание 3" />
+								<img data-src="./images/products/pic-4.png" alt="Описание 4" />
+								<img data-src="./images/products/pic-4.png" alt="Описание 5" />
+							</div>
+
+							<div class="shopBullet_overlay">
+								<span class="shopBullet_overlay-another">Another 7 images</span>
 							</div>
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-favorite="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!--Кнопка избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>5 460 ALL</strong>
-								<small>≈ 56 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">11 hours ago</span>
+
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 3 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<!-- Галлерея -->
-						<div class="product-card_gallery" id="product-gallery-32">
-							<!-- Прелоадер -->
-							<span class="product-card_preloader">
-								<span class="product-card_preloader_body"></span>
-							</span>
-
-							<!-- Контейнер со слайдами -->
-							<div class="gallery-wrapper">
-								<img
-									src="./images/placeholder.png"
-									data-src="../../images/daily-rental/pic-1.png"
-									alt="Описание"
-									loading="lazy"
-									class="product-image img-responsive"
-								/>
-								<img
-									src="./images/placeholder.png"
-									data-src="../../images/daily-rental/pic-2.png"
-									alt="Описание"
-									loading="lazy"
-									class="product-image img-responsive"
-								/>
-								<img
-									src="./images/placeholder.png"
-									data-src="../../images/daily-rental/pic-3.png"
-									alt="Описание"
-									loading="lazy"
-									class="product-image img-responsive"
-								/>
-								<img
-									src="./images/placeholder.png"
-									data-src="../../images/daily-rental/pic-4.png"
-									alt="Описание"
-									loading="lazy"
-									class="product-image img-responsive"
-								/>
-								<img
-									src="./images/placeholder.png"
-									data-src="../../images/daily-rental/pic-5.png"
-									alt="Описание"
-									loading="lazy"
-									class="product-image img-responsive"
-								/>
-							</div>
-							<!-- Контейнер пагинации -->
-							<div class="gallery-dots">
-								<span class="dot active" data-index="0"></span>
-								<span class="dot" data-index="1"></span>
-								<span class="dot" data-index="2"></span>
-								<span class="dot" data-index="3"></span>
-								<span class="dot" data-index="4"></span>
-							</div>
-
-							<!-- OVERLAY -->
-							<div class="product-card_overlay">
-								<span class="product-card_count">Another 12 images</span>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<img src="./images/products/pic-3.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-liked="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 532 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 4 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/daily-rental/pic-4.png"
-									alt="Apartment 56 m², 2 rooms, 3 beds"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-4.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
-					<!-- Избранное -->
-					<button class="product-card_like" data-favorite="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 532 ALL</strong>
-								<small>≈ 67 €</small>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
+
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 5 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/daily-rental/pic-5.png"
-									alt="Apartment 56 m², 2 rooms, 3 beds"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-5.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-favorite="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 532 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 6 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/daily-rental/pic-6.png"
-									alt="Apartment 56 m², 2 rooms, 3 beds"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<!-- Изображение -->
+							<img src="./images/products/pic-6.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-favorite="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 532 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 7 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/daily-rental/pic-7.png"
-									alt="Apartment 56 m², 2 rooms, 3 beds"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<!-- Изображение -->
+							<img src="../../images/products/pic-7.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-favorite="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 532 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 8 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/daily-rental/pic-8.png"
-									alt="Apartment 56 m², 2 rooms, 3 beds"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<!-- Изображение -->
+							<img src="../../images/products/pic-8.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-favorite="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 532 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 9 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/products/pic-1.png"
-									alt="Loaders, loading and unloading services, cargo transportation"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="shopBullet">
+							<!-- Контейнер со слайдами -->
+							<div class="shopBullet_images">
+								<img data-src="./images/daily-rental/pic-1.png" alt="Описание 1" />
+								<img data-src="./images/daily-rental/pic-2.png" alt="Описание 2" />
+								<img data-src="./images/daily-rental/pic-3.png" alt="Описание 3" />
+								<img data-src="./images/daily-rental/pic-4.png" alt="Описание 4" />
+								<img data-src="./images/daily-rental/pic-5.png" alt="Описание 5" />
 							</div>
-							<!-- Рейтинг -->
-							<div class="product-card_rating">
-								<svg class="icon icon--star">
-									<use href="./icons/symbol/sprite.svg#star"></use>
-								</svg>
-								<span> top </span>
+
+							<div class="shopBullet_overlay">
+								<span class="shopBullet_overlay-another">Another 5 images</span>
 							</div>
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-liked="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в Избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 532 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Loaders, loading and unloading services, cargo transportation</h2>
-							</div>
-						</a>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
 
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 10 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/products/pic-2.png"
-									alt="Removal of large and bulky waste"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
-
-							<!-- Рейтинг -->
-							<div class="product-card_rating">
-								<svg class="icon icon--star">
-									<use href="./icons/symbol/sprite.svg#star"></use>
-								</svg>
-								<span> top </span>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<img src="../../images/daily-rental/pic-2.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-liked="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>4 192 ALL</strong>
-								<small>≈ 56 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>5 460 ALL</strong>
+									<small>≈ 56 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Removal of large and bulky waste</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">11 hours ago</span>
+
+								<span class="meta-timeago">11 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
-			<!--11 -->
+			<!-- 11 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/products/pic-3.png"
-									alt="Any types of construction and repair services"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<!-- Галлерея -->
+						<div class="shopBullet">
+							<!-- Контейнер со слайдами -->
+							<div class="shopBullet_images">
+								<img data-src="./images/daily-rental/pic-1.png" alt="Описание 1" />
+								<img data-src="./images/daily-rental/pic-2.png" alt="Описание 2" />
+								<img data-src="./images/daily-rental/pic-3.png" alt="Описание 3" />
+								<img data-src="./images/daily-rental/pic-4.png" alt="Описание 4" />
+								<img data-src="./images/daily-rental/pic-4.png" alt="Описание 5" />
 							</div>
 
-							<!-- Рейтинг -->
-							<div class="product-card_rating">
-								<svg class="icon icon--star">
-									<use href="./icons/symbol/sprite.svg#star"></use>
-								</svg>
-								<span> top </span>
+							<div class="shopBullet_overlay">
+								<span class="shopBullet_overlay-another">Another 7 images</span>
 							</div>
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-liked="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!--Кнопка избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>5 460 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Any types of construction and repair services</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 12 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/products/pic-4.png"
-									alt="Car repair, computer diagnostics, automotive electronics"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
-
-							<!-- Рейтинг -->
-							<div class="product-card_rating">
-								<svg class="icon icon--star">
-									<use href="./icons/symbol/sprite.svg#star"></use>
-								</svg>
-								<span> top </span>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<img src="../../images/daily-rental/pic-4.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-liked="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 922 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Car repair, computer diagnostics, automotive electronics</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 13 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/products/pic-5.png"
-									alt="Any types of construction and repair services"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<!-- Изображение -->
+							<img src="../../images/daily-rental/pic-5.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-liked="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>5 460 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Any types of construction and repair services</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 14 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/products/pic-6.png"
-									alt="Car repair, computer diagnostics, automotive electronics"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<!-- Изображение -->
+							<img src="../../images/daily-rental/pic-6.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-liked="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 922 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Car repair, computer diagnostics, automotive electronics</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 15 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/products/pic-7.png"
-									alt="Loaders, loading and unloading services, cargo transportation"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<!-- Изображение -->
+							<img src="../../images/daily-rental/pic-7.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
 
-					<!-- Избранное -->
-					<button class="product-card_like" data-liked="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>6 532 ALL</strong>
-								<small>≈ 67 €</small>
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Loaders, loading and unloading services, cargo transportation</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 
 			<!-- 16 -->
 			<div class="col-md-3 col-sm-6">
-				<div class="product-card">
-					<a href="#product-link" class="product_link">
-						<div class="product-card_figure">
-							<div class="product-card_image">
-								<!-- Изображение -->
-								<img
-									src="../../images/products/pic-8.png"
-									alt="Removal of large and bulky waste"
-									class="img-responsive"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
+				<a href="#product-link" class="product_link">
+					<div class="product-card">
+						<div class="product-card_image">
+							<!-- Изображение -->
+							<img src="../../images/daily-rental/pic-8.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy" />
 						</div>
-					</a>
-					<!-- Избранное -->
-					<button class="product-card_like" data-liked="false">
-						<svg class="icon icon--like">
-							<use href="./icons/symbol/sprite.svg#like"></use>
-						</svg>
-					</button>
 
-					<div class="product-card_spacebetween">
-						<a href="#product-link" class="product_link product-card_info">
-							<!--Цена -->
-							<div class="product-card_price">
-								<strong>4 192 ALL</strong>
-								<small>≈ 67 €</small>
+						<!-- Кнопка добавить в избранное -->
+						<div role="button" title="add to liked..." class="product-card_like" data-favorite="false">
+							<svg class="icon icon--like">
+								<use href="./icons/symbol/sprite.svg#like"></use>
+							</svg>
+						</div>
+
+						<div class="product-card_spacebetween">
+							<div class="product-card_info">
+								<!--Цена -->
+								<div class="product-card_price">
+									<strong>6 532 ALL</strong>
+									<small>≈ 67 €</small>
+								</div>
+
+								<!-- Заголовок -->
+								<div class="product-card_title">
+									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
+								</div>
 							</div>
 
-							<!-- Заголовок -->
-							<div class="product-card_title">
-								<h2>Removal of large and bulky waste</h2>
-							</div>
-						</a>
-
-						<div class="product-card_meta">
-							<a href="#product-location" class="meta-location" aria-label="Product location">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
+							<div class="product-card_meta">
+								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+								<span role="button" data-href="#product-location-link" class="meta-location" title="open in next city...">
+									<span class="meta-location_icon">
+										<svg class="icon icon--map-pin">
+											<use href="./icons/symbol/sprite.svg#map-pin"></use>
+										</svg>
+									</span>
+									<span class="meta-location_name"> Tiana </span>
 								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</a>
-							<span class="meta-timeago">4 hours ago</span>
+								<span class="meta-timeago">4 hours ago</span>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 		<!-- row -->

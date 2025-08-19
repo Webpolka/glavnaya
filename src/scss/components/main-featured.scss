@@ -2,13 +2,13 @@
 PAGE MAIN FEATURED SECTION
 --------------------------------------------------------------------------------------------------------------------------------*/
 .main-featured{
-    margin-bottom: 60px;
+    margin-bottom: rem(60);
 
     .container-greyout{
-        margin-bottom: 50px;
+        margin-bottom: rem(50);
     }
     .product-card_like{
-        top: 20px;
-        right: 20px;
+        top: rem(20);
+        right: rem(20);
     }
 }
