@@ -1,0 +1,369 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+CATEGORIES OVERLAY
+--------------------------------------------------------------------------------------------------------------------------------*/
+.catsoverlay {
+	opacity: 0;
+	visibility: hidden;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 90;
+	background-color: rgba(0, 0, 0, 0.35);
+	width: 100%;
+	top: 141px;
+
+	transition: all 0.3s ease-in-out;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@include lg {
+		top: 0;
+	}
+
+	// Обвертка
+	&-wrapper {
+		background-color: #fff;
+		height: 100%;
+	}
+
+	// Само меню
+	&-menu {
+		display: flex;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		align-items: stretch;
+		background-color: #fff;
+		margin: 0 auto;	
+
+		max-width: var(--container-width);
+		padding: 0 var(--container-padding);
+
+		@include lg {
+			display: block;
+		}
+
+		&_lg-header {
+			display: none;
+
+			position: relative;
+			text-align: center;
+			padding: rem(30) rem(30) rem(0);
+			@include lg {
+				display: block;
+			}
+		}
+		&_lg-title {
+			font-size: rem(20);
+			font-weight: 700;
+		}
+		&_lg-close {
+			position: absolute;
+			top: rem(35);
+			right: rem(30);
+
+			width: rem(12);
+			height: rem(12);
+			background-image: url("../../icons/close.svg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center center;
+
+			opacity: 0.65;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		// Левая часть навигация по категориям
+		&_navigation {
+			@include lg {
+				width: 100%;
+			}
+		}
+
+		&_cats {
+			box-sizing: content-box;
+			width: rem(265);
+			padding: rem(25) rem(15) rem(25) 0;
+			border-right: 2px solid #ededed;
+			overflow: auto;
+			flex-shrink: 0;
+
+			@include lg {
+				border-right: none;
+				width: 100%;
+			}
+
+			&-item {
+				display: flex;
+				min-height: rem(42);
+				align-items: center;
+				justify-content: space-between;
+				padding-inline: rem(20);
+
+				overflow: hidden;
+				border-radius: rem(5);
+
+				@include lg {
+					border: 1px solid rgb(0, 0, 0, 0.05);
+					margin-bottom: rem(5);
+				}
+
+				@media (min-width: 992px) {
+					&.active {
+						background: #f8f8f8;
+						a {
+							color: var(--accent);
+						}
+					}
+				}
+				&:hover {
+					background: #f8f8f8;
+					a {
+						color: var(--accent);
+					}
+				}
+			}
+			&-link {
+				display: flex;
+				align-items: center;
+				width: 100%;
+
+				min-height: rem(42);
+				color: #262626;
+				transition: color 0.2s ease-in-out;
+
+				@include lg {
+					pointer-events: none;
+				}
+			}
+			&-arrow {
+				display: none;
+				flex-shrink: 0;
+
+				width: rem(30);
+				height: rem(30);
+				background-image: url("../../icons/down.svg");
+				background-repeat: no-repeat;
+				background-size: 70%;
+				background-position: center center;
+
+				transform: rotate(-90deg);
+
+				@include lg {
+					display: block;
+				}
+			}
+		}
+
+		// Правая часть
+		&_content {
+			position: relative;
+			width: 100%;
+			padding: rem(50);
+			overflow-y: auto;
+		}
+
+		&_subcats {
+			position: relative;
+			height: 100%;
+			display: none;
+
+			&.active {
+				display: block;
+				animation: fade-up 0.3s ease-in-out;
+			}
+
+			@include lg {
+				position: fixed;
+				top: 0;
+				left: 100%;
+
+				display: block;
+
+				width: 100%;
+				height: 100%;
+				max-height: 100vh;
+				overflow-y: auto;
+
+				padding: rem(20) rem(15);
+				background-color: white;
+
+				transition: all 0.3s ease-in-out;
+
+				&.active-lg {				
+					left: 0;
+				}
+			}
+
+			&-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				@include lg {
+					padding-top: rem(10);
+					margin-bottom: rem(20);
+				}
+			}
+
+			&-title {
+				font-weight: 500;
+				font-size: rem(22);
+				color: #1a1a1a;
+
+				margin-bottom: rem(30);
+
+				@include lg {
+					margin-bottom: 0;
+				}
+			}
+
+			&-blocks {
+				column-count: 4;
+				column-gap: rem(16);
+
+				@include lg {
+					column-count: 1;
+				}
+			}
+
+			&-block {
+				page-break-inside: avoid;
+				break-inside: avoid;
+				padding-bottom: 25px;
+
+				@include lg {
+					padding-bottom: rem(0);
+				}
+			}
+			&-list {
+				@include lg {
+					overflow: hidden;
+					max-height: 0;
+					transition: all 0.3s ease-in-out;
+					background-color: rgb(0, 0, 0, 0.05);
+
+					display: flex;
+					flex-direction: column;
+					gap: rem(5);
+
+					margin-top: rem(2.5);
+					margin-bottom: rem(2.5);
+				}
+			}
+
+			&-linkwrap {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				transition: background 0.2s ease-in-out;
+				overflow: hidden;
+
+				@include lg {
+					min-height: rem(42);
+					padding-inline: rem(20);
+					border-radius: rem(5);
+					border: 1px solid rgb(0, 0, 0, 0.05);
+					&:hover {
+						background: #f8f8f8;
+						a {
+							color: var(--accent);
+						}
+					}
+
+					&.active {
+						border: 1px solid rgb(238, 0, 0, 0.5);
+						background: #f8f8f8;
+						a {
+							color: var(--accent);
+						}
+					}
+				}
+			}
+
+			&-link {
+				width: 100%;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+
+				color: #262626;
+				line-height: 190%;
+
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					color: var(--accent);
+				}
+
+				&.title--subcats-link {
+					width: auto;
+					white-space: normal;
+					font-size: rem(16);
+					line-height: 100%;
+					font-weight: 700;
+					margin-bottom: rem(10);
+
+					@include lg {
+						pointer-events: none;
+						margin-bottom: 0;
+					}
+				}
+			}
+			&-back {
+				display: none;
+				flex-shrink: 0;
+
+				width: rem(25);
+				height: rem(25);
+				background-image: url("../../icons/down.svg");
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: center center;
+				transform: rotate(90deg);
+
+				@include lg {
+					display: block;
+				}
+			}
+			&-close {
+				display: none;
+				flex-shrink: 0;
+
+				width: rem(12);
+				height: rem(12);
+				background-image: url("../../icons/close.svg");
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: center center;
+
+				@include lg {
+					display: block;
+					margin-right: rem(5);
+				}
+			}
+
+			&-arrow {
+				display: none;
+				flex-shrink: 0;
+
+				width: rem(20);
+				height: rem(20);
+				background-image: url("../../icons/down.svg");
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: center center;
+
+				@include lg {
+					display: block;
+				}
+			}
+		}
+	}
+}

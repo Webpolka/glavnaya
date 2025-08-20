@@ -1,0 +1,122 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+CATEGORIES OVERLAY
+--------------------------------------------------------------------------------------------------------------------------------*/
+.categories_overlay {
+	display: block;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 90;
+	background-color: rgba(0, 0, 0, 0.35);
+	width: 100%;
+	top: 141px;
+}
+.categories_wrapper {
+	background-color: #fff;
+	height: 100%;
+}
+
+.categories_menu {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	align-items: stretch;
+	background-color: #fff;
+	max-width: var(--container-width);
+	margin: 0 auto;
+	padding: 0 var(--container-padding);
+}
+.categories_cats {
+	width: rem(265);
+	padding: rem(25) rem(15) rem(25) 0;
+	flex-shrink: 0;
+	border-right: 2px solid #ededed;
+	overflow: auto;
+	box-sizing: content-box;
+}
+.categories_subcats {
+	position: relative;
+	width: 100%;
+	padding: rem(50);
+	overflow-y: auto;
+}
+
+.categories_subcats__wrapper {
+	position: relative;
+	height: 100%;
+}
+
+.categories_content__wrapper {
+	display: flex;
+	align-items: center;
+	line-height: 160%;
+}
+
+.categories_blocks {
+	column-count: 4;
+	column-gap: rem(16);
+}
+.categories_block {
+	page-break-inside: avoid;
+	break-inside: avoid;
+	padding-bottom: 30px;
+}
+
+.categories_link__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	text-decoration: none;	
+	position: relative;
+
+	border-radius: rem(8);
+	position: relative;
+    overflow: hidden;
+	
+    cursor: pointer;
+
+	color: #262626;    
+	transition: color 0.2s ease-in-out;
+	&:hover {
+		color: var(--accent);
+	}
+}
+.categories_link {
+	display: flex;
+	min-height: rem(42);
+	align-items: center;
+	padding-inline: rem(20);
+    color: #262626;    
+
+    transition: all 0.2s ease-in-out;
+	&:hover {
+		background: #f8f8f8;
+		color: var(--accent);
+	}
+}
+
+.categories_link__text {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.categories_link__text--subcat {
+	width: auto;
+	white-space: normal;
+	font-size: rem(16);
+	line-height: 125%;
+	font-weight: 700;
+	margin-bottom: rem(5);
+}
+
+.categories_title {
+	font-weight: 500;
+	font-size: rem(22);
+	color: #1a1a1a;
+
+	margin-bottom: rem(30);
+}

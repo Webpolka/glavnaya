@@ -1,0 +1,152 @@
+<!-- SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGN UP FORM  -->
+<div class="authorize-signup">
+	<!-- Close button -->
+	<button class="authorize-signup_close">
+		<svg class="icon icon--close">
+			<use href="./icons/symbol/sprite.svg#close"></use>
+		</svg>
+	</button>
+	<!-- Заголовок -->
+	<h3 class="authorize-signup_title">Sign Up</h3>
+
+	<div class="authorize-signup_spacebetween">
+		<!-- Top -->
+		<div class="authorize-signup_top">
+			<div class="authorize-signup_tabs">
+				<button class="signup-tab" data-tab="1">By phone</button>
+				<button class="signup-tab" data-tab="2">By Email</button>
+			</div>
+
+			<div class="authorize-signup_panels">
+				<!-- By phone -->
+				<div class="signup-panel" data-panel="1">
+					<form action="" id="signup-by-phone">
+						<label
+							>Your name
+							<input class="input" type="text" name="name" placeholder="Type your name" autocomplete="on" />
+						</label>
+						<label
+							>Phone
+							<input class="input" type="text" name="phone" placeholder="Type number phone" autocomplete="on" />
+						</label>
+						<label
+							>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on" />
+						</label>
+
+						<span class="panel-shorter-text">Not shorter than 8 characters</span>
+
+						<button class="btn" type="submit">Sign up</button>
+					</form>
+				</div>
+
+				<!-- By email -->
+				<div class="signup-panel" data-panel="2">
+					<form action="" id="signup-by-email">
+						<label
+							>Your name
+							<input class="input" type="text" name="name" placeholder="Type your name" autocomplete="on" />
+						</label>
+						<label
+							>Email
+							<input
+								class="input"
+								type="text"
+								name="emailorusername"
+								placeholder="Type email or username"
+								autocomplete="on"
+							/>
+						</label>
+						<label
+							>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on" />
+						</label>
+
+						<span class="panel-shorter-text">Not shorter than 8 characters</span>
+
+						<button class="btn" type="submit">Sign up</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Bottom -->
+		<div class="authorize-signup_bottom">
+			<button class="panel-signup-btn" data-modal="signup">Sign in</button>
+			<p>for registered users</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- LOGIN FORM LOGIN FORM LOGIN FORM  LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM  -->
+<div class="authorize-login">
+	<!-- Close button -->
+	<button class="authorize-login_close">
+		<svg class="icon icon--close">
+			<use href="./icons/symbol/sprite.svg#close"></use>
+		</svg>
+	</button>
+	<!-- Заголовок -->
+	<h3 class="authorize-login_title">Log into your profile</h3>
+
+	<div class="authorize-login_spacebetween">
+		<!-- Top -->
+		<div class="authorize-login_top">
+			<div class="authorize-login_tabs">
+				<button class="login-tab" data-tab="1">By phone</button>
+				<button class="login-tab" data-tab="2">By Email</button>
+			</div>
+
+			<div class="authorize-login_panels">
+				<!-- By phone -->
+				<div class="login-panel" data-panel="1">
+					<form action="" id="login-by-phone">
+						<label
+							>Phone number
+							<input class="input" type="number" name="phone" placeholder="Type number" autocomplete="on" />
+						</label>
+						<label
+							>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on" />
+						</label>
+						<label class="checkbox-item panel-remember-label">
+							<input class="checkbox-input" type="checkbox" name="remember" />
+							Remember me
+						</label>
+						<button class="btn" type="submit">Sign in</button>
+
+						<span class="panel-reset-btn">Reset password</span>
+					</form>
+				</div>
+
+				<!-- By email -->
+				<div class="login-panel" data-panel="2">
+					<form action="" id="login-by-email">
+						<label
+							>Email
+							<input class="input" type="email" name="email" placeholder="Type email" autocomplete="on" />
+						</label>
+						<label
+							>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on" />
+						</label>
+						<label class="checkbox-item panel-remember-label">
+							<input class="checkbox-input" type="checkbox" name="remember" />
+							Remember me
+						</label>
+						<button class="btn" type="submit">Sign in</button>
+
+						<span class="panel-reset-btn">Reset password</span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Bottom -->
+		<div class="authorize-login_bottom">
+			<button class="panel-login-btn" data-modal="sign-up">Sign up</button>
+			<p>for first-time users</p>
+		</div>
+	</div>
+</div>

@@ -22,13 +22,10 @@
 
 		<!-- Вторая часть хедера -->
 		<div class="header-bottom">
-
 			<div class="header-bottom_intro">
 				<!-- Бургер -->
 				<button class="header-burger" id="burger">
-					<svg class="icon icon--burgersvg">
-						<use href="./icons/symbol/sprite.svg#burgersvg"></use>
-					</svg>
+					<span></span>
 				</button>
 
 				<!-- Лого -->
@@ -74,9 +71,9 @@
 					<span class="header-add-listing_name"> Add listing </span>
 				</button>
 
-				<!-- Кнопка войти -->
-				<button class="header-sign-in" aria-label="Sign in">
-					<span class="header-sign-in_name"> Sign in </span>
+				<!-- Кнопка авторизации - скрипт привязан к значению data-signed (зареган юзер или нет...)-->
+				<button class="header-sign-in" aria-label="Authorization" data-signed="true">
+					<span class="header-sign-in_name"> Sign </span>
 				</button>
 			</nav>
 		</div>

@@ -4,7 +4,7 @@ COMPONENTS
 .shopBullet {
 	aspect-ratio: 305/240;
 	border-radius: rem(10);
-	&_dots{
+	&_dots {
 		padding-inline: 0.35rem;
 	}
 	&_dot:after {
@@ -12,7 +12,7 @@ COMPONENTS
 		margin-bottom: 0.35rem;
 	}
 
-	img{
+	img {
 		transition: transform 0.3s ease-in-out;
 	}
 	&:hover {
@@ -318,5 +318,50 @@ COMPONENTS
 			width: rem(14);
 			height: rem(18);
 		}
+	}
+}
+
+/*---------------------------------------------- INPUTS ----------------------------------------------------*/
+
+.input {
+	display: block;
+	width: 100%;
+
+	border: 1px solid #efeaea;
+	border-radius: rem(5);
+
+	min-height: rem(50);
+	padding-inline: rem(15);
+
+	font-weight: 400;
+	font-size: rem(16);
+	line-height: 120%;
+	color: #3d3d3d;
+
+	&::placeholder {
+		color: #969696;
+	}	
+	&:focus {
+		outline: 1px solid var(--accent);
+	}
+}
+
+.btn {
+	font-weight: 500;
+	font-size: rem(16);
+	text-align: center;
+
+	color: var(--white);
+	background-color: var(--accent);
+	border-radius: rem(5);
+	min-height: rem(50);
+
+	width: 100%;
+	padding-inline: rem(15);
+
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		opacity: 0.75;
 	}
 }
