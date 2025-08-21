@@ -1,4 +1,317 @@
-<section class="catsoverlay">
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	<head>  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Submiting an advertising</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  
+  <!-- Choices CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+  
+  <!-- WL ShopBullet CSS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/css/main.min.css">
+
+  <link rel="stylesheet" href="vendor/bootstrap-grid.css">
+  <link rel="stylesheet" href="./css/main.min.css">  
+</head>
+ 
+  
+
+	<body>
+		<div class="site-overlay"></div>
+		<div class="wrapper">			
+			<header id="masthead" class="header">
+	<div class="container">
+		<!-- Верхняя часть хедера -->
+		<div class="header-top">
+			<!-- Верхнее меню -->
+			<nav class="header-top_nav" aria-label="Main menu">
+				<ul class="header-top_list">
+					<li><a href="#">Auto</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Real Estate</a></li>
+					<li><a href="#">Relax</a></li>
+					<li><a href="#">Rent</a></li>
+				</ul>
+			</nav>
+
+			<!-- Курс валюты -->
+			<div class="header-currency" data-euro="97.50" data-usd="110.50" role="button" tabindex="0" aria-label="Change currency">
+				<span class="header-currency_name">none</span>
+				<span class="header-currency_rate">none</span>
+			</div>
+		</div>
+
+		<!-- Вторая часть хедера -->
+		<div class="header-bottom">
+			<div class="header-bottom_intro">
+				<!-- Бургер -->
+				<button class="header-burger" id="burger">
+					<span></span>
+				</button>
+
+				<!-- Лого -->
+				<a href="#" class="header-logo">
+					<span class="header-logo_icon">
+						<svg class="icon icon--eagle">
+							<use href="./icons/symbol/sprite.svg#eagle"></use>
+						</svg>
+					</span>
+					<span class="header-logo_name"> Abl.al </span>
+				</a>
+
+				<!-- Форма поиска -->
+				<form class="header-search-form" role="search" aria-label="Site Search">
+					<button type="submit" class="search-button">
+						<svg class="icon icon--searchsvg">
+							<use href="./icons/symbol/sprite.svg#searchsvg"></use>
+						</svg>
+					</button>
+					<input type="text" class="search-input" name="search" id="search" placeholder="Find an ad" aria-label="Search">
+				</form>
+			</div>
+
+			<!-- Навигация второй части хедера -->
+			<nav class="header-bottom_nav">
+				<!-- Локация -->
+				<button class="header-location" aria-label="Change location">
+					<span class="header-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="header-location_name"> Tiana </span>
+				</button>
+
+				<!-- Добавить в список -->
+				<button class="header-add-listing" aria-label="Add listing">
+					<span class="header-add-listing_before">
+						<svg class="icon icon--plus">
+							<use href="./icons/symbol/sprite.svg#plus"></use>
+						</svg>
+					</span>
+					<span class="header-add-listing_name"> Add listing </span>
+				</button>
+
+				<!-- Кнопка авторизации - скрипт привязан к значению data-signed (зареган юзер или нет...)-->
+				<button class="header-sign-in" aria-label="Authorization" data-signed="true">
+					<span class="header-sign-in_name"> Sign </span>
+				</button>
+			</nav>
+		</div>
+	</div>
+</header>
+
+			<main id="primary" class="main">
+				<div class="container">
+	<div class="advertising">
+		<form action="">
+			<h2 class="advertising_title">Submitting an advertisement</h2>
+
+			<!-- Вступительная часть -->
+			<div class="advertising_form-part advertising_form-intro">
+				<!-- 1 -->
+				<div class="advertising_input-block">
+					<div class="form-group">
+						<label for="product-name">Product/Service Name *</label>
+						<input type="text" id="product-name" name="product-name" class="input" maxlength="50" placeholder="e.g.: BMW X5M" required autocomplete="onрф">
+						<div class="form-group_hint">
+							<span data-counter="product-name" class="char-count">0</span>
+							out of 50 characters
+						</div>
+					</div>
+				</div>
+
+				<!-- 2 -->
+				<div class="advertising_breadcrumbs-block">
+					<div class="advertising_block-name">Category *</div>
+
+					<div class="categorie-breadcrumbs">
+						<a class="categorie-breadcrumbs_link" href="#">Auto</a>
+
+						<!--svg разделитель -->
+						<svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A"/>
+						</svg>
+
+						<span class="categorie-breadcrumbs_span">Passenger cars</span>
+					</div>
+
+					<!-- Вставь в скрытый инпут в value название категории (нужно для формы)-->
+					<input type="text" id="product-category" name="product-category" value="Passenger cars" hidden>
+
+					<!-- Кнопка для выбора категорий -->
+					<div role="button" data-btn="change-cats" class="btn-gray">Change category</div>
+				</div>
+
+				<!-- 3 SELECT -->
+				<div class="advertising_select-block">
+					<div class="advertising_block-name">Make *</div>
+
+					<select id="product-make" name="product-make" required>
+						<option value="1">Make option 1</option>
+						<option value="2">Make option 2</option>
+						<option value="3">Make option 3</option>
+						<option value="4">Make option 4</option>
+						<option value="5">Make option 5</option>
+					</select>
+				</div>
+
+				<!-- 5 SELECT -->
+				<div class="advertising_select-block">
+					<div class="advertising_block-name">Model *</div>
+
+					<select id="product-model" name="product-model" required>
+						<option value="1">Model option 1</option>
+						<option value="2">Model option 2</option>
+						<option value="3">Model option 3</option>
+						<option value="4">Model option 4</option>
+						<option value="5">Model option 5</option>					
+					</select>
+				</div>
+
+				<!-- 6 SELECT -->
+				<div class="advertising_select-block">
+					<div class="advertising_block-name">Year *</div>
+
+					<select id="product-year" name="product-year" required>
+						<option value="1">Year option 1</option>
+						<option value="2">Year option 2</option>
+						<option value="3">Year option 3</option>
+						<option value="4">Year option 4</option>
+						<option value="5">Year option 5</option>
+						<option value="4">Year option 6</option>						
+					</select>
+				</div>
+
+				<!-- 7 SELECT -->
+				<div class="advertising_select-block">
+					<div class="advertising_block-name">Generation *</div>
+
+					<select id="product-generation" name="product-generation" required>
+						<option value="1">Generation option 1</option>
+						<option value="2">Generation option 2</option>
+						<option value="3">Generation option 3</option>
+						<option value="4">Generation option 4</option>
+						<option value="5">Generation option 5</option>						
+					</select>
+				</div>
+			</div>
+
+			<!-- Часть с параметрами -->
+			<div class="advertising_form-part advertising_form-parametrs">
+				<h3>Parameters</h3>
+				<!-- 8 SELECT -->
+				<div class="advertising_select-block">
+					<div class="advertising_block-name">Body type *</div>
+
+					<select id="product-body_type" name="product-body_type" required>
+						<option value="1">Body type option 1</option>
+						<option value="2">Body type option 2</option>
+						<option value="3">Body type option 3</option>
+						<option value="4">Body type option 4</option>
+						<option value="5">Body type option 5</option>						
+					</select>
+				</div>
+
+				<!-- 9 RADIO BUTTONS -->
+				<div class="advertising_radio-block advertising_transmission-type">
+					<div class="advertising_block-name">Transmission type *</div>
+
+					<div class="form-group-inrow">
+						<label class="radio">
+							<input type="radio" name="transmission" value="automatic" required checked="checked">
+							<span class="custom-radio">Automatic</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="transmission" value="manual" required>
+							<span class="custom-radio">Manual</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="transmission" value="cvt" required>
+							<span class="custom-radio">CVT</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="transmission" value="robotized" required>
+							<span class="custom-radio">Robotized</span>
+						</label>
+					</div>
+				</div>
+
+				<!-- 10 RADIO BUTTONS -->
+				<div class="advertising_radio-block">
+					<div class="advertising_block-name">Engine type *</div>
+
+					<div class="form-group-inrow">
+						<label class="radio">
+							<input type="radio" name="engine" value="gasoline" required>
+							<span class="custom-radio">Gasoline</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="lpg" required>
+							<span class="custom-radio">LPG</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="cng" required>
+							<span class="custom-radio">CNG</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="hybrid_gasoline" required>
+							<span class="custom-radio">Hybrid gasoline</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="diesel" required>
+							<span class="custom-radio">Diesel</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="hybrid_diesel" required>
+							<span class="custom-radio">Hybrid diesel</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="electric" required>
+							<span class="custom-radio">Electric</span>
+						</label>
+					</div>
+				</div>
+
+				<!--11 RADIO BUTTONS -->
+				<div class="advertising_radio-block">
+					<div class="advertising_block-name">Drive system</div>
+
+					<div class="form-group-inrow">
+						<label class="radio">
+							<input type="radio" name="drive_system" value="front-wheel drive">
+							<span class="custom-radio">Front-wheel drive</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="drive_system" value="rear-wheel drive">
+							<span class="custom-radio">Rear-wheel drive</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="drive_system" value="all-wheel drive">
+							<span class="custom-radio">All-wheel drive</span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>
+				
+			</main>
+			<footer id="colophon" class="footer">
+	<div class="container">
+		<span class="footer-text">Подвал</span>
+	</div>
+</footer>
+
+		</div>
+		<section class="catsoverlay">
 	<h2 class="visually-hidden">КАТЕГОРИИ</h2>
 	<div class="catsoverlay-wrapper">
 		<div class="catsoverlay-menu">
@@ -10,43 +323,43 @@
 				</div>
 
 				<ul class="catsoverlay-menu_cats">
-					<li class="catsoverlay-menu_cats-item" data-catID="1">
+					<li class="catsoverlay-menu_cats-item" data-catid="1">
 						<a class="catsoverlay-menu_cats-link" href="#">Auto</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catID="2">
+					<li class="catsoverlay-menu_cats-item" data-catid="2">
 						<a class="catsoverlay-menu_cats-link" href="#">Services</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catID="3">
+					<li class="catsoverlay-menu_cats-item" data-catid="3">
 						<a class="catsoverlay-menu_cats-link" href="#">Real Estate</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catID="4">
+					<li class="catsoverlay-menu_cats-item" data-catid="4">
 						<a class="catsoverlay-menu_cats-link" href="#">Relax</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catID="5">
+					<li class="catsoverlay-menu_cats-item" data-catid="5">
 						<a class="catsoverlay-menu_cats-link" href="#">Rent</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catID="6">
+					<li class="catsoverlay-menu_cats-item" data-catid="6">
 						<a class="catsoverlay-menu_cats-link" href="#">Health</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catID="7">
+					<li class="catsoverlay-menu_cats-item" data-catid="7">
 						<a class="catsoverlay-menu_cats-link" href="#">Education</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catID="8">
+					<li class="catsoverlay-menu_cats-item" data-catid="8">
 						<a class="catsoverlay-menu_cats-link" href="#">Animals</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catID="9">
+					<li class="catsoverlay-menu_cats-item" data-catid="9">
 						<a class="catsoverlay-menu_cats-link" href="#">Tourism</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catID="10">
+					<li class="catsoverlay-menu_cats-item" data-catid="10">
 						<a class="catsoverlay-menu_cats-link" href="#">Flea Market</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
@@ -56,7 +369,7 @@
 			<!-- Подкатегории правая сторона -->
 			<div class="catsoverlay-menu_content">
 				<!-- 1 -->
-				<div class="catsoverlay-menu_subcats" data-blockID="1">
+				<div class="catsoverlay-menu_subcats" data-blockid="1">
 					<div class="catsoverlay-menu_subcats-header">
 						<button class="catsoverlay-menu_subcats-back" data-subcatback="lg"></button>
 						<h2 class="catsoverlay-menu_subcats-title">Auto</h2>
@@ -224,7 +537,7 @@
 				</div>
 
 				<!-- 2 -->
-				<div class="catsoverlay-menu_subcats" data-blockID="2">
+				<div class="catsoverlay-menu_subcats" data-blockid="2">
 					<div class="catsoverlay-menu_subcats-header">
 						<button class="catsoverlay-menu_subcats-back" data-subcatback="lg"></button>
 						<h2 class="catsoverlay-menu_subcats-title">Services</h2>
@@ -392,7 +705,7 @@
 				</div>
 
 				<!-- 3 -->
-				<div class="catsoverlay-menu_subcats" data-blockID="3">
+				<div class="catsoverlay-menu_subcats" data-blockid="3">
 					<div class="catsoverlay-menu_subcats-header">
 						<button class="catsoverlay-menu_subcats-back" data-subcatback="lg"></button>
 						<h2 class="catsoverlay-menu_subcats-title">Real Estate</h2>
@@ -560,7 +873,7 @@
 				</div>
 
 				<!-- 4 -->
-				<div class="catsoverlay-menu_subcats" data-blockID="4">
+				<div class="catsoverlay-menu_subcats" data-blockid="4">
 					<div class="catsoverlay-menu_subcats-header">
 						<button class="catsoverlay-menu_subcats-back" data-subcatback="lg"></button>
 						<h2 class="catsoverlay-menu_subcats-title">Relax</h2>
@@ -730,3 +1043,153 @@
 		</div>
 	</div>
 </section>
+
+        <!-- SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGN UP FORM  -->
+<div class="authorize-signup">
+	<!-- Close button -->
+	<button class="authorize-signup_close">
+		<svg class="icon icon--close">
+			<use href="./icons/symbol/sprite.svg#close"></use>
+		</svg>
+	</button>
+	<!-- Заголовок -->
+	<h3 class="authorize-signup_title">Sign Up</h3>
+
+	<div class="authorize-signup_spacebetween">
+		<!-- Top -->
+		<div class="authorize-signup_top">
+			<div class="authorize-signup_tabs">
+				<button class="signup-tab" data-tab="1">By phone</button>
+				<button class="signup-tab" data-tab="2">By Email</button>
+			</div>
+
+			<div class="authorize-signup_panels">
+				<!-- By phone -->
+				<div class="signup-panel" data-panel="1">
+					<form action="" id="signup-by-phone">
+						<label>Your name
+							<input class="input" type="text" name="name" placeholder="Type your name" autocomplete="on">
+						</label>
+						<label>Phone
+							<input class="input" type="text" name="phone" placeholder="Type number phone" autocomplete="on">
+						</label>
+						<label>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
+						</label>
+
+						<span class="panel-shorter-text">Not shorter than 8 characters</span>
+
+						<button class="btn" type="submit">Sign up</button>
+					</form>
+				</div>
+
+				<!-- By email -->
+				<div class="signup-panel" data-panel="2">
+					<form action="" id="signup-by-email">
+						<label>Your name
+							<input class="input" type="text" name="name" placeholder="Type your name" autocomplete="on">
+						</label>
+						<label>Email
+							<input class="input" type="text" name="emailorusername" placeholder="Type email or username" autocomplete="on">
+						</label>
+						<label>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
+						</label>
+
+						<span class="panel-shorter-text">Not shorter than 8 characters</span>
+
+						<button class="btn" type="submit">Sign up</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Bottom -->
+		<div class="authorize-signup_bottom">
+			<button class="panel-signup-btn" data-modal="signup">Sign in</button>
+			<p>for registered users</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- LOGIN FORM LOGIN FORM LOGIN FORM  LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM  -->
+<div class="authorize-login">
+	<!-- Close button -->
+	<button class="authorize-login_close">
+		<svg class="icon icon--close">
+			<use href="./icons/symbol/sprite.svg#close"></use>
+		</svg>
+	</button>
+	<!-- Заголовок -->
+	<h3 class="authorize-login_title">Log into your profile</h3>
+
+	<div class="authorize-login_spacebetween">
+		<!-- Top -->
+		<div class="authorize-login_top">
+			<div class="authorize-login_tabs">
+				<button class="login-tab" data-tab="1">By phone</button>
+				<button class="login-tab" data-tab="2">By Email</button>
+			</div>
+
+			<div class="authorize-login_panels">
+				<!-- By phone -->
+				<div class="login-panel" data-panel="1">
+					<form action="" id="login-by-phone">
+						<label>Phone number
+							<input class="input" type="number" name="phone" placeholder="Type number" autocomplete="on">
+						</label>
+						<label>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
+						</label>
+						<label class="checkbox-item panel-remember-label">
+							<input class="checkbox-input" type="checkbox" name="remember">
+							Remember me
+						</label>
+						<button class="btn" type="submit">Sign in</button>
+
+						<span class="panel-reset-btn">Reset password</span>
+					</form>
+				</div>
+
+				<!-- By email -->
+				<div class="login-panel" data-panel="2">
+					<form action="" id="login-by-email">
+						<label>Email
+							<input class="input" type="email" name="email" placeholder="Type email" autocomplete="on">
+						</label>
+						<label>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
+						</label>
+						<label class="checkbox-item panel-remember-label">
+							<input class="checkbox-input" type="checkbox" name="remember">
+							Remember me
+						</label>
+						<button class="btn" type="submit">Sign in</button>
+
+						<span class="panel-reset-btn">Reset password</span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Bottom -->
+		<div class="authorize-login_bottom">
+			<button class="panel-login-btn" data-modal="sign-up">Sign up</button>
+			<p>for first-time users</p>
+		</div>
+	</div>
+</div>
+
+		
+		<!-- WL ShopBullet Script -->
+<script src="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/vendor/js/script.js"></script>
+
+<!-- Choices Script -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="./js/main.min.js"></script>
+
+	</body>
+</html>

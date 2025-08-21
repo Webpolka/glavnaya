@@ -340,7 +340,7 @@ COMPONENTS
 
 	&::placeholder {
 		color: #969696;
-	}	
+	}
 	&:focus {
 		outline: 1px solid var(--accent);
 	}
@@ -363,5 +363,28 @@ COMPONENTS
 
 	&:hover {
 		opacity: 0.75;
+	}
+}
+
+.btn-gray {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	padding-inline: rem(30);
+	min-height: rem(50);
+
+	border-radius: rem(5);
+
+	background: #f0f0f0;	
+
+	font-weight: 500;
+	font-size: rem(16);	
+	color: #1a1a1a;
+
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	&:hover {
+		color: var(--accent);
 	}
 }

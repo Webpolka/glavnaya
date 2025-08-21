@@ -1,0 +1,204 @@
+<div class="container">
+	<div class="advertising">
+		<form action="">
+			<h2 class="advertising_title">Submitting an advertisement</h2>
+
+			<!-- Вступительная часть -->
+			<div class="advertising_form-part advertising_form-intro">
+				<!-- 1 -->
+				<div class="advertising_input-block">
+					<div class="form-group">
+						<label for="product-name">Product/Service Name *</label>
+						<input
+							type="text"
+							id="product-name"
+							name="product-name"
+							class="input"
+							maxlength="50"
+							placeholder="e.g.: BMW X5M"
+							required
+							autocomplete="onрф"
+						/>
+						<div class="form-group_hint">
+							<span data-counter="product-name" class="char-count">0</span>
+							out of 50 characters
+						</div>
+					</div>
+				</div>
+
+				<!-- 2 -->
+				<div class="advertising_breadcrumbs-block">
+					<div class="advertising_block-name">Category *</div>
+
+					<div class="categorie-breadcrumbs">
+						<a class="categorie-breadcrumbs_link" href="#">Auto</a>
+
+						<!--svg разделитель -->
+						<svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A" />
+						</svg>
+
+						<span class="categorie-breadcrumbs_span">Passenger cars</span>
+					</div>
+
+					<!-- Вставь в скрытый инпут в value название категории (нужно для формы)-->
+					<input type="text" id="product-category" name="product-category" value="Passenger cars" hidden />
+
+					<!-- Кнопка для выбора категорий -->
+					<div role="button" data-btn="change-cats" class="btn-gray">Change category</div>
+				</div>
+
+				<!-- 3 SELECT -->
+				<div class="advertising_select-block">
+					<div class="advertising_block-name">Make *</div>
+
+					<select id="product-make" name="product-make" required>
+						<option value="1">Make option 1</option>
+						<option value="2">Make option 2</option>
+						<option value="3">Make option 3</option>
+						<option value="4">Make option 4</option>
+						<option value="5">Make option 5</option>
+					</select>
+				</div>
+
+				<!-- 5 SELECT -->
+				<div class="advertising_select-block">
+					<div class="advertising_block-name">Model *</div>
+
+					<select id="product-model" name="product-model" required>
+						<option value="1">Model option 1</option>
+						<option value="2">Model option 2</option>
+						<option value="3">Model option 3</option>
+						<option value="4">Model option 4</option>
+						<option value="5">Model option 5</option>					
+					</select>
+				</div>
+
+				<!-- 6 SELECT -->
+				<div class="advertising_select-block">
+					<div class="advertising_block-name">Year *</div>
+
+					<select id="product-year" name="product-year" required>
+						<option value="1">Year option 1</option>
+						<option value="2">Year option 2</option>
+						<option value="3">Year option 3</option>
+						<option value="4">Year option 4</option>
+						<option value="5">Year option 5</option>
+						<option value="4">Year option 6</option>						
+					</select>
+				</div>
+
+				<!-- 7 SELECT -->
+				<div class="advertising_select-block">
+					<div class="advertising_block-name">Generation *</div>
+
+					<select id="product-generation" name="product-generation" required>
+						<option value="1">Generation option 1</option>
+						<option value="2">Generation option 2</option>
+						<option value="3">Generation option 3</option>
+						<option value="4">Generation option 4</option>
+						<option value="5">Generation option 5</option>						
+					</select>
+				</div>
+			</div>
+
+			<!-- Часть с параметрами -->
+			<div class="advertising_form-part advertising_form-parametrs">
+				<h3>Parameters</h3>
+				<!-- 8 SELECT -->
+				<div class="advertising_select-block">
+					<div class="advertising_block-name">Body type *</div>
+
+					<select id="product-body_type" name="product-body_type" required>
+						<option value="1">Body type option 1</option>
+						<option value="2">Body type option 2</option>
+						<option value="3">Body type option 3</option>
+						<option value="4">Body type option 4</option>
+						<option value="5">Body type option 5</option>						
+					</select>
+				</div>
+
+				<!-- 9 RADIO BUTTONS -->
+				<div class="advertising_transmission-type advertising_radio-block">
+					<div class="advertising_block-name">Transmission type *</div>
+
+					<div class="form-group-inrow">
+						<label class="radio">
+							<input type="radio" name="transmission" value="automatic" required checked />
+							<span class="custom-radio">Automatic</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="transmission" value="manual" required />
+							<span class="custom-radio">Manual</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="transmission" value="cvt" required />
+							<span class="custom-radio">CVT</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="transmission" value="robotized" required />
+							<span class="custom-radio">Robotized</span>
+						</label>
+					</div>
+				</div>
+
+				<!-- 10 RADIO BUTTONS -->
+				<div class="advertising_radio-block">
+					<div class="advertising_block-name">Engine type *</div>
+
+					<div class="form-group-inrow">
+						<label class="radio">
+							<input type="radio" name="engine" value="gasoline" required />
+							<span class="custom-radio">Gasoline</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="lpg" required />
+							<span class="custom-radio">LPG</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="cng" required />
+							<span class="custom-radio">CNG</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="hybrid_gasoline" required />
+							<span class="custom-radio">Hybrid gasoline</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="diesel" required />
+							<span class="custom-radio">Diesel</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="hybrid_diesel" required />
+							<span class="custom-radio">Hybrid diesel</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="engine" value="electric" required />
+							<span class="custom-radio">Electric</span>
+						</label>
+					</div>
+				</div>
+
+				<!--11 RADIO BUTTONS -->
+				<div class="advertising_radio-block">
+					<div class="advertising_block-name">Drive system</div>
+
+					<div class="form-group-inrow">
+						<label class="radio">
+							<input type="radio" name="drive_system" value="front-wheel drive" />
+							<span class="custom-radio">Front-wheel drive</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="drive_system" value="rear-wheel drive" />
+							<span class="custom-radio">Rear-wheel drive</span>
+						</label>
+						<label class="radio">
+							<input type="radio" name="drive_system" value="all-wheel drive" />
+							<span class="custom-radio">All-wheel drive</span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>

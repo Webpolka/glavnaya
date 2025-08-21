@@ -155,7 +155,7 @@ function initSignButton(signedBoolean) {
 }
 
 function removeNoScroll() {
-	const catOverlay = document.querySelector(".catsoverlay-wrapper");	
+	const catOverlay = document.querySelector(".catsoverlay-wrapper");
 
 	clearTimeout(timer);
 	timer = setTimeout(() => {
@@ -230,4 +230,42 @@ const headerSignTabs = new Tabs({
 DATA-CATEGORIES LISTENER
 ----------------------------------------------------------------------------------------------------------------*/
 import CatsMenu from "./modules/cats-menu-prod";
-const categoriesMenu = new CatsMenu();
+new CatsMenu();
+
+/*--------------------------------------------------------------------------------------------------------------
+CHAR COUNTERS
+----------------------------------------------------------------------------------------------------------------*/
+import CharCounter from "./modules/char-counter";
+
+new CharCounter({
+	inputId: "product-name",
+	maxLength: 50,
+});
+
+/*--------------------------------------------------------------------------------------------------------------
+CHOICES SELECTS
+----------------------------------------------------------------------------------------------------------------*/
+const selectProductMake = document.getElementById("product-make");
+const selectProductModel = document.getElementById("product-model");
+const selectProductGeneration = document.getElementById("product-generation");
+const selectProductYear = document.getElementById("product-year");
+const selectProductBodyType = document.getElementById("product-body_type");
+
+const selectProductArray = [
+	selectProductMake, 
+	selectProductModel, 
+	selectProductGeneration, 
+	selectProductYear, 
+	selectProductBodyType
+];
+
+selectProductArray.forEach((select) => {
+	new Choices(select, {
+		searchEnabled: false, // отключить поиск, так как один выбор
+		itemSelectText: "", // убрать подсказку при выборе
+		shouldSort: false,
+		placeholder: true,
+		placeholderValue: "Select", // placeholder
+		position: "bottom",
+	});
+});

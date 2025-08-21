@@ -32,6 +32,7 @@ ROOT
   --white: white;
   --black: #1a1a1a;
   --accent: #e60000;
+  --border: #efeaea;
   --scrollbar: gray;
   --scrollbar-track: gray;
   --scrollbar-thumb: var(--accent);
@@ -339,6 +340,141 @@ body {
 .main {
   position: relative;
   flex: 1 1 auto;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+ADVERTISING CUSTOM FORM ELEMENTS
+--------------------------------------------------------------------------------------------------------------------------------*/
+.advertising {
+  padding-top: 1.25rem;
+  width: 70%;
+}
+@media (max-width: 992px) {
+  .advertising {
+    width: 100%;
+  }
+}
+.advertising_title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1.875rem;
+}
+.advertising_form-part {
+  padding-top: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.advertising_form-part h3 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  padding-bottom: 1.25rem;
+}
+.advertising_form-intro {
+  padding-bottom: 0.625rem;
+}
+.advertising_block-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+.advertising_input-block {
+  margin-bottom: 1.875rem;
+}
+.advertising_input-block label[for] {
+  display: block;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+.advertising_input-block .form-group .input {
+  margin-bottom: 0.625rem;
+}
+.advertising_input-block .form-group .input:focus {
+  outline: 1px solid #bbbbbb;
+}
+.advertising_input-block .form-group_hint {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #878787;
+}
+.advertising_input-block .form-group_hint .char-count {
+  color: var(--accent);
+}
+.advertising_breadcrumbs-block {
+  margin-bottom: 1.875rem;
+}
+.advertising_breadcrumbs-block .categorie-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.9375rem;
+}
+.advertising_breadcrumbs-block .categorie-breadcrumbs_link {
+  color: #1a1a1a;
+  transition: color 0.3s ease-in-out;
+}
+.advertising_breadcrumbs-block .categorie-breadcrumbs_link:hover {
+  color: var(--accent);
+}
+.advertising_breadcrumbs-block .categorie-breadcrumbs_span {
+  color: #1a1a1a;
+}
+.advertising_select-block {
+  margin-bottom: 1.25rem;
+}
+.advertising_radio-block {
+  margin-bottom: 1.875rem;
+  /* скрываем оригинальный радиобатон */
+  /* стиль кастомного овала */
+  /* выделение выбранного варианта */
+  /* Можно добавить эффект при наведении */
+}
+.advertising_radio-block .form-group-inrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+.advertising_radio-block .radio {
+  display: block;
+  position: relative;
+  font-size: 0.875rem;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 400;
+}
+.advertising_radio-block .radio input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+.advertising_radio-block .custom-radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.3125rem 1.25rem;
+  border: 1px solid #d5d5d5;
+  border-radius: 6.25rem;
+  color: #3d3d3d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.advertising_radio-block .radio input[type=radio]:checked + .custom-radio {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.advertising_radio-block .radio:hover .custom-radio {
+  border-color: #999;
+}
+.advertising_transmission-type .custom-radio {
+  background-color: #f3f3f3;
+}
+.advertising_transmission-type .radio input[type=radio]:checked + .custom-radio {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: #fff;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
@@ -975,6 +1111,81 @@ CATEGORIES OVERLAY
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
+CUSTOM CHOICES SELECT
+--------------------------------------------------------------------------------------------------------------------------------*/
+/* Добавляем стрелку через псевдоэлемент */
+.choices {
+  position: relative;
+}
+
+.choices::before {
+  content: "";
+  position: absolute;
+  right: 10px; /* позиция справа */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../icons/down.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  opacity: 0.5;
+  pointer-events: none; /* чтобы не мешала кликам */
+}
+
+.choices__inner {
+  border: 1px solid #efeaea;
+  border-radius: 0.3125rem;
+  min-height: 3.125rem;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.9375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  background-color: transparent;
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+.choices__list--dropdown .choices__item {
+  padding: 0.9375rem 1.25rem !important;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #efeaea;
+  top: 100%;
+  margin-top: -1px;
+  border-bottom-left-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.choices.is-focused .choices__inner {
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
+}
+
+.choices__item--choice.is-selected {
+  background-color: var(--accent) !important;
+  color: #fff;
+}
+
+.choices[data-type*=select-one]::after {
+  display: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
 COMPONENTS
 --------------------------------------------------------------------------------------------------------------------------------*/
 .shopBullet {
@@ -1270,6 +1481,24 @@ COMPONENTS
 }
 .btn:hover {
   opacity: 0.75;
+}
+
+.btn-gray {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1.875rem;
+  min-height: 3.125rem;
+  border-radius: 0.3125rem;
+  background: #f0f0f0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.btn-gray:hover {
+  color: var(--accent);
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
