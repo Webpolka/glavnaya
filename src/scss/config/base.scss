@@ -3,6 +3,12 @@ BASE
 --------------------------------------------------------------------------------------------------------------------------------*/
 html {
 	scroll-behavior: smooth;
+	opacity: 0.2;
+	transition: opacity 0.75s ease-in-out;
+
+	&.loaded{
+		opacity: 1;
+	}
 }
 
 body {
@@ -86,7 +92,11 @@ body {
 	}
 }
 .no-scroll {
-	overflow: hidden;	
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
 }
 
 .posar {
@@ -152,4 +162,7 @@ body {
 .main {
 	position: relative;
 	flex: 1 1 auto;
+}
+.accent {
+	color: var(--accent);
 }

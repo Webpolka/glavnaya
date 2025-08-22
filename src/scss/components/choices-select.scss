@@ -74,6 +74,9 @@ CUSTOM CHOICES SELECT
 	background-color: var(--accent) !important;
 	color: #fff;
 }
+.choices__item--disabled {
+	display: none;
+}
 
 .choices[data-type*=select-one]::after {   
     display: none;   

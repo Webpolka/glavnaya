@@ -36,34 +36,37 @@ if (currencyBlock) {
 /*--------------------------------------------------------------------------------------------------------------
 MAIN ELLEPSIS SWIPER BLOCK
 ----------------------------------------------------------------------------------------------------------------*/
-const swiper = new Swiper("#swiperEllipse", {
-	slidesPerView: 10,
-	spaceBetween: 20,
-	loop: true,
+const swiperEllipse = document.querySelector("#swiperEllipse");
 
-	navigation: {
-		nextEl: ".ellipse-next-button",
-		prevEl: ".swiper-button-prev",
-	},
+swiperEllipse &&
+	new Swiper("#swiperEllipse", {
+		slidesPerView: 10,
+		spaceBetween: 20,
+		loop: true,
 
-	breakpoints: {
-		0: {
-			slidesPerView: 3,
+		navigation: {
+			nextEl: ".ellipse-next-button",
+			prevEl: ".swiper-button-prev",
 		},
-		// при ширине >= 640px
-		576: {
-			slidesPerView: 4,
+
+		breakpoints: {
+			0: {
+				slidesPerView: 3,
+			},
+			// при ширине >= 640px
+			576: {
+				slidesPerView: 4,
+			},
+			// при ширине >= 768px
+			768: {
+				slidesPerView: 6,
+			},
+			// при ширине >= 1024px
+			1024: {
+				slidesPerView: 10,
+			},
 		},
-		// при ширине >= 768px
-		768: {
-			slidesPerView: 6,
-		},
-		// при ширине >= 1024px
-		1024: {
-			slidesPerView: 10,
-		},
-	},
-});
+	});
 
 /*--------------------------------------------------------------------------------------------------------------
 HEADER TRANSFER BLOCKS
@@ -142,14 +145,20 @@ const dataSignedBtn = document.querySelector("[data-signed]");
 const dataSignedText = dataSignedBtn.querySelector("span");
 
 const allHeaderSlideCloseBtns = [document.querySelector(".authorize-login_close"), document.querySelector(".authorize-signup_close")];
-const signedBoolean = dataSignedBtn.dataset.signed === "true" ? true : false;
 
 let timer;
 
+let signedBoolean;
+if (dataSignedBtn) {
+	signedBoolean = dataSignedBtn.dataset.signed === "true" ? true : false;
+	// Выставляем стейт кнопки
+	initSignButton(signedBoolean);
+}
+
 function initSignButton(signedBoolean) {
-	if (signedBoolean) {
+	if (signedBoolean && dataSignedText) {
 		dataSignedText.textContent = "Sign In";
-	} else if (!signedBoolean) {
+	} else if (!signedBoolean && dataSignedText) {
 		dataSignedText.textContent = "Sign Up";
 	}
 }
@@ -161,8 +170,10 @@ function removeNoScroll() {
 	timer = setTimeout(() => {
 		document.documentElement.classList.remove("no-scroll");
 		document.documentElement.style.paddingRight = "";
-		siteOverlay.classList.remove("active");
-		catOverlay.style.paddingRight = "";
+		siteOverlay && siteOverlay.classList.remove("active");
+		if (catOverlay) {
+			catOverlay.style.paddingRight = "";
+		}
 	}, 0);
 }
 function addNoScroll() {
@@ -170,28 +181,29 @@ function addNoScroll() {
 	const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 	document.documentElement.classList.add("no-scroll");
 
-	catOverlay.style.paddingRight = `${scrollbarWidth}px`;
+	if (catOverlay) {
+		catOverlay.style.paddingRight = `${scrollbarWidth}px`;
+	}
 	document.documentElement.style.paddingRight = `${scrollbarWidth}px`;
-	siteOverlay.classList.add("active");
+	siteOverlay && siteOverlay.classList.add("active");
 }
 
-// Выставляем стейт кнопки
-initSignButton(signedBoolean);
-
 // Прослушивание кнопки Sign Up или Sign In
-dataSignedBtn.addEventListener("click", function (e) {
-	e.preventDefault();
+dataSignedBtn &&
+	dataSignedBtn.addEventListener("click", function (e) {
+		e.preventDefault();
 
-	if (signedBoolean) {
-		addNoScroll();
-		loginSlideForm.classList.add("active");
-		console.log("Пользователь уже зарегистрирован !");
-	} else if (!signedBoolean) {
-		addNoScroll();
-		signSlideForm.classList.add("active");
-		console.log("Пользователю нужно зарегистрироваться !");
-	}
-});
+		if (signedBoolean && loginSlideForm) {
+			addNoScroll();
+			loginSlideForm.classList.add("active");
+			console.log("Пользователь уже зарегистрирован !");
+		} else if (!signedBoolean && signSlideForm) {
+			addNoScroll();
+			signSlideForm.classList.add("active");
+			console.log("Пользователю нужно зарегистрироваться !");
+		}
+		return;
+	});
 
 // Прослушивание всех кнопок закрыть для слайд форм авторизации
 allHeaderSlideCloseBtns.forEach((btn) => {
@@ -217,14 +229,17 @@ document.querySelectorAll(".panel-reset-btn").forEach((btn) => {
 DATA-TABS LISTENER
 ----------------------------------------------------------------------------------------------------------------*/
 import Tabs from "./modules/tabs";
+const authorizeLoginElement = document.querySelector(".authorize-login");
+const authorizeSignUpElement = document.querySelector(".authorize-signup");
 
-const headerLoginTabs = new Tabs({
-	parent: ".authorize-login",
-});
-
-const headerSignTabs = new Tabs({
-	parent: ".authorize-signup",
-});
+authorizeLoginElement &&
+	new Tabs({
+		parent: ".authorize-login",
+	});
+authorizeSignUpElement &&
+	new Tabs({
+		parent: ".authorize-signup",
+	});
 
 /*--------------------------------------------------------------------------------------------------------------
 DATA-CATEGORIES LISTENER
@@ -242,30 +257,69 @@ new CharCounter({
 	maxLength: 50,
 });
 
+new CharCounter({
+	inputId: "product-description",
+	maxLength: 4000,
+});
+
 /*--------------------------------------------------------------------------------------------------------------
 CHOICES SELECTS
 ----------------------------------------------------------------------------------------------------------------*/
-const selectProductMake = document.getElementById("product-make");
-const selectProductModel = document.getElementById("product-model");
-const selectProductGeneration = document.getElementById("product-generation");
-const selectProductYear = document.getElementById("product-year");
-const selectProductBodyType = document.getElementById("product-body_type");
+document.addEventListener("DOMContentLoaded", () => {
+	const selectProductMake = document.getElementById("product-make");
+	const selectProductModel = document.getElementById("product-model");
+	const selectProductGeneration = document.getElementById("product-generation");
+	const selectProductYear = document.getElementById("product-year");
+	const selectProductBodyType = document.getElementById("product-body_type");
+	const selectProductModification = document.getElementById("product-modification");
 
-const selectProductArray = [
-	selectProductMake, 
-	selectProductModel, 
-	selectProductGeneration, 
-	selectProductYear, 
-	selectProductBodyType
-];
+	const selectProductBodyColor = document.getElementById("product-body_color");
+	const selectProductInteriorMaterial = document.getElementById("product-interior_material");
+	const selectProductInterialColor = document.getElementById("product-interior_color");
 
-selectProductArray.forEach((select) => {
-	new Choices(select, {
-		searchEnabled: false, // отключить поиск, так как один выбор
-		itemSelectText: "", // убрать подсказку при выборе
-		shouldSort: false,
-		placeholder: true,
-		placeholderValue: "Select", // placeholder
-		position: "bottom",
+	const selectProductRegion = document.getElementById("product-region");
+	const selectProductCity = document.getElementById("product-city");
+
+	const selectProductArray = [
+		selectProductMake,
+		selectProductModel,
+		selectProductGeneration,
+		selectProductYear,
+		selectProductBodyType,
+		selectProductModification,
+		selectProductBodyColor,
+		selectProductInteriorMaterial,
+		selectProductInterialColor,
+		selectProductRegion,
+		selectProductCity,
+	];
+	
+	selectProductArray.forEach((select) => {		
+		select && new Choices(select, {
+			searchEnabled: false, // отключить поиск, так как один выбор
+			itemSelectText: "", // убрать подсказку при выборе
+			shouldSort: false,
+			placeholder: true,
+			placeholderValue: "Select", // placeholder
+			position: "bottom",
+		});
 	});
+});
+/*--------------------------------------------------------------------------------------------------------------
+IMAGES PRELOADER
+----------------------------------------------------------------------------------------------------------------*/
+import ImagePreloader from "./modules/images-preloader";
+
+// Инициализация класса после DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+	const loadProductImages = document.querySelector("#product-media");
+	loadProductImages &&
+		new ImagePreloader({
+			maxFileSizeKB: 500,
+			inputId: "product-media",
+			buttonId: "advertising-mediaload-button",
+			previewsContainerId: "advertising-mediaload-previews",
+			warningId: "advertising-mediaload-warning",
+			dragAreaId: "advertising-mediaload-area",
+		});
 });

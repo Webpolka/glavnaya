@@ -1,0 +1,159 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+CUSTOM IMAGES mediaload
+--------------------------------------------------------------------------------------------------------------------------------*/
+.advertising_mediaload-block {
+	.mediaload-banner {
+		min-height: inherit;
+
+		&_icon {
+			margin-bottom: rem(10);
+		}
+
+		&_title {
+			display: block;
+			font-weight: 500;
+			font-size: rem(16);
+			color: #1a1a1a;
+
+			margin-bottom: rem(5);
+		}
+
+		&_desc {
+			font-weight: 400;
+			font-size: rem(14);
+			color: #969696;
+
+			margin-bottom: rem(20);
+		}
+
+		&_button {
+			.btn {
+				margin-inline: auto;
+				display: inline-block;
+				width: initial;
+				padding-inline: rem(40);
+			}
+		}
+	}
+
+	.mediaload-upload-area {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		border: 2px dashed #ccc;
+		padding: rem(20) 0 0;
+		position: relative;
+		margin: rem(20) auto rem(0);
+		text-align: center;
+
+		border-radius: rem(10);
+		cursor: pointer;
+
+		max-width: 100%;
+
+		height: rem(220);
+
+		margin-bottom: rem(10);
+
+		&:hover {
+			background-color: #f9f9f9;
+		}
+	}
+	.mediaload-previews {
+		display: flex;
+		flex-wrap: wrap;
+
+		gap: rem(10) 0;
+
+		padding-block: rem(10);
+
+		margin-left: -5px;
+		margin-right: -5px;
+
+		&_item {
+			position: relative;
+			aspect-ratio: 4/3;
+			width: 20%;
+
+			padding-left: 5px;
+			padding-right: 5px;
+
+			@include md {
+				width: 33.33%;
+			}
+			@include sm {
+				width: 50%;
+			}
+
+			&-delete {
+				position: absolute;
+				top: rem(7);
+				right: rem(12);
+
+				width: rem(25);
+				height: rem(25);
+
+				border: 1px solid rgb(0, 0, 0, 0.45);
+				border-radius: 50%;
+				background-color: white;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				transition: all 0.3s ease-in-out;
+
+				&:hover {
+					border-color: var(--accent);
+
+					svg {
+						fill: var(--accent);
+					}
+				}
+
+				svg {
+					fill: rgb(0, 0, 0, 0.45);
+					width: rem(10);
+					height: rem(10);
+
+					transition: all 0.3s ease-in-out;
+				}
+			}
+		}
+
+		img {
+			aspect-ratio: 4/3;
+			width: 100%;
+			object-fit: cover;
+			border: 1px dashed #ccc;
+
+			border-radius: rem(5);
+			overflow: hidden;
+		}
+	}
+
+	.mediaload-warning {
+		background: rgb(230, 0, 0, 0.07);
+		width: 100%;
+
+		font-weight: 400;
+		font-size: rem(16);
+		color: #3d3d3d;
+
+		border-radius: rem(5);
+
+		display: inline-flex;
+		align-items: center;
+		gap: rem(20);
+
+		padding-inline: rem(20);
+		min-height: rem(50);
+
+		margin-bottom: rem(30);
+
+		&.hidden {
+			display: none;
+		}
+	}
+}

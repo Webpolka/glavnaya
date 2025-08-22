@@ -6,7 +6,7 @@
 			<!-- Вступительная часть -->
 			<div class="advertising_form-part advertising_form-intro">
 				<!-- 1 -->
-				<div class="advertising_input-block">
+				<div class="advertising_input-block advertising_product-name">
 					<div class="form-group">
 						<label for="product-name">Product/Service Name *</label>
 						<input
@@ -19,8 +19,8 @@
 							required
 							autocomplete="onрф"
 						/>
-						<div class="form-group_hint">
-							<span data-counter="product-name" class="char-count">0</span>
+						<div class="advertising_block-hint">
+							<span data-counter="product-name" class="accent">0</span>
 							out of 50 characters
 						</div>
 					</div>
@@ -42,7 +42,7 @@
 					</div>
 
 					<!-- Вставь в скрытый инпут в value название категории (нужно для формы)-->
-					<input type="text" id="product-category" name="product-category" value="Passenger cars" hidden />
+					<input type="text" id="product-category" name="product-category" value="Passenger cars" required hidden />
 
 					<!-- Кнопка для выбора категорий -->
 					<div role="button" data-btn="change-cats" class="btn-gray">Change category</div>
@@ -50,9 +50,10 @@
 
 				<!-- 3 SELECT -->
 				<div class="advertising_select-block">
-					<div class="advertising_block-name">Make *</div>
+					<label for="product-make" class="advertising_block-name">Make *</label>
 
 					<select id="product-make" name="product-make" required>
+						<option value="" disabled selected>Select make</option>
 						<option value="1">Make option 1</option>
 						<option value="2">Make option 2</option>
 						<option value="3">Make option 3</option>
@@ -63,41 +64,44 @@
 
 				<!-- 5 SELECT -->
 				<div class="advertising_select-block">
-					<div class="advertising_block-name">Model *</div>
+					<label for="product-model" class="advertising_block-name">Model *</label>
 
 					<select id="product-model" name="product-model" required>
+						<option value="" disabled selected>Select model</option>
 						<option value="1">Model option 1</option>
 						<option value="2">Model option 2</option>
 						<option value="3">Model option 3</option>
 						<option value="4">Model option 4</option>
-						<option value="5">Model option 5</option>					
+						<option value="5">Model option 5</option>
 					</select>
 				</div>
 
 				<!-- 6 SELECT -->
 				<div class="advertising_select-block">
-					<div class="advertising_block-name">Year *</div>
+					<label for="product-year" class="advertising_block-name">Year *</label>
 
 					<select id="product-year" name="product-year" required>
+						<option value="" disabled selected>Select year</option>
 						<option value="1">Year option 1</option>
 						<option value="2">Year option 2</option>
 						<option value="3">Year option 3</option>
 						<option value="4">Year option 4</option>
 						<option value="5">Year option 5</option>
-						<option value="4">Year option 6</option>						
+						<option value="6">Year option 6</option>
 					</select>
 				</div>
 
 				<!-- 7 SELECT -->
 				<div class="advertising_select-block">
-					<div class="advertising_block-name">Generation *</div>
+					<label for="product-generation" class="advertising_block-name">Select generation</label>
 
 					<select id="product-generation" name="product-generation" required>
+						<option value="" disabled selected>Select generation</option>
 						<option value="1">Generation option 1</option>
 						<option value="2">Generation option 2</option>
 						<option value="3">Generation option 3</option>
 						<option value="4">Generation option 4</option>
-						<option value="5">Generation option 5</option>						
+						<option value="5">Generation option 5</option>
 					</select>
 				</div>
 			</div>
@@ -107,98 +111,781 @@
 				<h3>Parameters</h3>
 				<!-- 8 SELECT -->
 				<div class="advertising_select-block">
-					<div class="advertising_block-name">Body type *</div>
+					<label for="product-body_type" class="advertising_block-name">Body type *</label>
 
 					<select id="product-body_type" name="product-body_type" required>
+						<option value="" disabled selected>Select body type</option>
 						<option value="1">Body type option 1</option>
 						<option value="2">Body type option 2</option>
 						<option value="3">Body type option 3</option>
 						<option value="4">Body type option 4</option>
-						<option value="5">Body type option 5</option>						
+						<option value="5">Body type option 5</option>
 					</select>
 				</div>
 
-				<!-- 9 RADIO BUTTONS -->
+				<!-- 4 RADIO BUTTONS -->
 				<div class="advertising_transmission-type advertising_radio-block">
-					<div class="advertising_block-name">Transmission type *</div>
-
-					<div class="form-group-inrow">
-						<label class="radio">
-							<input type="radio" name="transmission" value="automatic" required checked />
-							<span class="custom-radio">Automatic</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="transmission" value="manual" required />
-							<span class="custom-radio">Manual</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="transmission" value="cvt" required />
-							<span class="custom-radio">CVT</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="transmission" value="robotized" required />
-							<span class="custom-radio">Robotized</span>
-						</label>
-					</div>
+					<fieldset>
+						<legend class="advertising_block-name">Transmission type *</legend>
+						<div class="form-group-inrow">
+							<label class="radio">
+								<input type="radio" name="transmission" value="automatic" required checked />
+								<span class="custom-radio">Automatic</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="transmission" value="manual" />
+								<span class="custom-radio">Manual</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="transmission" value="cvt" />
+								<span class="custom-radio">CVT</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="transmission" value="robotized" />
+								<span class="custom-radio">Robotized</span>
+							</label>
+						</div>
+					</fieldset>
 				</div>
 
 				<!-- 10 RADIO BUTTONS -->
 				<div class="advertising_radio-block">
-					<div class="advertising_block-name">Engine type *</div>
+					<fieldset>
+						<legend class="advertising_block-name">Engine type *</legend>
+						<div class="form-group-inrow">
+							<label class="radio">
+								<input type="radio" name="engine" value="gasoline" required />
+								<span class="custom-radio">Gasoline</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="engine" value="lpg" />
+								<span class="custom-radio">LPG</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="engine" value="cng" />
+								<span class="custom-radio">CNG</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="engine" value="hybrid_gasoline" />
+								<span class="custom-radio">Hybrid gasoline</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="engine" value="diesel" />
+								<span class="custom-radio">Diesel</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="engine" value="hybrid_diesel" />
+								<span class="custom-radio">Hybrid diesel</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="engine" value="electric" />
+								<span class="custom-radio">Electric</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+				<!--11 RADIO BUTTONS -->
+				<div class="advertising_radio-block">
+					<fieldset>
+						<legend class="advertising_block-name">Drive system</legend>
+						<div class="form-group-inrow">
+							<label class="radio">
+								<input type="radio" name="drive_system" value="front-wheel drive" required />
+								<span class="custom-radio">Front-wheel drive</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="drive_system" value="rear-wheel drive" />
+								<span class="custom-radio">Rear-wheel drive</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="drive_system" value="all-wheel drive" />
+								<span class="custom-radio">All-wheel drive</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
 
-					<div class="form-group-inrow">
-						<label class="radio">
-							<input type="radio" name="engine" value="gasoline" required />
-							<span class="custom-radio">Gasoline</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="engine" value="lpg" required />
-							<span class="custom-radio">LPG</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="engine" value="cng" required />
-							<span class="custom-radio">CNG</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="engine" value="hybrid_gasoline" required />
-							<span class="custom-radio">Hybrid gasoline</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="engine" value="diesel" required />
-							<span class="custom-radio">Diesel</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="engine" value="hybrid_diesel" required />
-							<span class="custom-radio">Hybrid diesel</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="engine" value="electric" required />
-							<span class="custom-radio">Electric</span>
-						</label>
+				<!-- 12 SELECT -->
+				<div class="advertising_modification advertising_select-block">
+					<label for="product-modification" class="advertising_block-name">Modification *</label>
+
+					<select id="product-modification" name="product-modification" required>
+						<option value="" disabled selected>Select modification</option>
+						<option value="1">Body type option 1</option>
+						<option value="2">Body type option 2</option>
+						<option value="3">Body type option 3</option>
+						<option value="4">Body type option 4</option>
+						<option value="5">Body type option 5</option>
+					</select>
+					<div class="advertising_block-hint">
+						No modification needed? Please contact <a class="accent" href="#">technical support.</a>
 					</div>
 				</div>
 
-				<!--11 RADIO BUTTONS -->
-				<div class="advertising_radio-block">
-					<div class="advertising_block-name">Drive system</div>
-
-					<div class="form-group-inrow">
-						<label class="radio">
-							<input type="radio" name="drive_system" value="front-wheel drive" />
-							<span class="custom-radio">Front-wheel drive</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="drive_system" value="rear-wheel drive" />
-							<span class="custom-radio">Rear-wheel drive</span>
-						</label>
-						<label class="radio">
-							<input type="radio" name="drive_system" value="all-wheel drive" />
-							<span class="custom-radio">All-wheel drive</span>
-						</label>
+				<!-- 13 -->
+				<div class="advertising_input-block">
+					<div class="form-group">
+						<label for="product-vin">VIN number *</label>
+						<input
+							type="text"
+							id="product-vin"
+							name="product-vin"
+							class="input"
+							maxlength="17"
+							placeholder="A 17-character code"
+							required
+							autocomplete="off"
+						/>
 					</div>
 				</div>
 			</div>
 
+			<!-- Часть с "Состояние и цвет"-->
+			<div class="advertising_form-part advertising_form-conditions">
+				<h3>Condition and color</h3>
+
+				<!--14 RADIO BUTTONS -->
+				<div class="advertising_radio-block">
+					<fieldset>
+						<legend class="advertising_block-name">Condition *</legend>
+						<div class="form-group-inrow">
+							<label class="radio">
+								<input type="radio" name="product-condition" value="With mileage" required />
+								<span class="custom-radio">With mileage</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="product-condition" value="Accident damage" required />
+								<span class="custom-radio">Accident damage</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="product-condition" value="For parts" required />
+								<span class="custom-radio">For parts</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+
+				<!-- 15 -->
+				<div class="advertising_input-block">
+					<div class="form-group">
+						<label for="product-mileage">Mileage, km *</label>
+						<input
+							type="text"
+							id="product-mileage"
+							name="product-mileage"
+							class="input"
+							maxlength="10"
+							placeholder="Any"
+							required
+							autocomplete="off"
+						/>
+					</div>
+				</div>
+
+				<!-- 16 SELECT -->
+				<div class="advertising_modification advertising_select-block">
+					<label for="product-body_color" class="advertising_block-name">Body color</label>
+
+					<select id="product-body_color" name="product-body_color">
+						<option value="1">Body color option 1</option>
+						<option value="2">Body color option 2</option>
+						<option value="3">Body color option 3</option>
+						<option value="4">Body color option 4</option>
+						<option value="5">Body color option 5</option>
+					</select>
+				</div>
+
+				<!-- 17 SELECT -->
+				<div class="advertising_modification advertising_select-block">
+					<label for="product-interior_material" class="advertising_block-name">Interior material</label>
+
+					<select id="product-interior_material" name="product-interior_material">
+						<option value="1">Interior material type option 1</option>
+						<option value="2">Interior material option 2</option>
+						<option value="3">Interior material option 3</option>
+						<option value="4">Interior material option 4</option>
+						<option value="5">Interior material option 5</option>
+					</select>
+				</div>
+
+				<!-- 18 SELECT -->
+				<div class="advertising_modification advertising_select-block">
+					<label for="product-interior_color" class="advertising_block-name">Interior color</label>
+
+					<select id="product-interior_color" name="product-interior_color">
+						<option value="1">Interior color type option 1</option>
+						<option value="2">Interior color type option 2</option>
+						<option value="3">Interior color type option 3</option>
+						<option value="4">Interior color type option 4</option>
+						<option value="5">Interior color type option 5</option>
+					</select>
+				</div>
+			</div>
+
+			<!-- Часть с "Системы безопасности"-->
+			<div class="advertising_form-part advertising_form-safety_systems">
+				<h3>Safety systems</h3>
+
+				<!-- 19 CHECKBOX BUTTONS -->
+				<div class="advertising_checkbox-block">
+					<fieldset>
+						<legend class="visually-hidden">Safety systems</legend>
+
+						<div class="form-group-inrow">
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="abs" />
+								<span class="custom-checkbox">ABS</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="esp" />
+								<span class="custom-checkbox">ESP</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Traction control" />
+								<span class="custom-checkbox">Traction control</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Immobilizer" />
+								<span class="custom-checkbox">Immobilizer</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Alarm system" />
+								<span class="custom-checkbox">Alarm system</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Front airbags" />
+								<span class="custom-checkbox">Front airbags</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Side airbags" />
+								<span class="custom-checkbox">Side airbags</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Rear airbags" />
+								<span class="custom-checkbox">Rear airbags</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Tire pressure sensors" />
+								<span class="custom-checkbox">Tire pressure sensors</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Isofix" />
+								<span class="custom-checkbox">Isofix</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Pedestrian detection" />
+								<span class="custom-checkbox">Pedestrian detection</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Knee airbags" />
+								<span class="custom-checkbox">Knee airbags</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Emergency braking system" />
+								<span class="custom-checkbox">Emergency braking system</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-safety_systems[]" value="Rear door lock child safety system" />
+								<span class="custom-checkbox">Rear door lock child safety system</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- Часть с "Внешний вид"-->
+			<div class="advertising_form-part advertising_form-exterior">
+				<h3>Exterior</h3>
+
+				<!-- 20 CHECKBOX BUTTONS -->
+				<div class="advertising_checkbox-block">
+					<fieldset>
+						<legend class="visually-hidden">Exterior</legend>
+
+						<div class="form-group-inrow">
+							<label class="checkbox">
+								<input type="checkbox" name="product-exterior[]" value="Alloy wheels" />
+								<span class="custom-checkbox">Alloy wheels</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-exterior[]" value="Roof rails" />
+								<span class="custom-checkbox">Roof rails</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-exterior[]" value="Tow hitch" />
+								<span class="custom-checkbox">Tow hitch</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-exterior[]" value="Factory tinting" />
+								<span class="custom-checkbox">Factory tinting</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-exterior[]" value="Skid plate" />
+								<span class="custom-checkbox">Skid plate</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-exterior[]" value="Electric side steps" />
+								<span class="custom-checkbox">Electric side steps</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- Часть с "Итерьер"-->
+			<div class="advertising_form-part advertising_form-interior">
+				<h3>Interior</h3>
+
+				<!-- 21 CHECKBOX BUTTONS -->
+				<div class="advertising_checkbox-block">
+					<fieldset>
+						<legend class="visually-hidden">Interior</legend>
+						<div class="form-group-inrow">
+							<label class="checkbox">
+								<input type="checkbox" name="product-interior[]" value="Sunroof" />
+								<span class="custom-checkbox">Sunroof</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-interior[]" value="Panoramic roof" />
+								<span class="custom-checkbox">Panoramic roof</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-interior[]" value="Factory window shades" />
+								<span class="custom-checkbox">Factory window shades</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-interior[]" value="Auto-dimming rearview mirror" />
+								<span class="custom-checkbox">Auto-dimming rearview mirror</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-interior[]" value="Digital instrument cluster" />
+								<span class="custom-checkbox">Digital instrument cluster</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- Часть с "Освещение и свет"-->
+			<div class="advertising_form-part advertising_form-optics_lighting">
+				<h3>Optics and lighting</h3>
+
+				<!-- 22 CHECKBOX BUTTONS -->
+				<div class="advertising_checkbox-block">
+					<fieldset>
+						<legend class="visually-hidden">Optics and lighting</legend>
+						<div class="form-group-inrow">
+							<label class="checkbox">
+								<input type="checkbox" name="product-optics_and_lighting[]" value="Xenon headlights" />
+								<span class="custom-checkbox">Xenon headlights</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-optics_and_lighting[]" value="Fog lights" />
+								<span class="custom-checkbox">Fog lights</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-optics_and_lighting[]" value="LED headlights" />
+								<span class="custom-checkbox">LED headlights</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-optics_and_lighting[]" value="Matrix headlights" />
+								<span class="custom-checkbox">Matrix headlights</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-optics_and_lighting[]" value="Laser headlights" />
+								<span class="custom-checkbox">Laser headlights</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-optics_and_lighting[]" value="Adaptive lighting" />
+								<span class="custom-checkbox">Adaptive lighting</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-optics_and_lighting[]" value="Automatic high beams" />
+								<span class="custom-checkbox">Automatic high beams</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-optics_and_lighting[]" value="Headlight washer" />
+								<span class="custom-checkbox">Headlight washer</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-optics_and_lighting[]" value="Automatic headlight leveling" />
+								<span class="custom-checkbox">Automatic headlight leveling</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- Часть с "климат контроль"-->
+			<div class="advertising_form-part advertising_form-сlimate_control">
+				<h3>Climate control</h3>
+
+				<!-- 23 CHECKBOX BUTTONS -->
+				<div class="advertising_checkbox-block">
+					<fieldset>
+						<legend class="visually-hidden">Climate control</legend>
+						<div class="form-group-inrow">
+							<label class="checkbox">
+								<input type="checkbox" name="product-climate_control[]" value="Single-zone climate control" />
+								<span class="custom-checkbox">Single-zone climate control</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-climate_control[]" value="Air conditioning" />
+								<span class="custom-checkbox">Air conditioning</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-climate_control[]" value="Heated seats" />
+								<span class="custom-checkbox">Heated seats</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-climate_control[]" value="Heated windshield" />
+								<span class="custom-checkbox">Heated windshield</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-climate_control[]" value="Heated mirrors" />
+								<span class="custom-checkbox">Heated mirrors</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-climate_control[]" value="Heated steering wheel" />
+								<span class="custom-checkbox">Heated steering wheel</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-climate_control[]" value="Autonomous heater" />
+								<span class="custom-checkbox">Autonomous heater</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-climate_control[]" value="Multi-zone climate control" />
+								<span class="custom-checkbox">Multi-zone climate control</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-climate_control[]" value="Seat ventilation" />
+								<span class="custom-checkbox">Seat ventilation</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- Часть с "система мультимедиа"-->
+			<div class="advertising_form-part advertising_form-multimedia_system">
+				<h3>Multimedia system</h3>
+
+				<!-- 24 CHECKBOX BUTTONS -->
+				<div class="advertising_checkbox-block">
+					<fieldset>
+						<legend class="visually-hidden">Multimedia system</legend>
+						<div class="form-group-inrow">
+							<label class="checkbox">
+								<input type="checkbox" name="product-mutimedia_system[]" value="AUX" />
+								<span class="custom-checkbox">AUX</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-mutimedia_system[]" value="Bluetooth" />
+								<span class="custom-checkbox">Bluetooth</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-mutimedia_system[]" value="CD or MP3" />
+								<span class="custom-checkbox">CD or MP3</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-mutimedia_system[]" value="USB" />
+								<span class="custom-checkbox">USB</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-mutimedia_system[]" value="Multimedia display" />
+								<span class="custom-checkbox">Multimedia display</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-mutimedia_system[]" value="Built-in navigation system" />
+								<span class="custom-checkbox">Built-in navigation system</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-mutimedia_system[]" value="Apple CarPlay" />
+								<span class="custom-checkbox">Apple CarPlay</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-mutimedia_system[]" value="Android Auto" />
+								<span class="custom-checkbox">Android Auto</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-mutimedia_system[]" value="Wi-Fi connectivity" />
+								<span class="custom-checkbox">Wi-Fi connectivity</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-mutimedia_system[]" value="Voice control" />
+								<span class="custom-checkbox">Voice control</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- Часть с "комфорт"-->
+			<div class="advertising_form-part advertising_form-comfort">
+				<h3>Comfort</h3>
+
+				<!-- 24 CHECKBOX BUTTONS -->
+				<div class="advertising_checkbox-block">
+					<fieldset>
+						<legend class="visually-hidden">Comfort</legend>
+						<div class="form-group-inrow">
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Engine auto-start" />
+								<span class="custom-checkbox">Engine auto-start</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Cruise control" />
+								<span class="custom-checkbox">Cruise control</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Steering wheel controls for multimedia" />
+								<span class="custom-checkbox">Steering wheel controls for multimedia</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Power-adjustable seats" />
+								<span class="custom-checkbox">Power-adjustable seats</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Front power windows" />
+								<span class="custom-checkbox">Front power windows</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Rear power windows" />
+								<span class="custom-checkbox">Rear power windows</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Adaptive cruise control" />
+								<span class="custom-checkbox">Adaptive cruise control</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Start-stop system" />
+								<span class="custom-checkbox">Start-stop system</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Power tailgate" />
+								<span class="custom-checkbox">Power tailgate</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Seat massage function" />
+								<span class="custom-checkbox">Seat massage function</span>
+							</label>
+
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Electric folding mirrors" />
+								<span class="custom-checkbox">Electric folding mirrors</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Memory seat positions" />
+								<span class="custom-checkbox">Memory seat positions</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Wireless charging" />
+								<span class="custom-checkbox">Wireless charging</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Hands-free trunk opening" />
+								<span class="custom-checkbox">Hands-free trunk opening</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Air suspension" />
+								<span class="custom-checkbox">Air suspension</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Keyless access" />
+								<span class="custom-checkbox">Keyless access</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="12V power outlet" />
+								<span class="custom-checkbox">12V power outlet</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="220V power outlet" />
+								<span class="custom-checkbox">220V power outlet</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="110V power outlet" />
+								<span class="custom-checkbox">110V power outlet</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="product-comfort[]" value="Electric steering adjustment" />
+								<span class="custom-checkbox">Electric steering adjustment</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- Часть с загрузкой медиа -->
+			<div class="advertising_form-part advertising_form-mediaload">
+				<h3>Media</h3>
+
+				<div class="advertising_mediaload-block">
+					<div class="advertising_mediaload-hint">
+						The first photo will be displayed in search results, please select the most suitable one.
+					</div>
+
+					<div id="advertising-mediaload">
+						<div id="advertising-mediaload-area" class="mediaload-upload-area">
+							<!-- баннер с инфой и кнопкой прелоадера -->
+							<div class="mediaload-banner">
+								<div class="mediaload-banner_icon">
+									<svg class="icon icon--pre-photo">
+										<use href="./icons/symbol/sprite.svg#pre-photo"></use>
+									</svg>
+								</div>
+
+								<label for="product-media" class="mediaload-banner_title">Please select a photo</label>
+								<p class="mediaload-banner_desc">JPEG, JPG, or PNG formats up to 10 MB each.</p>
+
+								<input type="file" id="product-media" multiple accept="image/jpeg, image/png" class="hidden" />
+								<div class="mediaload-banner_button">
+									<button type="button" class="btn" id="advertising-mediaload-button">Select photo</button>
+								</div>
+							</div>
+						</div>
+
+						<div id="advertising-mediaload-previews" class="mediaload-previews"></div>
+
+						<div id="advertising-mediaload-warning" class="mediaload-warning hidden">JavaScript there paste text</div>
+					</div>
+				</div>
+
+				<div class="advertising_input-block advertising_youtube-link">
+					<div class="form-group">
+						<label for="product-youtube_link" class="advertising_block-name">YouTube video link</label>
+						<input
+							type="url"
+							id="product-youtube_link"
+							name="product-youtube_link"
+							class="input"
+							maxlength="150"
+							placeholder="https://youtube.com/"							
+							autocomplete="off"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<!-- Часть с описанием -->
+			<div class="advertising_form-part advertising_form-description">
+				<h3>Description *</h3>
+				<!-- 26 TEXT AREA -->
+				<div class="advertising_textarea-block">
+					<label for="product-description" class="visually-hidden">Description</label>
+
+					<textarea
+						class="textarea"
+						name="product-description"
+						id="product-description"
+						placeholder="Provide details and specifics to attract attention to your listing."
+						autocomplete="off"
+						required
+						maxlength="4000"
+					></textarea>
+
+					<div class="advertising_block-hint">
+						<span data-counter="product-description" class="accent">0</span>
+						out of 4000 characters
+					</div>
+				</div>
+			</div>
+
+			<!-- Часть с описанием -->
+			<div class="advertising_form-part advertising_form-price">
+				<h3>Price *</h3>
+				<!-- 27 RADIO BUTTONS AND INPUTS -->
+
+				<div class="advertising_price-plane advertising_radio-block">
+					<fieldset>
+						<legend class="visually-hidden">Price plane</legend>
+
+						<div class="form-group-inrow">
+							<label class="radio">
+								<input type="radio" name="product-price_plane" value="Price" required checked />
+								<span class="custom-radio">Price</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="product-price_plane" value="Negotiable price" />
+								<span class="custom-radio">Negotiable price</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="product-price_plane" value="Free" />
+								<span class="custom-radio">Free</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="advertising_price-plane advertising_inputsrow-block">
+					<div class="form-group">
+						<label for="product-price_all" class="visually-hidden">Price in ALL</label>
+						<input
+							type="text"
+							id="product-price_all"
+							name="product-price_all"
+							class="input"
+							maxlength="15"
+							placeholder="Price in ALL"
+							required
+							autocomplete="off"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="product-price_eur" class="visually-hidden">Price in EUR</label>
+						<input
+							type="text"
+							id="product-price_eur"
+							name="product-price_eur"
+							class="input"
+							maxlength="15"
+							placeholder="Price in EUR"
+							required
+							autocomplete="off"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<!-- Часть с параметрами -->
+			<div class="advertising_form-part advertising_form-location">
+				<h3>Location of the product / service</h3>
+				<!-- 28 SELECTS AND SUBMIT -->
+
+				<div class="advertising_select-block">
+					<label for="product-region" class="advertising_block-name">Region *</label>
+
+					<select id="product-region" name="product-region" required>
+						<option value="" disabled selected>Select region</option>
+						<option value="1">Region option 1</option>
+						<option value="2">Region option 2</option>
+						<option value="3">Region option 3</option>
+						<option value="4">Region option 4</option>
+						<option value="5">Region option 5</option>
+					</select>
+				</div>
+
+				<div class="advertising_select-block">
+					<label for="product-city" class="advertising_block-name">City / District *</label>
+
+					<select id="product-city" name="product-city" required>
+						<option value="" disabled selected>Select city/district</option>
+						<option value="1">City/District option 1</option>
+						<option value="2">City/District option 2</option>
+						<option value="3">City/District option 3</option>
+						<option value="4">City/District option 4</option>
+						<option value="5">City/District option 5</option>
+					</select>
+				</div>
+
+				<div class="advertising_submit-block">
+					<button type="submit" class="btn">Submit an advertisement</button>
+				</div>
+
+				<div class="advertising_block-hint">
+					By posting an advertisement, you agree to the <a class="accent" href="#">Terms of Service</a>.
+				</div>
+			</div>
 		</form>
 	</div>
 </div>

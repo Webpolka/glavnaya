@@ -190,11 +190,26 @@ h6 {
   height: 16px;
 }
 
+.icon--pre-flash {
+  width: 1rem;
+  height: 1.4375rem;
+}
+
+.icon--pre-photo {
+  width: 1.75rem;
+  height: 1.625rem;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------
 BASE
 --------------------------------------------------------------------------------------------------------------------------------*/
 html {
   scroll-behavior: smooth;
+  opacity: 0.2;
+  transition: opacity 0.75s ease-in-out;
+}
+html.loaded {
+  opacity: 1;
 }
 
 body {
@@ -279,6 +294,10 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .posar {
   position: relative;
 }
@@ -342,12 +361,19 @@ body {
   flex: 1 1 auto;
 }
 
+.accent {
+  color: var(--accent);
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------
 ADVERTISING CUSTOM FORM ELEMENTS
 --------------------------------------------------------------------------------------------------------------------------------*/
 .advertising {
+  --form-accent: rgb(188, 188, 188);
   padding-top: 1.25rem;
   width: 70%;
+  /********************************************************************* БЛОКИ *************************************************************/
+  /********************************************************************* ДОП СТИЛИ *************************************************************/
 }
 @media (max-width: 992px) {
   .advertising {
@@ -361,26 +387,98 @@ ADVERTISING CUSTOM FORM ELEMENTS
   margin-bottom: 1.875rem;
 }
 .advertising_form-part {
-  padding-top: 1.25rem;
-  border-bottom: 1px solid var(--border);
+  padding-top: 1.875rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 2px solid var(--border);
 }
 .advertising_form-part h3 {
   font-weight: 500;
   font-size: 1.25rem;
   color: #1a1a1a;
-  padding-bottom: 1.25rem;
+  padding-bottom: 1.5625rem;
+}
+.advertising_form-part.advertising_form-location {
+  border-bottom: none;
 }
 .advertising_form-intro {
+  padding-top: 0.625rem;
+}
+.advertising_form-intro .advertising_input-block {
+  width: 100%;
+}
+.advertising_form-mediaload h3 {
   padding-bottom: 0.625rem;
 }
+.advertising_form-description {
+  padding-top: 2.1875rem;
+  padding-bottom: 1.5625rem;
+}
+.advertising_form-description h3 {
+  padding-bottom: 0.9375rem;
+}
+.advertising_form-price {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.advertising_form-price .checkbox input[type=checkbox]:checked + .custom-checkbox,
+.advertising_form-price .radio input[type=radio]:checked + .custom-radio {
+  border-color: var(--accent);
+  color: white !important;
+  background-color: var(--accent);
+}
+.advertising_form-mediaload {
+  padding-bottom: 1.25rem;
+}
+.advertising_form-mediaload .advertising_input-block {
+  width: 100%;
+}
+.advertising_form-location {
+  padding-bottom: 6.25rem;
+}
+.advertising_form-location .btn {
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+.advertising_textarea-block {
+  margin-bottom: 1.25rem;
+}
+.advertising_textarea-block .textarea {
+  margin-bottom: 0.625rem;
+}
+.advertising_textarea-block .textarea:focus {
+  outline: 1px solid var(--form-accent);
+}
 .advertising_block-name {
+  display: block;
   font-weight: 500;
   font-size: 1rem;
   color: #1a1a1a;
   margin-bottom: 0.75rem;
 }
+.advertising_block-hint {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #878787;
+}
+.advertising_block-hint a {
+  transition: all 0.3s ease-in-out;
+}
+.advertising_block-hint a:hover {
+  opacity: 0.65;
+}
 .advertising_input-block {
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.25rem;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .advertising_input-block {
+    width: 75%;
+  }
+}
+@media (max-width: 576px) {
+  .advertising_input-block {
+    width: 100%;
+  }
 }
 .advertising_input-block label[for] {
   display: block;
@@ -393,15 +491,7 @@ ADVERTISING CUSTOM FORM ELEMENTS
   margin-bottom: 0.625rem;
 }
 .advertising_input-block .form-group .input:focus {
-  outline: 1px solid #bbbbbb;
-}
-.advertising_input-block .form-group_hint {
-  font-weight: 400;
-  font-size: 1rem;
-  color: #878787;
-}
-.advertising_input-block .form-group_hint .char-count {
-  color: var(--accent);
+  outline: 1px solid var(--form-accent);
 }
 .advertising_breadcrumbs-block {
   margin-bottom: 1.875rem;
@@ -424,20 +514,33 @@ ADVERTISING CUSTOM FORM ELEMENTS
 }
 .advertising_select-block {
   margin-bottom: 1.25rem;
+  width: 50%;
 }
-.advertising_radio-block {
-  margin-bottom: 1.875rem;
+@media (max-width: 768px) {
+  .advertising_select-block {
+    width: 75%;
+  }
+}
+@media (max-width: 576px) {
+  .advertising_select-block {
+    width: 100%;
+  }
+}
+.advertising_radio-block, .advertising_checkbox-block {
+  margin-bottom: 1.25rem;
   /* скрываем оригинальный радиобатон */
   /* стиль кастомного овала */
   /* выделение выбранного варианта */
   /* Можно добавить эффект при наведении */
 }
-.advertising_radio-block .form-group-inrow {
+.advertising_radio-block .form-group-inrow, .advertising_checkbox-block .form-group-inrow {
   display: flex;
   flex-wrap: wrap;
   gap: 0.625rem;
 }
-.advertising_radio-block .radio {
+.advertising_radio-block .radio,
+.advertising_radio-block .checkbox, .advertising_checkbox-block .radio,
+.advertising_checkbox-block .checkbox {
   display: block;
   position: relative;
   font-size: 0.875rem;
@@ -445,11 +548,15 @@ ADVERTISING CUSTOM FORM ELEMENTS
   cursor: pointer;
   font-weight: 400;
 }
-.advertising_radio-block .radio input[type=radio] {
+.advertising_radio-block .checkbox input[type=checkbox],
+.advertising_radio-block .radio input[type=radio], .advertising_checkbox-block .checkbox input[type=checkbox],
+.advertising_checkbox-block .radio input[type=radio] {
   position: absolute;
   opacity: 0;
 }
-.advertising_radio-block .custom-radio {
+.advertising_radio-block .custom-radio,
+.advertising_radio-block .custom-checkbox, .advertising_checkbox-block .custom-radio,
+.advertising_checkbox-block .custom-checkbox {
   position: relative;
   display: flex;
   align-items: center;
@@ -461,12 +568,30 @@ ADVERTISING CUSTOM FORM ELEMENTS
   background-color: #fff;
   transition: all 0.3s ease-in-out;
 }
-.advertising_radio-block .radio input[type=radio]:checked + .custom-radio {
+.advertising_radio-block .checkbox input[type=checkbox]:checked + .custom-checkbox,
+.advertising_radio-block .radio input[type=radio]:checked + .custom-radio, .advertising_checkbox-block .checkbox input[type=checkbox]:checked + .custom-checkbox,
+.advertising_checkbox-block .radio input[type=radio]:checked + .custom-radio {
   border-color: var(--accent);
   color: var(--accent);
 }
-.advertising_radio-block .radio:hover .custom-radio {
+.advertising_radio-block .checkbox:hover .custom-checkbox,
+.advertising_radio-block .radio:hover .custom-radio, .advertising_checkbox-block .checkbox:hover .custom-checkbox,
+.advertising_checkbox-block .radio:hover .custom-radio {
   border-color: #999;
+}
+.advertising_inputsrow-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.advertising_inputsrow-block .input {
+  max-width: 13.75rem;
+}
+.advertising_inputsrow-block .input:focus {
+  outline: 1px solid var(--form-accent);
+}
+.advertising_product-name {
+  margin-bottom: 1.875rem;
 }
 .advertising_transmission-type .custom-radio {
   background-color: #f3f3f3;
@@ -475,6 +600,9 @@ ADVERTISING CUSTOM FORM ELEMENTS
   border-color: var(--accent);
   color: var(--accent);
   background-color: #fff;
+}
+.advertising_modification .choices {
+  margin-bottom: 0.625rem;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
@@ -1181,6 +1309,10 @@ CUSTOM CHOICES SELECT
   color: #fff;
 }
 
+.choices__item--disabled {
+  display: none;
+}
+
 .choices[data-type*=select-one]::after {
   display: none;
 }
@@ -1448,6 +1580,26 @@ COMPONENTS
 }
 
 /*---------------------------------------------- INPUTS ----------------------------------------------------*/
+.textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #efeaea;
+  border-radius: 0.3125rem;
+  min-height: 12.5rem;
+  padding: 0.9375rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 120%;
+  color: #3d3d3d;
+  resize: none;
+}
+.textarea::placeholder {
+  color: #969696;
+}
+.textarea:focus {
+  outline: 1px solid var(--accent);
+}
+
 .input {
   display: block;
   width: 100%;
@@ -1799,6 +1951,129 @@ HEADER
   font-size: 1rem;
   color: #000;
   transition: color 0.3s ease-in-out;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+CUSTOM IMAGES mediaload
+--------------------------------------------------------------------------------------------------------------------------------*/
+.advertising_mediaload-block .mediaload-banner {
+  min-height: inherit;
+}
+.advertising_mediaload-block .mediaload-banner_icon {
+  margin-bottom: 0.625rem;
+}
+.advertising_mediaload-block .mediaload-banner_title {
+  display: block;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1a1a1a;
+  margin-bottom: 0.3125rem;
+}
+.advertising_mediaload-block .mediaload-banner_desc {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #969696;
+  margin-bottom: 1.25rem;
+}
+.advertising_mediaload-block .mediaload-banner_button .btn {
+  margin-inline: auto;
+  display: inline-block;
+  width: initial;
+  padding-inline: 2.5rem;
+}
+.advertising_mediaload-block .mediaload-upload-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px dashed #ccc;
+  padding: 1.25rem 0 0;
+  position: relative;
+  margin: 1.25rem auto 0rem;
+  text-align: center;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  max-width: 100%;
+  height: 13.75rem;
+  margin-bottom: 0.625rem;
+}
+.advertising_mediaload-block .mediaload-upload-area:hover {
+  background-color: #f9f9f9;
+}
+.advertising_mediaload-block .mediaload-previews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem 0;
+  padding-block: 0.625rem;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.advertising_mediaload-block .mediaload-previews_item {
+  position: relative;
+  aspect-ratio: 4/3;
+  width: 20%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media (max-width: 768px) {
+  .advertising_mediaload-block .mediaload-previews_item {
+    width: 33.33%;
+  }
+}
+@media (max-width: 576px) {
+  .advertising_mediaload-block .mediaload-previews_item {
+    width: 50%;
+  }
+}
+.advertising_mediaload-block .mediaload-previews_item-delete {
+  position: absolute;
+  top: 0.4375rem;
+  right: 0.75rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.advertising_mediaload-block .mediaload-previews_item-delete:hover {
+  border-color: var(--accent);
+}
+.advertising_mediaload-block .mediaload-previews_item-delete:hover svg {
+  fill: var(--accent);
+}
+.advertising_mediaload-block .mediaload-previews_item-delete svg {
+  fill: rgba(0, 0, 0, 0.45);
+  width: 0.625rem;
+  height: 0.625rem;
+  transition: all 0.3s ease-in-out;
+}
+.advertising_mediaload-block .mediaload-previews img {
+  aspect-ratio: 4/3;
+  width: 100%;
+  object-fit: cover;
+  border: 1px dashed #ccc;
+  border-radius: 0.3125rem;
+  overflow: hidden;
+}
+.advertising_mediaload-block .mediaload-warning {
+  background: rgba(230, 0, 0, 0.07);
+  width: 100%;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #3d3d3d;
+  border-radius: 0.3125rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-inline: 1.25rem;
+  min-height: 3.125rem;
+  margin-bottom: 1.875rem;
+}
+.advertising_mediaload-block .mediaload-warning.hidden {
+  display: none;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------

@@ -36,7 +36,15 @@ h6 {
 	height: 12px;
 	stroke: var(--accent);
 }
-.icon--refresh{
+.icon--refresh {
 	width: 16px;
 	height: 16px;
+}
+.icon--pre-flash {
+	width: rem(16);
+	height: rem(23);
+}
+.icon--pre-photo {
+	width: rem(28);
+	height: rem(26);
 }
