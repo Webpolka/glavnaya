@@ -1,37 +1,24 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
-CATEGORIES OVERLAY
+CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 --------------------------------------------------------------------------------------------------------------------------------*/
-.catsoverlay {
-	opacity: 0;
-	visibility: hidden;
+.catsadvert {
+	&_title {
+		font-weight: 500;
+		font-size: rem(24);
+		color: #1a1a1a;
 
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 90;
-	background-color: rgba(0, 0, 0, 0.35);
-	width: 100%;
-	top: 141px;
-
-	transition: all 0.3s ease-in-out;
-
-	&.active {
-		opacity: 1;
-		visibility: visible;
+		padding-top: rem(15);
+		margin-bottom: rem(25);
 	}
 
-	@include lg {
-		top: 0;
+	&_text {
+		font-weight: 500;
+		font-size: rem(16);
+		color: #1a1a1a;
+
+		margin-bottom: rem(20);
 	}
 
-	// Обвертка
-	&-wrapper {
-		background-color: #fff;
-		height: 100%;
-	}
-
-	// Само меню
 	&-menu {
 		display: flex;
 		position: relative;
@@ -39,48 +26,20 @@ CATEGORIES OVERLAY
 		height: 100%;
 		align-items: stretch;
 		background-color: #fff;
-		margin: 0 auto;	
+		margin: 0 auto;
 
 		max-width: var(--container-width);
 		padding-right: rem(18);
 
+		border: 1px solid var(--border);
+		border-radius: rem(5) rem(5) 0 0;
+
 		@include lg {
 			display: block;
+			border: none;
+			padding-right: 0;
 		}
-
-		&_lg-header {
-			display: none;
-
-			position: relative;
-			text-align: center;
-			padding: rem(30) rem(30) rem(0);
-			@include lg {
-				display: block;
-			}
-		}
-		&_lg-title {
-			font-size: rem(20);
-			font-weight: 700;
-		}
-		&_lg-close {
-			position: absolute;
-			top: rem(35);
-			right: rem(30);
-
-			width: rem(12);
-			height: rem(12);
-			background-image: url("../../icons/close.svg");
-			background-repeat: no-repeat;
-			background-size: 100%;
-			background-position: center center;
-
-			opacity: 0.65;
-			transition: all 0.3s ease-in-out;
-			&:hover {
-				opacity: 1;
-			}
-		}
-
+		
 		// Левая часть навигация по категориям
 		&_navigation {
 			@include lg {
@@ -90,15 +49,16 @@ CATEGORIES OVERLAY
 
 		&_cats {
 			box-sizing: content-box;
-			width: rem(265);
-			padding: rem(25) rem(15) rem(25) 0;
-			border-right: 2px solid #ededed;
+			width: rem(290);
+			padding: rem(25) 0;
+			border-right: 1px solid var(--border);
 			overflow: auto;
 			flex-shrink: 0;
 
 			@include lg {
 				border-right: none;
 				width: 100%;
+				padding: 0;
 			}
 
 			&-item {
@@ -137,9 +97,9 @@ CATEGORIES OVERLAY
 				width: 100%;
 
 				min-height: rem(42);
+				font-weight: 500;
 				color: #262626;
 				transition: color 0.2s ease-in-out;
-				font-weight: 500;
 
 				@include lg {
 					pointer-events: none;
@@ -168,8 +128,22 @@ CATEGORIES OVERLAY
 		&_content {
 			position: relative;
 			width: 100%;
-			padding: rem(50);
+			padding: rem(40) rem(50);
 			overflow-y: auto;
+
+			&.catsadvert-zindex.over {
+				z-index: 1;
+			}
+
+			@include lg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				min-height: 100%;
+				overflow: hidden;
+
+				z-index: -1;
+			}
 		}
 
 		&_subcats {
@@ -182,24 +156,23 @@ CATEGORIES OVERLAY
 				animation: fade-up 0.3s ease-in-out;
 			}
 
-			@include lg {
-				position: fixed;
+			@include lg {				
+				position: absolute;
 				top: 0;
 				left: 100%;
 
 				display: block;
 
 				width: 100%;
-				height: 100%;
-				max-height: 100vh;
-				overflow-y: auto;
+				height: 100%;				
 
 				padding: rem(20) rem(15);
 				background-color: white;
 
 				transition: all 0.3s ease-in-out;
 
-				&.active-lg {				
+				// для планшетов и мобилок работает класс active-lg
+				&.active-lg {
 					left: 0;
 				}
 			}

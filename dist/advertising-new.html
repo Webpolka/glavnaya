@@ -1,4 +1,305 @@
-<section class="catsoverlay">
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	<head>  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>New: Submiting an advertising</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  
+  <!-- Choices CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+  
+  <!-- WL ShopBullet CSS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/css/main.min.css">
+
+  <link rel="stylesheet" href="vendor/bootstrap-grid.css">
+  <link rel="stylesheet" href="postcss/main.min.css">  
+</head>
+ 
+  
+
+	<body>
+		<div class="site-overlay"></div>
+		<div class="wrapper">			
+			<header id="masthead" class="header">
+	<div class="container">
+		<!-- Верхняя часть хедера -->
+		<div class="header-top">
+			<!-- Верхнее меню -->
+			<nav class="header-top_nav" aria-label="Main menu">
+				<ul class="header-top_list">
+					<li><a href="#">Auto</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Real Estate</a></li>
+					<li><a href="#">Relax</a></li>
+					<li><a href="#">Rent</a></li>
+				</ul>
+			</nav>
+
+			<!-- Курс валюты -->
+			<div class="header-currency" data-euro="97.50" data-usd="110.50" role="button" tabindex="0" aria-label="Change currency">
+				<span class="header-currency_name">none</span>
+				<span class="header-currency_rate">none</span>
+			</div>
+		</div>
+
+		<!-- Вторая часть хедера -->
+		<div class="header-bottom">
+			<div class="header-bottom_intro">
+				<!-- Бургер -->
+				<div class="header-burger" id="burger">
+					<span></span>
+				</div>
+
+				<!-- Лого -->
+				<a href="index.html" class="header-logo">
+					<span class="header-logo_icon">
+						<svg class="icon icon--eagle">
+							<use href="./icons/symbol/sprite.svg#eagle"></use>
+						</svg>
+					</span>
+					<span class="header-logo_name"> Abl.al </span>
+				</a>
+
+				<!-- Форма поиска -->
+				<form class="header-search-form" role="search" aria-label="Site Search">
+					<button type="submit" class="search-button">
+						<svg class="icon icon--searchsvg">
+							<use href="./icons/symbol/sprite.svg#searchsvg"></use>
+						</svg>
+					</button>
+					<input type="text" class="search-input" name="search" id="search" placeholder="Find an ad" aria-label="Search">
+				</form>
+			</div>
+
+			<!-- Навигация второй части хедера -->
+			<nav class="header-bottom_nav">
+				<!-- Локация -->
+				<button class="header-location" aria-label="Change location">
+					<span class="header-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="header-location_name"> Tiana </span>
+				</button>
+
+				<!-- Добавить в список -->
+				<a href="advertising-category.html" class="header-add-listing" aria-label="Add listing">
+					<span class="header-add-listing_before">
+						<svg class="icon icon--plus">
+							<use href="./icons/symbol/sprite.svg#plus"></use>
+						</svg>
+					</span>
+					<span class="header-add-listing_name"> Add listing </span>
+				</a>
+
+				<!-- Кнопка авторизации - скрипт привязан к значению data-signed (зареган юзер или нет...)-->
+				<button class="header-sign-in" aria-label="Authorization" data-signed="false">
+					<span class="header-sign-in_name"> Sign </span>
+				</button>
+			</nav>
+		</div>
+	</div>
+</header>
+
+			<main id="primary" class="main">
+				<div class="container">
+	<div class="advertising advertising-new">
+		<form action="">
+			<h2 class="advertising_title">Submitting an advertisement</h2>
+
+			<!-- Вступительная часть -->
+			<div class="advertising_form-part advertising_form-intro">
+				<!-- 1 -->
+				<div class="advertising_input-block advertising_product-name">
+					<div class="form-group">
+						<label for="product-name">Product/Service Name *</label>
+						<input type="text" id="product-name" name="product-name" class="input" maxlength="50" placeholder="e.g.: BMW X5M" required autocomplete="off">
+						<div class="advertising_block-hint">
+							<span data-counter="product-name" class="accent">0</span>
+							out of 50 characters
+						</div>
+					</div>
+				</div>
+
+				<!-- 2 -->
+				<div class="advertising_breadcrumbs-block">
+					<div class="advertising_block-name">Category *</div>
+
+					<div class="categorie-breadcrumbs">
+						<a class="categorie-breadcrumbs_link" href="#">Auto</a>
+
+						<!--svg разделитель -->
+						<svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A"/>
+						</svg>
+
+						<span class="categorie-breadcrumbs_span">Passenger cars</span>
+					</div>
+
+					<!-- Вставь в скрытый инпут в value название категории (нужно для формы)-->
+					<input type="text" id="product-category" name="product-category" value="Passenger cars" required hidden>
+
+					<!-- Кнопка для выбора категорий -->
+					<a href="advertising-category.html" class="btn-gray">Change category</a>
+				</div>
+			</div>
+
+
+			<!-- Часть с загрузкой медиа -->
+			<div class="advertising_form-part advertising_form-mediaload">
+				<h3>Media</h3>
+
+				<div class="advertising_mediaload-block">
+					<div class="advertising_mediaload-hint">
+						The first photo will be displayed in search results, please select the most suitable one.
+					</div>
+
+					<div id="advertising-mediaload">
+						<div id="advertising-mediaload-area" class="mediaload-upload-area">
+							<!-- баннер с инфой и кнопкой прелоадера -->
+							<div class="mediaload-banner">
+								<div class="mediaload-banner_icon">
+									<svg class="icon icon--pre-photo">
+										<use href="./icons/symbol/sprite.svg#pre-photo"></use>
+									</svg>
+								</div>
+
+								<label for="product-media" class="mediaload-banner_title">Please select a photo</label>
+								<p class="mediaload-banner_desc">JPEG, JPG, or PNG formats up to 10 MB each.</p>
+
+								<input type="file" id="product-media" multiple="multiple" accept="image/jpeg, image/png" class="hidden">
+								<div class="mediaload-banner_button">
+									<button type="button" class="btn" id="advertising-mediaload-button">Select photo</button>
+								</div>
+							</div>
+						</div>
+
+						<div id="advertising-mediaload-previews" class="mediaload-previews"></div>
+
+						<div id="advertising-mediaload-warning" class="hidden mediaload-warning">JavaScript there paste text</div>
+					</div>
+				</div>
+
+				<div class="advertising_input-block advertising_youtube-link">
+					<div class="form-group">
+						<label for="product-youtube_link" class="advertising_block-name">YouTube video link</label>
+						<input type="url" id="product-youtube_link" name="product-youtube_link" class="input" maxlength="150" placeholder="https://youtube.com/" autocomplete="off">
+					</div>
+				</div>
+			</div>
+
+			<!-- Часть с описанием -->
+			<div class="advertising_form-part advertising_form-description">
+				<h3>Description *</h3>
+				<!-- 26 TEXT AREA -->
+				<div class="advertising_textarea-block">
+					<label for="product-description" class="visually-hidden">Description</label>
+
+					<textarea class="textarea" name="product-description" id="product-description" placeholder="Provide details and specifics to attract attention to your listing." autocomplete="off" required maxlength="4000"></textarea>
+
+					<div class="advertising_block-hint">
+						<span data-counter="product-description" class="accent">0</span>
+						out of 4000 characters
+					</div>
+				</div>
+			</div>
+
+			<!-- Часть с описанием -->
+			<div class="advertising_form-part advertising_form-price">
+				<h3>Price *</h3>
+				<!-- 27 RADIO BUTTONS AND INPUTS -->
+
+				<div class="advertising_price-plane advertising_radio-block">
+					<fieldset>
+						<legend class="visually-hidden">Price plane</legend>
+
+						<div class="form-group-inrow">
+							<label class="radio">
+								<input type="radio" name="product-price_plane" value="Price" required checked="checked">
+								<span class="custom-radio">Price</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="product-price_plane" value="Negotiable price">
+								<span class="custom-radio">Negotiable price</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="product-price_plane" value="Free">
+								<span class="custom-radio">Free</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="advertising_price-plane advertising_inputsrow-block">
+					<div class="form-group">
+						<label for="product-price_all" class="visually-hidden">Price in ALL</label>
+						<input type="text" id="product-price_all" name="product-price_all" class="input" maxlength="15" placeholder="Price in ALL" required autocomplete="off">
+					</div>
+
+					<div class="form-group">
+						<label for="product-price_eur" class="visually-hidden">Price in EUR</label>
+						<input type="text" id="product-price_eur" name="product-price_eur" class="input" maxlength="15" placeholder="Price in EUR" required autocomplete="off">
+					</div>
+				</div>
+			</div>
+
+			<!-- Часть с параметрами -->
+			<div class="advertising_form-part advertising_form-location">
+				<h3>Location of the product / service</h3>
+				<!-- 28 SELECTS AND SUBMIT -->
+
+				<div class="advertising_select-block">
+					<label for="product-region" class="advertising_block-name">Region *</label>
+
+					<select id="product-region" name="product-region" required>
+						<option value="" disabled="disabled" selected="selected">Select region</option>
+						<option value="1">Region option 1</option>
+						<option value="2">Region option 2</option>
+						<option value="3">Region option 3</option>
+						<option value="4">Region option 4</option>
+						<option value="5">Region option 5</option>
+					</select>
+				</div>
+
+				<div class="advertising_select-block">
+					<label for="product-city" class="advertising_block-name">City / District *</label>
+
+					<select id="product-city" name="product-city" required>
+						<option value="" disabled="disabled" selected="selected">Select city/district</option>
+						<option value="1">City/District option 1</option>
+						<option value="2">City/District option 2</option>
+						<option value="3">City/District option 3</option>
+						<option value="4">City/District option 4</option>
+						<option value="5">City/District option 5</option>
+					</select>
+				</div>
+
+				<div class="advertising_submit-block">
+					<button type="submit" class="btn">Submit an advertisement</button>
+				</div>
+
+				<div class="advertising_block-hint">
+					By posting an advertisement, you agree to the <a class="accent" href="#">Terms of Service</a>.
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+				
+			</main>
+			<footer id="colophon" class="footer">
+	<div class="container">
+		<span class="footer-text">Подвал</span>
+	</div>
+</footer>
+
+		</div>
+		<section class="catsoverlay">
 	<h2 class="visually-hidden">КАТЕГОРИИ</h2>
 	<div class="catsoverlay-wrapper">
 		<div class="catsoverlay-menu">
@@ -10,43 +311,43 @@
 				</div>
 
 				<ul class="catsoverlay-menu_cats">
-					<li class="catsoverlay-menu_cats-item" data-catIDoverlay="1">
+					<li class="catsoverlay-menu_cats-item" data-catidoverlay="1">
 						<a class="catsoverlay-menu_cats-link" href="#">Auto</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catIDoverlay="2">
+					<li class="catsoverlay-menu_cats-item" data-catidoverlay="2">
 						<a class="catsoverlay-menu_cats-link" href="#">Services</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catIDoverlay="3">
+					<li class="catsoverlay-menu_cats-item" data-catidoverlay="3">
 						<a class="catsoverlay-menu_cats-link" href="#">Real Estate</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catIDoverlay="4">
+					<li class="catsoverlay-menu_cats-item" data-catidoverlay="4">
 						<a class="catsoverlay-menu_cats-link" href="#">Relax</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catIDoverlay="5">
+					<li class="catsoverlay-menu_cats-item" data-catidoverlay="5">
 						<a class="catsoverlay-menu_cats-link" href="#">Rent</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catIDoverlay="6">
+					<li class="catsoverlay-menu_cats-item" data-catidoverlay="6">
 						<a class="catsoverlay-menu_cats-link" href="#">Health</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catIDoverlay="7">
+					<li class="catsoverlay-menu_cats-item" data-catidoverlay="7">
 						<a class="catsoverlay-menu_cats-link" href="#">Education</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catIDoverlay="8">
+					<li class="catsoverlay-menu_cats-item" data-catidoverlay="8">
 						<a class="catsoverlay-menu_cats-link" href="#">Animals</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catIDoverlay="9">
+					<li class="catsoverlay-menu_cats-item" data-catidoverlay="9">
 						<a class="catsoverlay-menu_cats-link" href="#">Tourism</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
-					<li class="catsoverlay-menu_cats-item" data-catIDoverlay="10">
+					<li class="catsoverlay-menu_cats-item" data-catidoverlay="10">
 						<a class="catsoverlay-menu_cats-link" href="#">Flea Market</a>
 						<span class="catsoverlay-menu_cats-arrow"></span>
 					</li>
@@ -56,7 +357,7 @@
 			<!-- Подкатегории правая сторона -->
 			<div class="catsoverlay-menu_content">
 				<!-- 1 -->
-				<div class="catsoverlay-menu_subcats" data-blockIDoverlay="1">
+				<div class="catsoverlay-menu_subcats" data-blockidoverlay="1">
 					<div class="catsoverlay-menu_subcats-header">
 						<button class="catsoverlay-menu_subcats-back" data-subcatback="overlay"></button>
 						<h2 class="catsoverlay-menu_subcats-title">Auto</h2>
@@ -224,7 +525,7 @@
 				</div>
 
 				<!-- 2 -->
-				<div class="catsoverlay-menu_subcats" data-blockIDoverlay="2">
+				<div class="catsoverlay-menu_subcats" data-blockidoverlay="2">
 					<div class="catsoverlay-menu_subcats-header">
 						<button class="catsoverlay-menu_subcats-back" data-subcatback="overlay"></button>
 						<h2 class="catsoverlay-menu_subcats-title">Services</h2>
@@ -392,7 +693,7 @@
 				</div>
 
 				<!-- 3 -->
-				<div class="catsoverlay-menu_subcats" data-blockIDoverlay="3">
+				<div class="catsoverlay-menu_subcats" data-blockidoverlay="3">
 					<div class="catsoverlay-menu_subcats-header">
 						<button class="catsoverlay-menu_subcats-back" data-subcatback="overlay"></button>
 						<h2 class="catsoverlay-menu_subcats-title">Real Estate</h2>
@@ -560,7 +861,7 @@
 				</div>
 
 				<!-- 4 -->
-				<div class="catsoverlay-menu_subcats" data-blockIDoverlay="4">
+				<div class="catsoverlay-menu_subcats" data-blockidoverlay="4">
 					<div class="catsoverlay-menu_subcats-header">
 						<button class="catsoverlay-menu_subcats-back" data-subcatback="overlay"></button>
 						<h2 class="catsoverlay-menu_subcats-title">Relax</h2>
@@ -730,3 +1031,213 @@
 		</div>
 	</div>
 </section>
+
+        <!-- SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGN UP FORM  -->
+<div class="authorize-signup">
+	<!-- Close button -->
+	<button class="authorize-signup_close">
+		<svg class="icon icon--close">
+			<use href="./icons/symbol/sprite.svg#close"></use>
+		</svg>
+	</button>
+	<!-- Заголовок -->
+	<h3 class="authorize-signup_title">Sign Up</h3>
+
+	<div class="authorize-signup_spacebetween">
+		<!-- Top -->
+		<div class="authorize-signup_top">
+			<div class="authorize-signup_tabs">
+				<button class="signup-tab" data-tab="1">By phone</button>
+				<button class="signup-tab" data-tab="2">By Email</button>
+			</div>
+
+			<div class="authorize-signup_panels">
+				<!-- By phone -->
+				<div class="signup-panel" data-panel="1">
+					<form action="" id="signup-by-phone">
+						<label>Your name
+							<input class="input" type="text" name="name" placeholder="Type your name" autocomplete="on">
+						</label>
+						<label>Phone
+							<input class="input" type="text" name="phone" placeholder="Type number phone" autocomplete="on">
+						</label>
+						<label>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
+						</label>
+
+						<span class="panel-shorter-text">Not shorter than 8 characters</span>
+
+						<button class="btn" type="submit">Sign up</button>
+					</form>
+				</div>
+
+				<!-- By email -->
+				<div class="signup-panel" data-panel="2">
+					<form action="" id="signup-by-email">
+						<label>Your name
+							<input class="input" type="text" name="name" placeholder="Type your name" autocomplete="on">
+						</label>
+						<label>Email
+							<input class="input" type="text" name="emailorusername" placeholder="Type email or username" autocomplete="on">
+						</label>
+						<label>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
+						</label>
+
+						<span class="panel-shorter-text">Not shorter than 8 characters</span>
+
+						<button class="btn" type="submit">Sign up</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Bottom -->
+		<div class="authorize-signup_bottom">
+			<button class="panel-signup-btn" data-modal="sign-in">Sign in</button>
+			<p>for registered users</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- LOGIN FORM LOGIN FORM LOGIN FORM  LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM  -->
+<div class="authorize-login">
+	<!-- Close button -->
+	<button class="authorize-login_close">
+		<svg class="icon icon--close">
+			<use href="./icons/symbol/sprite.svg#close"></use>
+		</svg>
+	</button>
+	<!-- Заголовок -->
+	<h3 class="authorize-login_title">Log into your profile</h3>
+
+	<div class="authorize-login_spacebetween">
+		<!-- Top -->
+		<div class="authorize-login_top">
+			<div class="authorize-login_tabs">
+				<button class="login-tab" data-tab="1">By phone</button>
+				<button class="login-tab" data-tab="2">By Email</button>
+			</div>
+
+			<div class="authorize-login_panels">
+				<!-- By phone -->
+				<div class="login-panel" data-panel="1">
+					<form action="" id="login-by-phone">
+						<label>Phone number
+							<input class="input" type="number" name="phone" placeholder="Type number" autocomplete="on">
+						</label>
+						<label>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
+						</label>
+						<label class="checkbox-item panel-remember-label">
+							<input class="checkbox-input" type="checkbox" name="remember">
+							<span>Remember me</span>
+						</label>
+						<button class="btn" type="submit">Sign in</button>
+
+						<span class="panel-reset-btn">Reset password</span>
+					</form>
+				</div>
+
+				<!-- By email -->
+				<div class="login-panel" data-panel="2">
+					<form action="" id="login-by-email">
+						<label>Email
+							<input class="input" type="email" name="email" placeholder="Type email" autocomplete="on">
+						</label>
+						<label>Password
+							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
+						</label>
+						<label class="checkbox-item panel-remember-label">
+							<input class="checkbox-input" type="checkbox" name="remember">
+							<span>Remember me</span>
+						</label>
+						<button class="btn" type="submit">Sign in</button>
+
+						<span class="panel-reset-btn">Reset password</span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Bottom -->
+		<div class="authorize-login_bottom">
+			<button class="panel-login-btn" data-modal="sign-in">Sign up</button>
+			<p>for first-time users</p>
+		</div>
+	</div>
+</div>
+
+
+		<!--LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL Модальное окно для ВХОДА - LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL  -->
+<div data-signinmodal="true" class="modal-sign-in_overlay">
+	<div class="modal-sign-in_window">
+		<!-- Кнопка закрыть -->
+		<button type="button" class="modal-sign-in_closeBtn" data-signinmodal="close-btn">
+			<svg class="icon icon--close">
+				<use href="./icons/symbol/sprite.svg#close"></use>
+			</svg>
+		</button>
+
+		<form action="" id="sign-in-modal-form">
+			<!-- Первая часть формы -->
+			<div class="active modal-sign-in_first">
+				<h2 class="modal-sign-in_title">Log in or create a profile</h2>
+
+				<p class="modal-sign-in_text">Enter your phone number or email to log in or sign up.</p>
+
+				<input id="sign-name" name="sign-name" class="modal-sign-in_input" type="text" placeholder="Phone number or email" autocomplete="on" data-signinmodal="nikname">
+
+				<button type="button" data-signinmodal="continue" class="modal-sign-in_btn">Continue</button>
+
+				<div data-signinmodal="reset-nikname" class="modal-sign-in_resetBtn">Reset Phone number or email</div>
+
+				<p class="modal-sign-in_terms">
+					By registering and logging in, you agree to the website's <a href="#">Terms of Use</a> and
+					<a href="#">Privacy <br>
+						Policy</a>.
+				</p>
+			</div>
+
+			<!-- Вторая часть формы -->
+			<div class="modal-sign-in_second">
+				<!-- Кнопка назад -->
+				<div data-signinmodal="back-btn" class="modal-sign-in_backBtn">
+					<svg class="icon icon--prev">
+						<use href="./icons/symbol/sprite.svg#prev"></use>
+					</svg>
+				</div>
+
+				<!-- Приветствие -->
+				<h2 class="modal-sign-in_great">Hello, <span class="greating">John</span> !</h2>
+
+				<input id="sign-password" name="sign-password" class="modal-sign-in_input" type="password" placeholder="Enter your password" autocomplete="off" data-signinmodal="password">
+
+				<div class="modal-sign-in_remember">
+					<label class="checkbox-item panel-remember-label">
+						<input class="checkbox-input" type="checkbox" name="remember">
+						<span>Remember me</span>
+					</label>
+				</div>
+
+				<button type="submit" class="modal-sign-in_btn">Continue</button>
+
+				<button type="button" data-signinmodal="reset-password" class="modal-sign-in_resetBtn">Reset password</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+		
+		<!-- WL ShopBullet Script -->
+<script src="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/vendor/js/script.js"></script>
+
+<!-- Choices Script -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="./js/main.min.js"></script>
+
+	</body>
+</html>

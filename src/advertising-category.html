@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
-	@@include('html/components/head.html', { 'title': 'Submiting an advertising' })
+	@@include('html/components/head.html', { 'title': 'Category : Submiting an advertising' })
 
 	<body>
 		<div class="site-overlay"></div>
 		<div class="wrapper">			
 			@@include('html/sections/header.html')
 			<main id="primary" class="main">
-				@@include('html/sections/submiting-an-advertising.html')				
+				@@include('html/sections/cats-advert.html')				
 			</main>
 			@@include('html/sections/footer.html')
 		</div>
 		@@include('html/sections/cats-overlay.html')
         @@include('html/sections/authorize-forms.html')
+
+		@@include('html/sections/modal-login.html')
 		
 		@@include('html/components/script.html')
 	</body>

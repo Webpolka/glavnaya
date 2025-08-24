@@ -1,0 +1,226 @@
+<div class="container">
+	<div class="advertising advertising-new">
+		<form action="">
+			<h2 class="advertising_title">Submitting an advertisement</h2>
+
+			<!-- Вступительная часть -->
+			<div class="advertising_form-part advertising_form-intro">
+				<!-- 1 -->
+				<div class="advertising_input-block advertising_product-name">
+					<div class="form-group">
+						<label for="product-name">Product/Service Name *</label>
+						<input
+							type="text"
+							id="product-name"
+							name="product-name"
+							class="input"
+							maxlength="50"
+							placeholder="e.g.: BMW X5M"
+							required
+							autocomplete="off"
+						/>
+						<div class="advertising_block-hint">
+							<span data-counter="product-name" class="accent">0</span>
+							out of 50 characters
+						</div>
+					</div>
+				</div>
+
+				<!-- 2 -->
+				<div class="advertising_breadcrumbs-block">
+					<div class="advertising_block-name">Category *</div>
+
+					<div class="categorie-breadcrumbs">
+						<a class="categorie-breadcrumbs_link" href="#">Auto</a>
+
+						<!--svg разделитель -->
+						<svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A" />
+						</svg>
+
+						<span class="categorie-breadcrumbs_span">Passenger cars</span>
+					</div>
+
+					<!-- Вставь в скрытый инпут в value название категории (нужно для формы)-->
+					<input type="text" id="product-category" name="product-category" value="Passenger cars" required hidden />
+
+					<!-- Кнопка для выбора категорий -->
+					<a href="advertising-category.html" class="btn-gray">Change category</a>
+				</div>
+			</div>
+
+
+			<!-- Часть с загрузкой медиа -->
+			<div class="advertising_form-part advertising_form-mediaload">
+				<h3>Media</h3>
+
+				<div class="advertising_mediaload-block">
+					<div class="advertising_mediaload-hint">
+						The first photo will be displayed in search results, please select the most suitable one.
+					</div>
+
+					<div id="advertising-mediaload">
+						<div id="advertising-mediaload-area" class="mediaload-upload-area">
+							<!-- баннер с инфой и кнопкой прелоадера -->
+							<div class="mediaload-banner">
+								<div class="mediaload-banner_icon">
+									<svg class="icon icon--pre-photo">
+										<use href="./icons/symbol/sprite.svg#pre-photo"></use>
+									</svg>
+								</div>
+
+								<label for="product-media" class="mediaload-banner_title">Please select a photo</label>
+								<p class="mediaload-banner_desc">JPEG, JPG, or PNG formats up to 10 MB each.</p>
+
+								<input type="file" id="product-media" multiple accept="image/jpeg, image/png" class="hidden" />
+								<div class="mediaload-banner_button">
+									<button type="button" class="btn" id="advertising-mediaload-button">Select photo</button>
+								</div>
+							</div>
+						</div>
+
+						<div id="advertising-mediaload-previews" class="mediaload-previews"></div>
+
+						<div id="advertising-mediaload-warning" class="mediaload-warning hidden">JavaScript there paste text</div>
+					</div>
+				</div>
+
+				<div class="advertising_input-block advertising_youtube-link">
+					<div class="form-group">
+						<label for="product-youtube_link" class="advertising_block-name">YouTube video link</label>
+						<input
+							type="url"
+							id="product-youtube_link"
+							name="product-youtube_link"
+							class="input"
+							maxlength="150"
+							placeholder="https://youtube.com/"
+							autocomplete="off"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<!-- Часть с описанием -->
+			<div class="advertising_form-part advertising_form-description">
+				<h3>Description *</h3>
+				<!-- 26 TEXT AREA -->
+				<div class="advertising_textarea-block">
+					<label for="product-description" class="visually-hidden">Description</label>
+
+					<textarea
+						class="textarea"
+						name="product-description"
+						id="product-description"
+						placeholder="Provide details and specifics to attract attention to your listing."
+						autocomplete="off"
+						required
+						maxlength="4000"
+					></textarea>
+
+					<div class="advertising_block-hint">
+						<span data-counter="product-description" class="accent">0</span>
+						out of 4000 characters
+					</div>
+				</div>
+			</div>
+
+			<!-- Часть с описанием -->
+			<div class="advertising_form-part advertising_form-price">
+				<h3>Price *</h3>
+				<!-- 27 RADIO BUTTONS AND INPUTS -->
+
+				<div class="advertising_price-plane advertising_radio-block">
+					<fieldset>
+						<legend class="visually-hidden">Price plane</legend>
+
+						<div class="form-group-inrow">
+							<label class="radio">
+								<input type="radio" name="product-price_plane" value="Price" required checked />
+								<span class="custom-radio">Price</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="product-price_plane" value="Negotiable price" />
+								<span class="custom-radio">Negotiable price</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="product-price_plane" value="Free" />
+								<span class="custom-radio">Free</span>
+							</label>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="advertising_price-plane advertising_inputsrow-block">
+					<div class="form-group">
+						<label for="product-price_all" class="visually-hidden">Price in ALL</label>
+						<input
+							type="text"
+							id="product-price_all"
+							name="product-price_all"
+							class="input"
+							maxlength="15"
+							placeholder="Price in ALL"
+							required
+							autocomplete="off"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="product-price_eur" class="visually-hidden">Price in EUR</label>
+						<input
+							type="text"
+							id="product-price_eur"
+							name="product-price_eur"
+							class="input"
+							maxlength="15"
+							placeholder="Price in EUR"
+							required
+							autocomplete="off"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<!-- Часть с параметрами -->
+			<div class="advertising_form-part advertising_form-location">
+				<h3>Location of the product / service</h3>
+				<!-- 28 SELECTS AND SUBMIT -->
+
+				<div class="advertising_select-block">
+					<label for="product-region" class="advertising_block-name">Region *</label>
+
+					<select id="product-region" name="product-region" required>
+						<option value="" disabled selected>Select region</option>
+						<option value="1">Region option 1</option>
+						<option value="2">Region option 2</option>
+						<option value="3">Region option 3</option>
+						<option value="4">Region option 4</option>
+						<option value="5">Region option 5</option>
+					</select>
+				</div>
+
+				<div class="advertising_select-block">
+					<label for="product-city" class="advertising_block-name">City / District *</label>
+
+					<select id="product-city" name="product-city" required>
+						<option value="" disabled selected>Select city/district</option>
+						<option value="1">City/District option 1</option>
+						<option value="2">City/District option 2</option>
+						<option value="3">City/District option 3</option>
+						<option value="4">City/District option 4</option>
+						<option value="5">City/District option 5</option>
+					</select>
+				</div>
+
+				<div class="advertising_submit-block">
+					<button type="submit" class="btn">Submit an advertisement</button>
+				</div>
+
+				<div class="advertising_block-hint">
+					By posting an advertisement, you agree to the <a class="accent" href="#">Terms of Service</a>.
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

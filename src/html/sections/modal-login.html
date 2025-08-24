@@ -1,0 +1,76 @@
+<!--LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL Модальное окно для ВХОДА - LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL  -->
+<div data-signInModal="true" class="modal-sign-in_overlay">
+	<div class="modal-sign-in_window">
+		<!-- Кнопка закрыть -->
+		<button type="button" class="modal-sign-in_closeBtn" data-signInModal="close-btn">
+			<svg class="icon icon--close">
+				<use href="./icons/symbol/sprite.svg#close"></use>
+			</svg>
+		</button>
+
+		<form action="" id="sign-in-modal-form">
+			<!-- Первая часть формы -->
+			<div class="modal-sign-in_first active">
+				<h2 class="modal-sign-in_title">Log in or create a profile</h2>
+
+				<p class="modal-sign-in_text">Enter your phone number or email to log in or sign up.</p>
+
+				<input
+					id="sign-name"
+					name="sign-name"
+					class="modal-sign-in_input"
+					type="text"
+					placeholder="Phone number or email"
+					autocomplete="on"
+					data-signInModal="nikname"
+				/>
+
+				<button type="button" data-signInModal="continue" class="modal-sign-in_btn">Continue</button>
+
+				<div data-signInModal="reset-nikname" class="modal-sign-in_resetBtn">Reset Phone number or email</div>
+
+				<p class="modal-sign-in_terms">
+					By registering and logging in, you agree to the website's <a href="#">Terms of Use</a> and
+					<a href="#"
+						>Privacy <br />
+						Policy</a
+					>.
+				</p>
+			</div>
+
+			<!-- Вторая часть формы -->
+			<div class="modal-sign-in_second">
+				<!-- Кнопка назад -->
+				<div data-signInModal="back-btn" class="modal-sign-in_backBtn">
+					<svg class="icon icon--prev">
+						<use href="./icons/symbol/sprite.svg#prev"></use>
+					</svg>
+				</div>
+
+				<!-- Приветствие -->
+				<h2 class="modal-sign-in_great">Hello, <span class="greating">John</span> !</h2>
+
+				<input
+					id="sign-password"
+					name="sign-password"
+					class="modal-sign-in_input"
+					type="password"
+					placeholder="Enter your password"
+					autocomplete="off"
+					data-signInModal="password"
+				/>
+
+				<div class="modal-sign-in_remember">
+					<label class="checkbox-item panel-remember-label">
+						<input class="checkbox-input" type="checkbox" name="remember" />
+						<span>Remember me</span>
+					</label>
+				</div>
+
+				<button type="submit" class="modal-sign-in_btn">Continue</button>
+
+				<button type="button" data-signInModal="reset-password" class="modal-sign-in_resetBtn">Reset password</button>
+			</div>
+		</form>
+	</div>
+</div>

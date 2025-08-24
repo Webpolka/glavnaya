@@ -244,8 +244,31 @@ authorizeSignUpElement &&
 /*--------------------------------------------------------------------------------------------------------------
 DATA-CATEGORIES LISTENER
 ----------------------------------------------------------------------------------------------------------------*/
+// [data-catId] - catID обязательный префикс(скрипт на нём завязан)
 import CatsMenu from "./modules/cats-menu-prod";
-new CatsMenu();
+
+const categoriesOverlayMenu = document.querySelector(".catsoverlay");
+const categoriesAdvertisingStartPage = document.querySelector(".catsadvert");
+
+categoriesOverlayMenu &&
+	new CatsMenu({
+		parent: ".catsoverlay",
+		openBtn: "#burger",
+		catButton: "data-catIDoverlay",
+		catBlock: "data-blockIDoverlay",
+		backButton: "data-subcatback='overlay'",
+		closeButton: "data-catsclose='overlay'",
+		openSubListButton: "data-subcatslist='overlay'",
+	});
+categoriesAdvertisingStartPage &&
+	new CatsMenu({
+		parent: ".catsadvert",
+		catButton: "data-catIDpage",
+		catBlock: "data-blockIDpage",
+		backButton: "data-subcatback='page'",
+		closeButton: "data-catsclose='page'",
+		openSubListButton: "data-subcatslist='page'",
+	});
 
 /*--------------------------------------------------------------------------------------------------------------
 CHAR COUNTERS
@@ -293,16 +316,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		selectProductRegion,
 		selectProductCity,
 	];
-	
-	selectProductArray.forEach((select) => {		
-		select && new Choices(select, {
-			searchEnabled: false, // отключить поиск, так как один выбор
-			itemSelectText: "", // убрать подсказку при выборе
-			shouldSort: false,
-			placeholder: true,
-			placeholderValue: "Select", // placeholder
-			position: "bottom",
-		});
+
+	selectProductArray.forEach((select) => {
+		select &&
+			new Choices(select, {
+				searchEnabled: false, // отключить поиск, так как один выбор
+				itemSelectText: "", // убрать подсказку при выборе
+				shouldSort: false,
+				placeholder: true,
+				placeholderValue: "Select", // placeholder
+				position: "bottom",
+			});
 	});
 });
 /*--------------------------------------------------------------------------------------------------------------
@@ -322,4 +346,34 @@ document.addEventListener("DOMContentLoaded", () => {
 			warningId: "advertising-mediaload-warning",
 			dragAreaId: "advertising-mediaload-area",
 		});
+});
+
+/*--------------------------------------------------------------------------------------------------------------
+MODAL WINDOWS
+----------------------------------------------------------------------------------------------------------------*/
+import ModalAuth from "./modules/modal-auth";
+// Используем для каждого модального окна, передавая его DOM-элемент
+document.addEventListener("DOMContentLoaded", () => {
+	const signInModal = document.querySelector('[data-signInModal="true"]');	
+	signInModal &&
+		new ModalAuth(signInModal, {
+			selectors: {
+				openBtn: '[data-modal="sign-in"]',
+				closeBtn: '[data-signInModal="close-btn"]',
+				backBtn: '[data-signInModal="back-btn"]',
+				continueBtn: '[data-signInModal="continue"]',
+				submitBtn: 'button[type="submit"]',
+				greatName: ".greating",
+				firstPart: ".modal-sign-in_first",
+				secondPart: ".modal-sign-in_second",
+				form: "form",
+				firstInput: "[data-signInModal='nikname']",
+				secondInput: "[data-signInModal='password']",
+				resetFirstBtn: '[data-signInModal="reset-nikname"]',
+				resetSecondBtn: '[data-signInModal="reset-password"]',
+				authorizeLogin: ".authorize-login",
+				authorizeSignUp: ".authorize-signup",
+				siteOverlay: ".site-overlay",
+			},
+		});	
 });

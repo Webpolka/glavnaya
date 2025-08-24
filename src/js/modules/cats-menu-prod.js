@@ -2,12 +2,12 @@ export default class CatsMenu {
 	constructor(options = {}) {
 		const defaultConfig = {
 			parent: ".catsoverlay",
-			openBtn: "#burger",
-			catButton: "data-catID",
-			catBlock: "data-blockID",
-			backButton: "data-subcatback",
-			closeButton: "data-catsclose",
-			openSubListButton: "data-subcatslist",
+			openBtn: false,
+			catButton: "data-catIDoverlay",
+			catBlock: "data-blockIDoverlay",
+			backButton: "data-subcatback='overlay'",
+			closeButton: "data-catsclose='overlay'",
+			openSubListButton: "data-subcatslist='overlay'",
 		};
 		this.options = Object.assign(defaultConfig, options);
 		this.parent = document.querySelector(this.options.parent);
@@ -20,7 +20,7 @@ export default class CatsMenu {
 
 	closeAnotherLists(currentList, button) {
 		this.parent.querySelectorAll(`[${this.options.openSubListButton}]`).forEach((btn) => {
-			const parent = btn.closest(".catsoverlay-menu_subcats-block");
+			const parent = btn.closest(`${this.options.parent}-menu_subcats-block`);
 			const targetList = parent.querySelector("ul");
 			if (currentList !== targetList) {
 				targetList.classList.remove("active");
@@ -45,6 +45,35 @@ export default class CatsMenu {
 		});
 	}
 
+	getValueAfterPrefix(str, prefix) {
+		const startIndex = str.indexOf(prefix);
+		if (startIndex === -1) {
+			// Префикс не найден
+			return null;
+		}
+		const valueStart = startIndex + prefix.length;
+		// Можно взять остаток строки после префикса
+		return str.substring(valueStart).trim();
+	}
+
+	getDataAttributeCatID(targetElement, targetAttribute) {
+		const dataAttributes = [];
+		let result;
+
+		for (let attr of targetElement.attributes) {
+			if (attr.name.startsWith("data-catid")) {
+				dataAttributes.push(attr.name);
+			}
+		}
+
+		dataAttributes.forEach((d) => {
+			if (d === targetAttribute.toLowerCase()) {
+				result = d;
+			}
+		});
+		return result;
+	}
+
 	init() {
 		this.allCatButtons[0].classList.add("active");
 		this.allCatBlocks[0].classList.add("active");
@@ -57,7 +86,10 @@ export default class CatsMenu {
 
 			// Проверяем, что событие произошло именно на кнопке
 			if (target && this.parent.contains(target)) {
-				const catid = target.dataset.catid;
+				const dataAttrName = this.getDataAttributeCatID(target, this.options.catButton);
+				const dataAfterPrefix = this.getValueAfterPrefix(dataAttrName, "catid");
+
+				const catid = target.getAttribute(`data-catid${dataAfterPrefix}`);
 				const targetBlock = this.parent.querySelector(`[${this.options.catBlock}='${catid}']`);
 
 				if (targetBlock) {
@@ -72,10 +104,11 @@ export default class CatsMenu {
 		});
 
 		// Отслеживаем нажатие на бургер
-		this.openBtn.addEventListener("click", () => {
-			this.parent.classList.toggle("active");
-			this.openBtn.classList.toggle("active");
-		});
+		this.openBtn &&
+			this.openBtn.addEventListener("click", () => {
+				this.parent.classList.toggle("active");
+				this.openBtn.classList.toggle("active");
+			});
 
 		// Общее событие для всей области parent
 		this.parent.addEventListener("click", (e) => {
@@ -83,12 +116,20 @@ export default class CatsMenu {
 
 			// Обработка кликов внутри меню
 			// Кнопки категорий
-			if (target.closest(`[${this.options.catButton}]`)) {
+			if (target && target.closest(`[${this.options.catButton}]`)) {
 				const btn = target.closest(`[${this.options.catButton}]`);
-				const catid = btn.dataset.catid;
+
+				const dataAttrName = this.getDataAttributeCatID(btn, this.options.catButton);
+				const dataAfterPrefix = this.getValueAfterPrefix(dataAttrName, "catid");
+
+				const catid = btn.getAttribute(`data-catid${dataAfterPrefix}`);
+
 				const targetBlock = this.parent.querySelector(`[${this.options.catBlock}='${catid}']`);
 				if (targetBlock) {
 					targetBlock.classList.add("active-lg");
+
+					this.parent.querySelector(`${this.options.parent}-zindex`) &&
+						this.parent.querySelector(`${this.options.parent}-zindex`).classList.add("over");
 				}
 				return;
 			}
@@ -96,21 +137,31 @@ export default class CatsMenu {
 			// Кнопки закрытия
 			if (target.closest(`[${this.options.closeButton}]`)) {
 				this.parent.classList.remove("active");
-				this.openBtn.classList.remove("active");
+				this.openBtn && this.openBtn.classList.remove("active");
 				this.allCatBlocks.forEach((block) => block.classList.remove("active-lg"));
+				setTimeout(() => {
+					this.parent.querySelector(`${this.options.parent}-zindex`) &&
+						this.parent.querySelector(`${this.options.parent}-zindex`).classList.remove("over");
+				}, 300);
 				return;
 			}
 
 			// Кнопки "вернуться"
 			if (target.closest(`[${this.options.backButton}]`)) {
 				this.allCatBlocks.forEach((block) => block.classList.remove("active-lg"));
+
+				setTimeout(() => {
+					this.parent.querySelector(`${this.options.parent}-zindex`) &&
+						this.parent.querySelector(`${this.options.parent}-zindex`).classList.remove("over");
+				}, 300);
+
 				return;
 			}
 
 			// Кнопки открытия списка подкатегорий
 			if (target.closest(`[${this.options.openSubListButton}]`)) {
 				const btn = target.closest(`[${this.options.openSubListButton}]`);
-				const parent = btn.closest(".catsoverlay-menu_subcats-block");
+				const parent = btn.closest(`${this.options.parent}-menu_subcats-block`);
 				const targetList = parent.querySelector("ul");
 				if (targetList) {
 					btn.classList.toggle("active");

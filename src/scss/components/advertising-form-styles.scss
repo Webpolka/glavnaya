@@ -78,10 +78,10 @@ ADVERTISING CUSTOM FORM ELEMENTS
 		}
 	}
 
-	&_form-mediaload{
+	&_form-mediaload {
 		padding-bottom: rem(20);
 
-		.advertising_input-block{
+		.advertising_input-block {
 			width: 100%;
 		}
 	}
@@ -96,10 +96,6 @@ ADVERTISING CUSTOM FORM ELEMENTS
 	}
 
 	/********************************************************************* БЛОКИ *************************************************************/
-	&_mediaload-block {		
-	}
-	&_mediaload-hint {
-	}
 
 	// Блок с textarae (описанием)
 	&_textarea-block {
@@ -170,8 +166,6 @@ ADVERTISING CUSTOM FORM ELEMENTS
 
 	// Блок с хлебными крошками
 	&_breadcrumbs-block {
-		margin-bottom: rem(30);
-
 		.categorie-breadcrumbs {
 			display: flex;
 			align-items: center;
@@ -282,7 +276,6 @@ ADVERTISING CUSTOM FORM ELEMENTS
 	}
 
 	/********************************************************************* ДОП СТИЛИ *************************************************************/
-	
 
 	// Первый инпут в форме
 	&_product-name {
@@ -305,6 +298,18 @@ ADVERTISING CUSTOM FORM ELEMENTS
 	&_modification {
 		.choices {
 			margin-bottom: rem(10);
+		}
+	}
+
+	&-new,
+	&-electric {
+		.advertising_breadcrumbs-block {
+			margin-bottom: rem(15);
+		}
+	}
+	&-used {
+		.advertising_breadcrumbs-block {
+			margin-bottom: rem(30);
 		}
 	}
 }

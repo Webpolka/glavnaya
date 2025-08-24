@@ -1,0 +1,98 @@
+<!--SIGN UP MODAL SIGN UP MODAL SIGN UP MODAL SIGN UP MODAL SIGN UP MODAL SIGN UP MODAL Модальное окно для РЕГИСТРАЦИИ - SIGN UP MODAL  SIGN UP MODAL SIGN UP MODAL SIGN UP MODAL SIGN UP MODAL-->
+
+<!-- JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS JS  -->
+
+<!-- // const signUpModal = document.querySelector('[data-signUpModal="true"]');
+	// signUpModal &&
+	// 	new ModalAuth(signUpModal, {
+	// 		selectors: {
+	// 			openBtn: '[data-modal="sign-up"]',
+	// 			closeBtn: '[data-signUpModal="close-btn"]',
+	// 			backBtn: '[data-signUpModal="back-btn"]',
+	// 			continueBtn: '[data-signUpModal="continue"]',
+	// 			submitBtn: 'button[type="submit"]',
+	// 			greatName: ".greating",
+	// 			firstPart: ".modal-sign-up_first",
+	// 			secondPart: ".modal-sign-up_second",
+	// 			form: "form",
+	// 			firstInput: "#modal-sign-up-nikname",
+	// 			secondInput: "#modal-sign-up-password",
+	// 			resetFirstBtn: '[data-signUpModal="reset-nikname"]',
+	// 			resetSecondBtn: '[data-signUpModal="reset-password"]',
+	// 			authorizeLogin: ".authorize-login",
+	// 			authorizeSignUp: ".authorize-signup",
+	// 			siteOverlay: ".site-overlay",
+	// 		},
+	// 	});
+ -->
+
+<div data-signUpModal="true" class="modal-sign-up_overlay">
+	<div class="modal-sign-up_window">
+		<!-- Кнопка закрыть -->
+		<button type="button" class="modal-sign-up_closeBtn" data-signUpModal="close-btn">
+			<svg class="icon icon--close">
+				<use href="./icons/symbol/sprite.svg#close"></use>
+			</svg>
+		</button>
+
+		<form action="" id="sign-up-modal-form">
+			<!-- Первая часть формы -->
+			<div class="modal-sign-up_first active">
+				<h2 class="modal-sign-up_title">Log in or create a profile</h2>
+
+				<p class="modal-sign-up_text">Enter your phone number or email to log in or sign up.</p>
+
+				<input
+					id="modal-sign-up-nikname"
+					name="modal-sign-up-nikname"
+					class="input"
+					type="text"
+					placeholder="Phone number or email"
+					autocomplete="on"
+				/>
+
+				<button type="button" data-signUpModal="continue" class="btn">Continue</button>
+
+				<div data-signUpModal="reset-nikname" class="modal-sign-up_resetBtn">Reset Phone number or email</div>
+
+				<p class="modal-sign-up_terms">
+					By registering and logging in, you agree to the website's <a href="#">Terms of Use</a> and
+					<a href="#">Privacy Policy</a>.
+				</p>
+			</div>
+
+			<!-- Вторая часть формы -->
+			<div class="modal-sign-up_second">
+				<!-- Кнопка назад -->
+				<div data-signUpModal="back-btn" class="modal-sign-up_backBtn">
+					<svg class="icon icon--prev">
+						<use href="./icons/symbol/sprite.svg#prev"></use>
+					</svg>
+				</div>
+
+				<!-- Приветствие -->
+				<h2 class="modal-sign-up_great">Hello, <span class="greating">John</span> !</h2>
+
+				<input
+					id="modal-sign-up-password"
+					name="modal-sign-up-password"
+					class="input"
+					type="password"
+					placeholder="Enter your password"
+					autocomplete="off"
+				/>
+
+				<div class="modal-sign-up_remember">
+					<label class="checkbox-item panel-remember-label">
+						<input class="checkbox-input" type="checkbox" name="remember" />
+						<span>Remember me</span>
+					</label>
+				</div>
+
+				<button type="submit" class="btn">Continue</button>
+
+				<button type="button" data-signUpModal="reset-password" class="modal-sign-up_resetBtn">Reset password</button>
+			</div>
+		</form>
+	</div>
+</div>

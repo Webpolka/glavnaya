@@ -127,29 +127,29 @@ HEADER
 
 	// BURGER BUTTON
 	&-burger {
-		margin-right: rem(20);
-		flex-shrink: 0;		
-
-		display: inline-block;
 		position: relative;
+		display: inline-block;
+
 		width: rem(28);
-		height: rem(20);
-		text-align: center;
+		height: rem(19);
+
+		margin-right: rem(20);
+		flex-shrink: 0;
+
 		cursor: pointer;
-		top: 0;
-		left: 0;
 
 		span,
 		&::before,
 		&::after {
+			display: block;
 			content: "";
 			transition: all 0.3s ease-in-out;
-			right: 0;
 			position: absolute;
-			width: 100%;
-			height: rem(3);
+			left: 0;
+			width: 100%;			
+			height: 3px;
 			background-color: var(--accent);
-			border-radius: 10px;
+			border-radius: rem(10);
 			opacity: 0.85;
 		}
 		&::before {
@@ -159,20 +159,21 @@ HEADER
 			bottom: 0;
 		}
 		span {
-			top: calc(50% - 15% / 2);
+			top: 50%;
+			transform: translateY(-50%);
 		}
 		&.active span {
 			width: 0;
 			background-color: var(--accent);
 		}
-		&.active::before {
-			top: calc(50% - 15% / 2);
-			transform: rotate(-45deg);
+		&.active::before {		
+			top: 50%;
+			transform: translateY(-50%) rotate(-45deg);
 			background-color: var(--accent);
 		}
-		&.active::after {
-			bottom: calc(50% - 15% / 2);
-			transform: rotate(45deg);
+		&.active::after {	
+			bottom: 50%;					
+			transform: translateY(50%) rotate(45deg);
 			background-color: var(--accent);
 		}
 	}
