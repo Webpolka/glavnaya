@@ -31,6 +31,9 @@ HEADER PROFILE DROPDOWN
 	&_dropdown {
 		display: none;
 
+		max-width: rem(290);
+		width: 100%;
+
 		position: absolute;
 		top: calc(100% - 2px);
 		left: 0;
@@ -260,6 +263,7 @@ HEADER PROFILE DROPDOWN
 				font-weight: 500;
 				font-size: rem(14);
 				color: #fff;
+				padding-top: rem(1);
 
 				background: var(--accent);
 			}

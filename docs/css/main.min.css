@@ -2049,6 +2049,8 @@ HEADER PROFILE DROPDOWN
 }
 .header-profile_dropdown {
   display: none;
+  max-width: 18.125rem;
+  width: 100%;
   position: absolute;
   top: calc(100% - 2px);
   left: 0;
@@ -2234,6 +2236,7 @@ HEADER PROFILE DROPDOWN
   font-weight: 500;
   font-size: 0.875rem;
   color: #fff;
+  padding-top: 0.0625rem;
   background: var(--accent);
 }
 .header-profile_group .profile-group_list {
