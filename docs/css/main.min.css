@@ -2053,21 +2053,27 @@ HEADER PROFILE DROPDOWN
   top: calc(100% - 2px);
   left: 0;
   background-color: #fff;
-  padding: 1.5625rem;
-  max-width: 18.125rem;
-  width: 100%;
-  max-height: 70vh;
-  overflow-y: auto;
   border-radius: 0.625rem;
   z-index: 1000;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
   /* при открытии меню */
 }
-.header-profile_dropdown::-webkit-scrollbar {
+.header-profile_dropdown.show {
+  display: block;
+  animation: fade-up 0.3s ease-in-out;
+}
+.header-profile_dropdown-inner {
+  padding: 1.5625rem;
+  max-width: 18.125rem;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+.header-profile_dropdown-inner::-webkit-scrollbar {
   inline-size: 0rem;
   background-color: var(--scrollbar);
 }
-.header-profile_dropdown:before {
+.header-profile_dropdown-inner:before {
   position: absolute;
   content: "";
   top: 0;
@@ -2079,10 +2085,6 @@ HEADER PROFILE DROPDOWN
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
-}
-.header-profile_dropdown.show {
-  display: block;
-  animation: fade-up 0.3s ease-in-out;
 }
 .header-profile_rating {
   display: inline-flex;

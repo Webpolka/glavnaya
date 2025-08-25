@@ -28,8 +28,6 @@ HEADER PROFILE DROPDOWN
 			border: 1px solid var(--accent);
 		}
 	}
-
-	// Выпадающие профиль
 	&_dropdown {
 		display: none;
 
@@ -38,20 +36,26 @@ HEADER PROFILE DROPDOWN
 		left: 0;
 
 		background-color: #fff;
+		border-radius: rem(10);
+		z-index: 1000;
 
+		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+		/* при открытии меню */
+		&.show {
+			display: block;
+			animation: fade-up 0.3s ease-in-out;
+		}
+	}
+
+	// Выпадающие профиль
+	&_dropdown-inner {
 		padding: rem(25);
 
 		max-width: rem(290);
 		width: 100%;
 
-		// max-height: rem(555);
-		max-height: 70vh;
 		overflow-y: auto;
-
-		border-radius: rem(10);
-		z-index: 1000;
-
-		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+		max-height: 70vh;
 
 		&::-webkit-scrollbar {
 			inline-size: rem(0);
@@ -70,15 +74,10 @@ HEADER PROFILE DROPDOWN
 			height: rem(10);
 
 			background-image: url("../../icons/polygon.svg");
+
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: 100%;
-		}
-
-		/* при открытии меню */
-		&.show {
-			display: block;
-			animation: fade-up 0.3s ease-in-out;
 		}
 	}
 
