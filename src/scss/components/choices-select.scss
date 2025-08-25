@@ -4,26 +4,32 @@ CUSTOM CHOICES SELECT
 
 /* Добавляем стрелку через псевдоэлемент */
 .choices {
-  position: relative;
+	position: relative;
+
+	&:focus {
+		.choices__inner {
+			border: 1px solid var(--accent);
+		}
+	}
 }
 
 .choices::before {
-  content: "";
-  position: absolute;
-  right: 10px; /* позиция справа */
-  top: 50%;
-  transform: translateY(-50%);
- 
-  width: rem(24);
-  height: rem(24);
-  background-image: url('../../icons/down.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center center;
+	content: "";
+	position: absolute;
+	right: 10px; /* позиция справа */
+	top: 50%;
+	transform: translateY(-50%);
 
-  opacity: 0.5;
+	width: rem(24);
+	height: rem(24);
+	background-image: url("../../icons/down.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
 
-  pointer-events: none; /* чтобы не мешала кликам */
+	opacity: 0.5;
+
+	pointer-events: none; /* чтобы не мешала кликам */
 }
 
 .choices__inner {
@@ -40,6 +46,8 @@ CUSTOM CHOICES SELECT
 	color: #1a1a1a;
 
 	background-color: transparent;
+
+	// transition: border-color 0.3s ease-in-out;
 }
 
 .choices__placeholder {
@@ -64,6 +72,8 @@ CUSTOM CHOICES SELECT
 	border-bottom-right-radius: rem(5);
 	overflow: hidden;
 	word-break: break-all;
+		
+	border-color: var(--accent) !important;
 }
 
 .choices.is-focused .choices__inner {
@@ -78,6 +88,6 @@ CUSTOM CHOICES SELECT
 	display: none;
 }
 
-.choices[data-type*=select-one]::after {   
-    display: none;   
+.choices[data-type*="select-one"]::after {
+	display: none;
 }

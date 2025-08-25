@@ -1,3 +1,36 @@
+<!-- /*--------------------------------------------------------------------------------------------------------------
+MODAL WINDOWS
+----------------------------------------------------------------------------------------------------------------*/
+import ModalAuth from "./modules/modal-auth";
+// Используем для каждого модального окна, передавая его DOM-элемент
+document.addEventListener("DOMContentLoaded", () => {
+	const signInModal = document.querySelector('[data-signInModal="true"]');
+	signInModal &&
+		new ModalAuth(signInModal, {
+			selectors: {
+				openBtn: '[data-modal="sign-in"]',
+				closeBtn: '[data-signInModal="close-btn"]',
+				backBtn: '[data-signInModal="back-btn"]',
+				continueBtn: '[data-signInModal="continue"]',
+				submitBtn: 'button[type="submit"]',
+				greatName: ".greating",
+				firstPart: ".modal-sign-in_first",
+				secondPart: ".modal-sign-in_second",
+				form: "form",
+				firstInput: "[data-signInModal='nikname']",
+				secondInput: "[data-signInModal='password']",
+				resetFirstBtn: '[data-signInModal="reset-nikname"]',
+				resetSecondBtn: '[data-signInModal="reset-password"]',
+				authorizeLogin: ".authorize-login",
+				authorizeSignUp: ".authorize-signup",
+				siteOverlay: ".site-overlay",
+			},
+		});
+}); -->
+
+
+
+
 <!--LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL Модальное окно для ВХОДА - LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL LOGIN MODAL  -->
 <div data-signInModal="true" class="modal-sign-in_overlay">
 	<div class="modal-sign-in_window">

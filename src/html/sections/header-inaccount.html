@@ -1,0 +1,125 @@
+<header id="masthead" class="header">
+	<div class="container">
+		<!-- Верхняя часть хедера -->
+		<div class="header-top">
+			<!-- Верхнее меню -->
+			<nav class="header-top_nav" aria-label="Main menu">
+				<ul class="header-top_list">
+					<li><a href="#">Auto</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Real Estate</a></li>
+					<li><a href="#">Relax</a></li>
+					<li><a href="#">Rent</a></li>
+				</ul>
+			</nav>
+
+			<!-- Правая сторона верхней линии -->
+			<div class="header-top_right">
+				<!-- Курс валюты -->
+				<div
+					class="header-top_currency"
+					data-euro="97.50"
+					data-usd="110.50"
+					role="button"
+					tabindex="0"
+					aria-label="Change currency"
+				>
+					<span class="header-top_currency_name">none</span>
+					<span class="header-top_currency_rate">none</span>
+				</div>
+
+				<!--**************  Блок профиля вставляем если пользователь в аккаунте ************-->
+				<!-- accent это когда есть писмьма -->
+				 
+				<div class="header-top_profile">
+					<!-- Сообщения -->
+					<div class="header-top_messages accent" role="button" aria-label="Messages">
+						<svg class="icon icon--messages">
+							<use href="./icons/symbol/sprite.svg#messages"></use>
+						</svg>
+					</div>
+
+					<!-- Заказы -->
+					<div class="header-top_orders" role="button" aria-label="Orders">
+						<svg class="icon icon--orders">
+							<use href="./icons/symbol/sprite.svg#orders"></use>
+						</svg>
+					</div>
+
+					<!-- Избранное -->
+					<div class="header-top_favourite" role="button" aria-label="Favorite">
+						<svg class="icon icon--favourite">
+							<use href="./icons/symbol/sprite.svg#favourite"></use>
+						</svg>
+					</div>
+				</div>
+				<!--***************************  КОНЕЦ Блок профиля ***********************************-->
+
+			</div>
+		</div>
+
+		<!-- Вторая часть хедера -->
+		<div class="header-bottom">
+			<div class="header-bottom_intro">
+				<!-- Бургер -->
+				<div class="header-burger" id="burger">
+					<span></span>
+				</div>
+
+				<!-- Лого -->
+				<a href="index.html" class="header-logo">
+					<span class="header-logo_icon">
+						<svg class="icon icon--eagle">
+							<use href="./icons/symbol/sprite.svg#eagle"></use>
+						</svg>
+					</span>
+					<span class="header-logo_name"> Abl.al </span>
+				</a>
+
+				<!-- Форма поиска -->
+				<form class="header-search-form" role="search" aria-label="Site Search">
+					<button type="submit" class="search-button">
+						<svg class="icon icon--searchsvg">
+							<use href="./icons/symbol/sprite.svg#searchsvg"></use>
+						</svg>
+					</button>
+					<input type="text" class="search-input" name="search" id="search" placeholder="Find an ad" aria-label="Search" />
+				</form>
+			</div>
+
+			<!-- Навигация второй части хедера -->
+			<nav class="header-bottom_nav">
+				<!-- Локация -->
+				<button class="header-location" aria-label="Change location">
+					<span class="header-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="header-location_name"> Tiana </span>
+				</button>
+
+				<!-- Добавить в список -->
+				<a href="advertising-categories.html" class="header-add-listing" aria-label="Add listing">
+					<span class="header-add-listing_before">
+						<svg class="icon icon--plus">
+							<use href="./icons/symbol/sprite.svg#plus"></use>
+						</svg>
+					</span>
+					<span class="header-add-listing_name"> Add listing </span>
+				</a>
+
+				<!-- Кнопка авторизации - скрипт привязан к значению data-signed (зареган юзер или нет...)-->
+				<!-- <button class="header-sign-in" aria-label="Authorization" data-signed="false">
+					<span class="header-sign-in_name"> Sign </span>
+				</button> -->
+
+				<button class="header-profile_btn" aria-label="Profile" id="profile-btn">
+					<span class="header-profile_char">J</span>
+				</button>
+
+				@@include('header-profile-dropdown.html')
+			</nav>
+		</div>
+	</div>
+</header>

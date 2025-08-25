@@ -2,6 +2,7 @@
 CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 --------------------------------------------------------------------------------------------------------------------------------*/
 .catsadvert {
+	
 	&_title {
 		font-weight: 500;
 		font-size: rem(24);
@@ -31,6 +32,8 @@ CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 		max-width: var(--container-width);
 		padding-right: rem(18);
 
+		// padding-bottom: rem(100);
+
 		border: 1px solid var(--border);
 		border-radius: rem(5) rem(5) 0 0;
 
@@ -48,17 +51,36 @@ CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 		}
 
 		&_cats {
+			position: relative;
 			box-sizing: content-box;
 			width: rem(290);
-			padding: rem(25) 0;
-			border-right: 1px solid var(--border);
-			overflow: auto;
+			padding: rem(25) 0;			
+			overflow: hidden;
 			flex-shrink: 0;
+			border-right: 1px solid var(--border);
+
+			// &:after{
+			// 	position: absolute;
+			// 	top: 0;
+			// 	right: 0;
+			// 	content: "";
+			// 	width: 1px;				
+			// 	height: 10000px;
+
+			// 	z-index: 1;
+			// 	border-right: 1px solid var(--border);
+			// }
 
 			@include lg {
 				border-right: none;
 				width: 100%;
 				padding: 0;
+
+				overflow: auto;
+
+				&:after{
+					content: none;
+				}
 			}
 
 			&-item {

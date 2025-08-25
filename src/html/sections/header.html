@@ -13,10 +13,30 @@
 				</ul>
 			</nav>
 
-			<!-- Курс валюты -->
-			<div class="header-currency" data-euro="97.50" data-usd="110.50" role="button" tabindex="0" aria-label="Change currency">
-				<span class="header-currency_name">none</span>
-				<span class="header-currency_rate">none</span>
+			<!-- Правая сторона верхней линии -->
+			<div class="header-top_right">
+				<!-- Курс валюты -->
+				<div
+					class="header-top_currency"
+					data-euro="97.50"
+					data-usd="110.50"
+					role="button"
+					tabindex="0"
+					aria-label="Change currency"
+				>
+					<span class="header-top_currency_name">none</span>
+					<span class="header-top_currency_rate">none</span>
+				</div>	
+				
+				<div class="header-top_profile">
+					<!-- Избранное -->
+					<a href="inaccount-index.html" class="header-top_inaccount">
+						<svg class="icon icon--profile">
+							<use href="./icons/symbol/sprite.svg#profile"></use>
+						</svg>
+					</a>
+				</div>
+
 			</div>
 		</div>
 
@@ -62,7 +82,7 @@
 				</button>
 
 				<!-- Добавить в список -->
-				<a href="advertising-category.html" class="header-add-listing" aria-label="Add listing">
+				<a href="advertising-categories.html" class="header-add-listing" aria-label="Add listing">
 					<span class="header-add-listing_before">
 						<svg class="icon icon--plus">
 							<use href="./icons/symbol/sprite.svg#plus"></use>
@@ -74,7 +94,7 @@
 				<!-- Кнопка авторизации - скрипт привязан к значению data-signed (зареган юзер или нет...)-->
 				<button class="header-sign-in" aria-label="Authorization" data-signed="false">
 					<span class="header-sign-in_name"> Sign </span>
-				</button>
+				</button>								
 			</nav>
 		</div>
 	</div>

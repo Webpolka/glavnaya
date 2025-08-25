@@ -103,8 +103,10 @@ ADVERTISING CUSTOM FORM ELEMENTS
 
 		.textarea {
 			margin-bottom: rem(10);
+			outline: 1px solid transparent;
+			transition: all 0.3s ease-in-out;
 			&:focus {
-				outline: 1px solid var(--form-accent);
+				outline: 1px solid var(--accent);
 			}
 		}
 	}
@@ -157,8 +159,10 @@ ADVERTISING CUSTOM FORM ELEMENTS
 		.form-group {
 			.input {
 				margin-bottom: rem(10);
+				outline: 1px solid transparent;
+				transition: all 0.3s ease-in-out;
 				&:focus {
-					outline: 1px solid var(--form-accent);
+					outline: 1px solid var(--accent);
 				}
 			}
 		}
@@ -269,8 +273,10 @@ ADVERTISING CUSTOM FORM ELEMENTS
 
 		.input {
 			max-width: rem(220);
+			transition: all 0.3s ease-in-out;
+			outline: 1px solid transparent;
 			&:focus {
-				outline: 1px solid var(--form-accent);
+				outline: 1px solid var(--accent);
 			}
 		}
 	}
