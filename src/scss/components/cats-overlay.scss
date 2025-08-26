@@ -39,7 +39,7 @@ CATEGORIES OVERLAY
 		height: 100%;
 		align-items: stretch;
 		background-color: #fff;
-		margin: 0 auto;	
+		margin: 0 auto;
 
 		max-width: var(--container-width);
 		padding-right: rem(18);
@@ -88,13 +88,34 @@ CATEGORIES OVERLAY
 			}
 		}
 
-		&_cats {
-			box-sizing: content-box;
+		&_cats_wrapper {
+			position: relative;
+			flex-shrink: 0;
 			width: rem(265);
 			padding: rem(25) rem(15) rem(25) 0;
-			border-right: 2px solid #ededed;
-			overflow: auto;
-			flex-shrink: 0;
+
+			&:after {
+				position: absolute;
+				top: 0;
+				right: 0;
+				content: "";
+				width: 1px;
+				height: 10000px;
+
+				z-index: 1;
+				border-right: 1px solid var(--border);
+			}
+		}
+
+		&_cats {
+			box-sizing: content-box;
+			overflow-y: auto;
+			max-height: calc(100vh - 200px);
+
+			&::-webkit-scrollbar {
+				inline-size: rem(0);
+				background-color: var(--scrollbar);
+			}
 
 			@include lg {
 				border-right: none;
@@ -170,6 +191,12 @@ CATEGORIES OVERLAY
 			width: 100%;
 			padding: rem(50);
 			overflow-y: auto;
+
+			
+			&::-webkit-scrollbar {
+				inline-size: rem(0);
+				background-color: var(--scrollbar);
+			}
 		}
 
 		&_subcats {
@@ -199,7 +226,7 @@ CATEGORIES OVERLAY
 
 				transition: all 0.3s ease-in-out;
 
-				&.active-lg {				
+				&.active-lg {
 					left: 0;
 				}
 			}

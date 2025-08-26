@@ -1383,15 +1383,35 @@ CATEGORIES OVERLAY
   opacity: 1;
 }
 
+.catsoverlay-menu_cats_wrapper {
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 16.5625rem;
+  padding: 1.5625rem 0.9375rem 1.5625rem 0;
+}
+
+.catsoverlay-menu_cats_wrapper:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 1px;
+  height: 10000px;
+  z-index: 1;
+  border-right: 1px solid var(--border);
+}
+
 .catsoverlay-menu_cats {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  width: 16.5625rem;
-  padding: 1.5625rem 0.9375rem 1.5625rem 0;
-  border-right: 2px solid #ededed;
-  overflow: auto;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+.catsoverlay-menu_cats::-webkit-scrollbar {
+  inline-size: 0rem;
+  background-color: var(--scrollbar);
 }
 
 .catsoverlay-menu_cats-item {
@@ -1453,6 +1473,11 @@ CATEGORIES OVERLAY
   width: 100%;
   padding: 3.125rem;
   overflow-y: auto;
+}
+
+.catsoverlay-menu_content::-webkit-scrollbar {
+  inline-size: 0rem;
+  background-color: var(--scrollbar);
 }
 
 .catsoverlay-menu_subcats {
@@ -2874,6 +2899,38 @@ HEADER
   margin-right: 0.5rem;
 }
 
+.header-search-form-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  gap: 0.625rem;
+  min-height: 3.125rem;
+  border: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.3125rem;
+  margin-right: 1.5625rem;
+}
+
+.header-search-form-2 .search-input {
+  width: 100%;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  padding-left: 0.125rem;
+}
+
+.header-search-form-2 .search-button {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-top: 0.3125rem;
+}
+
 .header-location {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2980,6 +3037,10 @@ HEADER
 /* ------------------------------------------------------------------------------------------------------------------------------
 CUSTOM IMAGES mediaload
 --------------------------------------------------------------------------------------------------------------------------------*/
+
+.advertising_form-mediaload:hover .mediaload-upload-area {
+  border: 2px dashed var(--accent) !important;
+}
 
 .advertising_mediaload-block .mediaload-banner {
   min-height: inherit;
@@ -4222,6 +4283,10 @@ MEDIAQUERIES
   }
 
   .header-search-form {
+    margin-right: 0;
+  }
+
+  .header-search-form-2 {
     margin-right: 0;
   }
 }

@@ -1,6 +1,12 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 CUSTOM IMAGES mediaload
 --------------------------------------------------------------------------------------------------------------------------------*/
+.advertising_form-mediaload:hover {
+	.mediaload-upload-area {
+		border: 2px dashed var(--accent) !important;
+	}
+}
+
 .advertising_mediaload-block {
 	.mediaload-banner {
 		min-height: inherit;

@@ -96,7 +96,18 @@
 				</a>
 
 				<!-- Форма поиска -->
-				<form class="header-search-form" role="search" aria-label="Site Search">
+				<!-- <form class="header-search-form" role="search" aria-label="Site Search">
+					<button type="submit" class="search-button">
+						<svg class="icon icon--searchsvg">
+							<use href="./icons/symbol/sprite.svg#searchsvg"></use>
+						</svg>
+					</button>
+					<input type="text" class="search-input" name="search" id="search" placeholder="Find an ad" aria-label="Search" />
+				</form> -->
+
+
+				<!-- Форма поиска 2-->
+				<form class="header-search-form-2" role="search" aria-label="Site Search">
 					<button type="submit" class="search-button">
 						<svg class="icon icon--searchsvg">
 							<use href="./icons/symbol/sprite.svg#searchsvg"></use>
@@ -2623,48 +2634,50 @@
 					<button class="catsoverlay-menu_lg-close" data-catsclose="overlay"></button>
 				</div>
 
-				<ul class="catsoverlay-menu_cats">
-					<li class="catsoverlay-menu_cats-item" data-catidoverlay="1">
-						<a class="catsoverlay-menu_cats-link" href="#">Auto</a>
-						<span class="catsoverlay-menu_cats-arrow"></span>
-					</li>
-					<li class="catsoverlay-menu_cats-item" data-catidoverlay="2">
-						<a class="catsoverlay-menu_cats-link" href="#">Services</a>
-						<span class="catsoverlay-menu_cats-arrow"></span>
-					</li>
-					<li class="catsoverlay-menu_cats-item" data-catidoverlay="3">
-						<a class="catsoverlay-menu_cats-link" href="#">Real Estate</a>
-						<span class="catsoverlay-menu_cats-arrow"></span>
-					</li>
-					<li class="catsoverlay-menu_cats-item" data-catidoverlay="4">
-						<a class="catsoverlay-menu_cats-link" href="#">Relax</a>
-						<span class="catsoverlay-menu_cats-arrow"></span>
-					</li>
-					<li class="catsoverlay-menu_cats-item" data-catidoverlay="5">
-						<a class="catsoverlay-menu_cats-link" href="#">Rent</a>
-						<span class="catsoverlay-menu_cats-arrow"></span>
-					</li>
-					<li class="catsoverlay-menu_cats-item" data-catidoverlay="6">
-						<a class="catsoverlay-menu_cats-link" href="#">Health</a>
-						<span class="catsoverlay-menu_cats-arrow"></span>
-					</li>
-					<li class="catsoverlay-menu_cats-item" data-catidoverlay="7">
-						<a class="catsoverlay-menu_cats-link" href="#">Education</a>
-						<span class="catsoverlay-menu_cats-arrow"></span>
-					</li>
-					<li class="catsoverlay-menu_cats-item" data-catidoverlay="8">
-						<a class="catsoverlay-menu_cats-link" href="#">Animals</a>
-						<span class="catsoverlay-menu_cats-arrow"></span>
-					</li>
-					<li class="catsoverlay-menu_cats-item" data-catidoverlay="9">
-						<a class="catsoverlay-menu_cats-link" href="#">Tourism</a>
-						<span class="catsoverlay-menu_cats-arrow"></span>
-					</li>
-					<li class="catsoverlay-menu_cats-item" data-catidoverlay="10">
-						<a class="catsoverlay-menu_cats-link" href="#">Flea Market</a>
-						<span class="catsoverlay-menu_cats-arrow"></span>
-					</li>
-				</ul>
+				<div class="catsoverlay-menu_cats_wrapper">
+					<ul class="catsoverlay-menu_cats">
+						<li class="catsoverlay-menu_cats-item" data-catidoverlay="1">
+							<a class="catsoverlay-menu_cats-link" href="#">Auto</a>
+							<span class="catsoverlay-menu_cats-arrow"></span>
+						</li>
+						<li class="catsoverlay-menu_cats-item" data-catidoverlay="2">
+							<a class="catsoverlay-menu_cats-link" href="#">Services</a>
+							<span class="catsoverlay-menu_cats-arrow"></span>
+						</li>
+						<li class="catsoverlay-menu_cats-item" data-catidoverlay="3">
+							<a class="catsoverlay-menu_cats-link" href="#">Real Estate</a>
+							<span class="catsoverlay-menu_cats-arrow"></span>
+						</li>
+						<li class="catsoverlay-menu_cats-item" data-catidoverlay="4">
+							<a class="catsoverlay-menu_cats-link" href="#">Relax</a>
+							<span class="catsoverlay-menu_cats-arrow"></span>
+						</li>
+						<li class="catsoverlay-menu_cats-item" data-catidoverlay="5">
+							<a class="catsoverlay-menu_cats-link" href="#">Rent</a>
+							<span class="catsoverlay-menu_cats-arrow"></span>
+						</li>
+						<li class="catsoverlay-menu_cats-item" data-catidoverlay="6">
+							<a class="catsoverlay-menu_cats-link" href="#">Health</a>
+							<span class="catsoverlay-menu_cats-arrow"></span>
+						</li>
+						<li class="catsoverlay-menu_cats-item" data-catidoverlay="7">
+							<a class="catsoverlay-menu_cats-link" href="#">Education</a>
+							<span class="catsoverlay-menu_cats-arrow"></span>
+						</li>
+						<li class="catsoverlay-menu_cats-item" data-catidoverlay="8">
+							<a class="catsoverlay-menu_cats-link" href="#">Animals</a>
+							<span class="catsoverlay-menu_cats-arrow"></span>
+						</li>
+						<li class="catsoverlay-menu_cats-item" data-catidoverlay="9">
+							<a class="catsoverlay-menu_cats-link" href="#">Tourism</a>
+							<span class="catsoverlay-menu_cats-arrow"></span>
+						</li>
+						<li class="catsoverlay-menu_cats-item" data-catidoverlay="10">
+							<a class="catsoverlay-menu_cats-link" href="#">Flea Market</a>
+							<span class="catsoverlay-menu_cats-arrow"></span>
+						</li>
+					</ul>
+				</div>
 			</nav>
 
 			<!-- Подкатегории правая сторона -->
@@ -2682,7 +2695,9 @@
 						<div class="catsoverlay-menu_subcats-block">
 							<!-- ShowSubCat link -->
 							<div class="catsoverlay-menu_subcats-linkwrap" data-subcatslist="overlay">
-								<a href="advertising-used.html" class="catsoverlay-menu_subcats-link title--subcats-link"> Passenger cars </a>
+								<a href="advertising-used.html" class="catsoverlay-menu_subcats-link title--subcats-link">
+									Passenger cars
+								</a>
 								<span class="catsoverlay-menu_subcats-arrow"></span>
 							</div>
 
@@ -2941,7 +2956,8 @@
 						<div class="catsoverlay-menu_subcats-block">
 							<!-- ShowSubCat link -->
 							<div class="catsoverlay-menu_subcats-linkwrap" data-subcatslist="overlay">
-								<a href="#" class="catsoverlay-menu_subcats-link title--subcats-link">Services Trucks and special equipment </a>
+								<a href="#" class="catsoverlay-menu_subcats-link title--subcats-link">Services Trucks and special equipment
+								</a>
 								<span class="catsoverlay-menu_subcats-arrow"></span>
 							</div>
 
@@ -2985,7 +3001,8 @@
 						<div class="catsoverlay-menu_subcats-block">
 							<!-- ShowSubCat link -->
 							<div class="catsoverlay-menu_subcats-linkwrap" data-subcatslist="overlay">
-								<a href="#" class="catsoverlay-menu_subcats-link title--subcats-link">Services Spare parts and accesories </a>
+								<a href="#" class="catsoverlay-menu_subcats-link title--subcats-link">Services Spare parts and accesories
+								</a>
 								<span class="catsoverlay-menu_subcats-arrow"></span>
 							</div>
 
