@@ -130,7 +130,7 @@ CATEGORIES OVERLAY
 				padding-inline: rem(20);
 
 				overflow: hidden;
-				border-radius: rem(5);
+				border-radius: rem(0);
 
 				@include lg {
 					border: 1px solid rgb(0, 0, 0, 0.05);

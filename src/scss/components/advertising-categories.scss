@@ -35,7 +35,7 @@ CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 		// padding-bottom: rem(100);
 
 		border: 1px solid var(--border);
-		border-radius: rem(5) rem(5) 0 0;
+		border-radius: rem(5) ;
 
 		@include lg {
 			display: block;
@@ -91,7 +91,7 @@ CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 				padding-inline: rem(20);
 
 				overflow: hidden;
-				border-radius: rem(5);
+				border-radius: rem(0);
 
 				@include lg {
 					border: 1px solid rgb(0, 0, 0, 0.05);

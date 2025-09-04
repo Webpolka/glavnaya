@@ -87,45 +87,7 @@ HEADER PROFILE DROPDOWN
 	}
 
 	&_rating {
-		display: inline-flex;
-		align-items: center;
-		gap: rem(12.5);
-
-		margin-bottom: rem(30);
-
-		.rating {
-			&-num {
-				font-weight: 500;
-				font-size: rem(16);
-				color: #1a1a1a;
-			}
-
-			&-stars {
-				display: inline-flex;
-				align-items: center;
-				gap: rem(3);
-
-				&_star {
-					svg {
-						fill: transparent;
-						stroke: #f7c74d;
-						width: rem(18);
-						height: rem(17);
-
-						transition: all 0.3s ease-in-out;
-					}
-
-					&.active svg {
-						fill: #f7c74d;
-					}
-				}
-			}
-			&-reviews {
-				font-weight: 400;
-				font-size: rem(14);
-				color: #969696;
-			}
-		}
+		margin-bottom: rem(30);		
 	}
 
 	&_group {

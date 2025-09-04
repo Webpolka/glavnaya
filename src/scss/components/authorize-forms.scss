@@ -235,6 +235,12 @@ HEADER SIGN SLIDERS
 	.checkbox-input:active {
 		outline: 1px solid var(--accent);
 	}
+
+	.btn{
+		display: initial;
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .authorize-signup {

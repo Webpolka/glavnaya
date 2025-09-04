@@ -21,6 +21,16 @@ BOOTSTRAP EXTRA
 	--bs-gutter-y: 1.25rem;
 }
 
+// 25px
+.g-25,
+.gx-25 {
+	--bs-gutter-x: 1.55rem;
+}
+.g-25,
+.gy-25 {
+	--bs-gutter-y: 1.55rem;
+}
+
 // 30px
 .g-30,
 .gy-30 {

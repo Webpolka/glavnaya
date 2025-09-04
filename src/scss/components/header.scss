@@ -298,38 +298,8 @@ HEADER
 		}
 	}
 
-	// Форма поиска
+	
 	&-search-form {
-		display: flex;
-		align-items: center;
-		flex-grow: 1;
-		gap: rem(10);
-		min-height: rem(50);
-
-		border: 1px solid #efeaea;
-
-		padding: rem(8) rem(20);
-
-		border-radius: rem(5);
-
-		margin-right: rem(25);
-
-		@include lg {
-			margin-right: 0;
-		}
-
-		.search-input {
-			width: 100%;
-			font-size: rem(16);
-		}
-		.search-button {
-			flex-shrink: 0;
-			margin-right: rem(8);
-		}
-	}
-
-	// Форма поиска 2
-	&-search-form-2 {
 		display: flex;
 		align-items: center;
 		flex-grow: 1;
@@ -389,45 +359,6 @@ HEADER
 		}
 	}
 
-	// Кнопка добавть в список
-	&-add-listing {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: rem(15);
-
-		padding-inline: rem(30);
-		min-height: rem(50);
-
-		border-radius: rem(5);
-
-		background: var(--accent);
-		transition: opacity 0.3s ease-in-out;
-
-		&:hover {
-			opacity: 0.75;
-		}
-
-		&_before {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			flex-shrink: 0;
-
-			height: rem(20);
-			width: rem(20);
-
-			border-radius: rem(3);
-			background-color: var(--white);
-		}
-
-		&_name {
-			font-weight: 500;
-			font-size: rem(16);
-			color: var(--white);
-		}
-	}
 
 	// Кнопка войти
 	&-sign-in {
