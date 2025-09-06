@@ -32,18 +32,21 @@ export default class ImagePreloader {
 			this.handleFiles(this.input.files);
 		});
 
-		this.dragArea.addEventListener("dragover", (e) => {
-			e.preventDefault();
-			this.dragArea.style.backgroundColor = "#f0f0f0";
-		});
-		this.dragArea.addEventListener("dragleave", () => {
-			this.dragArea.style.backgroundColor = "";
-		});
-		this.dragArea.addEventListener("drop", (e) => {
-			e.preventDefault();
-			this.dragArea.style.backgroundColor = "";
-			this.handleFiles(e.dataTransfer.files);
-		});
+		this.dragArea &&
+			this.dragArea.addEventListener("dragover", (e) => {
+				e.preventDefault();
+				this.dragArea.style.backgroundColor = "#f0f0f0";
+			});
+		this.dragArea &&
+			this.dragArea.addEventListener("dragleave", () => {
+				this.dragArea.style.backgroundColor = "";
+			});
+		this.dragArea &&
+			this.dragArea.addEventListener("drop", (e) => {
+				e.preventDefault();
+				this.dragArea.style.backgroundColor = "";
+				this.handleFiles(e.dataTransfer.files);
+			});
 	}
 
 	handleFiles(files) {
@@ -54,18 +57,27 @@ export default class ImagePreloader {
 			// Проверка на дублирование по имени файла
 			const isDuplicate = this.selectedFiles.some((f) => f.name === file.name);
 			if (isDuplicate) {
-				this.warning.innerHTML = `<svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.56701 7.30309C9.37772 7.63641 9.61848 8.05 10.0018 8.05H14.9263C15.3512 8.05 15.5825 8.54655 15.309 8.8718L4.97844 21.1569C4.62931 21.5721 3.96161 21.2121 4.1166 20.6922L6.66548 12.1429C6.76108 11.8222 6.5209 11.5 6.18633 11.5H0.806771C0.435624 11.5 0.193847 11.1099 0.359003 10.7775L5.57639 0.277507C5.66087 0.107503 5.83433 0 6.02416 0H12.8554C13.2387 0 13.4794 0.413585 13.2901 0.746905L9.56701 7.30309Z" fill="#E60000"/></svg>
-        This media file was added !`;
-				this.warning.classList.remove("hidden");
+				if (this.warning) {
+					this.warning.innerHTML = `
+					<div class="mediaload-warning_inner">
+					<svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.56701 7.30309C9.37772 7.63641 9.61848 8.05 10.0018 8.05H14.9263C15.3512 8.05 15.5825 8.54655 15.309 8.8718L4.97844 21.1569C4.62931 21.5721 3.96161 21.2121 4.1166 20.6922L6.66548 12.1429C6.76108 11.8222 6.5209 11.5 6.18633 11.5H0.806771C0.435624 11.5 0.193847 11.1099 0.359003 10.7775L5.57639 0.277507C5.66087 0.107503 5.83433 0 6.02416 0H12.8554C13.2387 0 13.4794 0.413585 13.2901 0.746905L9.56701 7.30309Z" fill="#E60000"/></svg>
+        			<span>This media file was added !</span>
+					</div>`;
+				}
+				this.warning && this.warning.classList.remove("hidden");
 				continue;
 			}
 
 			// Проверка размера файла
 			if (file.size > this.maxFileSizeKB * 1024) {
-				this.warning.innerHTML = `
-        <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.56701 7.30309C9.37772 7.63641 9.61848 8.05 10.0018 8.05H14.9263C15.3512 8.05 15.5825 8.54655 15.309 8.8718L4.97844 21.1569C4.62931 21.5721 3.96161 21.2121 4.1166 20.6922L6.66548 12.1429C6.76108 11.8222 6.5209 11.5 6.18633 11.5H0.806771C0.435624 11.5 0.193847 11.1099 0.359003 10.7775L5.57639 0.277507C5.66087 0.107503 5.83433 0 6.02416 0H12.8554C13.2387 0 13.4794 0.413585 13.2901 0.746905L9.56701 7.30309Z" fill="#E60000"/></svg>
-        High-quality and clear photos attract buyers, and their quantity increases the chances of a sale.`;
-				this.warning.classList.remove("hidden");
+				if (this.warning) {
+					this.warning.innerHTML = `
+       			<div class="mediaload-warning_inner">
+       			<svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.56701 7.30309C9.37772 7.63641 9.61848 8.05 10.0018 8.05H14.9263C15.3512 8.05 15.5825 8.54655 15.309 8.8718L4.97844 21.1569C4.62931 21.5721 3.96161 21.2121 4.1166 20.6922L6.66548 12.1429C6.76108 11.8222 6.5209 11.5 6.18633 11.5H0.806771C0.435624 11.5 0.193847 11.1099 0.359003 10.7775L5.57639 0.277507C5.66087 0.107503 5.83433 0 6.02416 0H12.8554C13.2387 0 13.4794 0.413585 13.2901 0.746905L9.56701 7.30309Z" fill="#E60000"/></svg>
+        		<span>High-quality and clear photos attract buyers, and their quantity increases the chances of a sale.</span>
+				</div>`;
+				}
+				this.warning && this.warning.classList.remove("hidden");
 				continue;
 			}
 
@@ -75,9 +87,9 @@ export default class ImagePreloader {
 			this.selectedFiles.forEach((file) => dataTransfer.items.add(file));
 			this.input.files = dataTransfer.files;
 
-			// console.log(this.input.files);
+			 console.log(this.input.files);
 
-			this.warning.classList.add("hidden");
+			this.warning && this.warning.classList.add("hidden");
 
 			const reader = new FileReader();
 			reader.onload = (e) => {
@@ -95,7 +107,7 @@ export default class ImagePreloader {
 
 				deleteBtn.addEventListener("click", () => {
 					this.removeFile(file, previewDiv);
-					this.warning.classList.add("hidden");
+					this.warning && this.warning.classList.add("hidden");
 
 					console.log(this.input.files);
 				});
@@ -120,7 +132,7 @@ export default class ImagePreloader {
 
 		// Можно скрыть предупреждение, если список пуст
 		if (this.selectedFiles.length === 0) {
-			this.warning.classList.add("hidden");
+			this.warning && this.warning.classList.add("hidden");
 		}
 
 		if (previewElement && previewElement.parentNode) {
@@ -135,17 +147,20 @@ export default class ImagePreloader {
 		// const hasDuplicateFiles = this.selectedFiles.some((f) => {
 		// 	return false;
 		// });
-
-		if (hasLargeFiles) {
-			this.warning.innerHTML = `
-        <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.56701 7.30309C9.37772 7.63641 9.61848 8.05 10.0018 8.05H14.9263C15.3512 8.05 15.5825 8.54655 15.309 8.8718L4.97844 21.1569C4.62931 21.5721 3.96161 21.2121 4.1166 20.6922L6.66548 12.1429C6.76108 11.8222 6.5209 11.5 6.18633 11.5H0.806771C0.435624 11.5 0.193847 11.1099 0.359003 10.7775L5.57639 0.277507C5.66087 0.107503 5.83433 0 6.02416 0H12.8554C13.2387 0 13.4794 0.413585 13.2901 0.746905L9.56701 7.30309Z" fill="#E60000"/></svg>
-        High-quality and clear photos attract buyers, and their quantity increases the chances of a sale.`;
-			this.warning.classList.remove("hidden");
+		if (this.warning) {
+			if (hasLargeFiles) {
+				this.warning.innerHTML = `
+				<div class="mediaload-warning_inner">
+       			<svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.56701 7.30309C9.37772 7.63641 9.61848 8.05 10.0018 8.05H14.9263C15.3512 8.05 15.5825 8.54655 15.309 8.8718L4.97844 21.1569C4.62931 21.5721 3.96161 21.2121 4.1166 20.6922L6.66548 12.1429C6.76108 11.8222 6.5209 11.5 6.18633 11.5H0.806771C0.435624 11.5 0.193847 11.1099 0.359003 10.7775L5.57639 0.277507C5.66087 0.107503 5.83433 0 6.02416 0H12.8554C13.2387 0 13.4794 0.413585 13.2901 0.746905L9.56701 7.30309Z" fill="#E60000"/></svg>
+        		<span>High-quality and clear photos attract buyers, and their quantity increases the chances of a sale.</span>
+				</div>`;
+				this.warning.classList.remove("hidden");
+			}
+			// } else if (hasDuplicateFiles) {
+			// 	this.warning.innerHTML = `<svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.56701 7.30309C9.37772 7.63641 9.61848 8.05 10.0018 8.05H14.9263C15.3512 8.05 15.5825 8.54655 15.309 8.8718L4.97844 21.1569C4.62931 21.5721 3.96161 21.2121 4.1166 20.6922L6.66548 12.1429C6.76108 11.8222 6.5209 11.5 6.18633 11.5H0.806771C0.435624 11.5 0.193847 11.1099 0.359003 10.7775L5.57639 0.277507C5.66087 0.107503 5.83433 0 6.02416 0H12.8554C13.2387 0 13.4794 0.413585 13.2901 0.746905L9.56701 7.30309Z" fill="#E60000"/></svg>
+			// This media file was added !`;
+			// 	this.warning.classList.remove("hidden");
+			// }
 		}
-		// } else if (hasDuplicateFiles) {
-		// 	this.warning.innerHTML = `<svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.56701 7.30309C9.37772 7.63641 9.61848 8.05 10.0018 8.05H14.9263C15.3512 8.05 15.5825 8.54655 15.309 8.8718L4.97844 21.1569C4.62931 21.5721 3.96161 21.2121 4.1166 20.6922L6.66548 12.1429C6.76108 11.8222 6.5209 11.5 6.18633 11.5H0.806771C0.435624 11.5 0.193847 11.1099 0.359003 10.7775L5.57639 0.277507C5.66087 0.107503 5.83433 0 6.02416 0H12.8554C13.2387 0 13.4794 0.413585 13.2901 0.746905L9.56701 7.30309Z" fill="#E60000"/></svg>
-		// This media file was added !`;
-		// 	this.warning.classList.remove("hidden");
-		// }
 	}
 }

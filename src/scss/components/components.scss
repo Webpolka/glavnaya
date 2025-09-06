@@ -523,6 +523,7 @@ COMPONENTS
 	}
 }
 
+/*-------------------------------------------- Collection ----------------------------------------------------*/
 [class*="_collection"] {
 	display: flex;
 	align-items: center;
@@ -550,4 +551,129 @@ COMPONENTS
 
 		transition: all 0.3s ease-in-out;
 	}
+}
+
+/*-------------------------------------------- ads-tabs ----------------------------------------------------*/
+[class*="_tabs"] {
+	position: relative;
+
+	display: inline-flex;
+	align-items: center;
+	gap: rem(40);
+
+	width: 100%;
+	
+	margin-bottom: rem(40);
+	overflow-x: hidden;
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: rem(-100);
+		right: rem(-100);
+		height: 1px;
+		border-bottom: 1px solid #efeaea;
+	}
+
+
+	.site-tab,
+	.login-tab,
+	.signup-tab {
+		display: inline-flex;
+		gap: rem(8);
+		align-items: start;
+
+		font-weight: 500;
+		font-size: rem(16);		
+		color: #1a1a1a;
+		border-bottom: 3px solid transparent;
+
+		padding: rem(10) 0;
+
+		transition: all 0.3s ease-in-out;
+		span {
+			display: inline-block;
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: 120%;
+			color: #1a1a1a;
+			transition: all 0.3s ease-in-out;
+		}
+
+		small {
+			display: inline-block;
+			font-weight: 500;
+			font-size: rem(12);
+			line-height: 120%;
+			color: #b1b1b1;
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover {
+			span,
+			small {
+				color: rgb(230, 0, 0, 0.65);
+			}
+			color: rgb(230, 0, 0, 0.65);
+		}
+		&.active {
+			span,
+			small {
+				color: rgb(230, 0, 0);
+			}
+			color: var(--accent);
+			border-bottom: 3px solid var(--accent);
+		}
+	}
+}
+
+/*-------------------------------------------- RADIO CHECKBOX  ----------------------------------------------------*/
+.radio,
+.checkbox {
+	display: block;
+	position: relative;
+	font-size: rem(14);
+	user-select: none;
+	cursor: pointer;
+	font-weight: 400;
+}
+
+/* скрываем оригинальный радиобатон */
+.checkbox input[type="checkbox"],
+.radio input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
+/* стиль кастомного овала */
+.custom-radio,
+.custom-checkbox {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	min-height: rem(40);
+	padding: rem(5) rem(20);
+
+	border: 1px solid #d5d5d5;
+	border-radius: rem(100);
+
+	color: #3d3d3d;
+	background-color: #fff;
+
+	transition: all 0.3s ease-in-out;
+}
+
+/* выделение выбранного варианта */
+.checkbox input[type="checkbox"]:checked + .custom-checkbox,
+.radio input[type="radio"]:checked + .custom-radio {
+	border-color: var(--accent);
+	color: var(--accent);
+}
+
+/* Можно добавить эффект при наведении */
+.checkbox:hover .custom-checkbox,
+.radio:hover .custom-radio {
+	border-color: #999;
 }

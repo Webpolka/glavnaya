@@ -1,0 +1,302 @@
+/*-----------------------------------------------------------------------------------------------------------------
+PROFILE ADS
+ ------------------------------------------------------------------------------------------------------------------*/
+.profile-user_ads {
+	.ads_tabs {
+		margin-bottom: rem(30);
+	}
+
+	.ads-list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(30);
+
+		padding-bottom: rem(70);
+	}
+}
+
+.ads-card {
+	display: flex;
+	gap: rem(30);
+
+	padding-bottom: rem(25);
+	border-bottom: 1px solid #efeaea;
+
+	&:hover {
+		.ads-card_title h2 {
+			color: var(--accent);
+		}
+		.ads-card_image img {
+			transform: scale(1.05);
+		}
+	}
+
+	&_image {
+		flex-shrink: 0;
+
+		&-wrap {
+			overflow: hidden;
+			aspect-ratio: 24/18;
+			width: rem(240);
+			border-radius: rem(5);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			overflow: hidden;
+
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&_title {
+		display: inline-flex;
+		align-items: baseline;
+		gap: rem(20);
+
+		h2 {
+			font-weight: 700;
+			font-size: rem(24);
+			line-height: 120%;
+			color: #1a1a1a;
+
+			transition: color 0.3s ease-in-out;
+		}
+		span {
+			font-weight: 400;
+			font-size: rem(15);
+			line-height: 120%;
+			color: #3d3d3d;
+
+			opacity: 0.5;
+		}
+
+		margin-bottom: rem(10);
+	}
+
+	&_description {
+		font-weight: 400;
+		font-size: rem(15);
+		line-height: 120%;
+		color: #3d3d3d;
+
+		margin-bottom: rem(15);
+	}
+
+	&_price {
+		margin-bottom: rem(10);
+
+		strong {
+			font-weight: 500;
+			font-size: rem(20);
+			line-height: 120%;
+			color: var(--black);
+
+			margin-right: rem(7);
+		}
+		small {
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: 120%;
+			color: #b1b1b1;
+		}
+	}
+
+	&_main {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&_info {
+		display: flex;
+		justify-content: space-between;
+	}
+	&_info-counters {
+		flex-grow: 0;
+		display: flex;
+		flex-direction: column;
+		gap: rem(12);
+
+		.counter-item {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: rem(15);
+
+			span {
+				font-weight: 400;
+				font-size: rem(15);
+				line-height: 120%;
+				text-align: right;
+				color: #1a1a1a;
+			}
+
+			.icon--views {
+				width: rem(20);
+				height: rem(12);
+			}
+			.icon--called {
+				width: rem(20);
+				height: rem(13);
+			}
+			.icon--liked {
+				width: rem(20);
+				height: rem(13);
+			}
+		}
+	}
+	&_info-content {
+		flex-grow: 1;
+	}
+
+	&_status {
+		display: flex;
+		align-items: center;
+		gap: rem(15);
+
+		margin-bottom: rem(15);
+
+		// Активно
+		&.active {
+			.status-label {
+				background: #45c34e;
+			}
+			.status-description {
+				color: #45c34e;
+			}
+		}
+		// На паузе
+		&.inactive-pause {
+			.status-label {
+				background: var(--accent);
+			}
+			.status-description {
+				color: var(--accent);
+			}
+		}
+		// На рассмотрении
+		&.inactive-review {
+			.status-label {
+				background: #ffb042;
+			}
+			.status-description {
+				color: #ffb042;
+			}
+		}
+
+		.status-label {
+			border-radius: rem(5);
+			min-height: rem(26);
+			padding-inline: rem(10);
+			display: flex;
+			align-items: center;
+
+			font-weight: 500;
+			font-size: rem(14);
+			line-height: 120%;
+			color: #fff;
+		}
+		.status-description {
+			font-weight: 400;
+			font-size: rem(15);
+			line-height: 120%;
+			color: var(--dark);
+		}
+	}
+
+	&_footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-meta {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(25);
+
+			.meta-timeago {
+				font-family: var(--font-main);
+				font-weight: 400;
+				font-size: rem(15);
+				line-height: 120%;
+				color: #3d3d3d;
+				opacity: 0.5;
+			}
+
+			.meta-location {
+				display: inline-flex;
+				align-items: center;
+				gap: rem(5);
+
+				transition: all 0.3s ease-in-out;
+
+				&:hover {
+					opacity: 0.75;
+				}
+
+				&_name {
+					font-weight: 400;
+					font-size: rem(15);
+					line-height: 120%;
+					color: var(--black);
+				}
+			}
+
+			.icon--map-pin {
+				width: rem(14);
+				height: rem(18);
+			}
+		}
+
+		&-buttons {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(30);
+		}
+
+		.btn-ads {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(10);
+
+			&:hover {
+				span {
+					color: var(--accent);
+				}
+			}
+
+			span {
+				font-weight: 400;
+				font-size: rem(15);
+				line-height: 120%;
+				color: #1a1a1a;
+
+				transition: all 0.3s ease-in-out;
+			}
+
+			.icon--promote {
+				width: rem(14);
+				height: rem(12);
+			}
+			.icon--edit {
+				width: rem(14);
+				height: rem(14);
+			}
+			.icon--pause {
+				width: rem(14);
+				height: rem(14);
+			}
+			.icon--delete {
+				width: rem(14);
+				height: rem(14);
+			}
+			.icon--play {
+				width: rem(12);
+				height: rem(14);
+			}
+		}
+	}
+}

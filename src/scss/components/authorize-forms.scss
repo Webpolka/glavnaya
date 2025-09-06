@@ -58,42 +58,6 @@ HEADER SIGN SLIDERS
 		margin-bottom: rem(30);
 	}
 
-	&_tabs {
-		position: relative;
-
-		display: inline-flex;
-		align-items: center;
-		gap: rem(40);
-
-		width: 100%;
-
-		margin-bottom: rem(40);
-
-		&:after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: rem(-100);
-			right: rem(-100);
-			height: 1px;
-			border-bottom: 1px solid #efeaea;
-		}
-
-		.login-tab,
-		.signup-tab {
-			font-weight: 500;
-			font-size: rem(16);
-			line-height: 240%;
-			color: #1a1a1a;
-			border-bottom: 3px solid transparent;
-
-			transition: all 0.3s ease-in-out;
-			&.active {
-				color: var(--accent);
-				border-bottom: 3px solid red;
-			}
-		}
-	}
 
 	&_spacebetween {
 		display: flex;

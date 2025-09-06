@@ -1,0 +1,73 @@
+<div class="profile-user">
+	<div class="profile-user_wallet">
+		<div class="profile-user_title">
+			<span>Wallet</span>
+		</div>
+
+		<div class="profile-user_description">Here you can top up your wallet and view your transaction history</div>
+
+		<div class="wallet-balance">
+			<div class="wallet-balance_description">Your balance</div>
+			<div class="wallet-balance_all">11 932 ALL</div>
+		</div>
+
+		<div class="wallet_tabs">
+			<button class="site-tab active" data-tab="1">Add funds to balance</button>
+			<button class="site-tab" data-tab="2">Transaction history</button>
+		</div>
+
+		<div class="wallet-panels">
+			<!-- 1 Add funds to balance  -->
+			<div class="wallet-panel" data-panel="1">
+				<form action="" id="add-funds-to-balance" class="wallet-form">
+					<!-- 1 INPUT -->
+					<div class="form-group">
+						<label class="form-group_title" for="balance-amount-of-deposit">Amount of deposit</label>
+						<input
+							type="text"
+							id="balance-amount-of-deposit"
+							name="balance-amount-of-deposit"
+							class="input"
+							maxlength="30"
+							placeholder="ALL"
+							autocomplete="off"
+						/>
+					</div>
+
+					<!-- 2 RADIO BUTTONS -->
+					<div class="form-group">
+						<div class="form-group_title">Payment method</div>
+
+						<div class="form-group-inrow">
+							<label class="radio">
+								<input type="radio" name="balance-payment-method" value="Stripe" checked />
+								<span class="custom-radio">Stripe</span>
+							</label>
+							<label class="radio">
+								<input type="radio" name="balance-payment-method" value="Paypal" />
+								<span class="custom-radio">Paypal</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<button type="button" class="btn">Add funds</button>
+					</div>
+				</form>
+			</div>
+
+			<!-- 2 Transaction history -->
+			<div class="wallet-panel" data-panel="2">
+				<div class="wallet-transaction">
+					<ul class="wallet-transaction_list">
+						<li>1.Transaction item</li>
+						<li>2.Transaction item</li>
+						<li>3.Transaction item</li>
+						<li>4.Transaction item</li>
+						<li>5.Transaction item</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

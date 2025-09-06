@@ -1,0 +1,233 @@
+<div class="profile-user">
+	<div class="profile-user_settings">
+		<!-- Settings FORM -->
+		<form action="" id="settings-form">
+			<div class="profile-user_title">
+				<span>Settings</span>
+			</div>
+
+			<div class="profile-user_description">Here you can edit your profile</div>
+
+			<div class="row g-30">
+				<!-- Tile 1 -->
+				<div class="col-12">
+					<div class="settings-tile">
+						<div class="settings-tile_title">Personal information</div>
+						<div class="settings-tile_fields">
+							<!-- 1 RADIO BUTTONS -->
+							<div class="form-group">
+								<div class="form-group_title">Profile Type</div>
+
+								<div class="form-group-inrow">
+									<label class="radio">
+										<input type="radio" name="settings-profile-type" value="Personal" checked />
+										<span class="custom-radio">Personal</span>
+									</label>
+									<label class="radio">
+										<input type="radio" name="settings-profile-type" value="Business" />
+										<span class="custom-radio">Business</span>
+									</label>
+								</div>
+							</div>
+
+							<!-- 2 NAME INPUT -->
+							<div class="form-group">
+								<label class="form-group_title" for="settings-name">Name</label>
+								<input
+									type="text"
+									id="settings-name"
+									name="settings-name"
+									class="input"
+									maxlength="30"
+									placeholder="John"
+									autocomplete="on"
+								/>
+							</div>
+
+							<!-- 3 LAST INPUT -->
+							<div class="form-group">
+								<label class="form-group_title" for="settings-last-name">Last name</label>
+								<input
+									type="text"
+									id="settings-last-name"
+									name="settings-last-name"
+									class="input"
+									maxlength="30"
+									placeholder="Doe"
+									autocomplete="on"
+								/>
+							</div>
+
+							<!-- 4 PHONE NUMBER -->
+							<div class="form-group">
+								<label class="form-group_title" for="settings-phone">Phone number</label>
+								<input
+									type="phone"
+									id="settings-phone"
+									name="settings-phone"
+									class="input"
+									maxlength="15"
+									placeholder="+7"
+									autocomplete="on"
+								/>
+							</div>
+
+							<!-- 5 EMAIL -->
+							<div class="form-group">
+								<label class="form-group_title" for="settings-email">Email</label>
+								<input
+									type="email"
+									id="settings-email"
+									name="settings-email"
+									class="input"
+									maxlength="35"
+									placeholder="email@abl.al"
+									autocomplete="on"
+								/>
+							</div>
+
+							<!-- 6 TELEGRAM -->
+							<div class="form-group">
+								<label class="form-group_title" for="settings-telegram">Telegram</label>
+								<input
+									type="text"
+									id="settings-telegram"
+									name="settings-telegram"
+									class="input"
+									maxlength="50"
+									placeholder="@nametelegram"
+									autocomplete="on"
+								/>
+							</div>
+
+							<!-- 7 WhatsApp -->
+							<div class="form-group">
+								<label class="form-group_title" for="settings-whatsapp">WhatsApp</label>
+								<input
+									type="phone"
+									id="settings-whatsapp"
+									name="settings-whatsapp"
+									class="input"
+									maxlength="50"
+									placeholder="+7"
+									autocomplete="on"
+								/>
+							</div>
+
+							<!-- 8 Profile Link -->
+							<div class="form-group">
+								<label class="form-group_title" for="settings-profile-link">Profile Link</label>
+								<div class="input-wrapper">
+									<input
+										type="text"
+										id="settings-profile-link"
+										name="settings-profile-link"
+										class="input"
+										maxlength="50"
+										value="qXStOnaoJ0Aax7tMDz0jVSD7WoJtmG"
+										placeholder="qXStOnaoJ0Aax7tMDz0jVSD7WoJtmG"
+										autocomplete="on"
+									/>
+									<div class="input-wrapper_description">
+										Please provide a short URL for your page to make it more convenient and memorable.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tile 2 -->
+				<div class="col-12">
+					<div class="settings-tile">
+						<div class="settings-tile_title">Notification Method</div>
+						<div class="settings-tile_fields">
+							<!-- CHECKBOX -->
+							<div class="form-group">
+								<div class="form-group_title">Where to send notifications?</div>
+
+								<div class="form-group-inrow">
+									<label class="checkbox">
+										<input type="checkbox" name="settings-notification-method" checked />
+										<span class="custom-checkbox">Email</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tile 3 -->
+				<div class="col-12">
+					<div class="settings-tile">
+						<div class="settings-tile_title">Notification</div>
+						<div class="settings-tile_fields">
+							<!-- CHECKBOX -->
+							<div class="form-group">
+								<div class="form-group_title">Messages</div>
+
+								<div class="form-group-inrow">
+									<label class="checkbox">
+										<input type="checkbox" name="settings-notification-messages" checked />
+										<span class="custom-checkbox">Notify me about new messages.</span>
+									</label>
+								</div>
+							</div>
+							<!-- CHECKBOX -->
+							<div class="form-group">
+								<div class="form-group_title">Listings</div>
+
+								<div class="form-group-inrow">
+									<label class="checkbox">
+										<input type="checkbox" name="settings-notification-listings" />
+										<span class="custom-checkbox">Notify me when my listings expire.</span>
+									</label>
+								</div>
+							</div>
+							<!-- CHECKBOX -->
+							<div class="form-group">
+								<div class="form-group_title">Plan</div>
+
+								<div class="form-group-inrow">
+									<label class="checkbox">
+										<input type="checkbox" name="settings-notification-plan" />
+										<span class="custom-checkbox">Notify me when my plan expires</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tile 4 -->
+				<div class="col-12">
+					<div class="settings-tile">
+						<div class="settings-tile_title">Security</div>
+						<div class="settings-tile_fields">
+							<!-- CHECKBOX -->
+							<div class="form-group">
+								<div class="form-group_title">Password</div>
+
+								<div class="form-group-inrow">
+									<a href="#" class="btn-gray">Edit</a>
+								</div>
+							</div>
+						</div>
+						<div class="settings-tile_footer">
+							<button type="button" class="btn">Delete account</button>
+							<div class="settings-tile_footer-desc">
+								Profile recovery is not possible. All your listings, reviews, orders, and conversations will be lost.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12">
+					<div class="settings-save">
+						<button type="submit" class="btn">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

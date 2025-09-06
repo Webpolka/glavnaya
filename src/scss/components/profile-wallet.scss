@@ -1,0 +1,96 @@
+/*-----------------------------------------------------------------------------------------------------------------
+PROFILE WALLET PAGE
+ ------------------------------------------------------------------------------------------------------------------*/
+
+.profile-user_wallet {
+	margin-bottom: rem(70);
+}
+
+.wallet_tabs {
+	margin-bottom: rem(30);
+}
+
+.wallet-balance {
+	padding-top: rem(10);
+	margin-bottom: rem(30);
+
+	&_description {
+		font-weight: 400;
+		font-size: rem(14);
+		line-height: 120%;
+		color: #b1b1b1;
+	}
+	&_all {
+		font-weight: 500;
+		font-size: rem(36);
+		line-height: 120%;
+		color: #1a1a1a;
+	}
+}
+.wallet-form {
+	display: flex;
+	flex-direction: column;
+	gap: rem(20);
+
+	.btn {
+		padding-inline: rem(30);
+		margin-top: rem(10);
+	}
+}
+
+.wallet-panel {
+	display: none;
+	&.active {
+		display: block;
+		animation: fade-up 0.3s ease-in-out;
+	}
+
+	.form-group {
+		display: flex;
+		align-items: center;
+
+		&_title {
+			flex-shrink: 0;
+			width: rem(140);
+			margin-right: rem(15);
+
+			font-weight: 400;
+			font-size: rem(16);
+			color: #1a1a1a;
+		}
+
+		.input {
+			color: #1a1a1a;
+			max-width: rem(150);
+			transition: all 0.3s ease-in-out;
+			outline: 1px solid transparent;
+			&:focus {
+				outline: 1px solid var(--accent);
+			}
+		}
+	}
+
+	// Блоки с радиобаттонами и чекбоксами
+
+	.form-group-inrow {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(10);
+	}
+}
+
+.wallet-transaction {
+	&_list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+
+		li {
+			&::before {
+				content: "•";
+				color: var(--accent);
+				margin-right: rem(15);
+			}
+		}
+	}
+}

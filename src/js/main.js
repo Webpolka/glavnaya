@@ -258,6 +258,13 @@ import Tabs from "./modules/tabs";
 const authorizeLoginElement = document.querySelector(".authorize-login");
 const authorizeSignUpElement = document.querySelector(".authorize-signup");
 const authorizeBtn = document.querySelector("[data-signed]");
+const walletTabs = document.querySelector(".wallet_tabs");
+
+if (walletTabs) {
+	new Tabs({
+		parent: ".profile-user_wallet",
+	});
+}
 
 if (authorizeBtn) {
 	authorizeLoginElement &&
@@ -376,6 +383,19 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+	const loadVerificationtImages = document.querySelector("#verification-media");
+	loadVerificationtImages &&
+		new ImagePreloader({
+			maxFileSizeKB: 1000,
+			inputId: "verification-media",
+			buttonId: "verification-attach-btn",
+			previewsContainerId: "verification-mediaload-previews",
+			warningId: "verification-mediaload-warning",
+			dragAreaId: false,
+		});
+});
+
 /*--------------------------------------------------------------------------------------------------------------
 PROFILE BTN
 ----------------------------------------------------------------------------------------------------------------*/
@@ -405,7 +425,6 @@ if (profileBtn && profileDropdown) {
 	});
 }
 
-
 /*--------------------------------------------------------------------------------------------------------------
 LISTS BUTTONS-PANELS LISTENER
 ----------------------------------------------------------------------------------------------------------------*/
@@ -414,10 +433,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	const allListsButtons = document.querySelectorAll("[data-listBtn]");
 
 	allListsButtons.forEach((btn) => {
-	
 		btn.addEventListener("click", () => {
 			btn.classList.toggle("active");
-			
+
 			const id = btn.dataset.listbtn;
 			const dropdown = document.querySelector(`[data-listPanel="${id}"]`);
 
@@ -439,3 +457,24 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 });
+
+/*--------------------------------------------------------------------------------------------------------------
+SCROLL BUTTONS
+----------------------------------------------------------------------------------------------------------------*/
+import ScrollButtons from "./modules/scroll-buttons";
+
+document.addEventListener("DOMContentLoaded", () => {
+	const scrollConversations = document.querySelector(".conversations-list");
+	scrollConversations &&
+		new ScrollButtons({
+			btnParent: '.conversations-list',
+			btnUp: '[data-id="scroll-up"]',
+			btnDown: '[data-id="scroll-down"]',
+
+			scrollArea: ".conversations-list_scroll",	
+			step: 5,	
+			speed: 10	
+		});
+});
+
+

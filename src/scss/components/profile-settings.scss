@@ -1,0 +1,112 @@
+/*-----------------------------------------------------------------------------------------------------------------
+PROFILE SETTINGS PAGE
+ ------------------------------------------------------------------------------------------------------------------*/
+.profile-user_settings {
+	margin-bottom: rem(70);
+}
+
+.settings-tile {
+	border: 1px solid #efeaea;
+	border-radius: rem(10);
+	overflow: hidden;
+
+	&_title {
+		position: relative;
+
+		font-weight: 500;
+		font-size: rem(18);
+		color: #1a1a1a;
+
+		padding-inline: rem(35);
+		padding-top: rem(27);
+		padding-bottom: rem(22);
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: -100%;
+			width: 300%;
+			height: 1px;
+			border-bottom: 1px solid #efeaea;
+		}
+	}
+
+	&_fields {
+		display: flex;
+		flex-direction: column;
+		gap: rem(15);
+		padding-block: rem(30);
+		padding-inline: rem(35);
+	}
+
+	.form-group {
+		display: flex;
+		align-items: center;
+
+		&_title {
+			flex-shrink: 0;
+			width: rem(130);
+			margin-right: rem(15);
+
+			font-weight: 400;
+			font-size: rem(16);
+			color: #1a1a1a;
+		}
+
+		.input {
+			color: #1a1a1a;
+			max-width: rem(370);
+			transition: all 0.3s ease-in-out;
+			outline: 1px solid transparent;
+			&:focus {
+				outline: 1px solid var(--accent);
+			}
+		}
+	}
+
+	// Блоки с радиобаттонами и чекбоксами
+
+	.form-group-inrow {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(10);
+	}
+
+	.input-wrapper {
+		&_description {
+			font-weight: 400;
+			font-size: rem(14);
+			color: #b1b1b1;
+
+			padding-top: rem(10);
+		}
+	}
+
+	.btn,
+	.btn-gray {
+		min-height: rem(40);
+		font-size: rem(15);
+		padding-inline: rem(20);
+	}
+
+	&_footer {
+		background-color: rgb(230, 0, 0, 0.05);
+		padding-inline: rem(35);
+		padding-block: rem(30);
+
+		&-desc {
+			font-weight: 400;
+			font-size: rem(14);
+			color: #3d3d3d;
+
+			padding-top: rem(15);
+		}
+	}
+}
+.settings-save {
+	display: flex;
+	justify-content: center;
+
+	padding-top: rem(20);
+}

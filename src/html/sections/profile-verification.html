@@ -1,0 +1,81 @@
+<div class="profile-user">
+	<div class="verification">
+		<!-- Verification FORM -->
+		<form action="" id="verification-form">
+			<div class="profile-user_title">
+				<span>Verification</span>
+			</div>
+
+			<div class="profile-user_description">Your account has now been verified, and new opportunities are now available to you.</div>
+
+			<div class="row g-20">
+				<div class="col-12">
+					<!-- tile contacts confirm -->
+					<div class="profile-user_tile">
+						<div class="tile_title">Contacts</div>
+
+						<div class="tile_row">
+							<!-- 1 no-confirmed phone number-->
+							<div class="tile_row-item">
+								<svg class="icon icon--noconfirmed">
+									<use href="./icons/symbol/sprite.svg#noconfirmed"></use>
+								</svg>
+								<span>Phone number</span>
+								<!-- <input type="checkbox" name="verification-phone-confirmed" hidden /> -->
+							</div>
+
+							<!-- 2 confirmed email address-->
+							<div class="tile_row-item">
+								<svg class="icon icon--confirmed">
+									<use href="./icons/symbol/sprite.svg#confirmed"></use>
+								</svg>
+								<span>Email</span>
+								<!-- <input type="checkbox" name="verification-email-confirmed" hidden checked /> -->
+							</div>
+						</div>
+						<div class="tile_row">
+							<a href="#" class="btn">Confirm</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12">
+					<!-- tile passport and photos -->
+					<div class="profile-user_tile">
+						<div class="tile_title">Passport and photo</div>
+						<div class="tile_paragraph">
+							Take a photo of the main page of your passport and a selfie of your face holding a sheet of paper with the
+							numbers
+							<strong>8437031</strong> written on it.
+						</div>
+						<div class="tile_row mb-0">
+							<button type="button" class="btn-gray" id="verification-attach-btn">Attach</button>
+						</div>
+
+						<input type="file" id="verification-media" multiple="multiple" accept="image/jpeg, image/png" class="hidden" />
+						<div id="verification-mediaload-previews" class="mediaload-previews"></div>
+						<div id="verification-mediaload-warning" class="hidden mediaload-warning">JavaScript there paste text</div>
+					</div>
+				</div>
+
+				<div class="col-12">
+					<ul class="verification_list">
+						<li>Verification will take no more than one day, but sometimes it may take longer.</li>
+						<li>A "Verified" badge will appear in your profile.</li>
+						<li>You will have access to all site features.</li>
+						<li>Your data will be protected; we will not publish it anywhere.</li>
+					</ul>
+				</div>
+
+				<div class="col-12">
+					<div class="verification_row">
+						<button type="submit" class="btn">Submit for review</button>
+						<div class="verification_description">
+							By submitting files, you agree to the processing of personal <br />data in accordance with the Site Policy.
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

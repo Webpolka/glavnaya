@@ -66,7 +66,7 @@ ADVERTISING CUSTOM FORM ELEMENTS
 	}
 
 	// Раздел формы с ценником
-	&_form-price { 
+	&_form-price {
 		padding-top: rem(40);
 		padding-bottom: rem(40);
 
@@ -80,7 +80,6 @@ ADVERTISING CUSTOM FORM ELEMENTS
 
 	&_form-mediaload {
 		padding-bottom: rem(20);
-	
 
 		.advertising_input-block {
 			width: 100%;
@@ -214,55 +213,6 @@ ADVERTISING CUSTOM FORM ELEMENTS
 			display: flex;
 			flex-wrap: wrap;
 			gap: rem(10);
-		}
-
-		.radio,
-		.checkbox {
-			display: block;
-			position: relative;
-			font-size: rem(14);
-			user-select: none;
-			cursor: pointer;
-			font-weight: 400;
-		}
-
-		/* скрываем оригинальный радиобатон */
-		.checkbox input[type="checkbox"],
-		.radio input[type="radio"] {
-			position: absolute;
-			opacity: 0;
-		}
-
-		/* стиль кастомного овала */
-		.custom-radio,
-		.custom-checkbox {
-			position: relative;
-
-			display: flex;
-			align-items: center;
-			min-height: rem(40);
-			padding: rem(5) rem(20);
-
-			border: 1px solid #d5d5d5;
-			border-radius: rem(100);
-
-			color: #3d3d3d;
-			background-color: #fff;
-
-			transition: all 0.3s ease-in-out;
-		}
-
-		/* выделение выбранного варианта */
-		.checkbox input[type="checkbox"]:checked + .custom-checkbox,
-		.radio input[type="radio"]:checked + .custom-radio {
-			border-color: var(--accent);
-			color: var(--accent);
-		}
-
-		/* Можно добавить эффект при наведении */
-		.checkbox:hover .custom-checkbox,
-		.radio:hover .custom-radio {
-			border-color: #999;
 		}
 	}
 
