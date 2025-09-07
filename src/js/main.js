@@ -396,6 +396,19 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+	const loadMessagerImages = document.querySelector("#messenger-attach-files");
+	loadMessagerImages &&
+		new ImagePreloader({
+			maxFileSizeKB: 1000,
+			inputId: "messenger-attach-files",
+			buttonId: "messenger-attach-btn",
+			previewsContainerId: "messenger-attach-previews",
+			warningId: "messenger-attach-warning",
+			dragAreaId: false,
+		});
+});
+
 /*--------------------------------------------------------------------------------------------------------------
 PROFILE BTN
 ----------------------------------------------------------------------------------------------------------------*/
@@ -467,14 +480,36 @@ document.addEventListener("DOMContentLoaded", () => {
 	const scrollConversations = document.querySelector(".conversations-list");
 	scrollConversations &&
 		new ScrollButtons({
-			btnParent: '.conversations-list',
+			btnParent: ".conversations-list",
 			btnUp: '[data-id="scroll-up"]',
 			btnDown: '[data-id="scroll-down"]',
 
-			scrollArea: ".conversations-list_scroll",	
-			step: 5,	
-			speed: 10	
+			scrollArea: ".conversations-list_scroll",
+			step: 5,
+			speed: 10,
 		});
 });
 
+/*--------------------------------------------------------------------------------------------------------------
+REMOVE PREV ELEMENT SEPARATOR LINE IN CONVESATIONS SIDEBAR
+----------------------------------------------------------------------------------------------------------------*/
 
+const conversationsCards = document.querySelectorAll(".conversations-card");
+const conversationsList = document.querySelector(".conversations-list");
+let convTimerID;
+
+if (conversationsList) {
+	updateList();
+	conversationsList.addEventListener("click", updateList);
+
+	function updateList() {
+		clearTimeout(convTimerID);
+		convTimerID = setTimeout(() => {
+			conversationsCards.forEach((card, index) => {
+				if (card.classList.contains("active") && index > 0) {
+					conversationsCards[index - 1].classList.add("without-border");
+				}
+			});
+		}, 100);
+	}
+}

@@ -1,0 +1,209 @@
+/*-----------------------------------------------------------------------------------------------------------------
+PROFILE CONVERSATIONS SIDEBAR STYLES
+ ------------------------------------------------------------------------------------------------------------------*/
+.conversations {
+	border: 1px solid #efeaea;
+	border-radius: rem(10);
+	width: 100%;
+
+	&-header {
+		padding-block: rem(25);
+		padding-inline: rem(30);
+		border-bottom: 1px solid #efeaea;
+
+		&_title {
+			font-weight: 500;
+			font-size: rem(18);
+			line-height: 120%;
+			color: #1a1a1a;
+		}
+	}
+
+	&-list {
+		position: relative;
+
+		padding-top: rem(12);
+		padding-bottom: rem(12);
+
+		padding-right: rem(2);
+
+		.scroll-arrow-up {
+			top: 5px;
+		}
+		.scroll-arrow-down {
+			bottom: 5px;
+		}
+		.scroll-arrow-down,
+		.scroll-arrow-up {
+			position: absolute;
+			right: 2px;
+			width: rem(6);
+			height: rem(5);
+			cursor: pointer;
+			user-select: none;
+
+			svg {
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				fill: #efeaea;
+				width: rem(6);
+				height: rem(5);
+				transition: all 0.3s ease-in-out;
+			}
+			&:hover svg {
+				fill: var(--accent);
+			}
+		}
+
+		&_scroll {
+			display: flex;
+			flex-direction: column;
+
+			height: 70vh;			
+
+			overflow-y: auto;
+
+			&::-webkit-scrollbar {
+				inline-size: rem(6);
+				background-color: transparent;
+			}
+
+			&::-webkit-scrollbar-track {
+				border-radius: rem(10);
+				background: #efeaea;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				border-radius: rem(10);
+				border: 0 none #fff;
+				background-color: rgb(238, 0, 0);
+				cursor: pointer;
+
+				@include any-hover {
+					background-color: rgb(238, 0, 0, 0.5);
+				}
+			}
+		}
+	}
+
+	&-card {
+		display: flex;
+		gap: rem(15);
+		padding-left: rem(26);
+		margin-right: rem(7);
+
+		border-radius: 0 rem(5) rem(5) 0;
+
+		padding-block: rem(20);
+
+		&_header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			margin-bottom: rem(10);
+		}
+
+		&_name {
+			font-weight: 500;
+			font-size: rem(16);
+			line-height: 120%;
+			color: #1a1a1a;
+		}
+
+		&_date {
+			font-weight: 400;
+			font-size: rem(14);
+			line-height: 120%;
+			text-align: right;
+			color: #b1b1b1;
+
+			padding-right: rem(20);
+		}
+
+		&_subject {
+			font-weight: 400;
+			font-size: rem(14);
+			line-height: 120%;
+			color: #1a1a1a;
+
+			margin-bottom: rem(10);
+		}
+
+		&_excerpt {
+			font-weight: 400;
+			font-size: rem(14);
+			line-height: 120%;
+			color: #6c6c6c;
+		}
+
+		&_start {
+			width: 100%;
+			max-width: rem(100);
+		}
+		&_end {
+			position: relative;
+			flex-grow: 1;
+
+			&:after {
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: -20px;
+				width: 100%;
+				height: 1px;
+				border-bottom: 1px solid #efeaea;
+			}
+		}
+
+		&:last-child {
+			.conversations-card_end:after {
+				content: none;
+			}
+		}
+
+		&_image {
+			width: inherit;
+			aspect-ratio: 10/8;
+
+			position: relative;
+			border-radius: rem(5);
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				overflow: hidden;
+			}
+		}
+
+		border-left: 4px solid transparent;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+
+		&.without-border {
+			.conversations-card_end:after {
+				border-bottom: 1px solid transparent;
+			}
+		}
+
+		&.active {
+			background-color: rgb(230, 0, 0, 0.05) !important;
+			border-left: 4px solid rgb(230, 0, 0) !important;
+			.conversations-card_end:after {
+				border-bottom: 1px solid transparent;
+			}
+		}
+		&:hover {
+			background-color: rgb(230, 0, 0, 0.01);
+		}
+	}
+}

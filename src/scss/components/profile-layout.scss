@@ -4,6 +4,8 @@ PROFILE LAYOUT
  .profile-layout{
     display: flex;
     gap: rem(40);
+
+    margin-bottom: rem(70);
     
     &_aside{
         width: rem(290);      

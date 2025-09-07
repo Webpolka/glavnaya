@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Main</title>
+  <title>Conversations</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
@@ -23,7 +23,7 @@
 
 	<body>
 		<div class="site-overlay"></div>
-		<div class="wrapper">			
+		<div class="wrapper">
 			<header id="masthead" class="header">
 	<div class="container">
 		<!-- Верхняя часть хедера -->
@@ -143,25 +143,25 @@
 			<div class="rating-num">4.0</div>
 			<div class="rating-stars">
 				<!-- 1 -->
-				<div class="rating-stars_star active">
+				<div class="active rating-stars_star">
 					<svg class="icon icon--star">
 						<use href="./icons/symbol/sprite.svg#star"></use>
 					</svg>
 				</div>
 				<!-- 2 -->
-				<div class="rating-stars_star active">
+				<div class="active rating-stars_star">
 					<svg class="icon icon--star">
 						<use href="./icons/symbol/sprite.svg#star"></use>
 					</svg>
 				</div>
 				<!-- 3 -->
-				<div class="rating-stars_star active">
+				<div class="active rating-stars_star">
 					<svg class="icon icon--star">
 						<use href="./icons/symbol/sprite.svg#star"></use>
 					</svg>
 				</div>
 				<!-- 4 -->
-				<div class="rating-stars_star active">
+				<div class="active rating-stars_star">
 					<svg class="icon icon--star">
 						<use href="./icons/symbol/sprite.svg#star"></use>
 					</svg>
@@ -303,2313 +303,369 @@
 </header>
 
 			<main id="primary" class="main">
-				
-<section class="main-categories">
-	<h2 class="visually-hidden">Заголовок для категорий</h2>
+				<div class="profile">
+					<div class="container">
+						<!-- Хлебные крошки -->
+						<div class="breadcrumbs">
+							<a class="breadcrumbs_link" href="#">Services</a>
 
-	<div class="container">
-		<nav class="main-categories_nav">
-			<ul class="row g-20">
-				<!-- 1 -->
-				<li class="custom-col-5">
-					<a href="#" class="main-categories-card">
-						<div class="main-categories-card_image">
-							<img src="./images/main-cats/pic-1.png" alt="Buying and Selling Cars" loading="lazy" decoding="async">
+							<!--svg разделитель -->
+							<svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A"/>
+							</svg>
+
+							<span class="breadcrumbs_span">Profile</span>
 						</div>
-						<div class="main-categories-card_text">
-							<div class="main-categories-card_title">Auto</div>
-							<div class="main-categories-card_description">Buying and Selling Cars</div>
-						</div>
-					</a>
-				</li>
-				<!-- 2 -->
-				<li class="custom-col-5">
-					<a href="#" class="main-categories-card">
-						<div class="main-categories-card_image">
-							<img src="./images/main-cats/pic-2.png" alt="Directory of Service Companies" loading="lazy" decoding="async">
-						</div>
-						<div class="main-categories-card_text">
-							<div class="main-categories-card_title">Services</div>
-							<div class="main-categories-card_description">Directory of Service Companies</div>
-						</div>
-					</a>
-				</li>
-				<!-- 3 -->
-				<li class="custom-col-5">
-					<a href="#" class="main-categories-card">
-						<div class="main-categories-card_image">
-							<img src="./images/main-cats/pic-3.png" alt="Buying, Selling and Renting" loading="lazy" decoding="async">
-						</div>
-						<div class="main-categories-card_text">
-							<div class="main-categories-card_title">Real Estate</div>
-							<div class="main-categories-card_description">Buying, Selling and Renting</div>
-						</div>
-					</a>
-				</li>
-				<!-- 4 -->
-				<li class="custom-col-5">
-					<a href="#" class="main-categories-card">
-						<div class="main-categories-card_image">
-							<img src="./images/main-cats/pic-4.png" alt="Entertainment & Leisure Directory" loading="lazy" decoding="async">
-						</div>
-						<div class="main-categories-card_text">
-							<div class="main-categories-card_title">Relax</div>
-							<div class="main-categories-card_description">Entertainment & Leisure Directory</div>
-						</div>
-					</a>
-				</li>
-				<!-- 5 -->
-				<li class="custom-col-5">
-					<a href="#" class="main-categories-card">
-						<div class="main-categories-card_image">
-							<img src="./images/main-cats/pic-5.png" alt="All Types of Rentals" loading="lazy" decoding="async">
-						</div>
-						<div class="main-categories-card_text">
-							<div class="main-categories-card_title">Rent</div>
-							<div class="main-categories-card_description">All Types of Rentals</div>
-						</div>
-					</a>
-				</li>
-				<!-- 6 -->
-				<li class="custom-col-5">
-					<a href="#" class="main-categories-card">
-						<div class="main-categories-card_image">
-							<img src="./images/main-cats/pic-6.png" alt="Health, Beauty & Wellness Directory" loading="lazy" decoding="async">
-						</div>
-						<div class="main-categories-card_text">
-							<div class="main-categories-card_title">Health</div>
-							<div class="main-categories-card_description">Health, Beauty & Wellness Directory</div>
-						</div>
-					</a>
-				</li>
-				<!-- 7 -->
-				<li class="custom-col-5">
-					<a href="#" class="main-categories-card">
-						<div class="main-categories-card_image">
-							<img src="./images/main-cats/pic-7.png" alt="Training & Development" loading="lazy" decoding="async">
-						</div>
-						<div class="main-categories-card_text">
-							<div class="main-categories-card_title">Education</div>
-							<div class="main-categories-card_description">Training & Development</div>
-						</div>
-					</a>
-				</li>
-				<!-- 8 -->
-				<li class="custom-col-5">
-					<a href="#" class="main-categories-card">
-						<div class="main-categories-card_image">
-							<img src="./images/main-cats/pic-8.png" alt="For Animals & Owners" loading="lazy" decoding="async">
-						</div>
-						<div class="main-categories-card_text">
-							<div class="main-categories-card_title">Animals</div>
-							<div class="main-categories-card_description">For Animals & Owners</div>
-						</div>
-					</a>
-				</li>
-				<!-- 9 -->
-				<li class="custom-col-5">
-					<a href="#" class="main-categories-card">
-						<div class="main-categories-card_image">
-							<img src="./images/main-cats/pic-9.png" alt="Travel, Tours & Leisure" loading="lazy" decoding="async">
-						</div>
-						<div class="main-categories-card_text">
-							<div class="main-categories-card_title">Tourism</div>
-							<div class="main-categories-card_description">Travel, Tours & Leisure</div>
-						</div>
-					</a>
-				</li>
-				<!-- 10 -->
-				<li class="custom-col-5">
-					<a href="#" class="main-categories-card">
-						<div class="main-categories-card_image">
-							<img src="./images/main-cats/pic-10.png" alt="Buy and sell everything" loading="lazy" decoding="async">
-						</div>
-						<div class="main-categories-card_text">
-							<div class="main-categories-card_title">Flea market</div>
-							<div class="main-categories-card_description">Buy and sell everything</div>
-						</div>
-					</a>
-				</li>
-			</ul>
-		</nav>
+
+						<!-- Лэйаут -->
+						<div class="profile-layout">
+							<div class="profile-layout_conversations"><div class="conversations">
+	<div class="conversations-header">
+		<div class="conversations-header_title">All conversations</div>
 	</div>
-</section>
 
-<section class="main-ellipses">
-	<h2 class="visually-hidden">Заголовок для слайдера</h2>
-
-	<div class="container posar">
-		<div class="swiper" id="swiperEllipse">
-			<div class="swiper-wrapper">
-				<!-- 1 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>Car rentals for tourists</p>
-						</div>
-					</a>
-				</div>
-				<!-- 2 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-2.png" alt="New electric car">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>New electric car</p>
-						</div>
-					</a>
-				</div>
-				<!-- 3 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>Car rentals for tourists</p>
-						</div>
-					</a>
-				</div>
-				<!-- 4 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-2.png" alt="New electric car">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>New electric car</p>
-						</div>
-					</a>
-				</div>
-				<!-- 5 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>Car rentals for tourists</p>
-						</div>
-					</a>
-				</div>
-				<!-- 6 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-2.png" alt="New electric car">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>New electric car</p>
-						</div>
-					</a>
-				</div>
-				<!-- 7 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>Car rentals for tourists</p>
-						</div>
-					</a>
-				</div>
-				<!-- 8 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-2.png" alt="New electric car">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>New electric car</p>
-						</div>
-					</a>
-				</div>
-				<!-- 9 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>Car rentals for tourists</p>
-						</div>
-					</a>
-				</div>
-				<!-- 10 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-2.png" alt="New electric car">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>New electric car</p>
-						</div>
-					</a>
-				</div>
-				<!-- 11 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>Car rentals for tourists</p>
-						</div>
-					</a>
-				</div>
-				<!-- 12 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-2.png" alt="New electric car">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>New electric car</p>
-						</div>
-					</a>
-				</div>
-				<!-- 13 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-1.png" alt="Car rentals for tourists">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>Car rentals for tourists</p>
-						</div>
-					</a>
-				</div>
-				<!-- 14 -->
-				<div class="swiper-slide">
-					<a href="#" class="main-ellipses-card">
-						<div class="main-ellipses-card_gradient">
-							<div class="main-ellipses-card_image">
-								<img src="./images/main-figs/img-2.png" alt="New electric car">
-							</div>
-						</div>
-						<div class="main-ellipses-card_description">
-							<p>New electric car</p>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-
-		<!-- Навигация, если нужна -->
-		<div class="ellipse-next-button swiper-button-next">
-			<svg class="icon icon--next">
-				<use href="./icons/symbol/sprite.svg#next"></use>
+	<div class="conversations-list">
+		<!-- Scroll arrows -->
+		<button type="button" class="scroll-arrow-up" data-id="scroll-up">
+			<svg class="icon icon--list-up">
+				<use href="./icons/symbol/sprite.svg#list-up"></use>
 			</svg>
-		</div>
-		<div class="swiper-button-prev"></div>
-	</div>
-</section>
-
-<section class="main-figures">
-	<h2 class="visually-hidden">Заголовок для секции</h2>
-
-	<div class="container">
-		<div class="row g-16">
-			<!-- 1 -->
-			<div class="col-6 col-md-2 col-sm-4">
-				<a href="#" class="main-figures-card light-figure">
-					<div class="main-figures-card_image">
-						<img src="./images/main-figs/fig-1.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
-					</div>
-					<div class="main-figures-card_title">
-						<h3><strong>Buy a new car</strong> for up to 70 000 €</h3>
-					</div>
-				</a>
-			</div>
-
-			<!-- 2 -->
-			<div class="col-6 col-md-2 col-sm-4">
-				<a href="#" class="main-figures-card dark-figure">
-					<div class="main-figures-card_image">
-						<img src="./images/main-figs/fig-2.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
-					</div>
-					<div class="main-figures-card_title">
-						<h3><strong>Rent real estate</strong> for up to 70 € per day</h3>
-					</div>
-				</a>
-			</div>
-
-			<!-- 3 -->
-			<div class="col-6 col-md-2 col-sm-4">
-				<a href="#" class="main-figures-card light-figure">
-					<div class="main-figures-card_image">
-						<img src="./images/main-figs/fig-3.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
-					</div>
-					<div class="main-figures-card_title">
-						<h3><strong>Find a reliable mover</strong> for your relocation</h3>
-					</div>
-				</a>
-			</div>
-
-			<!-- 4 -->
-			<div class="col-6 col-md-2 col-sm-4">
-				<a href="#" class="main-figures-card dark-figure">
-					<div class="main-figures-card_image">
-						<img src="./images/main-figs/fig-4.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
-					</div>
-					<div class="main-figures-card_title">
-						<h3><strong>Order apartment</strong> renovation from professionals</h3>
-					</div>
-				</a>
-			</div>
-
-			<!-- 5 -->
-			<div class="col-6 col-md-2 col-sm-4">
-				<a href="#" class="main-figures-card light-figure">
-					<div class="main-figures-card_image">
-						<img src="./images/main-figs/fig-5.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
-					</div>
-					<div class="main-figures-card_title">
-						<h3><strong>Find your dream job</strong> near home</h3>
-					</div>
-				</a>
-			</div>
-
-			<!-- 6 -->
-			<div class="col-6 col-md-2 col-sm-4">
-				<a href="#" class="main-figures-card dark-figure">
-					<div class="main-figures-card_image">
-						<img src="./images/main-figs/fig-6.png" class="img-responsive" alt="Car rentals for tourists" loading="lazy" decoding="async">
-					</div>
-					<div class="main-figures-card_title">
-						<h3><strong>Rent a car</strong> up to 40 € per day</h3>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-			
-				<section class="main-featured">
-	<h2 class="visually-hidden">Заголовок для секции</h2>
-
-	<div class="container-greyout">
-		<!-- Заголовок -->
-		<div class="section-header">
-			<p class="section-header_title">Featured listing</p>
-			<a href="#" class="section-header_link"> How to get here? </a>
-		</div>
-
-		<!-- Карточки -->
-		<div class="row g-20">
-			<!-- 1 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/featured/pic-1.png" alt="Chevrolet Corvette Stingray C7" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<!-- Рейтинг -->
-						<div class="product-card_rating">
-							<svg class="icon icon--star">
-								<use href="./icons/symbol/sprite.svg#star"></use>
-							</svg>
-							<span> top </span>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 805 500 ALL</strong>
-									<small>≈ 69 800 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Chevrolet Corvette Stingray C7</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<span class="meta-timeago">4 hours ago</span>
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>								
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 2 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/featured/pic-2.png" alt="Apartment for sale near the city center with a sea view" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<!-- Рейтинг -->
-						<div class="product-card_rating">
-							<svg class="icon icon--star">
-								<use href="./icons/symbol/sprite.svg#star"></use>
-							</svg>
-							<span> top </span>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>20 962 500 ALL</strong>
-									<small>≈ 215 000 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment for sale near the city center with a sea view</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<span class="meta-timeago">4 hours ago</span>
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>								
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 3 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/featured/pic-3.png" alt="BMW X5M F95" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<!-- Рейтинг -->
-						<div class="product-card_rating">
-							<svg class="icon icon--star">
-								<use href="./icons/symbol/sprite.svg#star"></use>
-							</svg>
-							<span> top </span>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>8 970 000 ALL</strong>
-									<small>≈ 92 000 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>BMW X5M F95</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<span class="meta-timeago">4 hours ago</span>
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>								
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 4 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/featured/pic-4.png" alt="Audi RS6 C7" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<!-- Рейтинг -->
-						<div class="product-card_rating">
-							<svg class="icon icon--star">
-								<use href="./icons/symbol/sprite.svg#star"></use>
-							</svg>
-							<span> top </span>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>8 287 500 ALL</strong>
-									<small>≈ 85 000 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Audi RS6 C7</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<span class="meta-timeago">4 hours ago</span>
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city..."></span>
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-																
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<!-- row -->
-	</div>
-	<!-- container-greyout -->
-
-	<!-- Банер-плейхолдер -->
-	<div class="container">
-		<div class="section-banner">
-			<img class="img-responsive" src="./images/banner-placeholder.png" alt="Banner">
-		</div>
-	</div>
-</section>
-
-				<section class="product-section main-daily">
-	<h2 class="visually-hidden">Daily rentals of apartments in Albania</h2>
-
-	<div class="container">
-		<!-- Заголовок -->
-		<div class="section-header">
-			<p class="section-header_title">Daily rentals of apartments in Albania</p>
-			<a href="#" class="section-header_link"> Show all listings </a>
-		</div>
-
-		<!-- Карточки -->
-		<div class="row gx-20 gy-30">
-			<!-- 1 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="shopBullet">
-							<!-- Контейнер со слайдами -->
-							<div class="shopBullet_images">
-								<img data-src="./images/daily-rental/pic-1.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 1">
-								<img data-src="./images/daily-rental/pic-2.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 2">
-								<img data-src="./images/daily-rental/pic-3.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 3">
-								<img data-src="./images/daily-rental/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 4">
-								<img data-src="./images/daily-rental/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 5">
-							</div>
-
-							<div class="shopBullet_overlay">
-								<span class="shopBullet_overlay-another">Another 5 images</span>
-							</div>
-						</div>
-
-						<!-- Кнопка добавить в Избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 2 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/daily-rental/pic-2.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>5 460 ALL</strong>
-									<small>≈ 56 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-
-								<span class="meta-timeago">11 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 3 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<!-- Галлерея -->
-						<div class="shopBullet">
-							<!-- Контейнер со слайдами -->
-							<div class="shopBullet_images">
-								<img data-src="./images/daily-rental/pic-1.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 1">
-								<img data-src="./images/daily-rental/pic-2.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 2">
-								<img data-src="./images/daily-rental/pic-3.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 3">
-								<img data-src="./images/daily-rental/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 4">
-								<img data-src="./images/daily-rental/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 5">
-							</div>
-
-							<div class="shopBullet_overlay">
-								<span class="shopBullet_overlay-another">Another 7 images</span>
-							</div>
-						</div>
-
-						<!--Кнопка избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 4 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/daily-rental/pic-4.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 5 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/daily-rental/pic-5.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 6 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/daily-rental/pic-6.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 7 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/daily-rental/pic-7.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 8 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/daily-rental/pic-8.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<!-- row -->
-	</div>
-
-	<!-- Банер-плейхолдер -->
-	<div class="container">
-		<div class="section-banner">
-			<img class="img-responsive" src="./images/banner-placeholder.png" alt="Banner">
-		</div>
-	</div>
-</section>
-
-				<section class="product-section main-products">
-	<h2 class="visually-hidden">Products and services from companies</h2>
-
-	<div class="container">
-		<!-- Заголовок -->
-		<div class="section-header">
-			<p class="section-header_title">Products and services from companies</p>
-			<a href="#" class="section-header_link">Show all companies and services </a>
-		</div>
-
-		<!-- Карточки -->
-		<div class="row gx-20 gy-30">
-			<!-- 1 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/products/pic-1.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>5 460 ALL</strong>
-									<small>≈ 56 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-
-								<span class="meta-timeago">11 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 2 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<!-- Галлерея -->
-						<div class="shopBullet">
-							<!-- Контейнер со слайдами -->
-							<div class="shopBullet_images">
-								<img data-src="./images/products/pic-1.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 1">
-								<img data-src="./images/products/pic-2.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 2">
-								<img data-src="./images/products/pic-3.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 3">
-								<img data-src="./images/products/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 4">
-								<img data-src="./images/products/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 5">
-							</div>
-
-							<div class="shopBullet_overlay">
-								<span class="shopBullet_overlay-another">Another 7 images</span>
-							</div>
-						</div>
-
-						<!--Кнопка избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 3 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/products/pic-3.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 4 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/products/pic-4.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 5 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/products/pic-5.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 6 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/products/pic-6.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 7 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/products/pic-7.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 8 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/products/pic-8.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<!-- row -->
-	</div>
-	<!-- container-greyout -->
-
-	<!-- Банер-плейхолдер -->
-	<div class="container">
-		<div class="section-banner">
-			<img class="img-responsive" src="./images/banner-placeholder.png" alt="Banner">
-		</div>
-	</div>
-</section>
-
-				<section class="product-section main-recomend">
-	<h2 class="visually-hidden">Recommendations for you</h2>
-
-	<div class="container">
-		<!-- Заголовок -->
-		<div class="section-header">
-			<p class="section-header_title">Recommendations for you</p>
-		</div>
-
-		<!-- Карточки -->
-		<div class="row gx-20 gy-30">
-			<!-- 1 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/products/pic-1.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>5 460 ALL</strong>
-									<small>≈ 56 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-
-								<span class="meta-timeago">11 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 2 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<!-- Галлерея -->
-						<div class="shopBullet">
-							<!-- Контейнер со слайдами -->
-							<div class="shopBullet_images">
-								<img data-src="./images/products/pic-1.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 1">
-								<img data-src="./images/products/pic-2.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 2">
-								<img data-src="./images/products/pic-3.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 3">
-								<img data-src="./images/products/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 4">
-								<img data-src="./images/products/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 5">
-							</div>
-
-							<div class="shopBullet_overlay">
-								<span class="shopBullet_overlay-another">Another 7 images</span>
-							</div>
-						</div>
-
-						<!--Кнопка избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 3 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/products/pic-3.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 4 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/products/pic-4.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 5 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/products/pic-5.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 6 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/products/pic-6.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 7 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/products/pic-7.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 8 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/products/pic-8.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 9 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="shopBullet">
-							<!-- Контейнер со слайдами -->
-							<div class="shopBullet_images">
-								<img data-src="./images/daily-rental/pic-1.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 1">
-								<img data-src="./images/daily-rental/pic-2.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 2">
-								<img data-src="./images/daily-rental/pic-3.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 3">
-								<img data-src="./images/daily-rental/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 4">
-								<img data-src="./images/daily-rental/pic-5.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 5">
-							</div>
-
-							<div class="shopBullet_overlay">
-								<span class="shopBullet_overlay-another">Another 5 images</span>
-							</div>
-						</div>
-
-						<!-- Кнопка добавить в Избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 10 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/daily-rental/pic-2.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>5 460 ALL</strong>
-									<small>≈ 56 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-
-								<span class="meta-timeago">11 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 11 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<!-- Галлерея -->
-						<div class="shopBullet">
-							<!-- Контейнер со слайдами -->
-							<div class="shopBullet_images">
-								<img data-src="./images/daily-rental/pic-1.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 1">
-								<img data-src="./images/daily-rental/pic-2.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 2">
-								<img data-src="./images/daily-rental/pic-3.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 3">
-								<img data-src="./images/daily-rental/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 4">
-								<img data-src="./images/daily-rental/pic-4.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Описание 5">
-							</div>
-
-							<div class="shopBullet_overlay">
-								<span class="shopBullet_overlay-another">Another 7 images</span>
-							</div>
-						</div>
-
-						<!--Кнопка избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 12 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<img src="./images/daily-rental/pic-4.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 13 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/daily-rental/pic-5.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 14 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/daily-rental/pic-6.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 15 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/daily-rental/pic-7.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<!-- 16 -->
-			<div class="col-md-3 col-sm-6">
-				<a href="#product-link" class="product_link">
-					<div class="product-card">
-						<div class="product-card_image">
-							<!-- Изображение -->
-							<img src="./images/daily-rental/pic-8.png" alt="Apartment 56 m², 2 rooms, 3 beds" loading="lazy">
-						</div>
-
-						<!-- Кнопка добавить в избранное -->
-						<div title="add to liked..." class="product-card_like" data-favorite="false">
-							<svg class="icon icon--like">
-								<use href="./icons/symbol/sprite.svg#like"></use>
-							</svg>
-						</div>
-
-						<div class="product-card_spacebetween">
-							<div class="product-card_info">
-								<!--Цена -->
-								<div class="product-card_price">
-									<strong>6 532 ALL</strong>
-									<small>≈ 67 €</small>
-								</div>
-
-								<!-- Заголовок -->
-								<div class="product-card_title">
-									<h2>Apartment 56 m², 2 rooms, 3 beds</h2>
-								</div>
-							</div>
-
-							<div class="product-card_meta">
-								<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-								<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-									<span class="meta-location_icon">
-										<svg class="icon icon--map-pin">
-											<use href="./icons/symbol/sprite.svg#map-pin"></use>
-										</svg>
-									</span>
-									<span class="meta-location_name"> Tiana </span>
-								</span>
-								<span class="meta-timeago">4 hours ago</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<!-- row -->
-
-		<!-- Банер-плейхолдер -->
-		<button class="section-ajax" id="recomend-more">
-			<span class="section-ajax_icon">
-				<svg class="icon icon--refresh">
-					<use href="./icons/symbol/sprite.svg#refresh"></use>
-				</svg>
-			</span>
-			<span class="section-ajax_name">
-				<span>Show more</span>
-			</span>
 		</button>
-	</div>
-</section>
+		<button type="button" class="scroll-arrow-down" data-id="scroll-down">
+			<svg class="icon icon--list-down">
+				<use href="./icons/symbol/sprite.svg#list-down"></use>
+			</svg>
+		</button>
 
+		<!-- Scroll body -->
+		<div class="conversations-list_scroll">
+			<!-- 1 -->
+			<div role="button" data-conversationid="1" class="conversations-card">
+				<div class="conversations-card_start">
+					<div class="conversations-card_image">
+						<img src="./images/red-bmw.png" alt="Red BMW">
+					</div>
+				</div>
+				<div class="conversations-card_end">
+					<div class="conversations-card_header">
+						<div class="conversations-card_name">John Doe</div>
+						<div class="conversations-card_date">29.07.2025</div>
+					</div>
+					<div class="conversations-card_subject">BMW X5 G05</div>
+					<div class="conversations-card_excerpt">Congratulations on your new...</div>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div role="button" data-conversationid="2" class="conversations-card active">
+				<div class="conversations-card_start">
+					<div class="conversations-card_image">
+						<img src="./images/red-bmw.png" alt="Red BMW">
+					</div>
+				</div>
+				<div class="conversations-card_end">
+					<div class="conversations-card_header">
+						<div class="conversations-card_name">John Doe</div>
+						<div class="conversations-card_date">29.07.2025</div>
+					</div>
+					<div class="conversations-card_subject">BMW X5 G05</div>
+					<div class="conversations-card_excerpt">Congratulations on your new...</div>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div role="button" data-conversationid="3" class="conversations-card">
+				<div class="conversations-card_start">
+					<div class="conversations-card_image">
+						<img src="./images/red-bmw.png" alt="Red BMW">
+					</div>
+				</div>
+				<div class="conversations-card_end">
+					<div class="conversations-card_header">
+						<div class="conversations-card_name">John Doe</div>
+						<div class="conversations-card_date">29.07.2025</div>
+					</div>
+					<div class="conversations-card_subject">BMW X5 G05</div>
+					<div class="conversations-card_excerpt">Congratulations on your new...</div>
+				</div>
+			</div>
+			<!-- 4 -->
+			<div role="button" data-conversationid="4" class="conversations-card">
+				<div class="conversations-card_start">
+					<div class="conversations-card_image">
+						<img src="./images/red-bmw.png" alt="Red BMW">
+					</div>
+				</div>
+				<div class="conversations-card_end">
+					<div class="conversations-card_header">
+						<div class="conversations-card_name">John Doe</div>
+						<div class="conversations-card_date">29.07.2025</div>
+					</div>
+					<div class="conversations-card_subject">BMW X5 G05</div>
+					<div class="conversations-card_excerpt">Congratulations on your new...</div>
+				</div>
+			</div>
+			<!-- 5 -->
+			<div role="button" data-conversationid="5" class="conversations-card">
+				<div class="conversations-card_start">
+					<div class="conversations-card_image">
+						<img src="./images/red-bmw.png" alt="Red BMW">
+					</div>
+				</div>
+				<div class="conversations-card_end">
+					<div class="conversations-card_header">
+						<div class="conversations-card_name">John Doe</div>
+						<div class="conversations-card_date">29.07.2025</div>
+					</div>
+					<div class="conversations-card_subject">BMW X5 G05</div>
+					<div class="conversations-card_excerpt">Congratulations on your new...</div>
+				</div>
+			</div>
+			<!-- 6 -->
+			<div role="button" data-conversationid="6" class="conversations-card">
+				<div class="conversations-card_start">
+					<div class="conversations-card_image">
+						<img src="./images/red-bmw.png" alt="Red BMW">
+					</div>
+				</div>
+				<div class="conversations-card_end">
+					<div class="conversations-card_header">
+						<div class="conversations-card_name">John Doe</div>
+						<div class="conversations-card_date">29.07.2025</div>
+					</div>
+					<div class="conversations-card_subject">BMW X5 G05</div>
+					<div class="conversations-card_excerpt">Congratulations on your new...</div>
+				</div>
+			</div>
+			<!-- 7 -->
+			<div role="button" data-conversationid="7" class="conversations-card">
+				<div class="conversations-card_start">
+					<div class="conversations-card_image">
+						<img src="./images/red-bmw.png" alt="Red BMW">
+					</div>
+				</div>
+				<div class="conversations-card_end">
+					<div class="conversations-card_header">
+						<div class="conversations-card_name">John Doe</div>
+						<div class="conversations-card_date">29.07.2025</div>
+					</div>
+					<div class="conversations-card_subject">BMW X5 G05</div>
+					<div class="conversations-card_excerpt">Congratulations on your new...</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+							<div class="profile-layout_content"><div class="messenger">
+	<!-- Если есть сообщения -->
+	<div class="messenger-full">
+		<div class="messenger_header">
+			<!-- 1я часть хедера -->
+			<div class="messenger_header-top">
+				<!-- left column -->
+				<div class="messenger_header-column">
+					<div class="column-group">
+						<!-- кнопка назад -->
+						<button type="button" class="messenger_header-back-btn">
+							<svg class="icon icon--messenger-left">
+								<use href="./icons/symbol/sprite.svg#messenger-left"></use>
+							</svg>
+						</button>
+
+						<a href="#" class="messenger_header-user-link">
+							<div class="user-link_avatar">
+								<img src="./images/avatar.png" alt="avatr">
+							</div>
+						</a>
+					</div>
+
+					<!-- Имя и статус			 -->
+					<a href="#" class="user-link_title">
+						<div class="user-link_title-name">
+							<span>John Doe</span>
+						</div>
+						<div class="user-link_title-status">
+							<span>Online</span>
+						</div>
+					</a>
+				</div>
+
+				<!-- right column -->
+				<div class="messenger_header-column">
+					<!-- список доступных кнопок -->
+
+					<ul class="messenger_header-options-list">
+						<!-- 1 -->
+						<li class="messenger_header-options-item">
+							<svg class="icon icon--triple-dot">
+								<use href="./icons/symbol/sprite.svg#triple-dot"></use>
+							</svg>
+
+							<ul class="item--dropdown messenger_header-options-dropdown">
+								<li><button data-action="block-chat" type="button">Block user</button></li>
+								<li><button data-action="delete-chat" type="button">Delete chat</button></li>
+								<li><button data-action="request-feedback" type="button">Request feedback</button></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 2я часть хедера -->
+			<div class="messenger_header-bottom">
+				<!-- left column -->
+				<div class="messenger_header-column">
+					<div class="messenger_header-ad-subject">
+						<!-- image of ad -->
+						<div class="ad-subject_image">
+							<img src="./images/red-bmw.png" alt="Subject img">
+						</div>
+						<!-- Заголовок и цена -->
+						<div class="ad-subject_title">
+							<span class="ad-subject_title-name">BMW X5 G05</span>
+							<span class="ad-subject_title-price">10,000 ALL</span>
+						</div>
+					</div>
+				</div>
+				<!-- right colkumn -->
+				<div class="messenger_header-column">
+					<a href="#" class="btn-gray">Show add</a>
+				</div>
+			</div>
+		</div>
+		<!-- Список сообщений -->
+		<div class="messenger_list">
+			<!-- разделитель -->
+			<div class="messenger_list-separator">25.07.2025</div>
+
+			<!-- Продавец -->
+			<div class="messenger_list-seller-message">
+				<div class="seller-avatar">
+					<img src="./images/avatar.png" alt="avatar">
+				</div>
+				<div class="seller-tile">
+					<div class="seller-tile_text">Hello, I want to buy your car.</div>
+					<div class="seller-tile_date">20:50</div>
+				</div>
+			</div>
+
+			<!-- пользователь -->
+			<div class="messenger_list-user-message">
+				<div class="user-tile">
+					<div class="user-tile_text">Hello, I want to buy your car.</div>
+					<div class="user-tile_date">20:50</div>
+
+					<div class="user-tile_options">
+						<svg class="icon icon--triple-dot">
+							<use href="./icons/symbol/sprite.svg#triple-dot"></use>
+						</svg>
+						<div class="item--dropdown user-tile_options-dropdown">
+							<li><button data-action="edit" type="button">Edit message</button></li>
+							<li><button data-action="delete" type="button">Delete</button></li>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Продавец -->
+			<div class="messenger_list-seller-message">
+				<div class="seller-avatar">
+					<img src="./images/avatar.png" alt="avatar">
+				</div>
+				<div class="seller-tile">
+					<div class="seller-tile_text">Hello, I want to buy your car.</div>
+					<div class="seller-tile_date">20:50</div>
+				</div>
+			</div>
+
+			<!--  пользователь -->
+			<div class="messenger_list-user-message">
+				<div class="user-tile">
+					<div class="user-tile_text">Hello, I want to buy your car.</div>
+					<div class="user-tile_date">20:50</div>
+
+					<div class="user-tile_options">
+						<svg class="icon icon--triple-dot">
+							<use href="./icons/symbol/sprite.svg#triple-dot"></use>
+						</svg>
+						<div class="item--dropdown user-tile_options-dropdown">
+							<li><button data-action="edit" type="button">Edit message</button></li>
+							<li><button data-action="delete" type="button">Delete</button></li>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Продавец -->
+			<div class="messenger_list-seller-message">
+				<div class="seller-avatar">
+					<img src="./images/avatar.png" alt="avatar">
+				</div>
+				<div class="seller-tile">
+					<div class="seller-tile_text">Hello, I want to buy your car.</div>
+					<div class="seller-tile_date">20:50</div>
+				</div>
+			</div>
+
+			<!-- пользователь -->
+			<div class="messenger_list-user-message">
+				<div class="user-tile">
+					<div class="user-tile_text">Hello, I want to buy your car.</div>
+					<div class="user-tile_date">20:50</div>
+
+					<div class="user-tile_options">
+						<svg class="icon icon--triple-dot">
+							<use href="./icons/symbol/sprite.svg#triple-dot"></use>
+						</svg>
+						<div class="item--dropdown user-tile_options-dropdown">
+							<li><button data-action="edit" type="button">Edit message</button></li>
+							<li><button data-action="delete" type="button">Delete</button></li>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Форма отправки сообщений -->
+		<div class="messenger_footer">
+			<form action="" id="messenger-form">
+				<div class="messenger_footer-row">
+					<!-- Футер для отправки сообщений с кнопкой прикрепления файла -->
+					<button type="button" class="messenger-button_attach" id="messenger-attach-btn" title="Attach a file">
+						<svg class="icon icon--attach">
+							<use href="./icons/symbol/sprite.svg#attach"></use>
+						</svg>
+					</button>
+
+					<input type="file" id="messenger-attach-files" multiple="multiple" accept="image/jpeg, image/png" class="hidden">
+
+					<div class="messenger-field">
+						<input type="text" name="message" class="messenger-field_input" placeholder="Write a message">
+					</div>
+
+					<button type="submit" class="messenger-button_send" title="Send message">
+						<svg class="icon icon--send">
+							<use href="./icons/symbol/sprite.svg#send"></use>
+						</svg>
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="messenger-attach_previews">
+			<div id="messenger-attach-previews" class="mediaload-previews"></div>
+		</div>
+		<div class="messenger-attach_warning">
+			<div id="messenger-attach-warning" class="hidden mediaload-warning">JavaScript there paste text</div>
+		</div>
+	</div>
+</div>
+</div>
+						</div>
+					</div>
+				</div>
 			</main>
-			<footer id="colophon" class="footer">
-	<div class="container">
-		<span class="footer-text">Подвал</span>
-	</div>
+			<footer class="footer-empty">
+    <!-- Nothing here ;-) -->    
 </footer>
-
 		</div>
 		<section class="catsoverlay">
 	<h2 class="visually-hidden">КАТЕГОРИИ</h2>
@@ -4358,145 +2414,6 @@
 	</div>
 </section>
 
-        <!-- SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGNUP FORM SIGN UP FORM  -->
-<div class="authorize-signup">
-	<!-- Close button -->
-	<button class="authorize-signup_close">
-		<svg class="icon icon--close">
-			<use href="./icons/symbol/sprite.svg#close"></use>
-		</svg>
-	</button>
-	<!-- Заголовок -->
-	<h3 class="authorize-signup_title">Sign Up</h3>
-
-	<div class="authorize-signup_spacebetween">
-		<!-- Top -->
-		<div class="authorize-signup_top">
-			<div class="authorize-signup_tabs">
-				<button class="signup-tab" data-tab="1">By phone</button>
-				<button class="signup-tab" data-tab="2">By Email</button>
-			</div>
-
-			<div class="authorize-signup_panels">
-				<!-- By phone -->
-				<div class="signup-panel" data-panel="1">
-					<form action="" id="signup-by-phone">
-						<label>Your name
-							<input class="input" type="text" name="name" placeholder="Type your name" autocomplete="on">
-						</label>
-						<label>Phone
-							<input class="input" type="text" name="phone" placeholder="Type number phone" autocomplete="on">
-						</label>
-						<label>Password
-							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
-						</label>
-
-						<span class="panel-shorter-text">Not shorter than 8 characters</span>
-
-						<button class="btn" type="submit">Sign up</button>
-					</form>
-				</div>
-
-				<!-- By email -->
-				<div class="signup-panel" data-panel="2">
-					<form action="" id="signup-by-email">
-						<label>Your name
-							<input class="input" type="text" name="name" placeholder="Type your name" autocomplete="on">
-						</label>
-						<label>Email
-							<input class="input" type="text" name="emailorusername" placeholder="Type email or username" autocomplete="on">
-						</label>
-						<label>Password
-							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
-						</label>
-
-						<span class="panel-shorter-text">Not shorter than 8 characters</span>
-
-						<button class="btn" type="submit">Sign up</button>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- Bottom -->
-		<div class="authorize-signup_bottom">
-			<button class="panel-signup-btn" data-modal="sign-in">Sign in</button>
-			<p>for registered users</p>
-		</div>
-	</div>
-</div>
-
-
-
-
-<!-- LOGIN FORM LOGIN FORM LOGIN FORM  LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM LOGIN FORM  -->
-<div class="authorize-login">
-	<!-- Close button -->
-	<button class="authorize-login_close">
-		<svg class="icon icon--close">
-			<use href="./icons/symbol/sprite.svg#close"></use>
-		</svg>
-	</button>
-	<!-- Заголовок -->
-	<h3 class="authorize-login_title">Log into your profile</h3>
-
-	<div class="authorize-login_spacebetween">
-		<!-- Top -->
-		<div class="authorize-login_top">
-			<div class="authorize-login_tabs">
-				<button class="login-tab" data-tab="1">By phone</button>
-				<button class="login-tab" data-tab="2">By Email</button>
-			</div>
-
-			<div class="authorize-login_panels">
-				<!-- By phone -->
-				<div class="login-panel" data-panel="1">
-					<form action="" id="login-by-phone">
-						<label>Phone number
-							<input class="input" type="number" name="phone" placeholder="Type number" autocomplete="on">
-						</label>
-						<label>Password
-							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
-						</label>
-						<label class="checkbox-item panel-remember-label">
-							<input class="checkbox-input" type="checkbox" name="remember">
-							<span>Remember me</span>
-						</label>
-						<button class="btn" type="submit">Sign in</button>
-
-						<span class="panel-reset-btn">Reset password</span>
-					</form>
-				</div>
-
-				<!-- By email -->
-				<div class="login-panel" data-panel="2">
-					<form action="" id="login-by-email">
-						<label>Email
-							<input class="input" type="email" name="email" placeholder="Type email" autocomplete="on">
-						</label>
-						<label>Password
-							<input class="input" type="password" name="password" placeholder="Type password" autocomplete="on">
-						</label>
-						<label class="checkbox-item panel-remember-label">
-							<input class="checkbox-input" type="checkbox" name="remember">
-							<span>Remember me</span>
-						</label>
-						<button class="btn" type="submit">Sign in</button>
-
-						<span class="panel-reset-btn">Reset password</span>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- Bottom -->
-		<div class="authorize-login_bottom">
-			<button class="panel-login-btn" data-modal="sign-up">Sign up</button>
-			<p>for first-time users</p>
-		</div>
-	</div>
-</div>
-
-				
-		
 		<!-- WL ShopBullet Script -->
 <script src="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/vendor/js/script.js"></script>
 
