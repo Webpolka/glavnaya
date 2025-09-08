@@ -5225,7 +5225,7 @@ PROFILE MESSENGER STYLES
   -ms-flex-positive: 1;
   flex-grow: 1;
   padding-inline: 1.875rem;
-  padding-block: 1.875rem;
+  padding-top: 1.875rem;
   overflow-y: auto;
 }
 

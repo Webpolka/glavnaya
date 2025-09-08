@@ -4265,7 +4265,7 @@ PROFILE MESSENGER STYLES
 .messenger_list {
   flex-grow: 1;
   padding-inline: 1.875rem;
-  padding-block: 1.875rem;
+  padding-top: 1.875rem;
   overflow-y: auto;
 }
 .messenger_list::-webkit-scrollbar {
