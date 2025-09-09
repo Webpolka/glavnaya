@@ -513,3 +513,18 @@ if (conversationsList) {
 		}, 100);
 	}
 }
+
+/*--------------------------------------------------------------------------------------------------------------
+TABS BY ANCHOR
+----------------------------------------------------------------------------------------------------------------*/
+import TabsByAnchor from "./modules/tabs-by-anchor";
+
+new TabsByAnchor({
+	tab: "[data-tabFull]",
+	panel: "[data-panelFull]",
+});
+
+new TabsByAnchor({
+	tab: "[data-tabAds]",
+	panel: "[data-panelAds]",
+});

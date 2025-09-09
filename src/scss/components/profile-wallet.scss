@@ -73,6 +73,13 @@ PROFILE WALLET PAGE
 		flex-wrap: wrap;
 		gap: rem(10);
 	}
+
+	.custom-radio {
+		background-color: #f3f3f3;
+	}
+	.radio input[type="radio"]:checked + .custom-radio {
+		background-color: transparent;
+	}
 }
 
 .wallet-transaction {

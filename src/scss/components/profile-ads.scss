@@ -1,6 +1,7 @@
 /*-----------------------------------------------------------------------------------------------------------------
 PROFILE ADS
  ------------------------------------------------------------------------------------------------------------------*/
+
 .profile-user_ads {
 	.ads_tabs {
 		margin-bottom: rem(30);
@@ -9,7 +10,15 @@ PROFILE ADS
 	.ads-list {
 		display: flex;
 		flex-direction: column;
-		gap: rem(30);		
+		gap: rem(30);
+
+		&[data-panelAds] {
+			display: none;
+			&.active {
+				display: block;
+				animation: fade-up 0.3s ease-in-out;
+			}
+		}
 	}
 }
 

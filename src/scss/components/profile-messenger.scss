@@ -1,7 +1,8 @@
 /*-----------------------------------------------------------------------------------------------------------------
 PROFILE MESSENGER STYLES
  ------------------------------------------------------------------------------------------------------------------*/
-.messenger {
+
+ .messenger {
 	display: flex;
 	flex-direction: column;
 
@@ -82,7 +83,7 @@ PROFILE MESSENGER STYLES
 		&-options-dropdown {
 			visibility: hidden;
 			opacity: 0;
-			z-index: 1;			
+			z-index: 1;
 
 			display: flex;
 			transition: all 0.3s ease-in-out 0.3s;
@@ -182,12 +183,12 @@ PROFILE MESSENGER STYLES
 		.user-link_title {
 			display: flex;
 			flex-direction: column;
-			gap: rem(3);			
+			gap: rem(3);
 
 			&:hover {
 				.user-link_title-name {
 					color: var(--accent);
-				}				
+				}
 			}
 
 			&-name {
@@ -201,7 +202,7 @@ PROFILE MESSENGER STYLES
 				font-weight: 400;
 				font-size: rem(14);
 				line-height: 120%;
-				color: #3d3d3d;				
+				color: #3d3d3d;
 				opacity: 0.5;
 			}
 		}
@@ -263,7 +264,7 @@ PROFILE MESSENGER STYLES
 
 		padding-inline: rem(30);
 		padding-top: rem(30);
-		
+
 		overflow-y: auto;
 
 		&::-webkit-scrollbar {
@@ -493,7 +494,7 @@ PROFILE MESSENGER STYLES
 
 	/*---------------------------------------------------------------- Messager footer -----------------------------------------------*/
 
-	&_footer {
+	&_footer {		
 		flex-shrink: 0;
 
 		border-top: 1px solid #efeaea;
@@ -684,7 +685,8 @@ PROFILE MESSENGER STYLES
 		align-items: center;
 		justify-content: center;
 
-		height: inherit;
+		flex-grow: 1;
+		height: 70vh;
 
 		&_image {
 			aspect-ratio: 288/107;
@@ -719,3 +721,12 @@ PROFILE MESSENGER STYLES
 		}
 	}
 }
+
+[data-panelFull] {
+	display: none;
+	&.active {
+		display: flex;
+		animation: fade-up 0.3s ease-in-out;
+	}
+}
+

@@ -1,6 +1,21 @@
+<!-- Табы здесь подключены просто для примера верстки так как в реальности здесь должна быть асинхронная подзрузка из БД -->
+<!-- аттрибуты data-panelFull="messenger-full" и data-panelFull="messenger-empty" нужно будет убрать и желательно отключить скрипт активации данных табов в JS-->
+
 <div class="messenger">
+
+	<!-- 1 -->
+	<!-- Если пусто -->
+	<div class="messenger-empty active" data-panelFull="messenger-empty">
+		<div class="messenger-empty_image">
+			<img src="../../images/messenger-empty.png" alt="Empty messneg" />
+		</div>
+		<div class="messenger-empty_title">Choose a chat to start a conversation</div>
+		<div class="messenger-empty_description">All your active chats are listed on the left</div>
+	</div>
+
+	<!-- 2 -->
 	<!-- Если есть сообщения -->
-	<div class="messenger-full">
+	<div class="messenger-full" data-panelFull="messenger-full">
 		<div class="messenger_header">
 			<!-- 1я часть хедера -->
 			<div class="messenger_header-top">

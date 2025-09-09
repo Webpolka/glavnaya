@@ -3978,6 +3978,16 @@ PROFILE ADS
   gap: 1.875rem;
 }
 
+.profile-user_ads .ads-list[data-panelAds] {
+  display: none;
+}
+
+.profile-user_ads .ads-list[data-panelAds].active {
+  display: block;
+  -webkit-animation: fade-up 0.3s ease-in-out;
+  animation: fade-up 0.3s ease-in-out;
+}
+
 .ads-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5696,7 +5706,10 @@ PROFILE MESSENGER STYLES
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: inherit;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  height: 70vh;
 }
 
 .messenger-empty_image {
@@ -5731,6 +5744,18 @@ PROFILE MESSENGER STYLES
   line-height: 120%;
   text-align: center;
   color: #b1b1b1;
+}
+
+[data-panelFull] {
+  display: none;
+}
+
+[data-panelFull].active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: fade-up 0.3s ease-in-out;
+  animation: fade-up 0.3s ease-in-out;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------
@@ -5841,6 +5866,14 @@ PROFILE SETTINGS PAGE
   font-size: 0.875rem;
   color: #3d3d3d;
   padding-top: 0.9375rem;
+}
+
+.settings-tile .custom-radio {
+  background-color: #f3f3f3;
+}
+
+.settings-tile .radio input[type=radio]:checked + .custom-radio {
+  background-color: transparent;
 }
 
 .settings-save {
@@ -6495,6 +6528,14 @@ PROFILE WALLET PAGE
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 0.625rem;
+}
+
+.wallet-panel .custom-radio {
+  background-color: #f3f3f3;
+}
+
+.wallet-panel .radio input[type=radio]:checked + .custom-radio {
+  background-color: transparent;
 }
 
 .wallet-transaction_list {

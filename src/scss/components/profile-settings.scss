@@ -99,6 +99,13 @@ PROFILE SETTINGS PAGE
 			padding-top: rem(15);
 		}
 	}
+
+	.custom-radio {
+		background-color: #f3f3f3;
+	}
+	.radio input[type="radio"]:checked + .custom-radio {
+		background-color: transparent;
+	}
 }
 .settings-save {
 	display: flex;

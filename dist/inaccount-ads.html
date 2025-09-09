@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/css/main.min.css">
 
   <link rel="stylesheet" href="vendor/bootstrap-grid.css">
-  <link rel="stylesheet" href="./css/main.min.css">  
+  <link rel="stylesheet" href="postcss/main.min.css">  
 </head>
  
   
@@ -530,579 +530,1134 @@
 		<!--AJAX TABS -->
 		<div class="ads_tabs">
 			<!-- 1 -->
-			<button data-ads="all" class="active site-tab">
+			<button data-tabads="list-1" class="active site-tab">
 				<span>All ads</span>
 				<small>25</small>
 			</button>
 			<!-- 2 -->
-			<button data-ads="active" class="site-tab">
+			<button data-tabads="list-2" class="site-tab">
 				<span>Active</span>
 				<small>5</small>
 			</button>
 			<!-- 3 -->
-			<button data-ads="sold" class="site-tab">
+			<button data-tabads="list-1" class="site-tab">
 				<span>Sold</span>
 				<small>15</small>
 			</button>
 			<!-- 4 -->
-			<button data-ads="review" class="site-tab">
+			<button data-tabads="list-2" class="site-tab">
 				<span>Under review</span>
 				<small>0</small>
 			</button>
 			<!-- 5 -->
-			<button data-ads="archived" class="site-tab">
+			<button data-tabads="list-1" class="site-tab">
 				<span>Archived</span>
 				<small>5</small>
 			</button>
 		</div>
 
-		<!-- insert ajax content in ads-list container -->
-		<div class="ads-list" id="ads-list">
+		<!-- Табы здесь подключены просто для примера верстки так как в реальности здесь должна быть асинхронная подзрузка из БД -->
+		<!-- аттрибуты data-panelAds="list-$" нужно будет убрать и желательно отключить скрипт активации данных табов в JS-->
+		 <!-- и оставить один контейнер .ads-list в который будет вставляться сгененрированый на сервере контент -->
+
+		 <!-- 1 -->
+		<div class="active ads-list" data-panelads="list-1">
 			<!-- card 1 -->
-			<a href="#" class="ads-card">
-				<!-- image -->
-				<div class="ads-card_image">
-					<div class="ads-card_image-wrap">
-						<img src="./images/red-bmw.png" alt="img 1">
-					</div>
+<a href="#" class="ads-card">
+	<!-- image -->
+	<div class="ads-card_image">
+		<div class="ads-card_image-wrap">
+			<img src="./images/red-bmw.png" alt="img 1">
+		</div>
+	</div>
+	<!-- main -->
+	<div class="ads-card_main">
+		<!-- info content-->
+		<div class="ads-card_info">
+			<div class="ads-card_info-content">
+				<div class="ads-card_title">
+					<h2>BMW X5 G05</h2>
+					<span>№ 115897234</span>
 				</div>
-				<!-- main -->
-				<div class="ads-card_main">
-					<!-- info content-->
-					<div class="ads-card_info">
-						<div class="ads-card_info-content">
-							<div class="ads-card_title">
-								<h2>BMW X5 G05</h2>
-								<span>№ 115897234</span>
-							</div>
-							<div class="active ads-card_status">
-								<div class="status-label">Active</div>
-								<div class="status-description"></div>
-							</div>
-							<div class="ads-card_description">
-								Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts,
-								part of the car, front sills, glossy...
-							</div>
-							<div class="ads-card_price">
-								<strong>5 460 ALL</strong>
-								<small>≈ 56 €</small>
-							</div>
-						</div>
-
-						<!-- info counters -->
-						<div class="ads-card_info-counters">
-							<!-- 1 -->
-							<div data-counter="views" class="counter-item">
-								<span>3281</span>
-								<svg class="icon icon--views">
-									<use href="./icons/symbol/sprite.svg#views"></use>
-								</svg>
-							</div>
-							<!-- 2 -->
-							<div data-counter="called" class="counter-item">
-								<span>213</span>
-								<svg class="icon icon--called">
-									<use href="./icons/symbol/sprite.svg#called"></use>
-								</svg>
-							</div>
-							<!-- 3 -->
-							<div data-counter="liked" class="counter-item">
-								<span>0</span>
-								<svg class="icon icon--liked">
-									<use href="./icons/symbol/sprite.svg#liked"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-
-					<div class="ads-card_footer">
-						<!-- meta -->
-						<div class="ads-card_footer-meta">
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
-								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</span>
-
-							<span class="meta-timeago">11 hours ago</span>
-						</div>
-						<!-- buttons -->
-						<div class="ads-card_footer-buttons">
-							<!--button 1 -->
-							<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
-								<svg class="icon icon--promote">
-									<use href="./icons/symbol/sprite.svg#promote"></use>
-								</svg>
-								<span>Promote</span>
-							</div>
-							<!--button 2 -->
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
-								<svg class="icon icon--edit">
-									<use href="./icons/symbol/sprite.svg#edit"></use>
-								</svg>
-								<span>Edit</span>
-							</div>
-							<!--button 3 -->
-							<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
-								<svg class="icon icon--pause">
-									<use href="./icons/symbol/sprite.svg#pause"></use>
-								</svg>
-								<span>Pause</span>
-							</div>
-							<!--button 4 -->
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
-								<svg class="icon icon--delete">
-									<use href="./icons/symbol/sprite.svg#delete"></use>
-								</svg>
-								<span>Delete</span>
-							</div>
-						</div>
-					</div>
+				<div class="active ads-card_status">
+					<div class="status-label">Active</div>
+					<div class="status-description"></div>
 				</div>
-			</a>
-
-			<!-- card 2 -->
-			<a href="#" class="ads-card">
-				<!-- image -->
-				<div class="ads-card_image">
-					<div class="ads-card_image-wrap">
-						<img src="./images/red-bmw.png" alt="img 1">
-					</div>
+				<div class="ads-card_description">
+					Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts, part of the
+					car, front sills, glossy...
 				</div>
-				<!-- main -->
-				<div class="ads-card_main">
-					<!-- info content-->
-					<div class="ads-card_info">
-						<div class="ads-card_info-content">
-							<div class="ads-card_title">
-								<h2>BMW X5 G05</h2>
-								<span>№ 115897234</span>
-							</div>
-							<div class="ads-card_status inactive-pause">
-								<div class="status-label">Inactive</div>
-								<div class="status-description">The ad is on pause</div>
-							</div>
-							<div class="ads-card_description">
-								Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts,
-								part of the car, front sills, glossy...
-							</div>
-							<div class="ads-card_price">
-								<strong>5 460 ALL</strong>
-								<small>≈ 56 €</small>
-							</div>
-						</div>
-
-						<!-- info counters -->
-						<div class="ads-card_info-counters">
-							<!-- 1 -->
-							<div data-counter="views" class="counter-item">
-								<span>3281</span>
-								<svg class="icon icon--views">
-									<use href="./icons/symbol/sprite.svg#views"></use>
-								</svg>
-							</div>
-							<!-- 2 -->
-							<div data-counter="called" class="counter-item">
-								<span>213</span>
-								<svg class="icon icon--called">
-									<use href="./icons/symbol/sprite.svg#called"></use>
-								</svg>
-							</div>
-							<!-- 3 -->
-							<div data-counter="liked" class="counter-item">
-								<span>0</span>
-								<svg class="icon icon--liked">
-									<use href="./icons/symbol/sprite.svg#liked"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-
-					<div class="ads-card_footer">
-						<!-- meta -->
-						<div class="ads-card_footer-meta">
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
-								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</span>
-
-							<span class="meta-timeago">11 hours ago</span>
-						</div>
-						<!-- buttons -->
-						<div class="ads-card_footer-buttons">
-							<!--button 1 -->
-							<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
-								<svg class="icon icon--promote">
-									<use href="./icons/symbol/sprite.svg#promote"></use>
-								</svg>
-								<span>Promote</span>
-							</div>
-							<!--button 2 -->
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
-								<svg class="icon icon--edit">
-									<use href="./icons/symbol/sprite.svg#edit"></use>
-								</svg>
-								<span>Edit</span>
-							</div>
-							<!--button 3 -->
-							<div data-button="pause" class="btn-ads" role="button" title="Play this ad">
-								<svg class="icon icon--play">
-									<use href="./icons/symbol/sprite.svg#play"></use>
-								</svg>
-								<span>Play</span>
-							</div>
-							<!--button 4 -->
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
-								<svg class="icon icon--delete">
-									<use href="./icons/symbol/sprite.svg#delete"></use>
-								</svg>
-								<span>Delete</span>
-							</div>
-						</div>
-					</div>
+				<div class="ads-card_price">
+					<strong>5 460 ALL</strong>
+					<small>≈ 56 €</small>
 				</div>
-			</a>
+			</div>
 
-			<!-- card 3 -->
-
-			<a href="#" class="ads-card">
-				<!-- image -->
-				<div class="ads-card_image">
-					<div class="ads-card_image-wrap">
-						<img src="./images/red-bmw.png" alt="img 1">
-					</div>
+			<!-- info counters -->
+			<div class="ads-card_info-counters">
+				<!-- 1 -->
+				<div data-counter="views" class="counter-item">
+					<span>3281</span>
+					<svg class="icon icon--views">
+						<use href="./icons/symbol/sprite.svg#views"></use>
+					</svg>
 				</div>
-				<!-- main -->
-				<div class="ads-card_main">
-					<!-- info content-->
-					<div class="ads-card_info">
-						<div class="ads-card_info-content">
-							<div class="ads-card_title">
-								<h2>BMW X5 G05</h2>
-								<span>№ 115897234</span>
-							</div>
-							<div class="ads-card_status inactive-review">
-								<div class="status-label">Inactive</div>
-								<div class="status-description">The listing is under review</div>
-							</div>
-							<div class="ads-card_description">
-								Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts,
-								part of the car, front sills, glossy...
-							</div>
-							<div class="ads-card_price">
-								<strong>5 460 ALL</strong>
-								<small>≈ 56 €</small>
-							</div>
-						</div>
-
-						<!-- info counters -->
-						<div class="ads-card_info-counters">
-							<!-- 1 -->
-							<div data-counter="views" class="counter-item">
-								<span>3281</span>
-								<svg class="icon icon--views">
-									<use href="./icons/symbol/sprite.svg#views"></use>
-								</svg>
-							</div>
-							<!-- 2 -->
-							<div data-counter="called" class="counter-item">
-								<span>213</span>
-								<svg class="icon icon--called">
-									<use href="./icons/symbol/sprite.svg#called"></use>
-								</svg>
-							</div>
-							<!-- 3 -->
-							<div data-counter="liked" class="counter-item">
-								<span>0</span>
-								<svg class="icon icon--liked">
-									<use href="./icons/symbol/sprite.svg#liked"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-
-					<div class="ads-card_footer">
-						<!-- meta -->
-						<div class="ads-card_footer-meta">
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
-								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</span>
-
-							<span class="meta-timeago">11 hours ago</span>
-						</div>
-						<!-- buttons -->
-						<div class="ads-card_footer-buttons">
-							<!--button 1 -->
-							<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
-								<svg class="icon icon--promote">
-									<use href="./icons/symbol/sprite.svg#promote"></use>
-								</svg>
-								<span>Promote</span>
-							</div>
-							<!--button 2 -->
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
-								<svg class="icon icon--edit">
-									<use href="./icons/symbol/sprite.svg#edit"></use>
-								</svg>
-								<span>Edit</span>
-							</div>
-							<!--button 3 -->
-							<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
-								<svg class="icon icon--pause">
-									<use href="./icons/symbol/sprite.svg#pause"></use>
-								</svg>
-								<span>Pause</span>
-							</div>
-							<!--button 4 -->
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
-								<svg class="icon icon--delete">
-									<use href="./icons/symbol/sprite.svg#delete"></use>
-								</svg>
-								<span>Delete</span>
-							</div>
-						</div>
-					</div>
+				<!-- 2 -->
+				<div data-counter="called" class="counter-item">
+					<span>213</span>
+					<svg class="icon icon--called">
+						<use href="./icons/symbol/sprite.svg#called"></use>
+					</svg>
 				</div>
-			</a>
-
-			<!-- card 4 -->
-			<a href="#" class="ads-card">
-				<!-- image -->
-				<div class="ads-card_image">
-					<div class="ads-card_image-wrap">
-						<img src="./images/red-bmw.png" alt="img 1">
-					</div>
+				<!-- 3 -->
+				<div data-counter="liked" class="counter-item">
+					<span>0</span>
+					<svg class="icon icon--liked">
+						<use href="./icons/symbol/sprite.svg#liked"></use>
+					</svg>
 				</div>
-				<!-- main -->
-				<div class="ads-card_main">
-					<!-- info content-->
-					<div class="ads-card_info">
-						<div class="ads-card_info-content">
-							<div class="ads-card_title">
-								<h2>BMW X5 G05</h2>
-								<span>№ 115897234</span>
-							</div>
-							<div class="active ads-card_status">
-								<div class="status-label">Active</div>
-								<div class="status-description"></div>
-							</div>
-							<div class="ads-card_description">
-								Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts,
-								part of the car, front sills, glossy...
-							</div>
-							<div class="ads-card_price">
-								<strong>5 460 ALL</strong>
-								<small>≈ 56 €</small>
-							</div>
-						</div>
+			</div>
+		</div>
 
-						<!-- info counters -->
-						<div class="ads-card_info-counters">
-							<!-- 1 -->
-							<div data-counter="views" class="counter-item">
-								<span>3281</span>
-								<svg class="icon icon--views">
-									<use href="./icons/symbol/sprite.svg#views"></use>
-								</svg>
-							</div>
-							<!-- 2 -->
-							<div data-counter="called" class="counter-item">
-								<span>213</span>
-								<svg class="icon icon--called">
-									<use href="./icons/symbol/sprite.svg#called"></use>
-								</svg>
-							</div>
-							<!-- 3 -->
-							<div data-counter="liked" class="counter-item">
-								<span>0</span>
-								<svg class="icon icon--liked">
-									<use href="./icons/symbol/sprite.svg#liked"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
+		<div class="ads-card_footer">
+			<!-- meta -->
+			<div class="ads-card_footer-meta">
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<span data-href="#product-location-link" class="meta-location" title="open in next city...">
+					<span class="meta-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="meta-location_name"> Tiana </span>
+				</span>
 
-					<div class="ads-card_footer">
-						<!-- meta -->
-						<div class="ads-card_footer-meta">
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
-								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</span>
-
-							<span class="meta-timeago">11 hours ago</span>
-						</div>
-						<!-- buttons -->
-						<div class="ads-card_footer-buttons">
-							<!--button 1 -->
-							<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
-								<svg class="icon icon--promote">
-									<use href="./icons/symbol/sprite.svg#promote"></use>
-								</svg>
-								<span>Promote</span>
-							</div>
-							<!--button 2 -->
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
-								<svg class="icon icon--edit">
-									<use href="./icons/symbol/sprite.svg#edit"></use>
-								</svg>
-								<span>Edit</span>
-							</div>
-							<!--button 3 -->
-							<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
-								<svg class="icon icon--pause">
-									<use href="./icons/symbol/sprite.svg#pause"></use>
-								</svg>
-								<span>Pause</span>
-							</div>
-							<!--button 4 -->
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
-								<svg class="icon icon--delete">
-									<use href="./icons/symbol/sprite.svg#delete"></use>
-								</svg>
-								<span>Delete</span>
-							</div>
-						</div>
-					</div>
+				<span class="meta-timeago">11 hours ago</span>
+			</div>
+			<!-- buttons -->
+			<div class="ads-card_footer-buttons">
+				<!--button 1 -->
+				<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
+					<svg class="icon icon--promote">
+						<use href="./icons/symbol/sprite.svg#promote"></use>
+					</svg>
+					<span>Promote</span>
 				</div>
-			</a>
-
-			<!-- card 5 -->
-			<a href="#" class="ads-card">
-				<!-- image -->
-				<div class="ads-card_image">
-					<div class="ads-card_image-wrap">
-						<img src="./images/red-bmw.png" alt="img 1">
-					</div>
+				<!--button 2 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
+					<svg class="icon icon--edit">
+						<use href="./icons/symbol/sprite.svg#edit"></use>
+					</svg>
+					<span>Edit</span>
 				</div>
-				<!-- main -->
-				<div class="ads-card_main">
-					<!-- info content-->
-					<div class="ads-card_info">
-						<div class="ads-card_info-content">
-							<div class="ads-card_title">
-								<h2>BMW X5 G05</h2>
-								<span>№ 115897234</span>
-							</div>
-							<div class="active ads-card_status">
-								<div class="status-label">Active</div>
-								<div class="status-description"></div>
-							</div>
-							<div class="ads-card_description">
-								Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts,
-								part of the car, front sills, glossy...
-							</div>
-							<div class="ads-card_price">
-								<strong>5 460 ALL</strong>
-								<small>≈ 56 €</small>
-							</div>
-						</div>
-
-						<!-- info counters -->
-						<div class="ads-card_info-counters">
-							<!-- 1 -->
-							<div data-counter="views" class="counter-item">
-								<span>3281</span>
-								<svg class="icon icon--views">
-									<use href="./icons/symbol/sprite.svg#views"></use>
-								</svg>
-							</div>
-							<!-- 2 -->
-							<div data-counter="called" class="counter-item">
-								<span>213</span>
-								<svg class="icon icon--called">
-									<use href="./icons/symbol/sprite.svg#called"></use>
-								</svg>
-							</div>
-							<!-- 3 -->
-							<div data-counter="liked" class="counter-item">
-								<span>0</span>
-								<svg class="icon icon--liked">
-									<use href="./icons/symbol/sprite.svg#liked"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-
-					<div class="ads-card_footer">
-						<!-- meta -->
-						<div class="ads-card_footer-meta">
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<span data-href="#product-location-link" class="meta-location" title="open in next city...">
-								<span class="meta-location_icon">
-									<svg class="icon icon--map-pin">
-										<use href="./icons/symbol/sprite.svg#map-pin"></use>
-									</svg>
-								</span>
-								<span class="meta-location_name"> Tiana </span>
-							</span>
-
-							<span class="meta-timeago">11 hours ago</span>
-						</div>
-						<!-- buttons -->
-						<div class="ads-card_footer-buttons">
-							<!--button 1 -->
-							<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
-								<svg class="icon icon--promote">
-									<use href="./icons/symbol/sprite.svg#promote"></use>
-								</svg>
-								<span>Promote</span>
-							</div>
-							<!--button 2 -->
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
-								<svg class="icon icon--edit">
-									<use href="./icons/symbol/sprite.svg#edit"></use>
-								</svg>
-								<span>Edit</span>
-							</div>
-							<!--button 3 -->
-							<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
-								<svg class="icon icon--pause">
-									<use href="./icons/symbol/sprite.svg#pause"></use>
-								</svg>
-								<span>Pause</span>
-							</div>
-							<!--button 4 -->
-							<!-- JAVASCRIPT LOCATION LINK USE data-href -->
-							<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
-								<svg class="icon icon--delete">
-									<use href="./icons/symbol/sprite.svg#delete"></use>
-								</svg>
-								<span>Delete</span>
-							</div>
-						</div>
-					</div>
+				<!--button 3 -->
+				<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
+					<svg class="icon icon--pause">
+						<use href="./icons/symbol/sprite.svg#pause"></use>
+					</svg>
+					<span>Pause</span>
 				</div>
-			</a>
+				<!--button 4 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
+					<svg class="icon icon--delete">
+						<use href="./icons/symbol/sprite.svg#delete"></use>
+					</svg>
+					<span>Delete</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+
+<!-- card 2 -->
+<a href="#" class="ads-card">
+	<!-- image -->
+	<div class="ads-card_image">
+		<div class="ads-card_image-wrap">
+			<img src="./images/red-bmw.png" alt="img 1">
+		</div>
+	</div>
+	<!-- main -->
+	<div class="ads-card_main">
+		<!-- info content-->
+		<div class="ads-card_info">
+			<div class="ads-card_info-content">
+				<div class="ads-card_title">
+					<h2>BMW X5 G05</h2>
+					<span>№ 115897234</span>
+				</div>
+				<div class="ads-card_status inactive-pause">
+					<div class="status-label">Inactive</div>
+					<div class="status-description">The ad is on pause</div>
+				</div>
+				<div class="ads-card_description">
+					Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts, part of the
+					car, front sills, glossy...
+				</div>
+				<div class="ads-card_price">
+					<strong>5 460 ALL</strong>
+					<small>≈ 56 €</small>
+				</div>
+			</div>
+
+			<!-- info counters -->
+			<div class="ads-card_info-counters">
+				<!-- 1 -->
+				<div data-counter="views" class="counter-item">
+					<span>3281</span>
+					<svg class="icon icon--views">
+						<use href="./icons/symbol/sprite.svg#views"></use>
+					</svg>
+				</div>
+				<!-- 2 -->
+				<div data-counter="called" class="counter-item">
+					<span>213</span>
+					<svg class="icon icon--called">
+						<use href="./icons/symbol/sprite.svg#called"></use>
+					</svg>
+				</div>
+				<!-- 3 -->
+				<div data-counter="liked" class="counter-item">
+					<span>0</span>
+					<svg class="icon icon--liked">
+						<use href="./icons/symbol/sprite.svg#liked"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="ads-card_footer">
+			<!-- meta -->
+			<div class="ads-card_footer-meta">
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<span data-href="#product-location-link" class="meta-location" title="open in next city...">
+					<span class="meta-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="meta-location_name"> Tiana </span>
+				</span>
+
+				<span class="meta-timeago">11 hours ago</span>
+			</div>
+			<!-- buttons -->
+			<div class="ads-card_footer-buttons">
+				<!--button 1 -->
+				<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
+					<svg class="icon icon--promote">
+						<use href="./icons/symbol/sprite.svg#promote"></use>
+					</svg>
+					<span>Promote</span>
+				</div>
+				<!--button 2 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
+					<svg class="icon icon--edit">
+						<use href="./icons/symbol/sprite.svg#edit"></use>
+					</svg>
+					<span>Edit</span>
+				</div>
+				<!--button 3 -->
+				<div data-button="pause" class="btn-ads" role="button" title="Play this ad">
+					<svg class="icon icon--play">
+						<use href="./icons/symbol/sprite.svg#play"></use>
+					</svg>
+					<span>Play</span>
+				</div>
+				<!--button 4 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
+					<svg class="icon icon--delete">
+						<use href="./icons/symbol/sprite.svg#delete"></use>
+					</svg>
+					<span>Delete</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+
+<!-- card 3 -->
+
+<a href="#" class="ads-card">
+	<!-- image -->
+	<div class="ads-card_image">
+		<div class="ads-card_image-wrap">
+			<img src="./images/red-bmw.png" alt="img 1">
+		</div>
+	</div>
+	<!-- main -->
+	<div class="ads-card_main">
+		<!-- info content-->
+		<div class="ads-card_info">
+			<div class="ads-card_info-content">
+				<div class="ads-card_title">
+					<h2>BMW X5 G05</h2>
+					<span>№ 115897234</span>
+				</div>
+				<div class="ads-card_status inactive-review">
+					<div class="status-label">Inactive</div>
+					<div class="status-description">The listing is under review</div>
+				</div>
+				<div class="ads-card_description">
+					Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts, part of the
+					car, front sills, glossy...
+				</div>
+				<div class="ads-card_price">
+					<strong>5 460 ALL</strong>
+					<small>≈ 56 €</small>
+				</div>
+			</div>
+
+			<!-- info counters -->
+			<div class="ads-card_info-counters">
+				<!-- 1 -->
+				<div data-counter="views" class="counter-item">
+					<span>3281</span>
+					<svg class="icon icon--views">
+						<use href="./icons/symbol/sprite.svg#views"></use>
+					</svg>
+				</div>
+				<!-- 2 -->
+				<div data-counter="called" class="counter-item">
+					<span>213</span>
+					<svg class="icon icon--called">
+						<use href="./icons/symbol/sprite.svg#called"></use>
+					</svg>
+				</div>
+				<!-- 3 -->
+				<div data-counter="liked" class="counter-item">
+					<span>0</span>
+					<svg class="icon icon--liked">
+						<use href="./icons/symbol/sprite.svg#liked"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="ads-card_footer">
+			<!-- meta -->
+			<div class="ads-card_footer-meta">
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<span data-href="#product-location-link" class="meta-location" title="open in next city...">
+					<span class="meta-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="meta-location_name"> Tiana </span>
+				</span>
+
+				<span class="meta-timeago">11 hours ago</span>
+			</div>
+			<!-- buttons -->
+			<div class="ads-card_footer-buttons">
+				<!--button 1 -->
+				<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
+					<svg class="icon icon--promote">
+						<use href="./icons/symbol/sprite.svg#promote"></use>
+					</svg>
+					<span>Promote</span>
+				</div>
+				<!--button 2 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
+					<svg class="icon icon--edit">
+						<use href="./icons/symbol/sprite.svg#edit"></use>
+					</svg>
+					<span>Edit</span>
+				</div>
+				<!--button 3 -->
+				<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
+					<svg class="icon icon--pause">
+						<use href="./icons/symbol/sprite.svg#pause"></use>
+					</svg>
+					<span>Pause</span>
+				</div>
+				<!--button 4 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
+					<svg class="icon icon--delete">
+						<use href="./icons/symbol/sprite.svg#delete"></use>
+					</svg>
+					<span>Delete</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+
+<!-- card 4 -->
+<a href="#" class="ads-card">
+	<!-- image -->
+	<div class="ads-card_image">
+		<div class="ads-card_image-wrap">
+			<img src="./images/red-bmw.png" alt="img 1">
+		</div>
+	</div>
+	<!-- main -->
+	<div class="ads-card_main">
+		<!-- info content-->
+		<div class="ads-card_info">
+			<div class="ads-card_info-content">
+				<div class="ads-card_title">
+					<h2>BMW X5 G05</h2>
+					<span>№ 115897234</span>
+				</div>
+				<div class="active ads-card_status">
+					<div class="status-label">Active</div>
+					<div class="status-description"></div>
+				</div>
+				<div class="ads-card_description">
+					Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts, part of the
+					car, front sills, glossy...
+				</div>
+				<div class="ads-card_price">
+					<strong>5 460 ALL</strong>
+					<small>≈ 56 €</small>
+				</div>
+			</div>
+
+			<!-- info counters -->
+			<div class="ads-card_info-counters">
+				<!-- 1 -->
+				<div data-counter="views" class="counter-item">
+					<span>3281</span>
+					<svg class="icon icon--views">
+						<use href="./icons/symbol/sprite.svg#views"></use>
+					</svg>
+				</div>
+				<!-- 2 -->
+				<div data-counter="called" class="counter-item">
+					<span>213</span>
+					<svg class="icon icon--called">
+						<use href="./icons/symbol/sprite.svg#called"></use>
+					</svg>
+				</div>
+				<!-- 3 -->
+				<div data-counter="liked" class="counter-item">
+					<span>0</span>
+					<svg class="icon icon--liked">
+						<use href="./icons/symbol/sprite.svg#liked"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="ads-card_footer">
+			<!-- meta -->
+			<div class="ads-card_footer-meta">
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<span data-href="#product-location-link" class="meta-location" title="open in next city...">
+					<span class="meta-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="meta-location_name"> Tiana </span>
+				</span>
+
+				<span class="meta-timeago">11 hours ago</span>
+			</div>
+			<!-- buttons -->
+			<div class="ads-card_footer-buttons">
+				<!--button 1 -->
+				<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
+					<svg class="icon icon--promote">
+						<use href="./icons/symbol/sprite.svg#promote"></use>
+					</svg>
+					<span>Promote</span>
+				</div>
+				<!--button 2 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
+					<svg class="icon icon--edit">
+						<use href="./icons/symbol/sprite.svg#edit"></use>
+					</svg>
+					<span>Edit</span>
+				</div>
+				<!--button 3 -->
+				<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
+					<svg class="icon icon--pause">
+						<use href="./icons/symbol/sprite.svg#pause"></use>
+					</svg>
+					<span>Pause</span>
+				</div>
+				<!--button 4 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
+					<svg class="icon icon--delete">
+						<use href="./icons/symbol/sprite.svg#delete"></use>
+					</svg>
+					<span>Delete</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+
+<!-- card 5 -->
+<a href="#" class="ads-card">
+	<!-- image -->
+	<div class="ads-card_image">
+		<div class="ads-card_image-wrap">
+			<img src="./images/red-bmw.png" alt="img 1">
+		</div>
+	</div>
+	<!-- main -->
+	<div class="ads-card_main">
+		<!-- info content-->
+		<div class="ads-card_info">
+			<div class="ads-card_info-content">
+				<div class="ads-card_title">
+					<h2>BMW X5 G05</h2>
+					<span>№ 115897234</span>
+				</div>
+				<div class="active ads-card_status">
+					<div class="status-label">Active</div>
+					<div class="status-description"></div>
+				</div>
+				<div class="ads-card_description">
+					Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts, part of the
+					car, front sills, glossy...
+				</div>
+				<div class="ads-card_price">
+					<strong>5 460 ALL</strong>
+					<small>≈ 56 €</small>
+				</div>
+			</div>
+
+			<!-- info counters -->
+			<div class="ads-card_info-counters">
+				<!-- 1 -->
+				<div data-counter="views" class="counter-item">
+					<span>3281</span>
+					<svg class="icon icon--views">
+						<use href="./icons/symbol/sprite.svg#views"></use>
+					</svg>
+				</div>
+				<!-- 2 -->
+				<div data-counter="called" class="counter-item">
+					<span>213</span>
+					<svg class="icon icon--called">
+						<use href="./icons/symbol/sprite.svg#called"></use>
+					</svg>
+				</div>
+				<!-- 3 -->
+				<div data-counter="liked" class="counter-item">
+					<span>0</span>
+					<svg class="icon icon--liked">
+						<use href="./icons/symbol/sprite.svg#liked"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="ads-card_footer">
+			<!-- meta -->
+			<div class="ads-card_footer-meta">
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<span data-href="#product-location-link" class="meta-location" title="open in next city...">
+					<span class="meta-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="meta-location_name"> Tiana </span>
+				</span>
+
+				<span class="meta-timeago">11 hours ago</span>
+			</div>
+			<!-- buttons -->
+			<div class="ads-card_footer-buttons">
+				<!--button 1 -->
+				<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
+					<svg class="icon icon--promote">
+						<use href="./icons/symbol/sprite.svg#promote"></use>
+					</svg>
+					<span>Promote</span>
+				</div>
+				<!--button 2 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
+					<svg class="icon icon--edit">
+						<use href="./icons/symbol/sprite.svg#edit"></use>
+					</svg>
+					<span>Edit</span>
+				</div>
+				<!--button 3 -->
+				<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
+					<svg class="icon icon--pause">
+						<use href="./icons/symbol/sprite.svg#pause"></use>
+					</svg>
+					<span>Pause</span>
+				</div>
+				<!--button 4 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
+					<svg class="icon icon--delete">
+						<use href="./icons/symbol/sprite.svg#delete"></use>
+					</svg>
+					<span>Delete</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+				
+		</div>
+
+		<!-- 2 -->
+		<div class="ads-list" data-panelads="list-2">
+			<!-- card 1 -->
+<a href="#" class="ads-card">
+	<!-- image -->
+	<div class="ads-card_image">
+		<div class="ads-card_image-wrap">
+			<img src="./images/daily-rental/pic-1.png" alt="img 1">
+		</div>
+	</div>
+	<!-- main -->
+	<div class="ads-card_main">
+		<!-- info content-->
+		<div class="ads-card_info">
+			<div class="ads-card_info-content">
+				<div class="ads-card_title">
+					<h2>BMW X5 G05</h2>
+					<span>№ 115897234</span>
+				</div>
+				<div class="active ads-card_status">
+					<div class="status-label">Active</div>
+					<div class="status-description"></div>
+				</div>
+				<div class="ads-card_description">
+					Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts, part of the
+					car, front sills, glossy...
+				</div>
+				<div class="ads-card_price">
+					<strong>5 460 ALL</strong>
+					<small>≈ 56 €</small>
+				</div>
+			</div>
+
+			<!-- info counters -->
+			<div class="ads-card_info-counters">
+				<!-- 1 -->
+				<div data-counter="views" class="counter-item">
+					<span>3281</span>
+					<svg class="icon icon--views">
+						<use href="./icons/symbol/sprite.svg#views"></use>
+					</svg>
+				</div>
+				<!-- 2 -->
+				<div data-counter="called" class="counter-item">
+					<span>213</span>
+					<svg class="icon icon--called">
+						<use href="./icons/symbol/sprite.svg#called"></use>
+					</svg>
+				</div>
+				<!-- 3 -->
+				<div data-counter="liked" class="counter-item">
+					<span>0</span>
+					<svg class="icon icon--liked">
+						<use href="./icons/symbol/sprite.svg#liked"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="ads-card_footer">
+			<!-- meta -->
+			<div class="ads-card_footer-meta">
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<span data-href="#product-location-link" class="meta-location" title="open in next city...">
+					<span class="meta-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="meta-location_name"> Tiana </span>
+				</span>
+
+				<span class="meta-timeago">11 hours ago</span>
+			</div>
+			<!-- buttons -->
+			<div class="ads-card_footer-buttons">
+				<!--button 1 -->
+				<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
+					<svg class="icon icon--promote">
+						<use href="./icons/symbol/sprite.svg#promote"></use>
+					</svg>
+					<span>Promote</span>
+				</div>
+				<!--button 2 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
+					<svg class="icon icon--edit">
+						<use href="./icons/symbol/sprite.svg#edit"></use>
+					</svg>
+					<span>Edit</span>
+				</div>
+				<!--button 3 -->
+				<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
+					<svg class="icon icon--pause">
+						<use href="./icons/symbol/sprite.svg#pause"></use>
+					</svg>
+					<span>Pause</span>
+				</div>
+				<!--button 4 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
+					<svg class="icon icon--delete">
+						<use href="./icons/symbol/sprite.svg#delete"></use>
+					</svg>
+					<span>Delete</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+
+<!-- card 2 -->
+<a href="#" class="ads-card">
+	<!-- image -->
+	<div class="ads-card_image">
+		<div class="ads-card_image-wrap">
+			<img src="./images/daily-rental/pic-2.png" alt="img 2">
+		</div>
+	</div>
+	<!-- main -->
+	<div class="ads-card_main">
+		<!-- info content-->
+		<div class="ads-card_info">
+			<div class="ads-card_info-content">
+				<div class="ads-card_title">
+					<h2>BMW X5 G05</h2>
+					<span>№ 115897234</span>
+				</div>
+				<div class="ads-card_status inactive-pause">
+					<div class="status-label">Inactive</div>
+					<div class="status-description">The ad is on pause</div>
+				</div>
+				<div class="ads-card_description">
+					Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts, part of the
+					car, front sills, glossy...
+				</div>
+				<div class="ads-card_price">
+					<strong>5 460 ALL</strong>
+					<small>≈ 56 €</small>
+				</div>
+			</div>
+
+			<!-- info counters -->
+			<div class="ads-card_info-counters">
+				<!-- 1 -->
+				<div data-counter="views" class="counter-item">
+					<span>3281</span>
+					<svg class="icon icon--views">
+						<use href="./icons/symbol/sprite.svg#views"></use>
+					</svg>
+				</div>
+				<!-- 2 -->
+				<div data-counter="called" class="counter-item">
+					<span>213</span>
+					<svg class="icon icon--called">
+						<use href="./icons/symbol/sprite.svg#called"></use>
+					</svg>
+				</div>
+				<!-- 3 -->
+				<div data-counter="liked" class="counter-item">
+					<span>0</span>
+					<svg class="icon icon--liked">
+						<use href="./icons/symbol/sprite.svg#liked"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="ads-card_footer">
+			<!-- meta -->
+			<div class="ads-card_footer-meta">
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<span data-href="#product-location-link" class="meta-location" title="open in next city...">
+					<span class="meta-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="meta-location_name"> Tiana </span>
+				</span>
+
+				<span class="meta-timeago">11 hours ago</span>
+			</div>
+			<!-- buttons -->
+			<div class="ads-card_footer-buttons">
+				<!--button 1 -->
+				<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
+					<svg class="icon icon--promote">
+						<use href="./icons/symbol/sprite.svg#promote"></use>
+					</svg>
+					<span>Promote</span>
+				</div>
+				<!--button 2 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
+					<svg class="icon icon--edit">
+						<use href="./icons/symbol/sprite.svg#edit"></use>
+					</svg>
+					<span>Edit</span>
+				</div>
+				<!--button 3 -->
+				<div data-button="pause" class="btn-ads" role="button" title="Play this ad">
+					<svg class="icon icon--play">
+						<use href="./icons/symbol/sprite.svg#play"></use>
+					</svg>
+					<span>Play</span>
+				</div>
+				<!--button 4 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
+					<svg class="icon icon--delete">
+						<use href="./icons/symbol/sprite.svg#delete"></use>
+					</svg>
+					<span>Delete</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+
+<!-- card 3 -->
+
+<a href="#" class="ads-card">
+	<!-- image -->
+	<div class="ads-card_image">
+		<div class="ads-card_image-wrap">
+		<img src="./images/daily-rental/pic-3.png" alt="img 3">
+		</div>
+	</div>
+	<!-- main -->
+	<div class="ads-card_main">
+		<!-- info content-->
+		<div class="ads-card_info">
+			<div class="ads-card_info-content">
+				<div class="ads-card_title">
+					<h2>BMW X5 G05</h2>
+					<span>№ 115897234</span>
+				</div>
+				<div class="ads-card_status inactive-review">
+					<div class="status-label">Inactive</div>
+					<div class="status-description">The listing is under review</div>
+				</div>
+				<div class="ads-card_description">
+					Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts, part of the
+					car, front sills, glossy...
+				</div>
+				<div class="ads-card_price">
+					<strong>5 460 ALL</strong>
+					<small>≈ 56 €</small>
+				</div>
+			</div>
+
+			<!-- info counters -->
+			<div class="ads-card_info-counters">
+				<!-- 1 -->
+				<div data-counter="views" class="counter-item">
+					<span>3281</span>
+					<svg class="icon icon--views">
+						<use href="./icons/symbol/sprite.svg#views"></use>
+					</svg>
+				</div>
+				<!-- 2 -->
+				<div data-counter="called" class="counter-item">
+					<span>213</span>
+					<svg class="icon icon--called">
+						<use href="./icons/symbol/sprite.svg#called"></use>
+					</svg>
+				</div>
+				<!-- 3 -->
+				<div data-counter="liked" class="counter-item">
+					<span>0</span>
+					<svg class="icon icon--liked">
+						<use href="./icons/symbol/sprite.svg#liked"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="ads-card_footer">
+			<!-- meta -->
+			<div class="ads-card_footer-meta">
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<span data-href="#product-location-link" class="meta-location" title="open in next city...">
+					<span class="meta-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="meta-location_name"> Tiana </span>
+				</span>
+
+				<span class="meta-timeago">11 hours ago</span>
+			</div>
+			<!-- buttons -->
+			<div class="ads-card_footer-buttons">
+				<!--button 1 -->
+				<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
+					<svg class="icon icon--promote">
+						<use href="./icons/symbol/sprite.svg#promote"></use>
+					</svg>
+					<span>Promote</span>
+				</div>
+				<!--button 2 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
+					<svg class="icon icon--edit">
+						<use href="./icons/symbol/sprite.svg#edit"></use>
+					</svg>
+					<span>Edit</span>
+				</div>
+				<!--button 3 -->
+				<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
+					<svg class="icon icon--pause">
+						<use href="./icons/symbol/sprite.svg#pause"></use>
+					</svg>
+					<span>Pause</span>
+				</div>
+				<!--button 4 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
+					<svg class="icon icon--delete">
+						<use href="./icons/symbol/sprite.svg#delete"></use>
+					</svg>
+					<span>Delete</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+
+<!-- card 4 -->
+<a href="#" class="ads-card">
+	<!-- image -->
+	<div class="ads-card_image">
+		<div class="ads-card_image-wrap">
+		<img src="./images/daily-rental/pic-4.png" alt="img 4">
+		</div>
+	</div>
+	<!-- main -->
+	<div class="ads-card_main">
+		<!-- info content-->
+		<div class="ads-card_info">
+			<div class="ads-card_info-content">
+				<div class="ads-card_title">
+					<h2>BMW X5 G05</h2>
+					<span>№ 115897234</span>
+				</div>
+				<div class="active ads-card_status">
+					<div class="status-label">Active</div>
+					<div class="status-description"></div>
+				</div>
+				<div class="ads-card_description">
+					Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts, part of the
+					car, front sills, glossy...
+				</div>
+				<div class="ads-card_price">
+					<strong>5 460 ALL</strong>
+					<small>≈ 56 €</small>
+				</div>
+			</div>
+
+			<!-- info counters -->
+			<div class="ads-card_info-counters">
+				<!-- 1 -->
+				<div data-counter="views" class="counter-item">
+					<span>3281</span>
+					<svg class="icon icon--views">
+						<use href="./icons/symbol/sprite.svg#views"></use>
+					</svg>
+				</div>
+				<!-- 2 -->
+				<div data-counter="called" class="counter-item">
+					<span>213</span>
+					<svg class="icon icon--called">
+						<use href="./icons/symbol/sprite.svg#called"></use>
+					</svg>
+				</div>
+				<!-- 3 -->
+				<div data-counter="liked" class="counter-item">
+					<span>0</span>
+					<svg class="icon icon--liked">
+						<use href="./icons/symbol/sprite.svg#liked"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="ads-card_footer">
+			<!-- meta -->
+			<div class="ads-card_footer-meta">
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<span data-href="#product-location-link" class="meta-location" title="open in next city...">
+					<span class="meta-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="meta-location_name"> Tiana </span>
+				</span>
+
+				<span class="meta-timeago">11 hours ago</span>
+			</div>
+			<!-- buttons -->
+			<div class="ads-card_footer-buttons">
+				<!--button 1 -->
+				<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
+					<svg class="icon icon--promote">
+						<use href="./icons/symbol/sprite.svg#promote"></use>
+					</svg>
+					<span>Promote</span>
+				</div>
+				<!--button 2 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
+					<svg class="icon icon--edit">
+						<use href="./icons/symbol/sprite.svg#edit"></use>
+					</svg>
+					<span>Edit</span>
+				</div>
+				<!--button 3 -->
+				<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
+					<svg class="icon icon--pause">
+						<use href="./icons/symbol/sprite.svg#pause"></use>
+					</svg>
+					<span>Pause</span>
+				</div>
+				<!--button 4 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
+					<svg class="icon icon--delete">
+						<use href="./icons/symbol/sprite.svg#delete"></use>
+					</svg>
+					<span>Delete</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+
+<!-- card 5 -->
+<a href="#" class="ads-card">
+	<!-- image -->
+	<div class="ads-card_image">
+		<div class="ads-card_image-wrap">
+			<img src="./images/daily-rental/pic-5.png" alt="img 5">
+		</div>
+	</div>
+	<!-- main -->
+	<div class="ads-card_main">
+		<!-- info content-->
+		<div class="ads-card_info">
+			<div class="ads-card_info-content">
+				<div class="ads-card_title">
+					<h2>BMW X5 G05</h2>
+					<span>№ 115897234</span>
+				</div>
+				<div class="active ads-card_status">
+					<div class="status-label">Active</div>
+					<div class="status-description"></div>
+				</div>
+				<div class="ads-card_description">
+					Car from the USA in excellent condition Fully serviced Front part of the car, front sills, glossy inserts, part of the
+					car, front sills, glossy...
+				</div>
+				<div class="ads-card_price">
+					<strong>5 460 ALL</strong>
+					<small>≈ 56 €</small>
+				</div>
+			</div>
+
+			<!-- info counters -->
+			<div class="ads-card_info-counters">
+				<!-- 1 -->
+				<div data-counter="views" class="counter-item">
+					<span>3281</span>
+					<svg class="icon icon--views">
+						<use href="./icons/symbol/sprite.svg#views"></use>
+					</svg>
+				</div>
+				<!-- 2 -->
+				<div data-counter="called" class="counter-item">
+					<span>213</span>
+					<svg class="icon icon--called">
+						<use href="./icons/symbol/sprite.svg#called"></use>
+					</svg>
+				</div>
+				<!-- 3 -->
+				<div data-counter="liked" class="counter-item">
+					<span>0</span>
+					<svg class="icon icon--liked">
+						<use href="./icons/symbol/sprite.svg#liked"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="ads-card_footer">
+			<!-- meta -->
+			<div class="ads-card_footer-meta">
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<span data-href="#product-location-link" class="meta-location" title="open in next city...">
+					<span class="meta-location_icon">
+						<svg class="icon icon--map-pin">
+							<use href="./icons/symbol/sprite.svg#map-pin"></use>
+						</svg>
+					</span>
+					<span class="meta-location_name"> Tiana </span>
+				</span>
+
+				<span class="meta-timeago">11 hours ago</span>
+			</div>
+			<!-- buttons -->
+			<div class="ads-card_footer-buttons">
+				<!--button 1 -->
+				<div data-button="promote" class="btn-ads" role="button" title="Promote this ad">
+					<svg class="icon icon--promote">
+						<use href="./icons/symbol/sprite.svg#promote"></use>
+					</svg>
+					<span>Promote</span>
+				</div>
+				<!--button 2 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#edit-page" class="btn-ads" role="button" title="Edit this ad">
+					<svg class="icon icon--edit">
+						<use href="./icons/symbol/sprite.svg#edit"></use>
+					</svg>
+					<span>Edit</span>
+				</div>
+				<!--button 3 -->
+				<div data-button="pause" class="btn-ads" role="button" title="Pause this ad">
+					<svg class="icon icon--pause">
+						<use href="./icons/symbol/sprite.svg#pause"></use>
+					</svg>
+					<span>Pause</span>
+				</div>
+				<!--button 4 -->
+				<!-- JAVASCRIPT LOCATION LINK USE data-href -->
+				<div data-href="#delete-page" class="btn-ads" role="button" title="Delete this ad">
+					<svg class="icon icon--delete">
+						<use href="./icons/symbol/sprite.svg#delete"></use>
+					</svg>
+					<span>Delete</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>
+				
 		</div>
 	</div>
 </div>
