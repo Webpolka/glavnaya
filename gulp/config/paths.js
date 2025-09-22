@@ -1,13 +1,12 @@
 import path from 'path';
 
-const buildFolder = './dist';
+const buildFolder = './docs';
 const srcFolder = './src';
 
 const filePaths = {
   build: {
     js: `${buildFolder}/js/`,
-    css: `${buildFolder}/css/`,
-    postcss: `${buildFolder}/postcss/`,
+    css: `${buildFolder}/css/`,   
     images: `${buildFolder}/images/`,
     svg: `${buildFolder}/icons/`,
     fonts: `${buildFolder}/fonts/`,
@@ -17,8 +16,7 @@ const filePaths = {
     js: `${srcFolder}/js/*.js`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/icons/*.svg`,
-    scss: [`${srcFolder}/scss/main.scss`, `!${srcFolder}/scss/**/_*.scss`],
-    postcss: [`${buildFolder}/css/*.css`,`${buildFolder}/css/**/*.css`],
+    scss: `${srcFolder}/scss/main.scss`,  
     html: `${srcFolder}/*.html`,
     static: `${srcFolder}/vendor/**/*.*`,
     svgIcons: `${srcFolder}/icons/*.svg`,

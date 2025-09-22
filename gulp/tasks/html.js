@@ -1,8 +1,7 @@
 import gulp from 'gulp';
 import fileInclude from 'gulp-file-include';
-import webpHtml from 'gulp-webp-html-nosvg';
-import versionNumber from 'gulp-version-number';
 import htmlMin from 'gulp-htmlmin';
+import htmlBeautify from 'gulp-html-beautify';
 
 import { plugins } from '../config/plugins.js';
 import { filePaths } from '../config/paths.js';
@@ -17,36 +16,19 @@ const html = (isBuild, serverInstance) => {
 			}))
     .pipe(plugins.replace(/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(icons|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
 				'$1./$4$5$7$1'))
-    // .pipe(plugins.replace(/@img\//g, 'images/'))
-    .pipe(plugins.if(isBuild, webpHtml()))
+
     .pipe(
       htmlMin({
         useShortDoctype: true,
         sortClassName: true,
-        removeComments: isBuild,
-
-        /** Раскомментировать если требуется минификация html */
-        //collapseWhitespace: isBuild,
+        removeComments: isBuild,       
+        collapseWhitespace: isBuild,
       })
-    )
-    .pipe(
-      plugins.if(
-        isBuild,
-        versionNumber({
-          value: '%DT%',
-
-          append: {
-            key: '_v',
-            cover: 0,
-            to: ['css', 'js'],
-          },
-
-          output: {
-            file: 'gulp/version.json',
-          },
-        })
-      )
-    )
+    )   
+    .pipe(htmlBeautify({ 
+      indent_size: 4,
+      preserve_newlines: true,
+    }))
     .pipe(gulp.dest(filePaths.buildFolder))
     .pipe(serverInstance.stream());
 };
