@@ -73,22 +73,8 @@ HEADER TRANSFER BLOCKS
 ----------------------------------------------------------------------------------------------------------------*/
 import TransferElements from "./modules/transfer";
 
-// const headerLocationEl = document.querySelector(".header-medium_nav");
-// const headerLocationPlace = document.querySelector(".header-medium_intro");
 const headerSearchFormEl = document.querySelector(".header-search-form");
 const headerSearchFormPlace = document.querySelector(".header-bottom");
-
-// if (headerLocationEl && headerLocationPlace) {
-// 	new TransferElements({
-// 		sourceElement: headerLocationEl,
-// 		breakpoints: {
-// 			992: {
-// 				targetElement: headerLocationPlace,
-// 				targetPosition: 2,
-// 			},
-// 		},
-// 	});
-// }
 
 if (headerSearchFormEl && headerSearchFormPlace) {
 	new TransferElements({
