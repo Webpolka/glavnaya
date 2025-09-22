@@ -73,28 +73,28 @@ HEADER TRANSFER BLOCKS
 ----------------------------------------------------------------------------------------------------------------*/
 import TransferElements from "./modules/transfer";
 
-const headerLocationEl = document.querySelector(".header-location");
-const headerLocationPlace = document.querySelector(".header-bottom_intro");
+// const headerLocationEl = document.querySelector(".header-medium_nav");
+// const headerLocationPlace = document.querySelector(".header-medium_intro");
 const headerSearchFormEl = document.querySelector(".header-search-form");
 const headerSearchFormPlace = document.querySelector(".header-bottom");
 
-if (headerLocationEl && headerLocationPlace) {
-	new TransferElements({
-		sourceElement: headerLocationEl,
-		breakpoints: {
-			576: {
-				targetElement: headerLocationPlace,
-				targetPosition: 2,
-			},
-		},
-	});
-}
+// if (headerLocationEl && headerLocationPlace) {
+// 	new TransferElements({
+// 		sourceElement: headerLocationEl,
+// 		breakpoints: {
+// 			992: {
+// 				targetElement: headerLocationPlace,
+// 				targetPosition: 2,
+// 			},
+// 		},
+// 	});
+// }
 
 if (headerSearchFormEl && headerSearchFormPlace) {
 	new TransferElements({
 		sourceElement: headerSearchFormEl,
 		breakpoints: {
-			576: {
+			992: {
 				targetElement: headerSearchFormPlace,
 				targetPosition: 1,
 			},
@@ -321,7 +321,43 @@ new CharCounter({
 });
 
 /*--------------------------------------------------------------------------------------------------------------
-CHOICES SELECTS
+SEARCH BY PARAMS PAGE CHOICES SELECTS
+----------------------------------------------------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+	const selectParamsBrand = document.getElementById("params-brand");
+	const selectParamsModel = document.getElementById("params-model");
+	const selectParamsGeneration = document.getElementById("params-generation");
+	const selectParamsYearfrom = document.getElementById("params-yearfrom");
+	const selectParamsYearto = document.getElementById("params-yearto");
+	const selectParamsEnginefrom = document.getElementById("params-enginefrom");
+	const selectParamsEngineto = document.getElementById("params-engineto");
+	
+
+	const selectParamsArray = [
+		selectParamsBrand,
+		selectParamsModel,
+		selectParamsGeneration,
+		selectParamsYearfrom,
+		selectParamsYearto,
+		selectParamsEnginefrom,
+		selectParamsEngineto		
+	];
+
+	selectParamsArray.forEach((select) => {
+		select &&
+			new Choices(select, {
+				searchEnabled: false, // отключить поиск, так как один выбор
+				itemSelectText: "", // убрать подсказку при выборе
+				shouldSort: false,
+				placeholder: true,
+				placeholderValue: "Select", // placeholder
+				position: "bottom",
+			});
+	});
+});
+
+/*--------------------------------------------------------------------------------------------------------------
+PRODUCT PAGE CHOICES SELECTS
 ----------------------------------------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
 	const selectProductMake = document.getElementById("product-make");

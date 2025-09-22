@@ -94,6 +94,15 @@ CATEGORIES OVERLAY
 			width: rem(265);
 			padding: rem(25) rem(15) rem(25) 0;
 
+			@include lg {
+				width: 100%;
+				padding: 0 15px rem(15) 0;
+
+				&:after{
+					border-right: none;
+				}
+			}
+
 			&:after {
 				position: absolute;
 				top: 0;
@@ -111,15 +120,26 @@ CATEGORIES OVERLAY
 			box-sizing: content-box;
 			overflow-y: auto;
 			max-height: calc(100vh - 200px);
+			padding-left: 15px;
 
 			&::-webkit-scrollbar {
 				inline-size: rem(0);
-				background-color: var(--scrollbar);
+				background-color: transparent;
+			}
+			&::-webkit-scrollbar-track {
+				box-shadow: none;
+				background: none;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				border: 0 none;
 			}
 
 			@include lg {
 				border-right: none;
 				width: 100%;
+				margin-top: 20px;
+				max-height: calc(100vh - 120px);
 			}
 
 			&-item {
@@ -155,7 +175,6 @@ CATEGORIES OVERLAY
 			&-link {
 				display: flex;
 				align-items: center;
-				width: 100%;
 
 				min-height: rem(42);
 				color: #262626;
@@ -192,7 +211,6 @@ CATEGORIES OVERLAY
 			padding: rem(50);
 			overflow-y: auto;
 
-			
 			&::-webkit-scrollbar {
 				inline-size: rem(0);
 				background-color: var(--scrollbar);

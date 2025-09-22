@@ -1,0 +1,122 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+COMAPNYS SERVICES
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.companys-services {
+	display: flex;
+	flex-direction: column;
+	gap: rem(40);
+
+	&__title {
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 1.2;
+		color: #1a1a1a;
+
+		margin-bottom: rem(30);
+	}
+
+	&__list {
+		a {
+			font-weight: 400;
+			font-size: 18px;
+			color: var(--black);		
+			transition: all 0.3s ease-in-out;	
+
+			&:hover {
+				color: var(--accent);
+			}
+		}
+		column-count: 5; /* Количество колонок */
+		column-gap: 10px; /* Расстояние между колонками */
+
+		@include md{
+			column-count: 3;			
+		}
+		li {
+			margin-bottom: 10px;
+		}
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.companys-card {
+	position: relative;
+
+	color: #fff;
+	padding: rem(20);
+	border-radius: rem(10);
+	overflow: hidden;
+
+	aspect-ratio: 305/200;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	&:hover:before {
+		opacity: 0;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 23.56%, rgba(0, 0, 0, 0) 67.67%, #000 100%);
+		transition: all 0.3s ease-in-out;
+	}
+
+	&__bottom {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+	&__name {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.2;
+	}
+
+	&__location {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.2;
+	}
+
+	&__label {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 1;
+
+		min-height: 26px;
+		padding-inline: 10px;
+
+		border-radius: 5px;
+		overflow: hidden;
+
+		display: flex;
+		align-items: center;
+		gap: 6px;
+
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 1.2;
+
+		border: 1px solid transparent;
+
+		text-transform: uppercase;
+		color: var(--white);
+		background: #e60000;
+	}
+	img {
+		z-index: -1;
+	}
+}

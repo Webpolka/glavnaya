@@ -2,23 +2,27 @@
 
 @import "config/fonts";
 
-@import "config/root";
-
-@import "config/reset";
-
 @import "config/functions";
 
 @import "config/mixins";
 
 @import "config/placeholders";
 
+@import "config/keyframes";
+
+@import "config/reset";
+
+@import "config/root";
+
 @import "config/typography";
 
 @import "config/base";
 
-@import "components/*.scss";
+@import "sections/*.scss";
 
-@import "config/keyframes";
+@import "22.09.2025/*.scss";
 
 
+  
 
+     

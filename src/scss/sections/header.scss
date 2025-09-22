@@ -15,7 +15,10 @@ HEADER
 		align-items: center;
 		justify-content: space-between;
 
+		gap: 20px;
+
 		min-height: rem(46);
+		
 
 		&:after {
 			content: "";
@@ -47,6 +50,10 @@ HEADER
 				color: #3d3d3d;
 
 				transition: all 0.3s ease-in-out;
+
+				@include sm{
+					font-size: 12px;
+				}
 				&:hover {
 					color: var(--accent);
 				}
@@ -59,6 +66,10 @@ HEADER
 			justify-content: space-between;
 
 			gap: rem(50);
+
+			@include sm{
+				gap: 20px;
+			}
 		}
 
 		// Курс валют
@@ -177,8 +188,8 @@ HEADER
 		}
 	}
 
-	// Нижняя часть хедера
-	&-bottom {
+	// средняя часть хедера
+	&-medium {
 		position: relative;
 
 		display: flex;
@@ -207,7 +218,6 @@ HEADER
 
 			@include sm {
 				width: 100%;
-				margin-bottom: rem(12);
 				justify-content: space-between;
 			}
 		}
@@ -218,8 +228,7 @@ HEADER
 			gap: rem(20);
 
 			@include lg {
-				width: 100%;
-				margin-top: rem(20);
+				width: 100%;				
 				justify-content: flex-end;
 			}
 		}
@@ -339,8 +348,12 @@ HEADER
 
 		margin-right: rem(40);
 		transition: all 0.3s ease-in-out;
+		@include md{
+			display: none;
+		}
 
 		@include sm {
+			
 			margin-right: 0;
 		}
 

@@ -1,0 +1,123 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+ALL BRANDS
+--------------------------------------------------------------------------------------------------------------------------------*/
+.all-brands {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(30);
+
+		margin-bottom: rem(30);
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 2.12rem;
+		line-height: 1.2;
+		color: #1a1a1a;
+
+		margin-bottom: rem(10);
+	}
+	&__annotation {
+		font-weight: 400;
+		font-size: 0.94rem;
+		color: #b1b1b1;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: rem(25);
+
+		margin-bottom: rem(25);
+	}
+
+	&__labels {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(27);
+
+		flex-wrap: wrap;
+	}
+	&__label {
+		width: rem(69);
+		aspect-ratio: 1/1;
+		overflow: hidden;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center; /* по горизонтали */
+		align-items: center; /* по вертикали */
+
+		overflow: hidden;
+		flex-shrink: 0;
+
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+
+		img {
+			height: 100%; /* растягиваем изображение по высоте контейнера */
+			width: auto; /* сохраняем пропорции изображения по ширине */
+			max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
+			object-fit: cover;
+			object-position: center center;
+
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&__list {
+		column-count: 5; /* Количество колонок */
+		column-gap: 20px; /* Расстояние между колонками */
+		@include md {
+			column-count: 3;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__footer {
+		.btn {
+			padding-inline: rem(60);
+		}
+	}
+	@include md {
+		.adv-mini {
+			display: none;
+		}
+	}
+}
+
+/*----------------------------------------- Brand Link ---------------------------------------*/
+.brand-link {
+	display: inline-flex;
+	align-items: baseline;
+	gap: rem(7);
+
+	&__name {
+		font-weight: 400;
+		font-size: 16px;
+		color: #1a1a1a;
+
+		transition: 0.3s ease-in-out;
+	}
+
+	&__count {
+		font-weight: 400;
+		font-size: 13px;
+		color: #b1b1b1;
+	}
+	&:hover {
+		.brand-link__name {
+			color: var(--accent);
+		}
+	}
+}

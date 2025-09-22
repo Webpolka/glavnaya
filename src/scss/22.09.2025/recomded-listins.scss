@@ -1,0 +1,39 @@
+/*-----------------------------------------------------------------------------------------------------------------
+recomended listings
+ ------------------------------------------------------------------------------------------------------------------*/
+.recomended-listings {
+	&__title {
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 1.2;
+		color: #1a1a1a;
+
+		margin-bottom: rem(20);
+	}
+	.product-card {
+		padding: 0;
+		&_spacebetween {
+			padding-inline: 0;
+		}
+		&_meta {
+			justify-content: flex-start;
+			gap: 15px;
+		}
+		&_like {
+			right: 8px;
+			top: 15px;
+            svg{
+                width: 25px;
+                height: 25px;
+            }
+		}
+	}
+    .btn{
+        justify-content: center;
+        width: 100%;
+        min-height: 60px;
+        font-size: 16px;
+
+        margin-top: rem(40);
+    }
+}

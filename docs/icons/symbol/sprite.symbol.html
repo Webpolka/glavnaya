@@ -26,6 +26,7 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-called-dims { width: 14px; height: 14px; }
 	.svg-check-dims { width: 12px; height: 8px; }
 	.svg-checked-ok-dims { width: 22px; height: 22px; }
+	.svg-circles-inrow-dims { width: 74px; height: 22px; }
 	.svg-close-dims { width: 20px; height: 20px; }
 	.svg-confirmed-dims { width: 22px; height: 22px; }
 	.svg-delete-dims { width: 14px; height: 14px; }
@@ -96,6 +97,7 @@ for further details on how to create this embeddable sprite variant.
 		<symbol fill="none" viewBox="0 0 14 14" id="called" xmlns="http://www.w3.org/2000/svg"><path d="M8.667 1v.813c0 1.532 0 2.298.462 2.774.461.476 1.204.476 2.69.476H13m0 0l-1.97-1.625M13 5.063l-1.97 1.625" stroke="#B1B1B1" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.757 2.07l.511.944c.462.853.276 1.972-.45 2.721 0 0-.882.91.716 2.558 1.598 1.647 2.48.739 2.48.739.727-.75 1.812-.94 2.639-.465l.916.527c1.249.72 1.396 2.525.299 3.657-.66.68-1.468 1.209-2.36 1.244-1.504.059-4.057-.334-6.618-2.975S-.052 5.746.005 4.196c.034-.921.547-1.754 1.207-2.434C2.309.63 4.06.781 4.757 2.068z" fill="#B1B1B1"/></symbol>
 		<symbol fill="none" viewBox="0 0 12 8" id="check" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.333L4.077 7 11 1" stroke="#E60000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 		<symbol fill="none" viewBox="0 0 22 22" id="checked-ok" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="11" fill="#45C34E"/><path d="M15.742 7.821l.433.421.183.179-.183.18-5.725 5.578-.174.17-.174-.17-3.277-3.193-.183-.178.183-.18.433-.421.175-.17.174.17 2.668 2.6 5.119-4.986.174-.17.174.17z" fill="#fff" stroke="#fff" stroke-width=".5"/></symbol>
+		<symbol fill="none" viewBox="0 0 74 22" id="circles-inrow" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="10.5" fill="#714D33" stroke="#fff"/><circle cx="24" cy="11" r="10.5" fill="#9EB39F" stroke="#fff"/><circle cx="37" cy="11" r="10.5" fill="#2A2A2A" stroke="#fff"/><circle cx="50" cy="11" r="10.5" fill="#FFCD70" stroke="#fff"/><circle cx="63" cy="11" r="10.5" fill="#3176B7" stroke="#fff"/></symbol>
 		<symbol viewBox="0 0 20 20" id="close" xmlns="http://www.w3.org/2000/svg"><path d="M.418.418a1.429 1.429 0 012.02 0L10 7.98 17.561.418a1.429 1.429 0 012.02 2.02L12.022 10l7.56 7.561a1.429 1.429 0 11-2.02 2.02L10 12.022l-7.561 7.56a1.429 1.429 0 11-2.02-2.02L7.978 10 .42 2.439a1.429 1.429 0 010-2.02z"/></symbol>
 		<symbol fill="none" viewBox="0 0 22 22" id="confirmed" xmlns="http://www.w3.org/2000/svg"><path d="M21 11c0 5.523-4.477 10-10 10S1 16.523 1 11 5.477 1 11 1s10 4.477 10 10z" stroke="#45C34E" stroke-width="2"/><path d="M7.666 11l1.87 1.87c.194.194.51.194.705 0l4.092-4.093" stroke="#45C34E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 		<symbol fill="none" viewBox="0 0 14 14" id="delete" xmlns="http://www.w3.org/2000/svg"><path d="M2.628 12.798L1.4 4.2h11.2l-1.229 8.598A1.4 1.4 0 019.986 14h-5.97a1.4 1.4 0 01-1.386-1.202zM13.3 1.4H9.8V.7a.7.7 0 00-.7-.7H4.9a.7.7 0 00-.7.7v.7H.7a.7.7 0 100 1.4h12.6a.7.7 0 100-1.4z" fill="#E60000"/></symbol>
@@ -127,7 +129,7 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 16 17" id="profile" xmlns="http://www.w3.org/2000/svg"><path d="M13.25 15.3H2.75a.84.84 0 01-.769-1.137C2.971 11.643 5.294 10.2 8 10.2c2.707 0 5.03 1.443 6.02 3.963a.84.84 0 01-.77 1.137zM4.733 5.1C4.733 3.225 6.2 1.7 8 1.7s3.266 1.525 3.266 3.4S9.801 8.5 8 8.5c-1.8 0-3.267-1.525-3.267-3.4zm11.232 9.89c-.594-2.855-2.451-4.962-4.895-5.918 1.295-1.085 2.05-2.84 1.772-4.763C12.521 2.08 10.74.296 8.588.036 5.618-.324 3.1 2.082 3.1 5.1c0 1.606.715 3.038 1.831 3.972-2.445.956-4.301 3.063-4.896 5.919C-.18 16.028.623 17 1.643 17h12.714c1.02 0 1.824-.972 1.607-2.01z"/></symbol>
 		<symbol fill="none" viewBox="0 0 14 12" id="promote" xmlns="http://www.w3.org/2000/svg"><path d="M13.079.03a.68.68 0 01.633.123c.09.071.162.164.212.27.05.106.076.223.076.341v4.244a.8.8 0 01-.109.402.739.739 0 01-.29.281.686.686 0 01-.755-.071l-1.15-.918L8.772 8.84c-.17.24-.419.406-.697.465a1.096 1.096 0 01-.812-.147l-.105-.074L4.821 7.22l-3.093 4.372a.924.924 0 01-1.244.274l-.1-.07a1.029 1.029 0 01-.364-.609 1.074 1.074 0 01.106-.711l.066-.107 3.555-5.024c.17-.241.418-.407.697-.466.278-.058.568-.006.812.148l.104.074 2.335 1.862 2.466-3.485-1.153-.919a.76.76 0 01-.228-.307.808.808 0 01.078-.753.732.732 0 01.286-.247l.096-.037L13.08.03h-.001z" fill="#E60000"/></symbol>
 		<symbol viewBox="0 0 20 19" id="referral" xmlns="http://www.w3.org/2000/svg"><path d="M3.618 18.186a3.618 3.618 0 003.49-2.713h5.683a3.657 3.657 0 102.522-4.375L12.496 6.28a3.619 3.619 0 10-5.092 0L4.593 11.1a3.583 3.583 0 00-.975-.15 3.618 3.618 0 000 7.236zm12.662-5.427a1.808 1.808 0 110 3.617 1.808 1.808 0 010-3.617zM9.95 1.906a1.809 1.809 0 110 3.618 1.809 1.809 0 010-3.618zm-.975 5.276c.316.095.645.146.975.15.332-.004.661-.055.979-.151l2.814 4.814a3.618 3.618 0 00-.951 1.669H7.107A3.612 3.612 0 006.163 12l2.81-4.819zM3.618 12.76a1.809 1.809 0 110 3.618 1.809 1.809 0 010-3.618z"/></symbol>
-		<symbol fill="none" viewBox="0 0 16 16" id="refresh" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#bmclip0_32_734)"><path d="M16 6.524v-4.94L14.294 3.28a7.951 7.951 0 00-2.08-1.948A7.9 7.9 0 007.926.073C3.556.074 0 3.63 0 8c0 4.37 3.556 7.926 7.926 7.926 1.516 0 2.99-.43 4.261-1.241a7.946 7.946 0 002.871-3.223l-1.176-.572a6.577 6.577 0 01-5.956 3.729 6.626 6.626 0 01-6.619-6.62c0-3.649 2.97-6.618 6.62-6.618a6.66 6.66 0 015.428 2.835l-2.32 2.308H16z" fill="#fff"/></g><defs><clipPath id="bmclip0_32_734"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 16 16" id="refresh" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#bnclip0_32_734)"><path d="M16 6.524v-4.94L14.294 3.28a7.951 7.951 0 00-2.08-1.948A7.9 7.9 0 007.926.073C3.556.074 0 3.63 0 8c0 4.37 3.556 7.926 7.926 7.926 1.516 0 2.99-.43 4.261-1.241a7.946 7.946 0 002.871-3.223l-1.176-.572a6.577 6.577 0 01-5.956 3.729 6.626 6.626 0 01-6.619-6.62c0-3.649 2.97-6.618 6.62-6.618a6.66 6.66 0 015.428 2.835l-2.32 2.308H16z" fill="#fff"/></g><defs><clipPath id="bnclip0_32_734"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></symbol>
 		<symbol viewBox="0 0 14 12" id="response" xmlns="http://www.w3.org/2000/svg"><path d="M5.064 2.726V0L0 4.637l5.064 4.637v-2.73c4.17 0 6.849 0 8.935 5.456 0-2.726.298-9.274-8.935-9.274z"/></symbol>
 		<symbol fill="none" viewBox="0 0 19 18" id="reviews" xmlns="http://www.w3.org/2000/svg"><path d="M4.778 5.722h9.444M4.778 9.5h9.444M18 16.111l-3.14-1.57a3.94 3.94 0 00-.481-.22 1.902 1.902 0 00-.34-.08c-.131-.019-.264-.019-.53-.019H4.022c-1.058 0-1.587 0-1.99-.206a1.888 1.888 0 01-.826-.825C1 12.787 1 12.258 1 11.2V4.022c0-1.058 0-1.587.206-1.99.181-.356.47-.645.825-.826C2.435 1 2.964 1 4.022 1h10.956c1.058 0 1.587 0 1.99.206.356.181.645.47.826.825.206.404.206.933.206 1.991v12.09z"/></symbol>
 		<symbol fill="none" viewBox="0 0 20 20" id="searchsvg" xmlns="http://www.w3.org/2000/svg"><path d="M13.796 13.811L19 19M16 8.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" stroke="#969696" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -242,6 +244,17 @@ embedded above. They may be styled via CSS.
 
 					</div>
 					<h2>checked-ok</h2>
+				</li>
+				<li title="circles-inrow">
+					<div class="icon-box">
+
+						<!-- circles-inrow -->
+						<svg class="svg-circles-inrow-dims">
+							<use xlink:href="#circles-inrow"></use>
+						</svg>
+
+					</div>
+					<h2>circles-inrow</h2>
 				</li>
 				<li title="close">
 					<div class="icon-box">
@@ -792,6 +805,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>checked-ok</h2>
 				</li>
+				<li title="circles-inrow">
+					<div class="icon-box">
+
+						<!-- circles-inrow -->
+						<svg class="svg-circles-inrow-dims">
+							<use xlink:href="sprite.svg#circles-inrow"></use>
+						</svg>
+
+					</div>
+					<h2>circles-inrow</h2>
+				</li>
 				<li title="close">
 					<div class="icon-box">
 
@@ -1251,7 +1275,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Sun, 07 Sep 2025 16:24:32 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+			<p>Generated at Mon, 22 Sep 2025 18:01:20 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

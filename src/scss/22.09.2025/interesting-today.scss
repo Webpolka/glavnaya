@@ -1,0 +1,133 @@
+/*-----------------------------------------------------------------------------------------------------------------
+INTERESTING TODAY
+ ------------------------------------------------------------------------------------------------------------------*/
+.interesting-today {	
+	.section-header{
+		&_title{
+			font-size: 24px;
+		}
+		margin-bottom: 20px;
+	}
+
+	&__footer {
+		margin-top: rem(20);
+		.btn {
+			width: 100%;
+			justify-content: center;
+			min-height: rem(60);
+			font-size: rem(16);
+		}
+	}
+}
+
+.interesting-card {
+	display: block;
+	border: 1px solid #e2e2e2;
+	border-radius: 10px;
+
+	&:hover {
+		.interesting-card__top:before {
+			opacity: 0;
+		}		
+	}
+
+	&__top {
+		position: relative;
+		border-radius: rem(10);
+
+		aspect-ratio: 410/300;
+		background: transparent;
+
+		align-items: center; /* по вертикали */
+
+		overflow: hidden;
+		flex-shrink: 0;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 23.56%, rgba(0, 0, 0, 0) 67.67%, #000 100%);
+			transition: all 0.3s ease-in-out;
+		}
+
+		img {
+			aspect-ratio: 410/300;
+			height: 100%; /* растягиваем изображение по высоте контейнера */
+			width: auto; /* сохраняем пропорции изображения по ширине */
+			max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+	&__content {
+		padding: rem(20);
+	}
+	&__description {
+		font-size: 15px;
+		line-height: 1.2;
+		color: #1a1a1a;
+
+		padding-top: 5px;
+		margin-bottom: 15px;
+	}
+	&__price {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		&--all {
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 1.2;
+			color: #1a1a1a;
+			background: #f7c74d;
+
+			border-radius: 5px;
+			padding: rem(10) rem(20);
+		}
+		&--small {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.2;
+			color: #b1b1b1;
+		}
+	}
+}
+.card-rating {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+
+	padding: 10px 10px 8px;
+	border-radius: 5px;
+	color: var(--black);
+	overflow: hidden;
+
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #1a1a1a;
+	border: 1px solid transparent;
+
+	text-transform: uppercase;
+
+	svg {
+		width: 12px;
+		height: 12px;
+	}
+	&--top {
+		background: #f7c74d;
+	}
+	&--new {
+		border: 1px solid var(--white);
+		background-color: transparent;
+		color: white;
+	}
+}

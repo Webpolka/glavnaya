@@ -47,6 +47,7 @@ CUSTOM CHOICES SELECT
 	font-size: rem(16);
 	font-weight: 400;
 	color: #1a1a1a;
+		width: initial;
 
 	background-color: transparent;
 
@@ -75,6 +76,7 @@ CUSTOM CHOICES SELECT
 	border-bottom-right-radius: rem(5);
 	overflow: hidden;
 	word-break: break-all;
+	min-width: 75px;
 
 	border-color: var(--accent) !important;
 }

@@ -1,0 +1,128 @@
+/*-----------------------------------------------------------------------------------------------------------------
+NEW VEHICLES
+ ------------------------------------------------------------------------------------------------------------------*/
+.new-vehicles {
+	display: flex;
+	flex-direction: column;
+	gap: rem(10);
+	height: 100%;
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.2;
+		color: #1a1a1a;
+
+		margin-bottom: rem(10);
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		flex-grow: 1;
+	}
+
+	&__grow {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+		flex-grow: 1;
+
+		@include xl {
+			gap: rem(40);
+			flex-direction: row;
+			.vehicles-card {
+				aspect-ratio: 400/200;
+				width: 50%;
+			}
+		}
+		@include sm{
+			flex-direction: column;
+			.vehicles-card {
+				aspect-ratio: 400/200;
+				width: 100%;
+			}
+		}
+	}
+
+	&__footer {
+		margin-top: rem(20);
+		.btn {
+			width: 100%;
+			justify-content: center;
+			min-height: rem(60);
+			font-size: rem(16);
+		}
+	}
+}
+
+/*------------------------------------- Vehicles card ---------------------------------------------*/
+.vehicles-card {
+	color: #fff;
+	padding: rem(20);
+	border-radius: rem(10);
+	overflow: hidden;
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	&:hover:before {
+		opacity: 0;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 23.56%, rgba(0, 0, 0, 0) 67.67%, #000 100%);
+		transition: all 0.3s ease-in-out;
+	}
+
+	&__top {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.2;
+	}
+
+	&__price {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 1.2;
+		small {
+			font-weight: 400;
+			font-size: 14px;
+		}
+	}
+
+	&__bottom {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__circles {
+		transform: translateY(7px);
+		svg {
+			max-width: 74px;
+			max-height: 22px;
+		}
+	}
+
+	img {
+		z-index: -1;
+	}
+}
