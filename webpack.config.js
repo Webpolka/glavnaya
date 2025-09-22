@@ -4,7 +4,7 @@ import { readDir } from './gulp/config/read-dir.js';
 export const webpackConfig = async (isMode) => {
 	const paths = {
 		src: resolve('src'),
-		build: resolve('dist'),
+		build: resolve('docs'),
 	};
 
 	const context = join(paths.src, 'js');
