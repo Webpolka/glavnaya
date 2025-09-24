@@ -6748,10 +6748,6 @@ SEARCH BY PARAMS
   border-radius: 0;
   border: 1px solid transparent;
 }
-.search-by-params .block-item:nth-child(n+2) {
-  background-color: #f3f3f3;
-  border-left: 1px solid #e6e6e6;
-}
 .search-by-params .block-part .choices__inner {
   border-radius: 0;
   border: 1px solid transparent;

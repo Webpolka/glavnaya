@@ -317,7 +317,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const selectParamsYearto = document.getElementById("params-yearto");
 	const selectParamsEnginefrom = document.getElementById("params-enginefrom");
 	const selectParamsEngineto = document.getElementById("params-engineto");
-	
 
 	const selectParamsArray = [
 		selectParamsBrand,
@@ -326,7 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		selectParamsYearfrom,
 		selectParamsYearto,
 		selectParamsEnginefrom,
-		selectParamsEngineto		
+		selectParamsEngineto,
 	];
 
 	selectParamsArray.forEach((select) => {
@@ -339,6 +338,23 @@ document.addEventListener("DOMContentLoaded", () => {
 				placeholderValue: "Select", // placeholder
 				position: "bottom",
 			});
+	});
+
+	// Изначально задаем серый фон для моделей и типа двигателя
+	selectParamsModel.parentElement.style.backgroundColor = "#e6e6e6";
+	selectParamsGeneration.parentElement.style.backgroundColor = "#e6e6e6";
+
+	// Обработчики изменения выбора
+	// Когда выбран бренд
+	selectParamsBrand.addEventListener("choice", () => {
+		// Меняем фон второго селекта на белый
+		selectParamsModel.parentElement.style.backgroundColor = "white";
+	});
+
+	// Когда выбрана модель
+	selectParamsModel.addEventListener("choice", () => {
+		// Меняем фон третьего селекта на белый
+		selectParamsGeneration.parentElement.style.backgroundColor = "white";
 	});
 });
 
