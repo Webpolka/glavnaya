@@ -1,0 +1,168 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+БЛОК - 72 companies SERVICES AND COMPANYS
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.services-cards {
+	color: #1a1a1a;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin-bottom: 15px;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.2;
+
+		margin-bottom: 10px;
+	}
+}
+
+/*----------------------------------------------- Services card ----------------------------------*/
+
+.services-card {
+	color: #1a1a1a;
+	border: 1px solid #efeaea;
+	border-radius: 5px;
+	padding: 30px 40px 25px 40px;
+
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		border: 1px solid #f7c74d;
+		.services-card__title {
+			color: var(--accent);
+		}
+		.services-card__middle {
+			color: #3d3d3d;
+		}
+		.services-card__image img {
+			transform: scale(1.05);
+		}
+	}
+
+	&__top {
+		display: flex;
+		gap: 30px;
+	}
+
+	&__image {
+		flex-shrink: 0;
+
+		overflow: hidden;
+		aspect-ratio: 1/1;
+		width: 100px;
+		border-radius: 10px;
+
+		img {
+			display: block;
+			width: auto;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+			overflow: hidden;
+
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&__grow {
+		flex-grow: 1;
+		display: flex;
+		justify-content: space-between;
+
+		.btn-gray {
+			padding-inline: 15px;
+			line-height: 1.2;
+			color: #3d3d3d;
+			font-size: 14px;
+			min-height: 32px;
+		}
+	}
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 1.2;
+
+		display: inline-flex;
+
+		align-items: center;
+		gap: 10px;
+
+		&--checked {
+			user-select: none;
+		}
+
+		&--usual {
+			user-select: none;
+			svg {
+				display: none;
+			}
+		}
+
+		&--top {
+            user-select: none;
+			align-self: start;
+			padding: 5px 10px;
+			background-color: var(--gold);
+			margin-bottom: -5px;
+			border-radius: 8px;
+		}	
+
+		svg {
+			width: 22px;
+			height: 22px;
+		}
+	}
+
+	&__address {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.2;
+		color: #b1b1b1;
+	}
+
+	&__middle {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.2;
+		color: #b1b1b1;
+
+		padding-block: 30px;
+
+		transition: all 0.3s ease-in-out;
+	}
+
+	&__bottom {
+		padding-block-start: 20px;
+
+		border-top: 1px solid rgb(0, 0, 0, 0.1);
+
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.2;
+		color: #1a1a1a;
+
+		.tags-label {
+			color: #b1b1b1;
+			margin-right: 5px;
+		}
+	}
+}

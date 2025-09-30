@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	@@include('html/components/head.html', { 'title': 'Services: Cards' })
+
+	<body>
+		<div class="site-overlay"></div>
+		<div class="wrapper">
+			@@include('html/sections/header.html')
+			<main id="primary" class="main">
+				<div class="auto container">
+					@@include('html/blocks/breadcrumbs.html') 
+					@@include('html/sections/service-catalog/services-list.html')
+				</div>
+
+				<div class="services container">
+					<div class="row gx-70">
+						<div class="col-sm-8">@@include('html/sections/service-catalog/services-cards-list.html')</div>
+						<div class="col-sm-4">
+							<div class="adv-expanded">
+								<b>ADV</b>
+								<p>мини баннер без фона</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/sections/footer-empty.html')
+		</div>
+		@@include('html/sections/cats-overlay.html') @@include('html/sections/authorize-forms.html')
+		@@include('html/components/script.html')
+	</body>
+</html>

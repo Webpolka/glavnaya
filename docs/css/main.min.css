@@ -1865,6 +1865,190 @@ LAYOUTS
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
+БЛОК - 72 companies SERVICES AND COMPANYS
+--------------------------------------------------------------------------------------------------------------------------------*/
+.services-cards {
+  color: #1a1a1a;
+}
+.services-cards__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+}
+.services-cards__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.services-cards__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+/*----------------------------------------------- Services card ----------------------------------*/
+.services-card {
+  color: #1a1a1a;
+  border: 1px solid #efeaea;
+  border-radius: 5px;
+  padding: 30px 40px 25px 40px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.services-card:hover {
+  border: 1px solid #f7c74d;
+}
+.services-card:hover .services-card__title {
+  color: var(--accent);
+}
+.services-card:hover .services-card__middle {
+  color: #3d3d3d;
+}
+.services-card:hover .services-card__image img {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.services-card__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.services-card__image {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  width: 100px;
+  border-radius: 10px;
+}
+.services-card__image img {
+  display: block;
+  width: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.services-card__grow {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.services-card__grow .btn-gray {
+  padding-inline: 15px;
+  line-height: 1.2;
+  color: #3d3d3d;
+  font-size: 14px;
+  min-height: 32px;
+}
+.services-card__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.services-card__name {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.services-card__name--checked {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.services-card__name--usual {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.services-card__name--usual svg {
+  display: none;
+}
+.services-card__name--top {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -ms-flex-item-align: start;
+      align-self: start;
+  padding: 5px 10px;
+  background-color: var(--gold);
+  margin-bottom: -5px;
+  border-radius: 8px;
+}
+.services-card__name svg {
+  width: 22px;
+  height: 22px;
+}
+.services-card__address {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #b1b1b1;
+}
+.services-card__middle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #b1b1b1;
+  padding-block: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.services-card__bottom {
+  -webkit-padding-before: 20px;
+          padding-block-start: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+.services-card__bottom .tags-label {
+  color: #b1b1b1;
+  margin-right: 5px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
 HEADER SIGN SLIDERS
 --------------------------------------------------------------------------------------------------------------------------------*/
 .authorize-login,
@@ -2238,7 +2422,8 @@ Banners and advertising elements
 /*--------------------------------------------- Adv expanded ------------------------------------------*/
 .adv-expanded {
   border-radius: 0.625rem;
-  min-height: 100%;
+  height: 100%;
+  max-height: 730px;
   background: #f4f4f4;
   display: -webkit-box;
   display: -ms-flexbox;
