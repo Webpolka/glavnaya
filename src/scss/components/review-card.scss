@@ -1,0 +1,152 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+Review card
+--------------------------------------------------------------------------------------------------------------------------------*/
+.review-card {
+	border: 1px solid #efeaea;
+	border-radius: rem(10);
+	padding: 25px 30px;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+	&__avatar {
+		aspect-ratio: 1/1;
+		overflow: hidden;
+		width: 60px;
+		border-radius: 50%;
+
+		img {
+			display: block;
+			width: auto;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+			overflow: hidden;
+		}
+	}
+	&__info {
+		flex-grow: 1;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__body {
+		margin-top: rem(10);
+		padding-left: 80px;
+	}
+
+	&__response {
+		margin-top: rem(20);
+
+		background: #f8f8f8;
+		padding: rem(30);
+		border-radius: rem(5);
+	}
+
+	.info__name {
+		font-weight: 500;
+		font-size: rem(18);
+		line-height: 120%;
+		color: #1a1a1a;
+
+		margin-bottom: rem(5);
+	}
+	.info__rating {
+		margin-bottom: rem(5);
+	}
+	.info__subject,
+	.info__date {
+		font-weight: 400;
+		font-size: rem(14);
+		line-height: 120%;
+		color: #b1b1b1;
+	}
+
+	.subject__text,
+	.response__text {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 130%;
+		color: #1a1a1a;
+
+		margin-bottom: rem(20);
+	}
+
+	.subject__collection {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+
+		margin-bottom: rem(25);
+
+		a {
+			aspect-ratio: 1/1;
+			width: 80px;
+			display: block;
+			border-radius: 5px;
+			overflow: hidden;
+
+			&:hover img {
+				transform: scale(1.1);
+			}
+
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				overflow: hidden;
+
+				transition: all 0.3s ease-in-out;
+			}
+		}
+	}
+
+	.response-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin-bottom: rem(20);
+
+		&_date {
+			font-weight: 500;
+			font-size: rem(15);
+			color: #969696;
+		}
+
+		&_btn {
+			font-weight: 500;
+			font-size: rem(15);
+			color: #969696;
+			display: inline-flex;
+			align-items: center;
+			gap: rem(8);
+			transition: all 0.3s ease-in-out;
+
+			// &:hover {
+			// 	color: var(--accent);
+			// 	svg {
+			// 		fill: var(--accent);
+			// 	}
+			// }
+			svg {
+				width: rem(14);
+				height: rem(12);
+
+				fill: #b1b1b1;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+	}
+
+	.btn {
+		min-height: rem(40);
+		padding-inline: rem(20);
+		font-size: rem(14);
+	}
+}

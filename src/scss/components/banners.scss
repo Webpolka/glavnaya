@@ -118,8 +118,7 @@ Banners and advertising elements
 
 	img {
 		height: 100%; /* растягиваем изображение по высоте контейнера */
-		width: auto; /* сохраняем пропорции изображения по ширине */
-		max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
+		width: auto; /* сохраняем пропорции изображения по ширине */		
 		object-fit: cover;
 		object-position: center center;
 	}
@@ -175,8 +174,7 @@ Banners and advertising elements
 
 	img {
 		height: 100%; /* растягиваем изображение по высоте контейнера */
-		width: auto; /* сохраняем пропорции изображения по ширине */
-		max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
+		width: auto; /* сохраняем пропорции изображения по ширине */		
 		object-fit: cover;
 		object-position: center center;
 	}

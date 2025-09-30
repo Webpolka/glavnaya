@@ -1,0 +1,80 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+Reviews block
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.reviews-block {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+
+	&__rating{
+		margin-bottom: 12px;
+	}
+
+	&__title {
+		display: inline-flex;
+		align-items: flex-start;
+		gap: rem(8);
+
+		font-weight: 500;
+		font-size: rem(24);
+		line-height: 120%;
+		color: #1a1a1a;
+
+		margin-bottom: rem(10);
+
+		span {
+			font-weight: 500;
+			font-size: rem(24);
+			line-height: 120%;
+			color: #1a1a1a;
+		}
+
+		small {
+			font-weight: 500;
+			font-size: rem(14);
+			line-height: 120%;
+			color: #b1b1b1;
+		}
+	}
+
+	&__description {
+		display: block;
+
+		font-weight: 400;
+		font-size: rem(15);
+		line-height: 130%;
+		color: #b1b1b1;
+
+		margin-bottom: rem(20);
+	}
+
+	&__collection {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+
+		a {
+			aspect-ratio: 1/1;
+			width: 80px;
+			display: block;
+			border-radius: 5px;
+			overflow: hidden;
+
+			&:hover img {
+				transform: scale(1.1);
+			}
+
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				overflow: hidden;
+
+				transition: all 0.3s ease-in-out;
+			}
+		}
+	}
+}

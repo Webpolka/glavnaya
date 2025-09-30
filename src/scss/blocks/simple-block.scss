@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+Simple block
+--------------------------------------------------------------------------------------------------------------------------------*/
+.simple-block {
+	&__title {
+		display: inline-flex;
+		align-items: flex-start;
+		gap: rem(8);
+
+		font-weight: 500;
+		font-size: rem(24);
+		line-height: 120%;
+		color: #1a1a1a;
+
+		margin-bottom: rem(20);
+	}
+
+	&__content {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.3;
+		color: #3d3d3d;
+	}
+}

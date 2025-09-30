@@ -530,36 +530,6 @@ COMPONENTS
 	}
 }
 
-/*-------------------------------------------- Collection ----------------------------------------------------*/
-[class*="_collection"] {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: rem(10);
-}
-
-[class*="_collection-figure"] {
-	aspect-ratio: 1/1;
-	width: rem(80);
-	display: block;
-	border-radius: rem(5);
-	overflow: hidden;
-
-	&:hover img {
-		transform: scale(1.1);
-	}
-
-	img {
-		display: block;
-		width: 100%;
-		height: auto;
-		object-fit: cover;
-		overflow: hidden;
-
-		transition: all 0.3s ease-in-out;
-	}
-}
-
 /*-------------------------------------------- ads-tabs ----------------------------------------------------*/
 [class*="_tabs"] {
 	position: relative;

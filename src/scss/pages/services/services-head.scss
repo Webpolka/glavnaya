@@ -1,0 +1,70 @@
+/*-----------------------------------------------------------------------------------------------------------------
+Шапка для страницы компании в разделе SERVICES
+ ------------------------------------------------------------------------------------------------------------------*/
+.services-head {
+	background: #f4f4f4;
+
+	.breadcrumbs {
+		position: relative;
+		z-index: 1;
+	}
+
+	.container {
+		height: 100%;
+		min-height: 360px;
+	}
+
+	&__banner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center; /* по горизонтали */
+		align-items: center; /* по вертикали */
+
+		overflow: hidden;
+		flex-shrink: 0;
+
+		color: #aeaeae;
+
+		font-weight: 200;
+		font-size: rem(96);
+		text-align: center;
+
+		& > *:not(img) {
+			z-index: 1;
+		}
+
+		.example-b {
+			font-weight: 200;
+			font-size: 96px;
+			text-align: center;
+		}
+
+		.example-p {
+			font-weight: 200;
+			font-size: 30px;
+			text-align: center;
+			color: #aeaeae;
+		}
+
+		&--transparent {
+			background-color: transparent;
+		}
+
+		img {
+			display: block;
+			position: absolute;
+			inset-block-start: 0;
+			inset-inline-start: 0;
+			object-fit: cover;
+			block-size: 100%;
+			inline-size: 100%;
+			z-index: 0;
+		}
+	}
+}

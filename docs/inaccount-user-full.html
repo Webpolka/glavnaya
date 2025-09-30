@@ -570,14 +570,15 @@
                                 <div class="col-sm-12">
                                     <div class="profile-user_listings">
                                         <!-- LISTING BLOCK -->
+                                        <!-- LISTING BLOCK -->
                                         <div class="listings-block">
                                             <!-- if content == true -->
-                                            <div class="profile-user_title">
+                                            <div class="listings-block__title">
                                                 <span>My ads</span>
                                                 <small>25</small>
                                             </div>
 
-                                            <div class="profile-user_description">All your listings are displayed here, and you can manage them easily.</div>
+                                            <div class="listings-block__description">All your listings are displayed here, and you can manage them easily.</div>
 
                                             <div class="row g-25">
                                                 <!-- 1 -->
@@ -723,375 +724,359 @@
                                             </div>
 
                                             <!-- ajax all listings -->
-                                            <div class="listings-block_all">
+                                            <div class="listings-block__all">
                                                 <button id="all-listings" class="btn">All Listings</button>
                                             </div>
                                         </div>
+
                                     </div>
-                                </div>
 
-                                <!-- Reviews page part -->
-                                <div class="col-sm-12">
-                                    <div class="profile-user_reviews">
-                                        <!-- REVIEWS BLOCK -->
-                                        <div class="rewiews-block">
-                                            <div class="profile-user_title">
-                                                <span>Reviews</span>
-                                                <small>25</small>
-                                            </div>
-
-                                            <div class="profile-user_description">What your buyers say about you</div>
-
-                                            <!-- Блок рейтинга -->
-                                            <div class="profile-user_rating">
-                                                <div class="rating-num">4.0</div>
-                                                <div class="rating-stars">
-                                                    <!-- 1 -->
-                                                    <div class="rating-stars_star active">
-                                                        <svg class="icon icon--star">
-                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <!-- 2 -->
-                                                    <div class="rating-stars_star active">
-                                                        <svg class="icon icon--star">
-                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <!-- 3 -->
-                                                    <div class="rating-stars_star active">
-                                                        <svg class="icon icon--star">
-                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <!-- 4 -->
-                                                    <div class="rating-stars_star active">
-                                                        <svg class="icon icon--star">
-                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <!-- 5 -->
-                                                    <div class="rating-stars_star">
-                                                        <svg class="icon icon--star">
-                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="rating-reviews">5 reviews</div>
-                                            </div>
-
-                                            <div class="profile-user_collection">
-                                                <a href="#" class="profile-user_collection-figure">
-                                                    <img src="./images/collection-img.png" alt="Image 1">
-                                                </a>
-                                                <a href="#" class="profile-user_collection-figure">
-                                                    <img src="./images/collection-img.png" alt="Image 2">
-                                                </a>
-                                                <a href="#" class="profile-user_collection-figure">
-                                                    <img src="./images/collection-img.png" alt="Image 3">
-                                                </a>
-                                                <a href="#" class="profile-user_collection-figure">
-                                                    <img src="./images/collection-img.png" alt="Image 4">
-                                                </a>
-                                                <a href="#" class="profile-user_collection-figure">
-                                                    <img src="./images/collection-img.png" alt="Image 5">
-                                                </a>
-                                                <a href="#" class="profile-user_collection-figure">
-                                                    <img src="./images/collection-img.png" alt="Image 6">
-                                                </a>
-                                            </div>
-
-                                            <!-- 1 -->
-                                            <div class="profile-user_review">
-                                                <!-- review header -->
-                                                <div class="review-header">
-                                                    <div class="review-header_wrap">
-                                                        <div class="review-header_avatar">
-                                                            <img src="./images/avatar.png" alt="Maria" class="avatar">
-                                                        </div>
-                                                    </div>
-                                                    <div class="review-header_info">
-                                                        <!-- left -->
-                                                        <div class="review-header_info-start">
-                                                            <div class="info_name">Alex</div>
-                                                            <div class="info_subject">Chevrolet Corvette Stingray C7</div>
-                                                        </div>
-
-                                                        <!-- right -->
-                                                        <div class="review-header_info-end">
-                                                            <div class="info_rating">
-                                                                <div class="rating-stars">
-                                                                    <!-- 1 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 2 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 3 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 4 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 5 -->
-                                                                    <div class="rating-stars_star">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="info_date">
-                                                                <span>19 July, 2025 years</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="review-body">
-                                                    <!--Review Subject -->
-                                                    <div class="review-body_subject">
-                                                        <div class="subject_text">
-                                                            I recently tried this product and was pleasantly surprised by its quality. The design is sleek and
-                                                            modern, and it performs exactly as advertised. Customer service was responsive and helpful when I had
-                                                            questions. Overall, I would definitely recommend this to anyone looking for a reliable option in this
-                                                            category.
-                                                        </div>
-
-                                                        <div class="subject_collection">
-                                                            <a href="#" class="subject_collection-figure">
-                                                                <img src="./images/collection-img.png" alt="Img 1">
-                                                            </a>
-                                                            <a href="#" class="subject_collection-figure">
-                                                                <img src="./images/collection-img.png" alt="Img 2">
-                                                            </a>
-                                                            <a href="#" class="subject_collection-figure">
-                                                                <img src="./images/collection-img.png" alt="Img 3">
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="subject_buttons">
-                                                            <a href="#" class="btn">Reply</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- 2 -->
-                                            <div class="profile-user_review">
-                                                <!-- review header -->
-                                                <div class="review-header">
-                                                    <div class="review-header_wrap">
-                                                        <div class="review-header_avatar">
-                                                            <img src="./images/avatar.png" alt="Maria" class="avatar">
-                                                        </div>
-                                                    </div>
-                                                    <div class="review-header_info">
-                                                        <!-- left -->
-                                                        <div class="review-header_info-start">
-                                                            <div class="info_name">Maria</div>
-                                                            <div class="info_subject">Chevrolet Corvette Stingray C7</div>
-                                                        </div>
-
-                                                        <!-- right -->
-                                                        <div class="review-header_info-end">
-                                                            <div class="info_rating">
-                                                                <div class="rating-stars">
-                                                                    <!-- 1 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 2 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 3 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 4 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 5 -->
-                                                                    <div class="rating-stars_star">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="info_date">
-                                                                <span>19 July, 2025 years</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="review-body">
-                                                    <!--Review Subject -->
-                                                    <div class="review-body_subject">
-                                                        <div class="subject_text">
-                                                            I recently tried this product and was pleasantly surprised by its quality. The design is sleek and
-                                                            modern, and it performs exactly as advertised. Customer service was responsive and helpful when I had
-                                                            questions. Overall, I would definitely recommend this to anyone looking for a reliable option in this
-                                                            category.
-                                                        </div>
-
-                                                        <div class="subject_collection">
-                                                            <a href="#" class="subject_collection-figure">
-                                                                <img src="./images/collection-img.png" alt="Img 1">
-                                                            </a>
-                                                            <a href="#" class="subject_collection-figure">
-                                                                <img src="./images/collection-img.png" alt="Img 2">
-                                                            </a>
-                                                            <a href="#" class="subject_collection-figure">
-                                                                <img src="./images/collection-img.png" alt="Img 3">
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="subject_buttons">
-                                                            <a href="#" class="btn">Reply</a>
-                                                        </div>
+                                    <!-- Reviews page part -->
+                                    <div class="col-sm-12">
+                                        <div class="profile-user_reviews">
+                                            <!-- REVIEWS BLOCK -->
+                                            <!-- REVIEWS BLOCK -->
+                                            <div class="reviews-block">
+                                                <div class="reviews-block__group">
+                                                    <!-- title -->
+                                                    <div class="reviews-block__title">
+                                                        <span>Reviews</span>
+                                                        <small>25</small>
                                                     </div>
 
-                                                    <!-- Review response -->
-                                                    <div class="review-body_response">
-                                                        <div class="response-header">
-                                                            <!-- response btn -->
-                                                            <span class="response-header_btn">
-                                                                <svg class="icon icon--response">
-                                                                    <use href="./icons/symbol/sprite.svg#response"></use>
+                                                    <!-- description -->
+                                                    <div class="reviews-block__description">What your buyers say about you</div>
+
+                                                    <!-- rating -->
+                                                    <div class="reviews-block__rating">
+                                                        <div class="rating-num">4.0</div>
+                                                        <div class="rating-stars">
+                                                            <!-- 1 -->
+                                                            <div class="rating-stars_star active">
+                                                                <svg class="icon icon--star">
+                                                                    <use href="./icons/symbol/sprite.svg#star"></use>
                                                                 </svg>
-                                                                <span>Seller's response</span>
-                                                            </span>
-
-                                                            <div class="response-header_date">
-                                                                <span>19 July, 2025 years</span>
+                                                            </div>
+                                                            <!-- 2 -->
+                                                            <div class="rating-stars_star active">
+                                                                <svg class="icon icon--star">
+                                                                    <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <!-- 3 -->
+                                                            <div class="rating-stars_star active">
+                                                                <svg class="icon icon--star">
+                                                                    <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <!-- 4 -->
+                                                            <div class="rating-stars_star active">
+                                                                <svg class="icon icon--star">
+                                                                    <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <!-- 5 -->
+                                                            <div class="rating-stars_star">
+                                                                <svg class="icon icon--star">
+                                                                    <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                </svg>
                                                             </div>
                                                         </div>
-
-                                                        <div class="response_text">
-                                                            I recently tried this product and was pleasantly surprised by its quality. The design is sleek and
-                                                            modern, and it performs exactly as advertised. Customer service was responsive and helpful when I had
-                                                            questions. Overall, I would definitely recommend this to anyone looking for a reliable option in this
-                                                            category.
-                                                        </div>
-
-                                                        <div class="response_buttons">
-                                                            <button data-responseaction="delete" class="btn">Delete</button>
-                                                        </div>
+                                                        <div class="rating-reviews">5 reviews</div>
                                                     </div>
-                                                </div>
-                                            </div>
 
-                                            <!-- 3 -->
-                                            <div class="profile-user_review">
-                                                <!-- review header -->
-                                                <div class="review-header">
-                                                    <div class="review-header_wrap">
-                                                        <div class="review-header_avatar">
+                                                    <!-- collection -->
+                                                    <ul class="reviews-block__collection">
+                                                        <li>
+                                                            <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- 1 -->
+                                                <div class="review-card">
+                                                    <!-- review-card header -->
+                                                    <div class="review-card__header">
+                                                        <div class="review-card__avatar">
                                                             <img src="./images/avatar.png" alt="Maria" class="avatar">
                                                         </div>
-                                                    </div>
-                                                    <div class="review-header_info">
-                                                        <!-- left -->
-                                                        <div class="review-header_info-start">
-                                                            <div class="info_name">John</div>
-                                                            <div class="info_subject">Chevrolet Corvette Stingray C7</div>
-                                                        </div>
 
-                                                        <!-- right -->
-                                                        <div class="review-header_info-end">
-                                                            <div class="info_rating">
-                                                                <div class="rating-stars">
-                                                                    <!-- 1 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 2 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 3 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 4 -->
-                                                                    <div class="rating-stars_star active">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    <!-- 5 -->
-                                                                    <div class="rating-stars_star">
-                                                                        <svg class="icon icon--star">
-                                                                            <use href="./icons/symbol/sprite.svg#star"></use>
-                                                                        </svg>
+                                                        <div class="review-card__info">
+                                                            <!-- left -->
+                                                            <div class="review-card__info-start">
+                                                                <div class="info__name">Alex</div>
+                                                                <div class="info__subject">Chevrolet Corvette Stingray C7</div>
+                                                            </div>
+
+                                                            <!-- right -->
+                                                            <div class="review-card__info-end">
+                                                                <div class="info__rating">
+                                                                    <div class="rating-stars">
+                                                                        <!-- 1 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 2 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 3 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 4 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 5 -->
+                                                                        <div class="rating-stars_star">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
+                                                                <div class="info__date">
+                                                                    <span>19 July, 2025 years</span>
+                                                                </div>
                                                             </div>
-                                                            <div class="info_date">
-                                                                <span>19 July, 2025 years</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="review-card__body">
+                                                        <!--review-card Subject -->
+                                                        <div class="review-card__subject">
+                                                            <div class="subject__text">
+                                                                I recently tried this product and was pleasantly surprised by its quality. The design is sleek and modern, and it performs
+                                                                exactly as advertised. Customer service was responsive and helpful when I had questions. Overall, I would definitely
+                                                                recommend this to anyone looking for a reliable option in this category.
+                                                            </div>
+
+                                                            <div class="subject__collection">
+                                                                <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                                <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                                <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                            </div>
+
+                                                            <div class="subject__buttons">
+                                                                <a href="#" class="btn">Reply</a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="review-body">
-                                                    <!--Review Subject -->
-                                                    <div class="review-body_subject">
-                                                        <div class="subject_text">
-                                                            I recently tried this product and was pleasantly surprised by its quality. The design is sleek and
-                                                            modern, and it performs exactly as advertised. Customer service was responsive and helpful when I had
-                                                            questions. Overall, I would definitely recommend this to anyone looking for a reliable option in this
-                                                            category.
+                                                <!-- 1 -->
+                                                <div class="review-card">
+                                                    <!-- review-card header -->
+                                                    <div class="review-card__header">
+                                                        <div class="review-card__avatar">
+                                                            <img src="./images/avatar.png" alt="Maria" class="avatar">
                                                         </div>
 
-                                                        <div class="subject_collection">
-                                                            <a href="#" class="subject_collection-figure">
-                                                                <img src="./images/collection-img.png" alt="Img 1">
-                                                            </a>
-                                                            <a href="#" class="subject_collection-figure">
-                                                                <img src="./images/collection-img.png" alt="Img 2">
-                                                            </a>
-                                                            <a href="#" class="subject_collection-figure">
-                                                                <img src="./images/collection-img.png" alt="Img 3">
-                                                            </a>
+                                                        <div class="review-card__info">
+                                                            <!-- left -->
+                                                            <div class="review-card__info-start">
+                                                                <div class="info__name">Alex</div>
+                                                                <div class="info__subject">Chevrolet Corvette Stingray C7</div>
+                                                            </div>
+
+                                                            <!-- right -->
+                                                            <div class="review-card__info-end">
+                                                                <div class="info__rating">
+                                                                    <div class="rating-stars">
+                                                                        <!-- 1 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 2 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 3 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 4 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 5 -->
+                                                                        <div class="rating-stars_star">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info__date">
+                                                                    <span>19 July, 2025 years</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="review-card__body">
+                                                        <!--review-card Subject -->
+                                                        <div class="review-card__subject">
+                                                            <div class="subject__text">
+                                                                I recently tried this product and was pleasantly surprised by its quality. The design is sleek and modern, and it performs
+                                                                exactly as advertised. Customer service was responsive and helpful when I had questions. Overall, I would definitely
+                                                                recommend this to anyone looking for a reliable option in this category.
+                                                            </div>
+
+                                                            <div class="subject__collection">
+                                                                <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                                <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                                <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                            </div>
+
+                                                            <div class="subject__buttons">
+                                                                <a href="#" class="btn">Reply</a>
+                                                            </div>
                                                         </div>
 
-                                                        <div class="subject_buttons">
-                                                            <a href="#" class="btn">Reply</a>
+                                                        <!-- Review response -->
+                                                        <div class="review-card__response">
+                                                            <div class="response-header">
+                                                                <!-- response btn -->
+                                                                <span class="response-header_btn">
+                                                                    <svg class="icon icon--response">
+                                                                        <use href="./icons/symbol/sprite.svg#response"></use>
+                                                                    </svg>
+                                                                    <span>Seller's response</span>
+                                                                </span>
+
+                                                                <div class="response-header_date">
+                                                                    <span>19 July, 2025 years</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="response__text">
+                                                                I recently tried this product and was pleasantly surprised by its quality. The design is sleek and modern, and it performs
+                                                                exactly as advertised. Customer service was responsive and helpful when I had questions. Overall, I would definitely
+                                                                recommend this to anyone looking for a reliable option in this category.
+                                                            </div>
+
+                                                            <div class="response__buttons">
+                                                                <button data-responseaction="delete" class="btn">Delete</button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <!-- 1 -->
+                                                <div class="review-card">
+                                                    <!-- review-card header -->
+                                                    <div class="review-card__header">
+                                                        <div class="review-card__avatar">
+                                                            <img src="./images/avatar.png" alt="Maria" class="avatar">
+                                                        </div>
+
+                                                        <div class="review-card__info">
+                                                            <!-- left -->
+                                                            <div class="review-card__info-start">
+                                                                <div class="info__name">Alex</div>
+                                                                <div class="info__subject">Chevrolet Corvette Stingray C7</div>
+                                                            </div>
+
+                                                            <!-- right -->
+                                                            <div class="review-card__info-end">
+                                                                <div class="info__rating">
+                                                                    <div class="rating-stars">
+                                                                        <!-- 1 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 2 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 3 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 4 -->
+                                                                        <div class="rating-stars_star active">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- 5 -->
+                                                                        <div class="rating-stars_star">
+                                                                            <svg class="icon icon--star">
+                                                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="info__date">
+                                                                    <span>19 July, 2025 years</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="review-card__body">
+                                                        <!--review-card Subject -->
+                                                        <div class="review-card__subject">
+                                                            <div class="subject__text">
+                                                                I recently tried this product and was pleasantly surprised by its quality. The design is sleek and modern, and it performs
+                                                                exactly as advertised. Customer service was responsive and helpful when I had questions. Overall, I would definitely
+                                                                recommend this to anyone looking for a reliable option in this category.
+                                                            </div>
+
+                                                            <div class="subject__collection">
+                                                                <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                                <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                                <a href="#"><img src="./images/collection-img.png" alt=""></a>
+                                                            </div>
+
+                                                            <div class="subject__buttons">
+                                                                <a href="#" class="btn">Reply</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>

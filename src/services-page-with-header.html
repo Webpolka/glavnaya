@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	@@include('html/components/head.html', { 'title': 'Services: page with header' })
+
+	<body>
+		<div class="site-overlay"></div>
+		<div class="wrapper">
+			@@include('html/sections/header.html')
+			<main id="primary" class="main">
+				<div class="services">
+					<!-- head of page -->
+					<div class="services-head">
+						<div class="container posar">
+							@@include('html/blocks/breadcrumbs-services.html')
+							<div class="services-head__banner">
+								<b class="example-b">ШАПКА ПРОФИЛЯ</b>
+								<p class="example-p">при покупке услуги</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Лэйаут -->
+					<div class="services-layout container">
+						<div class="services-layout_aside">@@include('html/sections/services/services-aside.html')</div>
+						<div class="services-layout_content">
+							@@include('html/blocks/simple-block.html')
+							@@include('html/blocks/listings-block.html')
+							@@include('html/blocks/reviews-block.html')			
+							
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('html/sections/footer-empty.html')
+		</div>
+		@@include('html/sections/cats-overlay.html') @@include('html/sections/authorize-forms.html')
+		@@include('html/components/script.html')
+	</body>
+</html>
