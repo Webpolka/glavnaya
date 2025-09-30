@@ -1,6 +1,17 @@
 /*-----------------------------------------------------------------------------------------------------------------
 SERVICES ASIDE
  ------------------------------------------------------------------------------------------------------------------*/
+.services-filter {
+	padding-top: 30px;
+	margin-bottom: 30px;
+	border-top: 1px solid #efeaea;
+
+	.btn {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
 .services-aside {
 	width: 100%;
 
@@ -8,30 +19,7 @@ SERVICES ASIDE
 	flex-direction: column;
 	gap: 10px;
 
-	transform: translateY(-140px);
-
-	&::-webkit-scrollbar {
-		inline-size: rem(0);
-		background-color: var(--scrollbar);
-	}
-
-	&:before {
-		position: absolute;
-		content: "";
-		top: 0;
-		right: rem(15);
-
-		transform: translateY(-100%);
-
-		width: rem(22);
-		height: rem(10);
-
-		background-image: url("../../icons/polygon.svg");
-
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: 100%;
-	}
+	margin-bottom: 30px;
 
 	&__avatar {
 		aspect-ratio: 1/1;

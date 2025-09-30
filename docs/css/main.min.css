@@ -791,7 +791,7 @@ Listings block
 .listings-block .product-card_title {
   margin-bottom: 0.9375rem;
 }
-.listings-block__noadds {
+.listings-block_noadds {
   padding-top: 2.1875rem;
   padding-bottom: 2.5rem;
   display: -webkit-box;
@@ -808,14 +808,14 @@ Listings block
       -ms-flex-pack: center;
           justify-content: center;
 }
-.listings-block__noicon {
+.listings-block_noicon {
   margin-bottom: 0.4375rem;
 }
-.listings-block__noicon svg {
+.listings-block_noicon svg {
   width: 2rem;
   height: 2rem;
 }
-.listings-block__warning {
+.listings-block_warning {
   text-align: center;
   font-weight: 400;
   font-size: 1rem;
@@ -1833,6 +1833,31 @@ CUSTOM CHOICES SELECT
   display: none;
 }
 
+/*------------------------------------------- Usual select with label -----------------------------------------------*/
+.usual-select-label {
+  color: #1a1a1a;
+}
+.usual-select-label label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.usual-select-label .choices::before {
+  right: 10px;
+  width: 26px;
+  height: 26px;
+}
+.usual-select-label .choices.is-focused .choices__inner {
+  border-radius: 5px;
+}
+.usual-select-label .choices__inner {
+  font-size: 1rem;
+  border: 1px solid #efeaea;
+  border-radius: 5px;
+  min-height: 3.125rem;
+}
+
 /*------------------------------------------- Small select with label -----------------------------------------------*/
 .small-select-label {
   color: #1a1a1a;
@@ -1879,7 +1904,46 @@ CUSTOM CHOICES SELECT
 /* ------------------------------------------------------------------------------------------------------------------------------
 COMPONENTS
 --------------------------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------- Shop Bullet ------------------------------------------*/
+.separate-label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+/*----------------------------------------------search-form  ----------------------------------------------------*/
+.search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  gap: 0.625rem;
+  min-height: 3.125rem;
+  border: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.3125rem;
+  margin-right: 1.5625rem;
+}
+.search-form .search-input {
+  width: 100%;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  padding-left: 0.125rem;
+}
+.search-form .search-button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-top: 0.3125rem;
+}
+
+/*---------------------------------------------- shopBullet ----------------------------------------------------*/
 .shopBullet {
   aspect-ratio: 305/240;
   border-radius: 0.625rem;
@@ -3205,35 +3269,6 @@ HEADER
   font-weight: 700;
   font-size: 1.625rem;
   color: var(--accent);
-}
-.header-search-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  gap: 0.625rem;
-  min-height: 3.125rem;
-  border: 1px solid #f8f8f8;
-  background-color: #f8f8f8;
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.3125rem;
-  margin-right: 1.5625rem;
-}
-.header-search-form .search-input {
-  width: 100%;
-  font-size: 1rem;
-  background-color: #f8f8f8;
-  padding-left: 0.125rem;
-}
-.header-search-form .search-button {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  padding-top: 0.3125rem;
 }
 .header-location {
   display: -webkit-inline-box;
@@ -7886,6 +7921,18 @@ PROFILE WALLET PAGE
 /*-----------------------------------------------------------------------------------------------------------------
 SERVICES ASIDE
  ------------------------------------------------------------------------------------------------------------------*/
+.services-filter {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #efeaea;
+}
+.services-filter .btn {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .services-aside {
   width: 100%;
   display: -webkit-box;
@@ -7896,28 +7943,7 @@ SERVICES ASIDE
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
-  -webkit-transform: translateY(-140px);
-      -ms-transform: translateY(-140px);
-          transform: translateY(-140px);
-}
-.services-aside::-webkit-scrollbar {
-  inline-size: 0rem;
-  background-color: var(--scrollbar);
-}
-.services-aside:before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0.9375rem;
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
-  width: 1.375rem;
-  height: 0.625rem;
-  background-image: url("../icons/polygon.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100%;
+  margin-bottom: 30px;
 }
 .services-aside__avatar {
   aspect-ratio: 1/1;
@@ -8184,6 +8210,56 @@ SERVICES ASIDE
   margin-right: 5px;
 }
 
+.services-catalog {
+  color: #1a1a1a;
+}
+.services-catalog__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
+}
+.services-catalog__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.services-catalog__showorderby {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+.services-catalog__showorderby .btn-show-map {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #1a1a1a;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.services-catalog__showorderby .btn-show-map:hover {
+  color: var(--accent);
+}
+.services-catalog__endcapt {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  color: #b1b1b1;
+  padding-top: 40px;
+}
+
 /*-----------------------------------------------------------------------------------------------------------------
 Шапка для страницы компании в разделе SERVICES
  ------------------------------------------------------------------------------------------------------------------*/
@@ -8262,19 +8338,35 @@ SERVICES COMPANY LAYOUT
   display: -ms-flexbox;
   display: flex;
   gap: 2.5rem;
-  padding-top: 30px;
   margin-bottom: 4.375rem;
+}
+.services-layout--paddingtop {
+  padding-top: 30px;
 }
 .services-layout_aside {
   width: 18.125rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+.services-layout_aside--withheader .services-aside {
+  -webkit-transform: translateY(-140px);
+      -ms-transform: translateY(-140px);
+          transform: translateY(-140px);
+}
 .services-layout_content {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.services-layout .listings-block {
+  padding-top: 25px;
+  border-bottom: none;
+}
+
+.services-search .search-form {
+  margin-right: 0;
+}
+
 @media (min-width: 992px){
   .catsoverlay-menu_cats-item.active {
     background: #f8f8f8;
@@ -8289,6 +8381,7 @@ SERVICES COMPANY LAYOUT
     color: var(--accent);
   }
 }
+
 @media (max-width: 1200px){
   .new-vehicles__grow {
     gap: 2.5rem;
@@ -8302,6 +8395,7 @@ SERVICES COMPANY LAYOUT
     width: 50%;
   }
 }
+
 @media (max-width: 992px){
   .header-bottom {
     padding-bottom: 20px;
@@ -8423,6 +8517,9 @@ SERVICES COMPANY LAYOUT
   .catsoverlay-menu_subcats-arrow {
     display: block;
   }
+  .search-form {
+    margin-right: 0;
+  }
   .header-medium {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -8432,9 +8529,6 @@ SERVICES COMPANY LAYOUT
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-  }
-  .header-search-form {
-    margin-right: 0;
   }
   .catsadvert-menu {
     display: block;
@@ -8569,6 +8663,7 @@ SERVICES COMPANY LAYOUT
             justify-content: center;
   }
 }
+
 @media (max-width: 768px){
   .header-bottom__nav ul {
     gap: 10px 15px;
@@ -8632,6 +8727,7 @@ SERVICES COMPANY LAYOUT
     display: none;
   }
 }
+
 @media (max-width: 576px){
   .authorize-login,
   .authorize-signup {
@@ -8706,6 +8802,7 @@ SERVICES COMPANY LAYOUT
     width: 50%;
   }
 }
+
 @media (max-width: 440px){
   .custom-col-5 {
     width: 100%;
@@ -8714,6 +8811,7 @@ SERVICES COMPANY LAYOUT
     display: none;
   }
 }
+
 @media (any-hover: hover){
   *::-webkit-scrollbar-thumb:hover {
     background-color: rgba(238, 0, 0, 0.5);

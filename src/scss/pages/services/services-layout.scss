@@ -5,14 +5,35 @@ SERVICES COMPANY LAYOUT
 	display: flex;
 	gap: rem(40);
 
-	padding-top: 30px;
 	margin-bottom: rem(70);
+
+	&--paddingtop {
+		padding-top: 30px;
+	}
 
 	&_aside {
 		width: rem(290);
 		flex-shrink: 0;
+
+		&--withheader {
+			.services-aside {
+				transform: translateY(-140px);
+			}
+		}
 	}
 	&_content {
 		flex-grow: 1;
+	}
+
+	.listings-block {
+		padding-top: 25px;
+		border-bottom: none;
+	}
+	
+}
+
+.services-search {
+	.search-form {
+		margin-right: 0;
 	}
 }

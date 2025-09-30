@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		selectParamsGearbox,
 		selectParamsBody,
 		selectParamsEngineType,
-		selectParamsDriveSystem
+		selectParamsDriveSystem,
 	];
 
 	selectParamsArray.forEach((select, i) => {
@@ -350,34 +350,35 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
-	console.log(paramsItem1);
-
 	// Изначально задаем серый фон для моделей и типа двигателя
-	selectParamsModel.parentElement.style.backgroundColor = "#e6e6e6";
-	selectParamsGeneration.parentElement.style.backgroundColor = "#e6e6e6";
+	if (selectParamsModel) selectParamsModel.parentElement.style.backgroundColor = "#e6e6e6";
+	if (selectParamsGeneration) selectParamsGeneration.parentElement.style.backgroundColor = "#e6e6e6";
 
 	// Обработчики изменения выбора
 	// Когда выбран бренд
-	selectParamsBrand.addEventListener("choice", () => {
-		// Меняем фон второго селекта на белый
-		if (paramsItem0.getValue(true)) {
-			selectParamsModel.parentElement.style.backgroundColor = "white";
-		}
-	});
+	selectParamsBrand &&
+		selectParamsBrand.addEventListener("choice", () => {
+			// Меняем фон второго селекта на белый
+			if (paramsItem0.getValue(true)) {
+				selectParamsModel.parentElement.style.backgroundColor = "white";
+			}
+		});
 
 	// Когда выбрана модель
-	selectParamsModel.addEventListener("choice", () => {
-		console.log(paramsItem0.getValue(true));
-		if (paramsItem0.getValue(true)) {
-			selectParamsGeneration.parentElement.style.backgroundColor = "white";
-		}
-	});
-	selectParamsGeneration.addEventListener("choice", () => {
-		console.log(paramsItem0.getValue(true));
-		if (paramsItem0.getValue(true)) {
-			selectParamsGeneration.parentElement.style.backgroundColor = "white";
-		}
-	});
+	selectParamsModel &&
+		selectParamsModel.addEventListener("choice", () => {
+			console.log(paramsItem0.getValue(true));
+			if (paramsItem0.getValue(true)) {
+				selectParamsGeneration.parentElement.style.backgroundColor = "white";
+			}
+		});
+	selectParamsGeneration &&
+		selectParamsGeneration.addEventListener("choice", () => {
+			console.log(paramsItem0.getValue(true));
+			if (paramsItem0.getValue(true)) {
+				selectParamsGeneration.parentElement.style.backgroundColor = "white";
+			}
+		});
 });
 
 /*--------------------------------------------------------------------------------------------------------------
@@ -389,7 +390,20 @@ document.addEventListener("DOMContentLoaded", () => {
 		const choices = new Choices(searchFilterSelect, {
 			searchEnabled: false,
 			itemSelectText: "",
-		});		
+		});
+	}
+});
+
+/*--------------------------------------------------------------------------------------------------------------
+CHOICES SERVICES PAGE IN FILTER 
+----------------------------------------------------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+	const servicesBodyColor = document.getElementById("services-body-color");
+	if (servicesBodyColor) {
+		const choices = new Choices(servicesBodyColor, {
+			searchEnabled: false,
+			itemSelectText: "",
+		});
 	}
 });
 

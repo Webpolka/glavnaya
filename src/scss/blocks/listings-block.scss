@@ -7,7 +7,7 @@ Listings block
 	padding-bottom: rem(30);
 
 	border-bottom: 1px solid #efeaea;
-	margin-bottom: 30px;
+	margin-bottom: 30px;	
 
 	&__title {
 		display: inline-flex;
@@ -89,7 +89,7 @@ Listings block
 	}
 
     
-	&__noadds {
+	&_noadds {
 		padding-top: rem(35);
 		padding-bottom: rem(40);
 		display: flex;
@@ -100,7 +100,7 @@ Listings block
 
 	border-bottom: 1px solid #efeaea;
 
-	&__noicon {
+	&_noicon {
 		svg {
 			width: rem(32);
 			height: rem(32);
@@ -108,7 +108,7 @@ Listings block
 		margin-bottom: rem(7);
 	}
 
-	&__warning {
+	&_warning {
 		text-align: center;
 		font-weight: 400;
 		font-size: rem(16);

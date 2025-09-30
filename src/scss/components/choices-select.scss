@@ -97,6 +97,49 @@ CUSTOM CHOICES SELECT
 	display: none;
 }
 
+/*------------------------------------------- Usual select with label -----------------------------------------------*/
+
+.usual-select-label {
+	color: #1a1a1a;
+
+	label {
+		display: block;
+
+		font-weight: 500;
+		font-size: 16px;
+
+		margin-bottom: 10px;
+	}
+	.choices {
+		&:focus {
+			// .choices__inner {
+			// 	border: 1px solid #efeaea;
+			// }
+		}
+		&::before {
+			right: 10px;
+			width: 26px;
+			height: 26px;
+		}
+	}
+
+	// .choices__list--dropdown,
+	// .choices__list[aria-expanded] {
+	// 	border-color: #efeaea !important;
+	// }
+
+	.choices.is-focused .choices__inner {
+		border-radius: 5px;
+	}
+
+	.choices__inner {
+		font-size: rem(16);
+		border: 1px solid #efeaea;
+		border-radius: 5px;
+		min-height: rem(50);
+	}
+}
+
 /*------------------------------------------- Small select with label -----------------------------------------------*/
 
 .small-select-label {

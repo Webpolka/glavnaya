@@ -1,0 +1,48 @@
+.services-catalog {
+	color: #1a1a1a;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin-bottom: 5px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.2;
+
+		margin-bottom: 10px;
+	}
+
+	&__showorderby {
+		display: inline-flex;
+		align-items: center;
+		gap: 25px;
+
+		.btn-show-map {
+			font-size: 16px;
+			line-height: 1.2;
+			color: #1a1a1a;
+
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				color: var(--accent);
+			}
+		}
+	}
+
+	&__endcapt {
+		text-align: center;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.2;
+		text-align: center;
+		color: #b1b1b1;
+
+		padding-top: 40px;
+	}
+}
