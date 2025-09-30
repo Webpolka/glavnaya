@@ -18,9 +18,14 @@
 
 @import "config/base";
 
-@import "sections/*.scss";
+@import "blocks/*.scss";
 
-@import "22.09.2025/*.scss";
+@import "components/*.scss";
+
+@import "pages/**/*.scss";
+@import "pages/*.scss";
+
+
 
 
   

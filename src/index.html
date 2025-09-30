@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
-	@@include('html/components/head.html', { 'title': 'Main' })
+	@@include('html/components/head.html', { 'title': 'Main-AUTO' })
 
 	<body>
 		<div class="site-overlay"></div>
-		<div class="wrapper">			
+		<div class="wrapper">
 			@@include('html/sections/header.html')
-			<main id="primary" class="main">
-				@@include('html/sections/main-1-first.html')
-				@@include('html/sections/main-2-featured.html')
-				@@include('html/sections/main-3-daily.html')
-				@@include('html/sections/main-4-products.html')
-				@@include('html/sections/main-5-recomendations.html')
+			<main id="primary" class="main">				 
+				<div class="auto container">
+					@@include('html/blocks/breadcrumbs.html')
+					<div class="row gx-70">
+						<div class="column_66 gap-20">
+							@@include('html/blocks/ONE-brand-list.html') 
+							@@include('html/blocks/search-by-params-exp.html')
+						</div>
+						<div class="column_33 gap-30">
+							<a href="#" class="adv-expanded">
+								<span>ADV</span>
+							</a>							
+						</div>
+					</div>
+				</div>		
+				
+				<div class="auto container">
+					<div class="row gx-70 justify-content-start">
+						<div class="col-sm-8">
+							@@include('html/blocks/found-listing.html')	
+						</div>
+					</div>	
+				</div>
+				
+				
 			</main>
-			@@include('html/sections/footer.html')
+			@@include('html/sections/footer-empty.html')
 		</div>
-		@@include('html/sections/cats-overlay.html')
-        @@include('html/sections/authorize-forms.html')
-	
-		
+		@@include('html/sections/cats-overlay.html') @@include('html/sections/authorize-forms.html')
 		@@include('html/components/script.html')
 	</body>
 </html>

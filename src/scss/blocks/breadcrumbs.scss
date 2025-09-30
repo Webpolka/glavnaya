@@ -1,0 +1,44 @@
+/* --------------------------------------------------------------- Breadcrumbs --------------------------------------------------------------------*/
+
+
+.profile .breadcrumbs {
+	padding-block-start: 40px;
+	padding-block-end: 30px;
+}
+
+.auto .breadcrumbs {
+	padding-block-start: 20px;
+	padding-block-end: 30px;
+}
+
+.breadcrumbs {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: rem(15);
+
+		li {
+			display: inline-flex;
+			align-items: center;
+			gap: 15px;
+		}
+
+		li a {
+			transition: color 0.3s ease-in-out;
+			font-weight: 400;
+			font-size: rem(15);
+			line-height: 120%;
+			color: #969696;
+
+			&:hover {
+				color: var(--accent);
+			}
+		}
+		li span {
+			font-weight: 400;
+			font-size: rem(15);
+			line-height: 120%;
+			color: #1a1a1a;
+		}
+	}
+}

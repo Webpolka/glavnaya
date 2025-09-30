@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Меню</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <!-- Choices CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- WL ShopBullet CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/css/main.min.css">
+
+    <link rel="stylesheet" href="vendor/bootstrap-grid.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+
+
+<style>
+    .web-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .web-list a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        aspect-ratio: 1/1;
+        width: 12.5%;
+        min-width: 100px;
+
+        font-size: 14px;
+        font-weight: 700;
+        color: #2f2f2f;
+        text-transform: uppercase;
+
+        border: 1px solid rgb(0, 0, 0, 0.5);
+        background-color: rgb(0, 0, 0, 0.1);
+    }
+
+    .web-list a span {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        font-size: 12px;
+        padding: 5px;
+        background-color: gold;
+        color: red;
+    }
+
+    .web-list a span.hot {
+        background-color: red;
+        color: white;
+    }
+
+    .web-list a:hover {
+        background-color: rgb(0, 0, 0, 0.3);
+        color: var(--accent);
+        border: 1px solid rgb(0, 0, 255, 0.5);
+    }
+
+    .web-center {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <header id="masthead" class="header">
+            <div class="container">
+                <!-- Верхняя часть хедера -->
+                <div class="header-top">
+                    <!-- Верхнее меню -->
+                    <nav class="header-top_nav" aria-label="Main menu">
+                        <ul class="header-top_list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="main-auto.html">Auto</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Real Estate</a></li>
+                            <li><a href="#">Relax</a></li>
+                            <li><a href="#">Rent</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Правая сторона верхней линии -->
+                    <div class="header-top_right">
+                        <!-- Курс валюты -->
+                        <div class="header-top_currency" data-euro="97.50" data-usd="110.50" role="button" tabindex="0" aria-label="Change currency">
+                            <span class="header-top_currency_name">none</span>
+                            <span class="header-top_currency_rate">none</span>
+                        </div>
+
+                        <div class="header-top_profile">
+                            <!-- Избранное -->
+                            <a href="inaccount-index.html" class="header-top_inaccount">
+                                <svg class="icon icon--profile">
+                                    <use href="./icons/symbol/sprite.svg#profile"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вторая часть хедера -->
+                <div class="header-medium">
+                    <div class="header-medium_intro">
+                        <!-- Бургер -->
+                        <div class="header-burger" id="burger">
+                            <span></span>
+                        </div>
+
+                        <!-- Лого -->
+                        <a href="index.html" class="header-logo">
+                            <span class="header-logo_icon">
+                                <svg class="icon icon--eagle">
+                                    <use href="./icons/symbol/sprite.svg#eagle"></use>
+                                </svg>
+                            </span>
+                            <span class="header-logo_name"> Abl.al </span>
+                        </a>
+
+                        <!-- Форма поиска -->
+                        <form class="header-search-form" role="search" aria-label="Site Search">
+                            <input type="text" class="search-input" name="search" id="search" placeholder="Find an ad" aria-label="Search">
+                            <button type="submit" class="search-button">
+                                <svg class="icon icon--searchsvg">
+                                    <use href="./icons/symbol/sprite.svg#searchsvg"></use>
+                                </svg>
+                            </button>
+                        </form>
+
+                        <!-- Навигация второй части хедера -->
+                        <nav class="header-medium_nav">
+                            <!-- Локация -->
+                            <button class="header-location" aria-label="Change location">
+                                <span class="header-location_icon">
+                                    <svg class="icon icon--map-pin">
+                                        <use href="./icons/symbol/sprite.svg#map-pin"></use>
+                                    </svg>
+                                </span>
+                                <span class="header-location_name"> Tiana </span>
+                            </button>
+
+                            <!-- Добавить в список -->
+                            <a href="advertising-categories.html" class="btn-add" aria-label="Add listing">
+                                <span class="btn-add_before">
+                                    <svg class="icon icon--plus">
+                                        <use href="./icons/symbol/sprite.svg#plus"></use>
+                                    </svg>
+                                </span>
+                                <span class="btn-add_name"> Add listing </span>
+                            </a>
+
+                            <!-- Кнопка авторизации - скрипт привязан к значению data-signed (зареган юзер или нет...)-->
+                            <button class="header-sign-in" aria-label="Authorization" data-signed="false">
+                                <span class="header-sign-in_name"> Sign </span>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="header-bottom">
+                    <nav class="header-bottom__nav">
+                        <ul class="menu">
+                            <li><a href="#">Cars</a></li>
+                            <li><a href="#">Motorcycles</a></li>
+                            <li><a href="#">Trucks and special equipment</a></li>
+                            <li><a href="#">Water transport</a></li>
+                            <li><a href="#">Special equipment rental</a></li>
+                            <li><a href="#">Car Rental</a></li>
+                            <li><a href="#">Spare parts and accessories</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <br>
+                <h2 style="font-size:20px; font-weight:bold;">Автоораздел</h2>
+                <div class="web-list">
+                    <a href="main.html">Главная</a>
+                    <a href="main-auto.html">Главная: АВТО</a>
+                    <a href="main-auto-category.html">Главная: АВТО (в категории)</a>
+                </div>
+                <br>
+                <h2 style="font-size:20px; font-weight:bold;">Подача объявления</h2>
+                <div class="web-list">
+                    <a href="advertising-categories.html">Категории</a>
+                    <a href="advertising-new.html">Новая машина</a>
+                    <a href="advertising-used.html">БУ машина</a>
+                    <a href="advertising-electric.html">Эл.машина</a>
+                </div>
+                <br>
+                <h2 style="font-size:20px; font-weight:bold;">Профиль</h2>
+                <div class="web-list">
+                    <a href="inaccount-index.html">ЛК: Главная</a>
+                    <a href="inaccount-user-empty.html">ЛК: пустой</a>
+                    <a href="inaccount-user-full.html">ЛК: заполненый</a>
+                    <a href="inaccount-ads.html">ЛК: добавленные</a>
+                    <a href="inaccount-messenger.html">ЛК: сообщения</a>
+                    <a href="inaccount-settings.html">ЛК: настройки</a>
+                    <a href="inaccount-verification.html">ЛК: верификация</a>
+                    <a href="inaccount-wallet.html">ЛК: кошелек</a>
+                </div>
+            </div>
+        </main>
+        <footer id="colophon" class="footer">
+            <div class="container">
+                <span class="footer-text">Подвал</span>
+            </div>
+        </footer>
+
+    </div>
+    <!-- WL ShopBullet Script -->
+    <script src="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/vendor/js/script.js"></script>
+
+    <!-- Choices Script -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	@@include('html/components/head.html', { 'title': 'Меню' })
+
+	<style>
+		.web-list {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+
+			padding-top: 35px;
+			padding-bottom: 35px;
+		}
+
+		.web-list a {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			text-align: center;
+
+			aspect-ratio: 1/1;
+			width: 12.5%;
+			min-width: 100px;
+
+			font-size: 14px;
+			font-weight: 700;
+			color: #2f2f2f;
+			text-transform: uppercase;
+
+			border: 1px solid rgb(0, 0, 0, 0.5);
+			background-color: rgb(0, 0, 0, 0.1);
+		}
+
+		.web-list a span {
+			position: absolute;
+			right: 7px;
+			top: 7px;
+			font-size: 12px;
+			padding: 5px;
+			background-color: gold;
+			color: red;
+		}
+		.web-list a span.hot {
+			background-color: red;
+			color: white;
+		}
+
+		.web-list a:hover {
+			background-color: rgb(0, 0, 0, 0.3);
+			color: var(--accent);
+			border: 1px solid rgb(0, 0, 255, 0.5);
+		}
+
+		.web-center {
+			width: 100%;
+			height: 30vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+
+	<body>
+		<div class="wrapper">
+			@@include('html/sections/header.html')
+			<main class="main">
+				<div class="container">		
+                    <br>
+					<h2 style="font-size:20px; font-weight:bold;">Автоораздел</h2>	
+					<div class="web-list">		
+						<a href="main.html">Главная</a>										
+                        <a href="main-auto.html">Главная: АВТО</a>	
+						<a href="main-auto-category.html">Главная: АВТО (в категории)</a>		
+					</div>					
+                    <br>
+					<h2 style="font-size:20px; font-weight:bold;">Подача объявления</h2>	
+					<div class="web-list">						
+						<a href="advertising-categories.html">Категории</a>
+						<a href="advertising-new.html">Новая машина</a>										
+                        <a href="advertising-used.html">БУ машина</a>										
+                        <a href="advertising-electric.html">Эл.машина</a>										                        
+					</div>	
+					<br>
+					<h2 style="font-size:20px; font-weight:bold;">Профиль</h2>	
+					<div class="web-list">						
+						<a href="inaccount-index.html">ЛК: Главная</a>
+						<a href="inaccount-user-empty.html">ЛК: пустой</a>										
+                        <a href="inaccount-user-full.html">ЛК: заполненый</a>										
+                        <a href="inaccount-ads.html">ЛК: добавленные</a>										
+                        <a href="inaccount-messenger.html">ЛК: сообщения</a>										
+                        <a href="inaccount-settings.html">ЛК: настройки</a>										
+                        <a href="inaccount-verification.html">ЛК: верификация</a>										
+                        <a href="inaccount-wallet.html">ЛК: кошелек</a>		
+					</div>										
+				</div>
+			</main>
+			@@include('html/sections/footer.html')
+		</div>
+		@@include('html/components/script.html')
+	</body>
+</html>

@@ -33,7 +33,7 @@
                     <nav class="header-top_nav" aria-label="Main menu">
                         <ul class="header-top_list">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="search-by-parametrs.html">Auto</a></li>
+                            <li><a href="main-auto.html">Auto</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#">Real Estate</a></li>
                             <li><a href="#">Relax</a></li>
@@ -315,398 +315,397 @@
         </header>
 
         <main id="primary" class="main">
-            <div class="profile">
-                <div class="container">
-                    <!-- Хлебные крошки -->
-                    <div class="breadcrumbs">
-                        <a class="breadcrumbs_link" href="#">Services</a>
+            <div class="container profile">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <ul class="breadcrumbs__list">
+                        <li><a href="#">Car sales</a>
+                            <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A"></path>
+                            </svg>
+                        </li>
+                        <li><span>BMW</span></li>
+                    </ul>
+                </nav>
 
-                        <!--svg разделитель -->
-                        <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A" />
-                        </svg>
 
-                        <span class="breadcrumbs_span">Profile</span>
-                    </div>
 
-                    <!-- Лэйаут -->
-                    <div class="profile-layout">
-                        <div class="profile-layout_aside">
-                            <div class="profile-aside">
-                                <div class="profile-aside_body">
+                <!-- Лэйаут -->
+                <div class="profile-layout">
+                    <div class="profile-layout_aside">
+                        <div class="profile-aside">
+                            <div class="profile-aside_body">
 
-                                    <div class="profile-aside_avatar">
-                                        <img src="./images/avatar.png" alt="Avatar">
+                                <div class="profile-aside_avatar">
+                                    <img src="./images/avatar.png" alt="Avatar">
+                                </div>
+
+                                <div class="profile-aside_name">
+                                    <span>John Doe</span>
+                                    <svg class="icon icon--checked-ok">
+                                        <use href="./icons/symbol/sprite.svg#checked-ok"></use>
+                                    </svg>
+                                </div>
+
+                                <!-- Блок рейтинга -->
+                                <div class="profile-aside_rating">
+                                    <div class="rating-num">4.0</div>
+                                    <div class="rating-stars">
+                                        <!-- 1 -->
+                                        <div class="rating-stars_star active">
+                                            <svg class="icon icon--star">
+                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                        <!-- 2 -->
+                                        <div class="rating-stars_star active">
+                                            <svg class="icon icon--star">
+                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                        <!-- 3 -->
+                                        <div class="rating-stars_star active">
+                                            <svg class="icon icon--star">
+                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                        <!-- 4 -->
+                                        <div class="rating-stars_star active">
+                                            <svg class="icon icon--star">
+                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                        <!-- 5 -->
+                                        <div class="rating-stars_star">
+                                            <svg class="icon icon--star">
+                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rating-reviews">5 reviews</div>
+                                </div>
+
+                                <!--Блок со списком -->
+                                <div class="profile-aside_menu">
+                                    <!-- 1я группа элементов -->
+                                    <div class="profile-aside_group">
+                                        <!-- 1 -->
+                                        <a href="inaccount-user-empty.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--profile">
+                                                    <use href="./icons/symbol/sprite.svg#profile"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">My profile</span>
+                                        </a>
+                                        <!-- 2 -->
+                                        <a href="inaccount-ads.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--ads">
+                                                    <use href="./icons/symbol/sprite.svg#ads"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">My ads</span>
+                                        </a>
+                                        <!-- 3 -->
+                                        <div class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--orders">
+                                                    <use href="./icons/symbol/sprite.svg#orders"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Orders</span>
+                                        </div>
+                                    </div>
+                                    <!-- Разделительная полоса -->
+                                    <div class="profile-aside_separator"></div>
+
+                                    <!-- 2я группа элементов -->
+                                    <div class="profile-aside_group">
+                                        <!-- 4 -->
+                                        <a href="inaccount-wallet.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--wallet">
+                                                    <use href="./icons/symbol/sprite.svg#wallet"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Wallet</span>
+                                            <span class="profile-group-badge">11 932 ALL</span>
+                                        </a>
+
+                                        <!-- 5 -->
+                                        <a href="inaccount-messenger.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--messages">
+                                                    <use href="./icons/symbol/sprite.svg#messages"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Messages</span>
+                                            <span class="profile-group-badge accent">1</span> <!-- accent class for red rectangle-->
+                                        </a>
+                                        <!-- 6 -->
+                                        <div class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--favourite">
+                                                    <use href="./icons/symbol/sprite.svg#favourite"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Favorites</span>
+                                        </div>
+                                        <!-- 7 -->
+                                        <div class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--reviews">
+                                                    <use href="./icons/symbol/sprite.svg#reviews"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Reviews</span>
+                                        </div>
                                     </div>
 
-                                    <div class="profile-aside_name">
-                                        <span>John Doe</span>
-                                        <svg class="icon icon--checked-ok">
-                                            <use href="./icons/symbol/sprite.svg#checked-ok"></use>
-                                        </svg>
+                                    <!-- Разделительная полоса -->
+                                    <div class="profile-aside_separator"></div>
+
+                                    <!-- 3я группа элементов -->
+                                    <div class="profile-aside_group">
+                                        <!-- 8 -->
+                                        <div class="profile-group-item" data-listbtn="aside-1">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--bussines">
+                                                    <use href="./icons/symbol/sprite.svg#bussines"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Business services</span>
+
+                                            <span class="profile-group-badge">
+                                                <svg class="icon icon--down-think">
+                                                    <use href="./icons/symbol/sprite.svg#down-think"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+
+                                        <!-- список -->
+                                        <ul class="profile-group_list" data-listpanel="aside-1">
+                                            <li><a href="#">Bussines link 1</a></li>
+                                            <li><a href="#">Bussines link 2</a></li>
+                                            <li><a href="#">Bussines link 3</a></li>
+                                        </ul>
+
+                                        <!-- 9 -->
+                                        <div class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--referral">
+                                                    <use href="./icons/symbol/sprite.svg#referral"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Referral program</span>
+                                        </div>
+
+
                                     </div>
 
-                                    <!-- Блок рейтинга -->
-                                    <div class="profile-aside_rating">
-                                        <div class="rating-num">4.0</div>
-                                        <div class="rating-stars">
-                                            <!-- 1 -->
-                                            <div class="rating-stars_star active">
-                                                <svg class="icon icon--star">
-                                                    <use href="./icons/symbol/sprite.svg#star"></use>
+                                    <!-- Разделительная полоса -->
+                                    <div class="profile-aside_separator"></div>
+
+                                    <!-- 4я группа элементов -->
+                                    <div class="profile-aside_group">
+                                        <!-- 10 -->
+                                        <a href="inaccount-settings.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--settings">
+                                                    <use href="./icons/symbol/sprite.svg#settings"></use>
                                                 </svg>
-                                            </div>
-                                            <!-- 2 -->
-                                            <div class="rating-stars_star active">
-                                                <svg class="icon icon--star">
-                                                    <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </span>
+                                            <span class="profile-group-text">Settings</span>
+                                        </a>
+                                        <!-- 11 -->
+                                        <a href="index.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--logout">
+                                                    <use href="./icons/symbol/sprite.svg#logout"></use>
                                                 </svg>
-                                            </div>
-                                            <!-- 3 -->
-                                            <div class="rating-stars_star active">
-                                                <svg class="icon icon--star">
-                                                    <use href="./icons/symbol/sprite.svg#star"></use>
-                                                </svg>
-                                            </div>
-                                            <!-- 4 -->
-                                            <div class="rating-stars_star active">
-                                                <svg class="icon icon--star">
-                                                    <use href="./icons/symbol/sprite.svg#star"></use>
-                                                </svg>
-                                            </div>
-                                            <!-- 5 -->
-                                            <div class="rating-stars_star">
-                                                <svg class="icon icon--star">
-                                                    <use href="./icons/symbol/sprite.svg#star"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="rating-reviews">5 reviews</div>
-                                    </div>
-
-                                    <!--Блок со списком -->
-                                    <div class="profile-aside_menu">
-                                        <!-- 1я группа элементов -->
-                                        <div class="profile-aside_group">
-                                            <!-- 1 -->
-                                            <a href="inaccount-user-empty.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--profile">
-                                                        <use href="./icons/symbol/sprite.svg#profile"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">My profile</span>
-                                            </a>
-                                            <!-- 2 -->
-                                            <a href="inaccount-ads.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--ads">
-                                                        <use href="./icons/symbol/sprite.svg#ads"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">My ads</span>
-                                            </a>
-                                            <!-- 3 -->
-                                            <div class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--orders">
-                                                        <use href="./icons/symbol/sprite.svg#orders"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Orders</span>
-                                            </div>
-                                        </div>
-                                        <!-- Разделительная полоса -->
-                                        <div class="profile-aside_separator"></div>
-
-                                        <!-- 2я группа элементов -->
-                                        <div class="profile-aside_group">
-                                            <!-- 4 -->
-                                            <a href="inaccount-wallet.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--wallet">
-                                                        <use href="./icons/symbol/sprite.svg#wallet"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Wallet</span>
-                                                <span class="profile-group-badge">11 932 ALL</span>
-                                            </a>
-
-                                            <!-- 5 -->
-                                            <a href="inaccount-messenger.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--messages">
-                                                        <use href="./icons/symbol/sprite.svg#messages"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Messages</span>
-                                                <span class="profile-group-badge accent">1</span> <!-- accent class for red rectangle-->
-                                            </a>
-                                            <!-- 6 -->
-                                            <div class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--favourite">
-                                                        <use href="./icons/symbol/sprite.svg#favourite"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Favorites</span>
-                                            </div>
-                                            <!-- 7 -->
-                                            <div class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--reviews">
-                                                        <use href="./icons/symbol/sprite.svg#reviews"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Reviews</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Разделительная полоса -->
-                                        <div class="profile-aside_separator"></div>
-
-                                        <!-- 3я группа элементов -->
-                                        <div class="profile-aside_group">
-                                            <!-- 8 -->
-                                            <div class="profile-group-item" data-listbtn="aside-1">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--bussines">
-                                                        <use href="./icons/symbol/sprite.svg#bussines"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Business services</span>
-
-                                                <span class="profile-group-badge">
-                                                    <svg class="icon icon--down-think">
-                                                        <use href="./icons/symbol/sprite.svg#down-think"></use>
-                                                    </svg>
-                                                </span>
-                                            </div>
-
-                                            <!-- список -->
-                                            <ul class="profile-group_list" data-listpanel="aside-1">
-                                                <li><a href="#">Bussines link 1</a></li>
-                                                <li><a href="#">Bussines link 2</a></li>
-                                                <li><a href="#">Bussines link 3</a></li>
-                                            </ul>
-
-                                            <!-- 9 -->
-                                            <div class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--referral">
-                                                        <use href="./icons/symbol/sprite.svg#referral"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Referral program</span>
-                                            </div>
-
-
-                                        </div>
-
-                                        <!-- Разделительная полоса -->
-                                        <div class="profile-aside_separator"></div>
-
-                                        <!-- 4я группа элементов -->
-                                        <div class="profile-aside_group">
-                                            <!-- 10 -->
-                                            <a href="inaccount-settings.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--settings">
-                                                        <use href="./icons/symbol/sprite.svg#settings"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Settings</span>
-                                            </a>
-                                            <!-- 11 -->
-                                            <a href="index.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--logout">
-                                                        <use href="./icons/symbol/sprite.svg#logout"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Log out</span>
-                                            </a>
-                                        </div>
+                                            </span>
+                                            <span class="profile-group-text">Log out</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile-layout_content">
-                            <div class="profile-user">
-                                <div class="profile-user_settings">
-                                    <!-- Settings FORM -->
-                                    <form action="" id="settings-form">
-                                        <div class="profile-user_title">
-                                            <span>Settings</span>
-                                        </div>
+                    </div>
+                    <div class="profile-layout_content">
+                        <div class="profile-user">
+                            <div class="profile-user_settings">
+                                <!-- Settings FORM -->
+                                <form action="" id="settings-form">
+                                    <div class="profile-user_title">
+                                        <span>Settings</span>
+                                    </div>
 
-                                        <div class="profile-user_description">Here you can edit your profile</div>
+                                    <div class="profile-user_description">Here you can edit your profile</div>
 
-                                        <div class="g-30 row">
-                                            <!-- Tile 1 -->
-                                            <div class="col-12">
-                                                <div class="settings-tile">
-                                                    <div class="settings-tile_title">Personal information</div>
-                                                    <div class="settings-tile_fields">
-                                                        <!-- 1 RADIO BUTTONS -->
-                                                        <div class="form-group">
-                                                            <div class="form-group_title">Profile Type</div>
+                                    <div class="g-30 row">
+                                        <!-- Tile 1 -->
+                                        <div class="col-12">
+                                            <div class="settings-tile">
+                                                <div class="settings-tile_title">Personal information</div>
+                                                <div class="settings-tile_fields">
+                                                    <!-- 1 RADIO BUTTONS -->
+                                                    <div class="form-group">
+                                                        <div class="form-group_title">Profile Type</div>
 
-                                                            <div class="form-group-inrow">
-                                                                <label class="radio">
-                                                                    <input type="radio" name="settings-profile-type" value="Personal" checked="checked">
-                                                                    <span class="custom-radio">Personal</span>
-                                                                </label>
-                                                                <label class="radio">
-                                                                    <input type="radio" name="settings-profile-type" value="Business">
-                                                                    <span class="custom-radio">Business</span>
-                                                                </label>
-                                                            </div>
+                                                        <div class="form-group-inrow">
+                                                            <label class="radio">
+                                                                <input type="radio" name="settings-profile-type" value="Personal" checked="checked">
+                                                                <span class="custom-radio">Personal</span>
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="settings-profile-type" value="Business">
+                                                                <span class="custom-radio">Business</span>
+                                                            </label>
                                                         </div>
+                                                    </div>
 
-                                                        <!-- 2 NAME INPUT -->
-                                                        <div class="form-group">
-                                                            <label class="form-group_title" for="settings-name">Name</label>
-                                                            <input type="text" id="settings-name" name="settings-name" class="input" maxlength="30" placeholder="John" autocomplete="on">
-                                                        </div>
+                                                    <!-- 2 NAME INPUT -->
+                                                    <div class="form-group">
+                                                        <label class="form-group_title" for="settings-name">Name</label>
+                                                        <input type="text" id="settings-name" name="settings-name" class="input" maxlength="30" placeholder="John" autocomplete="on">
+                                                    </div>
 
-                                                        <!-- 3 LAST INPUT -->
-                                                        <div class="form-group">
-                                                            <label class="form-group_title" for="settings-last-name">Last name</label>
-                                                            <input type="text" id="settings-last-name" name="settings-last-name" class="input" maxlength="30" placeholder="Doe" autocomplete="on">
-                                                        </div>
+                                                    <!-- 3 LAST INPUT -->
+                                                    <div class="form-group">
+                                                        <label class="form-group_title" for="settings-last-name">Last name</label>
+                                                        <input type="text" id="settings-last-name" name="settings-last-name" class="input" maxlength="30" placeholder="Doe" autocomplete="on">
+                                                    </div>
 
-                                                        <!-- 4 PHONE NUMBER -->
-                                                        <div class="form-group">
-                                                            <label class="form-group_title" for="settings-phone">Phone number</label>
-                                                            <input type="phone" id="settings-phone" name="settings-phone" class="input" maxlength="15" placeholder="+7" autocomplete="on">
-                                                        </div>
+                                                    <!-- 4 PHONE NUMBER -->
+                                                    <div class="form-group">
+                                                        <label class="form-group_title" for="settings-phone">Phone number</label>
+                                                        <input type="phone" id="settings-phone" name="settings-phone" class="input" maxlength="15" placeholder="+7" autocomplete="on">
+                                                    </div>
 
-                                                        <!-- 5 EMAIL -->
-                                                        <div class="form-group">
-                                                            <label class="form-group_title" for="settings-email">Email</label>
-                                                            <input type="email" id="settings-email" name="settings-email" class="input" maxlength="35" placeholder="email@abl.al" autocomplete="on">
-                                                        </div>
+                                                    <!-- 5 EMAIL -->
+                                                    <div class="form-group">
+                                                        <label class="form-group_title" for="settings-email">Email</label>
+                                                        <input type="email" id="settings-email" name="settings-email" class="input" maxlength="35" placeholder="email@abl.al" autocomplete="on">
+                                                    </div>
 
-                                                        <!-- 6 TELEGRAM -->
-                                                        <div class="form-group">
-                                                            <label class="form-group_title" for="settings-telegram">Telegram</label>
-                                                            <input type="text" id="settings-telegram" name="settings-telegram" class="input" maxlength="50" placeholder="@nametelegram" autocomplete="on">
-                                                        </div>
+                                                    <!-- 6 TELEGRAM -->
+                                                    <div class="form-group">
+                                                        <label class="form-group_title" for="settings-telegram">Telegram</label>
+                                                        <input type="text" id="settings-telegram" name="settings-telegram" class="input" maxlength="50" placeholder="@nametelegram" autocomplete="on">
+                                                    </div>
 
-                                                        <!-- 7 WhatsApp -->
-                                                        <div class="form-group">
-                                                            <label class="form-group_title" for="settings-whatsapp">WhatsApp</label>
-                                                            <input type="phone" id="settings-whatsapp" name="settings-whatsapp" class="input" maxlength="50" placeholder="+7" autocomplete="on">
-                                                        </div>
+                                                    <!-- 7 WhatsApp -->
+                                                    <div class="form-group">
+                                                        <label class="form-group_title" for="settings-whatsapp">WhatsApp</label>
+                                                        <input type="phone" id="settings-whatsapp" name="settings-whatsapp" class="input" maxlength="50" placeholder="+7" autocomplete="on">
+                                                    </div>
 
-                                                        <!-- 8 Profile Link -->
-                                                        <div class="form-group">
-                                                            <label class="form-group_title" for="settings-profile-link">Profile Link</label>
-                                                            <div class="input-wrapper">
-                                                                <input type="text" id="settings-profile-link" name="settings-profile-link" class="input" maxlength="50" value="qXStOnaoJ0Aax7tMDz0jVSD7WoJtmG" placeholder="qXStOnaoJ0Aax7tMDz0jVSD7WoJtmG" autocomplete="on">
-                                                                <div class="input-wrapper_description">
-                                                                    Please provide a short URL for your page to make it more convenient and memorable.
-                                                                </div>
+                                                    <!-- 8 Profile Link -->
+                                                    <div class="form-group">
+                                                        <label class="form-group_title" for="settings-profile-link">Profile Link</label>
+                                                        <div class="input-wrapper">
+                                                            <input type="text" id="settings-profile-link" name="settings-profile-link" class="input" maxlength="50" value="qXStOnaoJ0Aax7tMDz0jVSD7WoJtmG" placeholder="qXStOnaoJ0Aax7tMDz0jVSD7WoJtmG" autocomplete="on">
+                                                            <div class="input-wrapper_description">
+                                                                Please provide a short URL for your page to make it more convenient and memorable.
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Tile 2 -->
-                                            <div class="col-12">
-                                                <div class="settings-tile">
-                                                    <div class="settings-tile_title">Notification Method</div>
-                                                    <div class="settings-tile_fields">
-                                                        <!-- CHECKBOX -->
-                                                        <div class="form-group">
-                                                            <div class="form-group_title">Where to send notifications?</div>
-
-                                                            <div class="form-group-inrow">
-                                                                <label class="checkbox">
-                                                                    <input type="checkbox" name="settings-notification-method" checked="checked">
-                                                                    <span class="custom-checkbox">Email</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Tile 3 -->
-                                            <div class="col-12">
-                                                <div class="settings-tile">
-                                                    <div class="settings-tile_title">Notification</div>
-                                                    <div class="settings-tile_fields">
-                                                        <!-- CHECKBOX -->
-                                                        <div class="form-group">
-                                                            <div class="form-group_title">Messages</div>
-
-                                                            <div class="form-group-inrow">
-                                                                <label class="checkbox">
-                                                                    <input type="checkbox" name="settings-notification-messages" checked="checked">
-                                                                    <span class="custom-checkbox">Notify me about new messages.</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <!-- CHECKBOX -->
-                                                        <div class="form-group">
-                                                            <div class="form-group_title">Listings</div>
-
-                                                            <div class="form-group-inrow">
-                                                                <label class="checkbox">
-                                                                    <input type="checkbox" name="settings-notification-listings">
-                                                                    <span class="custom-checkbox">Notify me when my listings expire.</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <!-- CHECKBOX -->
-                                                        <div class="form-group">
-                                                            <div class="form-group_title">Plan</div>
-
-                                                            <div class="form-group-inrow">
-                                                                <label class="checkbox">
-                                                                    <input type="checkbox" name="settings-notification-plan">
-                                                                    <span class="custom-checkbox">Notify me when my plan expires</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Tile 4 -->
-                                            <div class="col-12">
-                                                <div class="settings-tile">
-                                                    <div class="settings-tile_title">Security</div>
-                                                    <div class="settings-tile_fields">
-                                                        <!-- CHECKBOX -->
-                                                        <div class="form-group">
-                                                            <div class="form-group_title">Password</div>
-
-                                                            <div class="form-group-inrow">
-                                                                <a href="#" class="btn-gray">Edit</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="settings-tile_footer">
-                                                        <button type="button" class="btn">Delete account</button>
-                                                        <div class="settings-tile_footer-desc">
-                                                            Profile recovery is not possible. All your listings, reviews, orders, and conversations will be lost.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="settings-save">
-                                                    <button type="submit" class="btn">Save changes</button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+
+                                        <!-- Tile 2 -->
+                                        <div class="col-12">
+                                            <div class="settings-tile">
+                                                <div class="settings-tile_title">Notification Method</div>
+                                                <div class="settings-tile_fields">
+                                                    <!-- CHECKBOX -->
+                                                    <div class="form-group">
+                                                        <div class="form-group_title">Where to send notifications?</div>
+
+                                                        <div class="form-group-inrow">
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="settings-notification-method" checked="checked">
+                                                                <span class="custom-checkbox">Email</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tile 3 -->
+                                        <div class="col-12">
+                                            <div class="settings-tile">
+                                                <div class="settings-tile_title">Notification</div>
+                                                <div class="settings-tile_fields">
+                                                    <!-- CHECKBOX -->
+                                                    <div class="form-group">
+                                                        <div class="form-group_title">Messages</div>
+
+                                                        <div class="form-group-inrow">
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="settings-notification-messages" checked="checked">
+                                                                <span class="custom-checkbox">Notify me about new messages.</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <!-- CHECKBOX -->
+                                                    <div class="form-group">
+                                                        <div class="form-group_title">Listings</div>
+
+                                                        <div class="form-group-inrow">
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="settings-notification-listings">
+                                                                <span class="custom-checkbox">Notify me when my listings expire.</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <!-- CHECKBOX -->
+                                                    <div class="form-group">
+                                                        <div class="form-group_title">Plan</div>
+
+                                                        <div class="form-group-inrow">
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="settings-notification-plan">
+                                                                <span class="custom-checkbox">Notify me when my plan expires</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tile 4 -->
+                                        <div class="col-12">
+                                            <div class="settings-tile">
+                                                <div class="settings-tile_title">Security</div>
+                                                <div class="settings-tile_fields">
+                                                    <!-- CHECKBOX -->
+                                                    <div class="form-group">
+                                                        <div class="form-group_title">Password</div>
+
+                                                        <div class="form-group-inrow">
+                                                            <a href="#" class="btn-gray">Edit</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="settings-tile_footer">
+                                                    <button type="button" class="btn">Delete account</button>
+                                                    <div class="settings-tile_footer-desc">
+                                                        Profile recovery is not possible. All your listings, reviews, orders, and conversations will be lost.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="settings-save">
+                                                <button type="submit" class="btn">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -2463,7 +2462,6 @@
             </div>
         </div>
     </section>
-
     <!-- WL ShopBullet Script -->
     <script src="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/vendor/js/script.js"></script>
 

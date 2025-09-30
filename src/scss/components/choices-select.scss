@@ -2,7 +2,6 @@
 CUSTOM CHOICES SELECT
 --------------------------------------------------------------------------------------------------------------------------------*/
 
-/* Добавляем стрелку через псевдоэлемент */
 .choices {
 	position: relative;
 
@@ -13,6 +12,7 @@ CUSTOM CHOICES SELECT
 	}
 }
 
+/* Добавляем стрелку через псевдоэлемент */
 .choices::before {
 	content: "";
 	position: absolute;
@@ -47,7 +47,7 @@ CUSTOM CHOICES SELECT
 	font-size: rem(16);
 	font-weight: 400;
 	color: #1a1a1a;
-		width: initial;
+	width: initial;
 
 	background-color: transparent;
 
@@ -95,4 +95,65 @@ CUSTOM CHOICES SELECT
 
 .choices[data-type*="select-one"]::after {
 	display: none;
+}
+
+/*------------------------------------------- Small select with label -----------------------------------------------*/
+
+.small-select-label {
+	color: #1a1a1a;
+
+	label {
+		display: block;
+		font-weight: 400;
+		font-size: 14px;
+
+		margin-bottom: 10px;
+	}
+	.choices {
+		&:focus {
+			.choices__inner {
+				border: 1px solid #efeaea;
+			}
+		}
+		&::before {
+			right: 5px;
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	.choices__inner {
+		font-size: rem(14);
+		border: 1px solid #efeaea;
+		border-radius: 5px;
+		min-height: rem(40);
+	}
+}
+
+/*------------------------------------------- Search orderby filter -----------------------------------------------*/
+
+.search-orderby {
+	.choices {
+		&:focus {
+			.choices__inner {
+				border: 1px solid transparent;
+			}
+		}
+
+		&::before {
+			right: 5px;
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	.choices__inner {
+		border: 1px solid transparent;
+		padding-right: 15px;
+	}
+
+	.choices__list--dropdown,
+	.choices__list[aria-expanded] {
+		border-color: #efeaea !important;
+	}
 }

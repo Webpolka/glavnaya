@@ -1,0 +1,218 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+БЛОК - Found 6,217 listings (АВТОРАЗДЕЛ) 
+--------------------------------------------------------------------------------------------------------------------------------*/
+.found-listing {
+	color: #1a1a1a;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin-bottom: 25px;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.2;
+
+		margin-bottom: 10px;
+	}
+
+	&__showorderby {
+		display: inline-flex;
+		align-items: center;
+		gap: 25px;
+
+		.btn-show-map {
+			font-size: 16px;
+			line-height: 1.2;
+			color: #1a1a1a;
+
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				color: var(--accent);
+			}
+		}
+	}
+}
+
+/*----------------------------------------------- Found card ----------------------------------*/
+
+.found-card {
+	display: flex;
+	gap: rem(30);
+
+	padding-bottom: rem(25);
+	border-bottom: 1px solid #efeaea;
+
+	&:last-child {
+		// border-bottom: 1px solid transparent;
+	}
+
+	&:hover {
+		.found-card_title {
+			color: var(--accent);
+		}
+		.found-card_desc {
+			color: #3d3d3d;
+		}
+		.found-card_image img {
+			transform: scale(1.05);
+		}
+	}
+
+	&_image {
+		flex-shrink: 0;
+
+		&-wrap {
+			overflow: hidden;
+			aspect-ratio: 24/18;
+			width: rem(240);
+			border-radius: rem(5);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			overflow: hidden;
+
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&_title {
+		font-weight: 700;
+		font-size: rem(24);
+		line-height: 120%;
+		color: #1a1a1a;
+
+		transition: color 0.3s ease-in-out;
+	}
+
+	&_desc {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 1.2;
+		color: #b1b1b1;
+		transition: all 0.3s ease-in-out;
+
+		margin-bottom: rem(15);
+	}
+
+	&_body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&_row {
+		display: flex;
+		gap: 20px;
+
+		margin-bottom: 20px;
+	}
+
+	&_col-1 {
+		width: 40%;
+
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	&_col-2 {
+		width: 30%;
+	}
+	&_col-3 {
+		width: 30%;
+	}
+
+	&_price {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	&_infolist {
+		color: #000;
+
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+
+		li {
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 1.2;
+		}
+	}
+
+	&_bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&_meta {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(22);
+
+		.meta-timeago {
+			font-family: var(--font-main);
+			font-weight: 400;
+			font-size: rem(15);
+			line-height: 120%;
+			color: #3d3d3d;
+			opacity: 0.5;
+		}
+
+		.meta-location {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(5);
+
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				opacity: 0.75;
+			}
+
+			&_name {
+				font-weight: 400;
+				font-size: rem(15);
+				line-height: 120%;
+				color: var(--black);
+			}
+		}
+
+		.icon--map-pin {
+			width: rem(14);
+			height: rem(18);
+		}
+	}
+
+	&_link {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 1.2;
+		color: #e60000;
+
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			// color: var(--black);
+			text-decoration: underline;
+		}
+	}
+}

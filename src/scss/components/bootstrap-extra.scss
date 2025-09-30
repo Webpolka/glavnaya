@@ -1,6 +1,55 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 BOOTSTRAP EXTRA
 --------------------------------------------------------------------------------------------------------------------------------*/
+.mb-10{
+	margin-bottom: 10px;
+}
+.mb-sm-10{
+	@include sm{
+	margin-bottom: 10px;	
+	}	
+}
+.mb-20{
+	margin-bottom: 20px;
+}
+.mb-sm-20{
+	@include sm{
+	margin-bottom: 20px;	
+	}	
+}
+.mb-25{
+	margin-bottom: 25px;
+}
+.mb-sm-25{
+	@include sm{
+	margin-bottom: 25px;	
+	}	
+}
+.mb-30{
+	margin-bottom: 30px;
+}
+.mb-sm-30{
+	@include sm{
+	margin-bottom: 30px;	
+	}	
+}
+.mb-40{
+	margin-bottom: 40px;
+}
+.mb-sm-40{
+	@include sm{
+	margin-bottom: 40px;	
+	}	
+}
+.mb-50{
+	margin-bottom: 50px;
+}
+.mb-sm-50{
+	@include sm{
+	margin-bottom: 50px;	
+	}	
+}
+
 // 16px
 .g-16,
 .gx-16 {
@@ -60,6 +109,17 @@ BOOTSTRAP EXTRA
 .gy-60 {
 	--bs-gutter-y: 3.75rem;
 }
+
+// 70px
+.g-70,
+.gx-70 {
+	--bs-gutter-x: 70px;
+}
+.g-70,
+.gy-70 {
+	--bs-gutter-y: 70px;
+}
+
 
 .custom-col-5 {
 	width: 20%;

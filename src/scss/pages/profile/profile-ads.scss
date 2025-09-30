@@ -15,7 +15,7 @@ PROFILE ADS
 		&[data-panelAds] {
 			display: none;
 			&.active {
-				display: block;
+				display: flex;
 				animation: fade-up 0.3s ease-in-out;
 			}
 		}

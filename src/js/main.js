@@ -318,6 +318,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	const selectParamsEnginefrom = document.getElementById("params-enginefrom");
 	const selectParamsEngineto = document.getElementById("params-engineto");
 
+	const selectParamsGearbox = document.getElementById("params-gearbox");
+	const selectParamsBody = document.getElementById("params-body");
+	const selectParamsEngineType = document.getElementById("params-engine-type");
+	const selectParamsDriveSystem = document.getElementById("params-drive-system");
+
 	const selectParamsArray = [
 		selectParamsBrand,
 		selectParamsModel,
@@ -326,6 +331,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		selectParamsYearto,
 		selectParamsEnginefrom,
 		selectParamsEngineto,
+		selectParamsGearbox,
+		selectParamsBody,
+		selectParamsEngineType,
+		selectParamsDriveSystem
 	];
 
 	selectParamsArray.forEach((select, i) => {
@@ -363,11 +372,25 @@ document.addEventListener("DOMContentLoaded", () => {
 			selectParamsGeneration.parentElement.style.backgroundColor = "white";
 		}
 	});
-	selectParamsGeneration.addEventListener("choice", () => {	console.log(paramsItem0.getValue(true));
+	selectParamsGeneration.addEventListener("choice", () => {
+		console.log(paramsItem0.getValue(true));
 		if (paramsItem0.getValue(true)) {
 			selectParamsGeneration.parentElement.style.backgroundColor = "white";
 		}
 	});
+});
+
+/*--------------------------------------------------------------------------------------------------------------
+CHOICES SEARCH ORDERBY IN FILTER 
+----------------------------------------------------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", () => {
+	const searchFilterSelect = document.getElementById("search-orderby-select");
+	if (searchFilterSelect) {
+		const choices = new Choices(searchFilterSelect, {
+			searchEnabled: false,
+			itemSelectText: "",
+		});		
+	}
 });
 
 /*--------------------------------------------------------------------------------------------------------------

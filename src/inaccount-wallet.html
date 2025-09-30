@@ -7,31 +7,18 @@
 		<div class="wrapper">
 			@@include('html/sections/header-inaccount.html')
 			<main id="primary" class="main">
-				<div class="profile">
-					<div class="container">
-						<!-- Хлебные крошки -->
-						<div class="breadcrumbs">
-							<a class="breadcrumbs_link" href="#">Services</a>
+				<div class="profile container">					
+					@@include('html/blocks/breadcrumbs.html')
 
-							<!--svg разделитель -->
-							<svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A" />
-							</svg>
-
-							<span class="breadcrumbs_span">Profile</span>
-						</div>
-
-						<!-- Лэйаут -->
-						<div class="profile-layout">
-							<div class="profile-layout_aside">@@include('html/sections/profile-aside.html')</div>
-							<div class="profile-layout_content">@@include('html/sections/profile-wallet.html')</div>
-						</div>
+					<!-- Лэйаут -->
+					<div class="profile-layout">
+						<div class="profile-layout_aside">@@include('html/sections/profile/profile-aside.html')</div>
+						<div class="profile-layout_content">@@include('html/sections/profile/profile-wallet.html')</div>
 					</div>
 				</div>
 			</main>
 			@@include('html/sections/footer-empty.html')
 		</div>
-		@@include('html/sections/cats-overlay.html')
-		@@include('html/components/script.html')
+		@@include('html/sections/cats-overlay.html') @@include('html/components/script.html')
 	</body>
 </html>

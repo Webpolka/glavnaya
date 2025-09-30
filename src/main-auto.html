@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	@@include('html/components/head.html', { 'title': 'Main-AUTO' })
+
+	<body>
+		<div class="site-overlay"></div>
+		<div class="wrapper">
+			@@include('html/sections/header.html')
+			<main id="primary" class="main home">
+				@@include('html/sections/main/main-ellipses.html') 
+				<div class="auto container">
+					<div class="row g-40">
+						<div class="column_66 gap-40">
+							@@include('html/blocks/ALL-brand-list.html') 
+							@@include('html/blocks/search-by-params.html')
+						</div>
+						<div class="column_33 gap-30">
+							<a href="#" class="adv">
+								<span>ADV</span>
+							</a>
+							<a href="#" class="adv">
+								<span>ADV</span>  
+							</a>
+						</div>
+					</div>
+				</div>
+
+				@@include('html/sections/main/main-figures.html')
+
+				<div class="container">
+					<div class="row g-40">
+						<div class="column_66">@@include('html/blocks/interesting-today.html')</div>
+						<div class="column_33">@@include('html/blocks/new-vehicles.html')</div>
+					</div>
+				</div>
+
+				@@include('html/blocks/companys-services.html') @@include('html/blocks/recomended-listings.html')
+			</main>
+			@@include('html/sections/footer-empty.html')
+		</div>
+		@@include('html/sections/cats-overlay.html') @@include('html/sections/authorize-forms.html')
+		@@include('html/components/script.html')
+	</body>
+</html>

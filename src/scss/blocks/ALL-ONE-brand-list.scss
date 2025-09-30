@@ -1,7 +1,9 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
-ALL BRANDS
+БЛОК - 85,757 car listings available right now in Albania
+
+СПИСОК ВСЕ БРЕНДЫ (АВТОРАЗДЕЛ)
 --------------------------------------------------------------------------------------------------------------------------------*/
-.all-brands {
+.brand-list {
 	&__header {
 		display: flex;
 		justify-content: space-between;
@@ -29,7 +31,7 @@ ALL BRANDS
 		flex-direction: column;
 		gap: rem(25);
 
-		margin-bottom: rem(25);
+		margin-bottom: rem(20);
 	}
 
 	&__labels {
@@ -106,6 +108,7 @@ ALL BRANDS
 		font-weight: 400;
 		font-size: 16px;
 		color: #1a1a1a;
+		white-space: nowrap;
 
 		transition: 0.3s ease-in-out;
 	}

@@ -33,7 +33,7 @@
                     <nav class="header-top_nav" aria-label="Main menu">
                         <ul class="header-top_list">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="search-by-parametrs.html">Auto</a></li>
+                            <li><a href="main-auto.html">Auto</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#">Real Estate</a></li>
                             <li><a href="#">Relax</a></li>
@@ -315,302 +315,301 @@
         </header>
 
         <main id="primary" class="main">
-            <div class="profile">
-                <div class="container">
-                    <!-- Хлебные крошки -->
-                    <div class="breadcrumbs">
-                        <a class="breadcrumbs_link" href="#">Services</a>
+            <div class="container profile">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <ul class="breadcrumbs__list">
+                        <li><a href="#">Car sales</a>
+                            <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A"></path>
+                            </svg>
+                        </li>
+                        <li><span>BMW</span></li>
+                    </ul>
+                </nav>
 
-                        <!--svg разделитель -->
-                        <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A" />
-                        </svg>
 
-                        <span class="breadcrumbs_span">Profile</span>
-                    </div>
 
-                    <!-- Лэйаут -->
-                    <div class="profile-layout">
-                        <div class="profile-layout_aside">
-                            <div class="profile-aside">
-                                <div class="profile-aside_body">
+                <!-- Лэйаут -->
+                <div class="profile-layout">
+                    <div class="profile-layout_aside">
+                        <div class="profile-aside">
+                            <div class="profile-aside_body">
 
-                                    <div class="profile-aside_avatar">
-                                        <img src="./images/avatar.png" alt="Avatar">
+                                <div class="profile-aside_avatar">
+                                    <img src="./images/avatar.png" alt="Avatar">
+                                </div>
+
+                                <div class="profile-aside_name">
+                                    <span>John Doe</span>
+                                    <svg class="icon icon--checked-ok">
+                                        <use href="./icons/symbol/sprite.svg#checked-ok"></use>
+                                    </svg>
+                                </div>
+
+                                <!-- Блок рейтинга -->
+                                <div class="profile-aside_rating">
+                                    <div class="rating-num">4.0</div>
+                                    <div class="rating-stars">
+                                        <!-- 1 -->
+                                        <div class="rating-stars_star active">
+                                            <svg class="icon icon--star">
+                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                        <!-- 2 -->
+                                        <div class="rating-stars_star active">
+                                            <svg class="icon icon--star">
+                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                        <!-- 3 -->
+                                        <div class="rating-stars_star active">
+                                            <svg class="icon icon--star">
+                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                        <!-- 4 -->
+                                        <div class="rating-stars_star active">
+                                            <svg class="icon icon--star">
+                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                        <!-- 5 -->
+                                        <div class="rating-stars_star">
+                                            <svg class="icon icon--star">
+                                                <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="rating-reviews">5 reviews</div>
+                                </div>
+
+                                <!--Блок со списком -->
+                                <div class="profile-aside_menu">
+                                    <!-- 1я группа элементов -->
+                                    <div class="profile-aside_group">
+                                        <!-- 1 -->
+                                        <a href="inaccount-user-empty.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--profile">
+                                                    <use href="./icons/symbol/sprite.svg#profile"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">My profile</span>
+                                        </a>
+                                        <!-- 2 -->
+                                        <a href="inaccount-ads.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--ads">
+                                                    <use href="./icons/symbol/sprite.svg#ads"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">My ads</span>
+                                        </a>
+                                        <!-- 3 -->
+                                        <div class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--orders">
+                                                    <use href="./icons/symbol/sprite.svg#orders"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Orders</span>
+                                        </div>
+                                    </div>
+                                    <!-- Разделительная полоса -->
+                                    <div class="profile-aside_separator"></div>
+
+                                    <!-- 2я группа элементов -->
+                                    <div class="profile-aside_group">
+                                        <!-- 4 -->
+                                        <a href="inaccount-wallet.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--wallet">
+                                                    <use href="./icons/symbol/sprite.svg#wallet"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Wallet</span>
+                                            <span class="profile-group-badge">11 932 ALL</span>
+                                        </a>
+
+                                        <!-- 5 -->
+                                        <a href="inaccount-messenger.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--messages">
+                                                    <use href="./icons/symbol/sprite.svg#messages"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Messages</span>
+                                            <span class="profile-group-badge accent">1</span> <!-- accent class for red rectangle-->
+                                        </a>
+                                        <!-- 6 -->
+                                        <div class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--favourite">
+                                                    <use href="./icons/symbol/sprite.svg#favourite"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Favorites</span>
+                                        </div>
+                                        <!-- 7 -->
+                                        <div class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--reviews">
+                                                    <use href="./icons/symbol/sprite.svg#reviews"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Reviews</span>
+                                        </div>
                                     </div>
 
-                                    <div class="profile-aside_name">
-                                        <span>John Doe</span>
-                                        <svg class="icon icon--checked-ok">
-                                            <use href="./icons/symbol/sprite.svg#checked-ok"></use>
-                                        </svg>
+                                    <!-- Разделительная полоса -->
+                                    <div class="profile-aside_separator"></div>
+
+                                    <!-- 3я группа элементов -->
+                                    <div class="profile-aside_group">
+                                        <!-- 8 -->
+                                        <div class="profile-group-item" data-listbtn="aside-1">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--bussines">
+                                                    <use href="./icons/symbol/sprite.svg#bussines"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Business services</span>
+
+                                            <span class="profile-group-badge">
+                                                <svg class="icon icon--down-think">
+                                                    <use href="./icons/symbol/sprite.svg#down-think"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+
+                                        <!-- список -->
+                                        <ul class="profile-group_list" data-listpanel="aside-1">
+                                            <li><a href="#">Bussines link 1</a></li>
+                                            <li><a href="#">Bussines link 2</a></li>
+                                            <li><a href="#">Bussines link 3</a></li>
+                                        </ul>
+
+                                        <!-- 9 -->
+                                        <div class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--referral">
+                                                    <use href="./icons/symbol/sprite.svg#referral"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="profile-group-text">Referral program</span>
+                                        </div>
+
+
                                     </div>
 
-                                    <!-- Блок рейтинга -->
-                                    <div class="profile-aside_rating">
-                                        <div class="rating-num">4.0</div>
-                                        <div class="rating-stars">
-                                            <!-- 1 -->
-                                            <div class="rating-stars_star active">
-                                                <svg class="icon icon--star">
-                                                    <use href="./icons/symbol/sprite.svg#star"></use>
+                                    <!-- Разделительная полоса -->
+                                    <div class="profile-aside_separator"></div>
+
+                                    <!-- 4я группа элементов -->
+                                    <div class="profile-aside_group">
+                                        <!-- 10 -->
+                                        <a href="inaccount-settings.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--settings">
+                                                    <use href="./icons/symbol/sprite.svg#settings"></use>
                                                 </svg>
-                                            </div>
-                                            <!-- 2 -->
-                                            <div class="rating-stars_star active">
-                                                <svg class="icon icon--star">
-                                                    <use href="./icons/symbol/sprite.svg#star"></use>
+                                            </span>
+                                            <span class="profile-group-text">Settings</span>
+                                        </a>
+                                        <!-- 11 -->
+                                        <a href="index.html" class="profile-group-item">
+                                            <span class="profile-group-icon">
+                                                <svg class="icon icon--logout">
+                                                    <use href="./icons/symbol/sprite.svg#logout"></use>
                                                 </svg>
-                                            </div>
-                                            <!-- 3 -->
-                                            <div class="rating-stars_star active">
-                                                <svg class="icon icon--star">
-                                                    <use href="./icons/symbol/sprite.svg#star"></use>
-                                                </svg>
-                                            </div>
-                                            <!-- 4 -->
-                                            <div class="rating-stars_star active">
-                                                <svg class="icon icon--star">
-                                                    <use href="./icons/symbol/sprite.svg#star"></use>
-                                                </svg>
-                                            </div>
-                                            <!-- 5 -->
-                                            <div class="rating-stars_star">
-                                                <svg class="icon icon--star">
-                                                    <use href="./icons/symbol/sprite.svg#star"></use>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="rating-reviews">5 reviews</div>
-                                    </div>
-
-                                    <!--Блок со списком -->
-                                    <div class="profile-aside_menu">
-                                        <!-- 1я группа элементов -->
-                                        <div class="profile-aside_group">
-                                            <!-- 1 -->
-                                            <a href="inaccount-user-empty.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--profile">
-                                                        <use href="./icons/symbol/sprite.svg#profile"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">My profile</span>
-                                            </a>
-                                            <!-- 2 -->
-                                            <a href="inaccount-ads.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--ads">
-                                                        <use href="./icons/symbol/sprite.svg#ads"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">My ads</span>
-                                            </a>
-                                            <!-- 3 -->
-                                            <div class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--orders">
-                                                        <use href="./icons/symbol/sprite.svg#orders"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Orders</span>
-                                            </div>
-                                        </div>
-                                        <!-- Разделительная полоса -->
-                                        <div class="profile-aside_separator"></div>
-
-                                        <!-- 2я группа элементов -->
-                                        <div class="profile-aside_group">
-                                            <!-- 4 -->
-                                            <a href="inaccount-wallet.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--wallet">
-                                                        <use href="./icons/symbol/sprite.svg#wallet"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Wallet</span>
-                                                <span class="profile-group-badge">11 932 ALL</span>
-                                            </a>
-
-                                            <!-- 5 -->
-                                            <a href="inaccount-messenger.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--messages">
-                                                        <use href="./icons/symbol/sprite.svg#messages"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Messages</span>
-                                                <span class="profile-group-badge accent">1</span> <!-- accent class for red rectangle-->
-                                            </a>
-                                            <!-- 6 -->
-                                            <div class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--favourite">
-                                                        <use href="./icons/symbol/sprite.svg#favourite"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Favorites</span>
-                                            </div>
-                                            <!-- 7 -->
-                                            <div class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--reviews">
-                                                        <use href="./icons/symbol/sprite.svg#reviews"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Reviews</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Разделительная полоса -->
-                                        <div class="profile-aside_separator"></div>
-
-                                        <!-- 3я группа элементов -->
-                                        <div class="profile-aside_group">
-                                            <!-- 8 -->
-                                            <div class="profile-group-item" data-listbtn="aside-1">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--bussines">
-                                                        <use href="./icons/symbol/sprite.svg#bussines"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Business services</span>
-
-                                                <span class="profile-group-badge">
-                                                    <svg class="icon icon--down-think">
-                                                        <use href="./icons/symbol/sprite.svg#down-think"></use>
-                                                    </svg>
-                                                </span>
-                                            </div>
-
-                                            <!-- список -->
-                                            <ul class="profile-group_list" data-listpanel="aside-1">
-                                                <li><a href="#">Bussines link 1</a></li>
-                                                <li><a href="#">Bussines link 2</a></li>
-                                                <li><a href="#">Bussines link 3</a></li>
-                                            </ul>
-
-                                            <!-- 9 -->
-                                            <div class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--referral">
-                                                        <use href="./icons/symbol/sprite.svg#referral"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Referral program</span>
-                                            </div>
-
-
-                                        </div>
-
-                                        <!-- Разделительная полоса -->
-                                        <div class="profile-aside_separator"></div>
-
-                                        <!-- 4я группа элементов -->
-                                        <div class="profile-aside_group">
-                                            <!-- 10 -->
-                                            <a href="inaccount-settings.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--settings">
-                                                        <use href="./icons/symbol/sprite.svg#settings"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Settings</span>
-                                            </a>
-                                            <!-- 11 -->
-                                            <a href="index.html" class="profile-group-item">
-                                                <span class="profile-group-icon">
-                                                    <svg class="icon icon--logout">
-                                                        <use href="./icons/symbol/sprite.svg#logout"></use>
-                                                    </svg>
-                                                </span>
-                                                <span class="profile-group-text">Log out</span>
-                                            </a>
-                                        </div>
+                                            </span>
+                                            <span class="profile-group-text">Log out</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile-layout_content">
-                            <div class="profile-user">
-                                <div class="gx-30 row">
-                                    <!-- Verification page part -->
-                                    <div class="col-lg-6">
-                                        <div class="profile-user_tile">
-                                            <div class="tile_group">
-                                                <div class="tile_title">
-                                                    <span>Verification</span>
-                                                </div>
-                                                <div class="tile_description">Complete verification to unlock more site features and elevate your status.</div>
+                    </div>
+                    <div class="profile-layout_content">
+                        <div class="profile-user">
+                            <div class="gx-30 row">
+                                <!-- Verification page part -->
+                                <div class="col-lg-6">
+                                    <div class="profile-user_tile">
+                                        <div class="tile_group">
+                                            <div class="tile_title">
+                                                <span>Verification</span>
                                             </div>
-                                            <div class="tile_row">
-                                                <a href="inaccount-verification.html" class="btn">Verify now</a>
-                                                <a href="#" class="btn-gray">About verification</a>
-                                            </div>
+                                            <div class="tile_description">Complete verification to unlock more site features and elevate your status.</div>
+                                        </div>
+                                        <div class="tile_row">
+                                            <a href="inaccount-verification.html" class="btn">Verify now</a>
+                                            <a href="#" class="btn-gray">About verification</a>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <!-- Plan not activated page part -->
-                                    <div class="col-lg-6">
-                                        <div class="profile-user_tile">
-                                            <div class="tile_group">
-                                                <div class="tile_title">Plan not activated</div>
-                                                <div class="tile_description">
-                                                    Choose a suitable plan to publish your ads and enhance their visibility to attract more viewers.
-                                                </div>
-                                            </div>
-                                            <div class="tile_row">
-                                                <a href="#" class="btn">Choose a plan</a>
+                                <!-- Plan not activated page part -->
+                                <div class="col-lg-6">
+                                    <div class="profile-user_tile">
+                                        <div class="tile_group">
+                                            <div class="tile_title">Plan not activated</div>
+                                            <div class="tile_description">
+                                                Choose a suitable plan to publish your ads and enhance their visibility to attract more viewers.
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <!-- Listings page part -->
-                                    <div class="col-sm-12">
-                                        <div class="profile-user_listings">
-                                            <!-- LISTING BLOCK -->
-                                            <div class="listings-block">
-
-                                                <!-- no adds content -->
-                                                <div class="listings-block_noadds">
-                                                    <div class="listings-block_noicon">
-                                                        <svg class="icon icon--noicon">
-                                                            <use href="./icons/symbol/sprite.svg#noicon"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="listings-block_warning">
-                                                        You don't have any active listings yet. <br>
-                                                        Let's post your first one!
-                                                    </div>
-                                                    <div class="listings-block_button">
-                                                        <!-- Добавить в список -->
-                                                        <a href="advertising-categories.html" class="btn-add" aria-label="Post an ad">
-                                                            <span class="btn-add_before">
-                                                                <svg class="icon icon--plus">
-                                                                    <use href="./icons/symbol/sprite.svg#plus"></use>
-                                                                </svg>
-                                                            </span>
-                                                            <span class="btn-add_name">Post an ad</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                                        <div class="tile_row">
+                                            <a href="#" class="btn">Choose a plan</a>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <!-- Reviews page part -->
-                                    <div class="col-sm-12">
-                                        <div class="profile-user_reviews">
-                                            <!-- REVIEWS BLOCK -->
-                                            <div class="rewiews-block">
-                                                <div class="profile-user_title">
-                                                    <span>Reviews</span>
-                                                    <small>0</small>
+                                <!-- Listings page part -->
+                                <div class="col-sm-12">
+                                    <div class="profile-user_listings">
+                                        <!-- LISTING BLOCK -->
+                                        <div class="listings-block">
+
+                                            <!-- no adds content -->
+                                            <div class="listings-block_noadds">
+                                                <div class="listings-block_noicon">
+                                                    <svg class="icon icon--noicon">
+                                                        <use href="./icons/symbol/sprite.svg#noicon"></use>
+                                                    </svg>
                                                 </div>
-
-                                                <div class="profile-user_description">No reviews yet.</div>
+                                                <div class="listings-block_warning">
+                                                    You don't have any active listings yet. <br>
+                                                    Let's post your first one!
+                                                </div>
+                                                <div class="listings-block_button">
+                                                    <!-- Добавить в список -->
+                                                    <a href="advertising-categories.html" class="btn-add" aria-label="Post an ad">
+                                                        <span class="btn-add_before">
+                                                            <svg class="icon icon--plus">
+                                                                <use href="./icons/symbol/sprite.svg#plus"></use>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="btn-add_name">Post an ad</span>
+                                                    </a>
+                                                </div>
                                             </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Reviews page part -->
+                                <div class="col-sm-12">
+                                    <div class="profile-user_reviews">
+                                        <!-- REVIEWS BLOCK -->
+                                        <div class="rewiews-block">
+                                            <div class="profile-user_title">
+                                                <span>Reviews</span>
+                                                <small>0</small>
+                                            </div>
+
+                                            <div class="profile-user_description">No reviews yet.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -2370,7 +2369,6 @@
             </div>
         </div>
     </section>
-
     <!-- WL ShopBullet Script -->
     <script src="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/vendor/js/script.js"></script>
 

@@ -33,7 +33,7 @@
                     <nav class="header-top_nav" aria-label="Main menu">
                         <ul class="header-top_list">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="search-by-parametrs.html">Auto</a></li>
+                            <li><a href="main-auto.html">Auto</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#">Real Estate</a></li>
                             <li><a href="#">Relax</a></li>
@@ -315,378 +315,377 @@
         </header>
 
         <main id="primary" class="main">
-            <div class="profile">
-                <div class="container">
-                    <!-- Хлебные крошки -->
-                    <div class="breadcrumbs">
-                        <a class="breadcrumbs_link" href="#">Services</a>
+            <div class="container profile">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <ul class="breadcrumbs__list">
+                        <li><a href="#">Car sales</a>
+                            <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A"></path>
+                            </svg>
+                        </li>
+                        <li><span>BMW</span></li>
+                    </ul>
+                </nav>
 
-                        <!--svg разделитель -->
-                        <svg width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.427481 8L0 7.52137L3.14504 4L0 0.478632L0.427481 0L4 4L0.427481 8Z" fill="#1A1A1A" />
-                        </svg>
 
-                        <span class="breadcrumbs_span">Profile</span>
-                    </div>
 
-                    <!-- Лэйаут -->
-                    <div class="profile-layout">
-                        <div class="profile-layout_conversations">
-                            <div class="conversations">
-                                <div class="conversations-header">
-                                    <div class="conversations-header_title">All conversations</div>
-                                </div>
+                <!-- Лэйаут -->
+                <div class="profile-layout">
+                    <div class="profile-layout_conversations">
+                        <div class="conversations">
+                            <div class="conversations-header">
+                                <div class="conversations-header_title">All conversations</div>
+                            </div>
 
-                                <div class="conversations-list">
-                                    <!-- Scroll arrows -->
-                                    <button type="button" class="scroll-arrow-up" data-id="scroll-up">
-                                        <svg class="icon icon--list-up">
-                                            <use href="./icons/symbol/sprite.svg#list-up"></use>
-                                        </svg>
-                                    </button>
-                                    <button type="button" class="scroll-arrow-down" data-id="scroll-down">
-                                        <svg class="icon icon--list-down">
-                                            <use href="./icons/symbol/sprite.svg#list-down"></use>
-                                        </svg>
-                                    </button>
+                            <div class="conversations-list">
+                                <!-- Scroll arrows -->
+                                <button type="button" class="scroll-arrow-up" data-id="scroll-up">
+                                    <svg class="icon icon--list-up">
+                                        <use href="./icons/symbol/sprite.svg#list-up"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="scroll-arrow-down" data-id="scroll-down">
+                                    <svg class="icon icon--list-down">
+                                        <use href="./icons/symbol/sprite.svg#list-down"></use>
+                                    </svg>
+                                </button>
 
-                                    <!-- Табы здесь подключены просто для примера верстки так как в реальности здесь должна быть асинхронная подзрузка из БД -->
-                                    <!-- аттрибуты data-tabFull="messenger-full" нужно будет убрать и желательно отключить скрипт активации данных табов в JS-->
+                                <!-- Табы здесь подключены просто для примера верстки так как в реальности здесь должна быть асинхронная подзрузка из БД -->
+                                <!-- аттрибуты data-tabFull="messenger-full" нужно будет убрать и желательно отключить скрипт активации данных табов в JS-->
 
-                                    <!-- Scroll body -->
-                                    <div class="conversations-list_scroll">
-                                        <!-- 1 -->
-                                        <div role="button" data-tabfull="messenger-full" class="conversations-card">
-                                            <div class="conversations-card_start">
-                                                <div class="conversations-card_image">
-                                                    <img src="./images/red-bmw.png" alt="Red BMW">
-                                                </div>
-                                            </div>
-                                            <div class="conversations-card_end">
-                                                <div class="conversations-card_header">
-                                                    <div class="conversations-card_name">John Doe</div>
-                                                    <div class="conversations-card_date">29.07.2025</div>
-                                                </div>
-                                                <div class="conversations-card_subject">BMW X5 G05</div>
-                                                <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                <!-- Scroll body -->
+                                <div class="conversations-list_scroll">
+                                    <!-- 1 -->
+                                    <div role="button" data-tabfull="messenger-full" class="conversations-card">
+                                        <div class="conversations-card_start">
+                                            <div class="conversations-card_image">
+                                                <img src="./images/red-bmw.png" alt="Red BMW">
                                             </div>
                                         </div>
-                                        <!-- 2 -->
-                                        <div role="button" data-tabfull="messenger-full" class="conversations-card">
-                                            <div class="conversations-card_start">
-                                                <div class="conversations-card_image">
-                                                    <img src="./images/red-bmw.png" alt="Red BMW">
-                                                </div>
+                                        <div class="conversations-card_end">
+                                            <div class="conversations-card_header">
+                                                <div class="conversations-card_name">John Doe</div>
+                                                <div class="conversations-card_date">29.07.2025</div>
                                             </div>
-                                            <div class="conversations-card_end">
-                                                <div class="conversations-card_header">
-                                                    <div class="conversations-card_name">John Doe</div>
-                                                    <div class="conversations-card_date">29.07.2025</div>
-                                                </div>
-                                                <div class="conversations-card_subject">BMW X5 G05</div>
-                                                <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                            <div class="conversations-card_subject">BMW X5 G05</div>
+                                            <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                        </div>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div role="button" data-tabfull="messenger-full" class="conversations-card">
+                                        <div class="conversations-card_start">
+                                            <div class="conversations-card_image">
+                                                <img src="./images/red-bmw.png" alt="Red BMW">
                                             </div>
                                         </div>
-                                        <!-- 3 -->
-                                        <div role="button" data-tabfull="messenger-full" class="conversations-card">
-                                            <div class="conversations-card_start">
-                                                <div class="conversations-card_image">
-                                                    <img src="./images/red-bmw.png" alt="Red BMW">
-                                                </div>
+                                        <div class="conversations-card_end">
+                                            <div class="conversations-card_header">
+                                                <div class="conversations-card_name">John Doe</div>
+                                                <div class="conversations-card_date">29.07.2025</div>
                                             </div>
-                                            <div class="conversations-card_end">
-                                                <div class="conversations-card_header">
-                                                    <div class="conversations-card_name">John Doe</div>
-                                                    <div class="conversations-card_date">29.07.2025</div>
-                                                </div>
-                                                <div class="conversations-card_subject">BMW X5 G05</div>
-                                                <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                            <div class="conversations-card_subject">BMW X5 G05</div>
+                                            <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                        </div>
+                                    </div>
+                                    <!-- 3 -->
+                                    <div role="button" data-tabfull="messenger-full" class="conversations-card">
+                                        <div class="conversations-card_start">
+                                            <div class="conversations-card_image">
+                                                <img src="./images/red-bmw.png" alt="Red BMW">
                                             </div>
                                         </div>
-                                        <!-- 4 -->
-                                        <div role="button" data-tabfull="messenger-full" class="conversations-card">
-                                            <div class="conversations-card_start">
-                                                <div class="conversations-card_image">
-                                                    <img src="./images/red-bmw.png" alt="Red BMW">
-                                                </div>
+                                        <div class="conversations-card_end">
+                                            <div class="conversations-card_header">
+                                                <div class="conversations-card_name">John Doe</div>
+                                                <div class="conversations-card_date">29.07.2025</div>
                                             </div>
-                                            <div class="conversations-card_end">
-                                                <div class="conversations-card_header">
-                                                    <div class="conversations-card_name">John Doe</div>
-                                                    <div class="conversations-card_date">29.07.2025</div>
-                                                </div>
-                                                <div class="conversations-card_subject">BMW X5 G05</div>
-                                                <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                            <div class="conversations-card_subject">BMW X5 G05</div>
+                                            <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                        </div>
+                                    </div>
+                                    <!-- 4 -->
+                                    <div role="button" data-tabfull="messenger-full" class="conversations-card">
+                                        <div class="conversations-card_start">
+                                            <div class="conversations-card_image">
+                                                <img src="./images/red-bmw.png" alt="Red BMW">
                                             </div>
                                         </div>
-                                        <!-- 5 -->
-                                        <div role="button" data-tabfull="messenger-full" class="conversations-card">
-                                            <div class="conversations-card_start">
-                                                <div class="conversations-card_image">
-                                                    <img src="./images/red-bmw.png" alt="Red BMW">
-                                                </div>
+                                        <div class="conversations-card_end">
+                                            <div class="conversations-card_header">
+                                                <div class="conversations-card_name">John Doe</div>
+                                                <div class="conversations-card_date">29.07.2025</div>
                                             </div>
-                                            <div class="conversations-card_end">
-                                                <div class="conversations-card_header">
-                                                    <div class="conversations-card_name">John Doe</div>
-                                                    <div class="conversations-card_date">29.07.2025</div>
-                                                </div>
-                                                <div class="conversations-card_subject">BMW X5 G05</div>
-                                                <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                            <div class="conversations-card_subject">BMW X5 G05</div>
+                                            <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                        </div>
+                                    </div>
+                                    <!-- 5 -->
+                                    <div role="button" data-tabfull="messenger-full" class="conversations-card">
+                                        <div class="conversations-card_start">
+                                            <div class="conversations-card_image">
+                                                <img src="./images/red-bmw.png" alt="Red BMW">
                                             </div>
                                         </div>
-                                        <!-- 6 -->
-                                        <div role="button" data-tabfull="messenger-full" class="conversations-card">
-                                            <div class="conversations-card_start">
-                                                <div class="conversations-card_image">
-                                                    <img src="./images/red-bmw.png" alt="Red BMW">
-                                                </div>
+                                        <div class="conversations-card_end">
+                                            <div class="conversations-card_header">
+                                                <div class="conversations-card_name">John Doe</div>
+                                                <div class="conversations-card_date">29.07.2025</div>
                                             </div>
-                                            <div class="conversations-card_end">
-                                                <div class="conversations-card_header">
-                                                    <div class="conversations-card_name">John Doe</div>
-                                                    <div class="conversations-card_date">29.07.2025</div>
-                                                </div>
-                                                <div class="conversations-card_subject">BMW X5 G05</div>
-                                                <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                            <div class="conversations-card_subject">BMW X5 G05</div>
+                                            <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                        </div>
+                                    </div>
+                                    <!-- 6 -->
+                                    <div role="button" data-tabfull="messenger-full" class="conversations-card">
+                                        <div class="conversations-card_start">
+                                            <div class="conversations-card_image">
+                                                <img src="./images/red-bmw.png" alt="Red BMW">
                                             </div>
                                         </div>
-                                        <!-- 7 -->
-                                        <div role="button" data-tabfull="messenger-full" class="conversations-card">
-                                            <div class="conversations-card_start">
-                                                <div class="conversations-card_image">
-                                                    <img src="./images/red-bmw.png" alt="Red BMW">
-                                                </div>
+                                        <div class="conversations-card_end">
+                                            <div class="conversations-card_header">
+                                                <div class="conversations-card_name">John Doe</div>
+                                                <div class="conversations-card_date">29.07.2025</div>
                                             </div>
-                                            <div class="conversations-card_end">
-                                                <div class="conversations-card_header">
-                                                    <div class="conversations-card_name">John Doe</div>
-                                                    <div class="conversations-card_date">29.07.2025</div>
-                                                </div>
-                                                <div class="conversations-card_subject">BMW X5 G05</div>
-                                                <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                            <div class="conversations-card_subject">BMW X5 G05</div>
+                                            <div class="conversations-card_excerpt">Congratulations on your new...</div>
+                                        </div>
+                                    </div>
+                                    <!-- 7 -->
+                                    <div role="button" data-tabfull="messenger-full" class="conversations-card">
+                                        <div class="conversations-card_start">
+                                            <div class="conversations-card_image">
+                                                <img src="./images/red-bmw.png" alt="Red BMW">
                                             </div>
+                                        </div>
+                                        <div class="conversations-card_end">
+                                            <div class="conversations-card_header">
+                                                <div class="conversations-card_name">John Doe</div>
+                                                <div class="conversations-card_date">29.07.2025</div>
+                                            </div>
+                                            <div class="conversations-card_subject">BMW X5 G05</div>
+                                            <div class="conversations-card_excerpt">Congratulations on your new...</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="profile-layout_content"><!-- Табы здесь подключены просто для примера верстки так как в реальности здесь должна быть асинхронная подзрузка из БД -->
-                            <!-- аттрибуты data-panelFull="messenger-full" и data-panelFull="messenger-empty" нужно будет убрать и желательно отключить скрипт активации данных табов в JS-->
+                    </div>
+                    <div class="profile-layout_content"><!-- Табы здесь подключены просто для примера верстки так как в реальности здесь должна быть асинхронная подзрузка из БД -->
+                        <!-- аттрибуты data-panelFull="messenger-full" и data-panelFull="messenger-empty" нужно будет убрать и желательно отключить скрипт активации данных табов в JS-->
 
-                            <div class="messenger">
+                        <div class="messenger">
 
-                                <!-- 1 -->
-                                <!-- Если пусто -->
-                                <div class="active messenger-empty" data-panelfull="messenger-empty">
-                                    <div class="messenger-empty_image">
-                                        <img src="./images/messenger-empty.png" alt="Empty messneg">
-                                    </div>
-                                    <div class="messenger-empty_title">Choose a chat to start a conversation</div>
-                                    <div class="messenger-empty_description">All your active chats are listed on the left</div>
+                            <!-- 1 -->
+                            <!-- Если пусто -->
+                            <div class="active messenger-empty" data-panelfull="messenger-empty">
+                                <div class="messenger-empty_image">
+                                    <img src="./images/messenger-empty.png" alt="Empty messneg">
                                 </div>
+                                <div class="messenger-empty_title">Choose a chat to start a conversation</div>
+                                <div class="messenger-empty_description">All your active chats are listed on the left</div>
+                            </div>
 
-                                <!-- 2 -->
-                                <!-- Если есть сообщения -->
-                                <div class="messenger-full" data-panelfull="messenger-full">
-                                    <div class="messenger_header">
-                                        <!-- 1я часть хедера -->
-                                        <div class="messenger_header-top">
-                                            <!-- left column -->
-                                            <div class="messenger_header-column">
-                                                <div class="column-group">
-                                                    <!-- кнопка назад -->
-                                                    <button type="button" class="messenger_header-back-btn">
-                                                        <svg class="icon icon--messenger-left">
-                                                            <use href="./icons/symbol/sprite.svg#messenger-left"></use>
-                                                        </svg>
-                                                    </button>
+                            <!-- 2 -->
+                            <!-- Если есть сообщения -->
+                            <div class="messenger-full" data-panelfull="messenger-full">
+                                <div class="messenger_header">
+                                    <!-- 1я часть хедера -->
+                                    <div class="messenger_header-top">
+                                        <!-- left column -->
+                                        <div class="messenger_header-column">
+                                            <div class="column-group">
+                                                <!-- кнопка назад -->
+                                                <button type="button" class="messenger_header-back-btn">
+                                                    <svg class="icon icon--messenger-left">
+                                                        <use href="./icons/symbol/sprite.svg#messenger-left"></use>
+                                                    </svg>
+                                                </button>
 
-                                                    <a href="#" class="messenger_header-user-link">
-                                                        <div class="user-link_avatar">
-                                                            <img src="./images/avatar.png" alt="avatr">
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-                                                <!-- Имя и статус			 -->
-                                                <a href="#" class="user-link_title">
-                                                    <div class="user-link_title-name">
-                                                        <span>John Doe</span>
-                                                    </div>
-                                                    <div class="user-link_title-status">
-                                                        <span>Online</span>
+                                                <a href="#" class="messenger_header-user-link">
+                                                    <div class="user-link_avatar">
+                                                        <img src="./images/avatar.png" alt="avatr">
                                                     </div>
                                                 </a>
                                             </div>
 
-                                            <!-- right column -->
-                                            <div class="messenger_header-column">
-                                                <!-- список доступных кнопок -->
-
-                                                <ul class="messenger_header-options-list">
-                                                    <!-- 1 -->
-                                                    <li class="messenger_header-options-item">
-                                                        <svg class="icon icon--triple-dot">
-                                                            <use href="./icons/symbol/sprite.svg#triple-dot"></use>
-                                                        </svg>
-
-                                                        <ul class="item--dropdown messenger_header-options-dropdown">
-                                                            <li><button data-action="block-chat" type="button">Block user</button></li>
-                                                            <li><button data-action="delete-chat" type="button">Delete chat</button></li>
-                                                            <li><button data-action="request-feedback" type="button">Request feedback</button></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- 2я часть хедера -->
-                                        <div class="messenger_header-bottom">
-                                            <!-- left column -->
-                                            <div class="messenger_header-column">
-                                                <div class="messenger_header-ad-subject">
-                                                    <!-- image of ad -->
-                                                    <div class="ad-subject_image">
-                                                        <img src="./images/red-bmw.png" alt="Subject img">
-                                                    </div>
-                                                    <!-- Заголовок и цена -->
-                                                    <div class="ad-subject_title">
-                                                        <span class="ad-subject_title-name">BMW X5 G05</span>
-                                                        <span class="ad-subject_title-price">10,000 ALL</span>
-                                                    </div>
+                                            <!-- Имя и статус			 -->
+                                            <a href="#" class="user-link_title">
+                                                <div class="user-link_title-name">
+                                                    <span>John Doe</span>
                                                 </div>
-                                            </div>
-                                            <!-- right colkumn -->
-                                            <div class="messenger_header-column">
-                                                <a href="#" class="btn-gray">Show add</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Список сообщений -->
-                                    <div class="messenger_list">
-                                        <!-- разделитель -->
-                                        <div class="messenger_list-separator">25.07.2025</div>
-
-                                        <!-- Продавец -->
-                                        <div class="messenger_list-seller-message">
-                                            <div class="seller-avatar">
-                                                <img src="./images/avatar.png" alt="avatar">
-                                            </div>
-                                            <div class="seller-tile">
-                                                <div class="seller-tile_text">Hello, I want to buy your car.</div>
-                                                <div class="seller-tile_date">20:50</div>
-                                            </div>
+                                                <div class="user-link_title-status">
+                                                    <span>Online</span>
+                                                </div>
+                                            </a>
                                         </div>
 
-                                        <!-- пользователь -->
-                                        <div class="messenger_list-user-message">
-                                            <div class="user-tile">
-                                                <div class="user-tile_text">Hello, I want to buy your car.</div>
-                                                <div class="user-tile_date">20:50</div>
+                                        <!-- right column -->
+                                        <div class="messenger_header-column">
+                                            <!-- список доступных кнопок -->
 
-                                                <div class="user-tile_options">
+                                            <ul class="messenger_header-options-list">
+                                                <!-- 1 -->
+                                                <li class="messenger_header-options-item">
                                                     <svg class="icon icon--triple-dot">
                                                         <use href="./icons/symbol/sprite.svg#triple-dot"></use>
                                                     </svg>
-                                                    <div class="item--dropdown user-tile_options-dropdown">
-                                                        <li><button data-action="edit" type="button">Edit message</button></li>
-                                                        <li><button data-action="delete" type="button">Delete</button></li>
-                                                    </div>
+
+                                                    <ul class="item--dropdown messenger_header-options-dropdown">
+                                                        <li><button data-action="block-chat" type="button">Block user</button></li>
+                                                        <li><button data-action="delete-chat" type="button">Delete chat</button></li>
+                                                        <li><button data-action="request-feedback" type="button">Request feedback</button></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- 2я часть хедера -->
+                                    <div class="messenger_header-bottom">
+                                        <!-- left column -->
+                                        <div class="messenger_header-column">
+                                            <div class="messenger_header-ad-subject">
+                                                <!-- image of ad -->
+                                                <div class="ad-subject_image">
+                                                    <img src="./images/red-bmw.png" alt="Subject img">
+                                                </div>
+                                                <!-- Заголовок и цена -->
+                                                <div class="ad-subject_title">
+                                                    <span class="ad-subject_title-name">BMW X5 G05</span>
+                                                    <span class="ad-subject_title-price">10,000 ALL</span>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <!-- Продавец -->
-                                        <div class="messenger_list-seller-message">
-                                            <div class="seller-avatar">
-                                                <img src="./images/avatar.png" alt="avatar">
-                                            </div>
-                                            <div class="seller-tile">
-                                                <div class="seller-tile_text">Hello, I want to buy your car.</div>
-                                                <div class="seller-tile_date">20:50</div>
-                                            </div>
+                                        <!-- right colkumn -->
+                                        <div class="messenger_header-column">
+                                            <a href="#" class="btn-gray">Show add</a>
                                         </div>
+                                    </div>
+                                </div>
+                                <!-- Список сообщений -->
+                                <div class="messenger_list">
+                                    <!-- разделитель -->
+                                    <div class="messenger_list-separator">25.07.2025</div>
 
-                                        <!--  пользователь -->
-                                        <div class="messenger_list-user-message">
-                                            <div class="user-tile">
-                                                <div class="user-tile_text">Hello, I want to buy your car.</div>
-                                                <div class="user-tile_date">20:50</div>
-
-                                                <div class="user-tile_options">
-                                                    <svg class="icon icon--triple-dot">
-                                                        <use href="./icons/symbol/sprite.svg#triple-dot"></use>
-                                                    </svg>
-                                                    <div class="item--dropdown user-tile_options-dropdown">
-                                                        <li><button data-action="edit" type="button">Edit message</button></li>
-                                                        <li><button data-action="delete" type="button">Delete</button></li>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <!-- Продавец -->
+                                    <div class="messenger_list-seller-message">
+                                        <div class="seller-avatar">
+                                            <img src="./images/avatar.png" alt="avatar">
                                         </div>
-
-                                        <!-- Продавец -->
-                                        <div class="messenger_list-seller-message">
-                                            <div class="seller-avatar">
-                                                <img src="./images/avatar.png" alt="avatar">
-                                            </div>
-                                            <div class="seller-tile">
-                                                <div class="seller-tile_text">Hello, I want to buy your car.</div>
-                                                <div class="seller-tile_date">20:50</div>
-                                            </div>
+                                        <div class="seller-tile">
+                                            <div class="seller-tile_text">Hello, I want to buy your car.</div>
+                                            <div class="seller-tile_date">20:50</div>
                                         </div>
+                                    </div>
 
-                                        <!-- пользователь -->
-                                        <div class="messenger_list-user-message">
-                                            <div class="user-tile">
-                                                <div class="user-tile_text">Hello, I want to buy your car.</div>
-                                                <div class="user-tile_date">20:50</div>
+                                    <!-- пользователь -->
+                                    <div class="messenger_list-user-message">
+                                        <div class="user-tile">
+                                            <div class="user-tile_text">Hello, I want to buy your car.</div>
+                                            <div class="user-tile_date">20:50</div>
 
-                                                <div class="user-tile_options">
-                                                    <svg class="icon icon--triple-dot">
-                                                        <use href="./icons/symbol/sprite.svg#triple-dot"></use>
-                                                    </svg>
-                                                    <div class="item--dropdown user-tile_options-dropdown">
-                                                        <li><button data-action="edit" type="button">Edit message</button></li>
-                                                        <li><button data-action="delete" type="button">Delete</button></li>
-                                                    </div>
+                                            <div class="user-tile_options">
+                                                <svg class="icon icon--triple-dot">
+                                                    <use href="./icons/symbol/sprite.svg#triple-dot"></use>
+                                                </svg>
+                                                <div class="item--dropdown user-tile_options-dropdown">
+                                                    <li><button data-action="edit" type="button">Edit message</button></li>
+                                                    <li><button data-action="delete" type="button">Delete</button></li>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Форма отправки сообщений -->
-                                    <div class="messenger_footer">
-                                        <form action="" id="messenger-form">
-                                            <div class="messenger_footer-row">
-                                                <!-- Футер для отправки сообщений с кнопкой прикрепления файла -->
-                                                <button type="button" class="messenger-button_attach" id="messenger-attach-btn" title="Attach a file">
-                                                    <svg class="icon icon--attach">
-                                                        <use href="./icons/symbol/sprite.svg#attach"></use>
-                                                    </svg>
-                                                </button>
+                                    <!-- Продавец -->
+                                    <div class="messenger_list-seller-message">
+                                        <div class="seller-avatar">
+                                            <img src="./images/avatar.png" alt="avatar">
+                                        </div>
+                                        <div class="seller-tile">
+                                            <div class="seller-tile_text">Hello, I want to buy your car.</div>
+                                            <div class="seller-tile_date">20:50</div>
+                                        </div>
+                                    </div>
 
-                                                <input type="file" id="messenger-attach-files" multiple="multiple" accept="image/jpeg, image/png" class="hidden">
+                                    <!--  пользователь -->
+                                    <div class="messenger_list-user-message">
+                                        <div class="user-tile">
+                                            <div class="user-tile_text">Hello, I want to buy your car.</div>
+                                            <div class="user-tile_date">20:50</div>
 
-                                                <div class="messenger-field">
-                                                    <input type="text" name="message" class="messenger-field_input" placeholder="Write a message">
+                                            <div class="user-tile_options">
+                                                <svg class="icon icon--triple-dot">
+                                                    <use href="./icons/symbol/sprite.svg#triple-dot"></use>
+                                                </svg>
+                                                <div class="item--dropdown user-tile_options-dropdown">
+                                                    <li><button data-action="edit" type="button">Edit message</button></li>
+                                                    <li><button data-action="delete" type="button">Delete</button></li>
                                                 </div>
-
-                                                <button type="submit" class="messenger-button_send" title="Send message">
-                                                    <svg class="icon icon--send">
-                                                        <use href="./icons/symbol/sprite.svg#send"></use>
-                                                    </svg>
-                                                </button>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
 
-                                    <div class="messenger-attach_previews">
-                                        <div id="messenger-attach-previews" class="mediaload-previews"></div>
+                                    <!-- Продавец -->
+                                    <div class="messenger_list-seller-message">
+                                        <div class="seller-avatar">
+                                            <img src="./images/avatar.png" alt="avatar">
+                                        </div>
+                                        <div class="seller-tile">
+                                            <div class="seller-tile_text">Hello, I want to buy your car.</div>
+                                            <div class="seller-tile_date">20:50</div>
+                                        </div>
                                     </div>
-                                    <div class="messenger-attach_warning">
-                                        <div id="messenger-attach-warning" class="hidden mediaload-warning">JavaScript there paste text</div>
+
+                                    <!-- пользователь -->
+                                    <div class="messenger_list-user-message">
+                                        <div class="user-tile">
+                                            <div class="user-tile_text">Hello, I want to buy your car.</div>
+                                            <div class="user-tile_date">20:50</div>
+
+                                            <div class="user-tile_options">
+                                                <svg class="icon icon--triple-dot">
+                                                    <use href="./icons/symbol/sprite.svg#triple-dot"></use>
+                                                </svg>
+                                                <div class="item--dropdown user-tile_options-dropdown">
+                                                    <li><button data-action="edit" type="button">Edit message</button></li>
+                                                    <li><button data-action="delete" type="button">Delete</button></li>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+
+                                <!-- Форма отправки сообщений -->
+                                <div class="messenger_footer">
+                                    <form action="" id="messenger-form">
+                                        <div class="messenger_footer-row">
+                                            <!-- Футер для отправки сообщений с кнопкой прикрепления файла -->
+                                            <button type="button" class="messenger-button_attach" id="messenger-attach-btn" title="Attach a file">
+                                                <svg class="icon icon--attach">
+                                                    <use href="./icons/symbol/sprite.svg#attach"></use>
+                                                </svg>
+                                            </button>
+
+                                            <input type="file" id="messenger-attach-files" multiple="multiple" accept="image/jpeg, image/png" class="hidden">
+
+                                            <div class="messenger-field">
+                                                <input type="text" name="message" class="messenger-field_input" placeholder="Write a message">
+                                            </div>
+
+                                            <button type="submit" class="messenger-button_send" title="Send message">
+                                                <svg class="icon icon--send">
+                                                    <use href="./icons/symbol/sprite.svg#send"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="messenger-attach_previews">
+                                    <div id="messenger-attach-previews" class="mediaload-previews"></div>
+                                </div>
+                                <div class="messenger-attach_warning">
+                                    <div id="messenger-attach-warning" class="hidden mediaload-warning">JavaScript there paste text</div>
                                 </div>
                             </div>
                         </div>
@@ -2444,7 +2443,6 @@
             </div>
         </div>
     </section>
-
     <!-- WL ShopBullet Script -->
     <script src="https://cdn.jsdelivr.net/gh/Webpolka/shopBullet@main/docs/vendor/js/script.js"></script>
 

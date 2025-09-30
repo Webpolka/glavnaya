@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
-SEARCH BY PARAMS
+БЛОК - Search by parameters (АВТОРАЗДЕЛ) 
 --------------------------------------------------------------------------------------------------------------------------------*/
 .search-by-params {
 	display: flex;
@@ -19,31 +19,6 @@ SEARCH BY PARAMS
 		& > * {
 			border: 1px solid #e6e6e6;
 			border-radius: 5px;
-		}
-	}
-	.choices__inner {
-		border: 1px solid transparent;
-	}
-
-	.block-item {		
-		.choices__inner {
-			border-radius: 0;
-			border: 1px solid transparent;
-		}		
-		// &:nth-child(n + 2) {
-		// 	background-color: #f3f3f3;
-		// 	border-left: 1px solid #e6e6e6;
-		// }
-	}
-
-	.block-part {
-		.choices__inner {
-			border-radius: 0;
-			border: 1px solid transparent;
-		}
-		&:nth-child(n + 3) {
-			border-left: 1px solid #e6e6e6;
-			padding-right: 20px;
 		}
 	}
 
@@ -90,15 +65,15 @@ SEARCH BY PARAMS
 		}
 	}
 
+	&__footer {
+		padding-block: rem(20);
+		padding-inline: rem(20);
+		border-top: 1px solid #e6e6e6;
+	}
+
 	&__spacebetween {
 		display: flex;
 		justify-content: space-between;
-
-		padding-block: rem(20);
-		padding-inline: rem(20);
-
-		border-top: 1px solid #e6e6e6;
-
 		@include lg {
 			flex-wrap: wrap;
 			justify-content: center;
@@ -118,6 +93,46 @@ SEARCH BY PARAMS
 	.btn {
 		padding-inline: rem(40);
 	}
+
+	.choices__inner {
+		border: 1px solid transparent;
+		border-radius: 0;
+	}
+
+	.choices {
+		position: relative;
+		&:focus {
+			.choices__inner {
+				border: 1px solid transparent;
+			}
+		}
+	}
+
+	.rect-select-item {
+		.choices{
+			border-radius: 0;
+		}
+		.choices__inner {
+			border-radius: 0;
+			border: 1px solid transparent !important;
+		}
+		&:nth-child(n + 2) {
+			background-color: #f3f3f3;
+			border-left: 1px solid #d8d8d8;
+		}
+	}
+
+	.block-part {
+		.choices__inner {
+			border-radius: 0;
+			border: 1px solid transparent;
+		}
+		&:nth-child(n + 3) {
+			border-left: 1px solid #e6e6e6;
+			padding-right: 20px;
+		}
+	}
+
 	.choices__list--dropdown,
 	.choices__list[aria-expanded] {
 		border: 1px solid #e6e6e6 !important;

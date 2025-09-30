@@ -4,7 +4,7 @@
 	<div class="search-by-params__block">
 		<div class="row g-0">
 			<!-- 1 -->
-			<div class="col-sm-4 block-item">
+			<div class="col-sm-4 rect-select-item">
 				<select id="params-brand" name="params-brand">
 					<option value="" disabled selected>Brand</option>
 					<option value="1">Alfa Romeo</option>
@@ -15,7 +15,7 @@
 				</select>
 			</div>
 			<!-- 2 -->
-			<div class="col-sm-4 block-item">
+			<div class="col-sm-4 rect-select-item">
 				<select id="params-model" name="params-model">
 					<option value="" disabled selected>Model</option>
 					<option value="1">Model 1</option>
@@ -26,7 +26,7 @@
 				</select>
 			</div>
 			<!-- 3 -->
-			<div class="col-sm-4 block-item">
+			<div class="col-sm-4 rect-select-item">
 				<select id="params-generation" name="params-generation">
 					<option value="" disabled selected>Generation</option>
 					<option value="1">Generation 1</option>
@@ -99,19 +99,87 @@
 				</div>
 			</div>
 
-			<div class="search-by-params__spacebetween">
-				<div class="search-by-params__group">
-					<button class="btn-allparams" data-id="open-all-params">
-						<img src="../../images/png-icons/params.png" alt="" />
-						<span>All parameters</span>
-					</button>
+            <!-- block footer -->
+			<div class="search-by-params__footer">
+				<div class="row g-20 mb-20">
+					<!-- 1 -->
+					<div class="col-3">
+						<div class="small-select-label">
+							<label for="params-gearbox">Gearbox</label>
 
-					<button class="btn-reset" data-id="reset-all-params">
-						<img src="../../images/png-icons/reset.png" alt="" />
-						<span>Reset</span>
-					</button>
+							<select id="params-gearbox" name="params-gearbox">
+								<option value="" disabled selected></option>
+								<option value="1">Gearbox option 1</option>
+								<option value="2">Gearbox option 2</option>
+								<option value="3">Gearbox option 3</option>
+								<option value="4">Gearbox option 4</option>
+								<option value="5">Gearbox option 5</option>
+							</select>
+						</div>
+					</div>
+					<!-- 2 -->
+					<div class="col-3">
+						<div class="small-select-label">
+							<label for="params-body">Body</label>
+
+							<select id="params-body" name="params-body">
+								<option value="" disabled selected></option>
+								<option value="1">Body option 1</option>
+								<option value="2">Body option 2</option>
+								<option value="3">Body option 3</option>
+								<option value="4">Body option 4</option>
+								<option value="5">Body option 5</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- 3 -->
+					<div class="col-3">
+						<div class="small-select-label">
+							<label for="params-engine-type">Engine type</label>
+
+							<select id="params-engine-type" name="params-enginetype">
+								<option value="" disabled selected></option>
+								<option value="1">Engine type 1</option>
+								<option value="2">Engine type 2</option>
+								<option value="3">Engine type 3</option>
+								<option value="4">Engine type 4</option>
+								<option value="5">Engine type 5</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- 4 -->
+					<div class="col-3">
+						<div class="small-select-label">
+							<label for="params-drive-system">Drive system</label>
+
+							<select id="params-drive-system" name="params-drive-system">
+								<option value="" disabled selected></option>
+								<option value="1">Drive system 1</option>
+								<option value="2">Drive system 2</option>
+								<option value="3">Drive system 3</option>
+								<option value="4">Drive system 4</option>
+								<option value="5">Drive system 5</option>
+							</select>
+						</div>
+					</div>
 				</div>
-				<button class="btn" id="show-by-params">Show 85,757 listings</button>
+
+				<div class="search-by-params__spacebetween">
+					<div class="search-by-params__group">
+						<button class="btn-allparams" data-id="open-all-params">
+							<img src="../../images/png-icons/params.png" alt="" />
+							<span>All parameters</span>
+						</button>
+
+						<button class="btn-reset" data-id="reset-all-params">
+							<img src="../../images/png-icons/reset.png" alt="" />
+							<span>Reset</span>
+						</button>
+					</div>
+					<button class="btn" id="show-by-params">Show 85,757 listings</button>
+				</div>
 			</div>
 		</div>
 	</div>
