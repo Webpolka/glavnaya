@@ -9,6 +9,10 @@ Listings block
 	border-bottom: 1px solid #efeaea;
 	margin-bottom: 30px;	
 
+	&--noborder{
+		border-bottom: none;
+	}
+
 	&__title {
 		display: inline-flex;
 		align-items: flex-start;

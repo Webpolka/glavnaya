@@ -721,6 +721,9 @@ Listings block
   margin-bottom: 30px;
   border-bottom: 1px solid #efeaea;
 }
+.listings-block--noborder {
+  border-bottom: none;
+}
 .listings-block__title {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -8360,7 +8363,6 @@ SERVICES COMPANY LAYOUT
 }
 .services-layout .listings-block {
   padding-top: 25px;
-  border-bottom: none;
 }
 
 .services-search .search-form {
