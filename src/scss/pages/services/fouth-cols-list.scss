@@ -14,9 +14,7 @@
 		font-weight: 700;
 		font-size: 2.12rem;
 		line-height: 1.2;
-		color: #1a1a1a;
-
-		margin-bottom: rem(10);
+		color: #1a1a1a;		
 	}
 	&__annotation {
 		font-weight: 400;
@@ -71,6 +69,7 @@
 	}
 
 	&__list {
+	
 		column-count: 4; /* Количество колонок */
 		column-gap: 20px; /* Расстояние между колонками */
 		@include md {

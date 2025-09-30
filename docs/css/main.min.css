@@ -4430,12 +4430,12 @@ ADVERTISING CUSTOM FORM ELEMENTS
   font-size: 2.12rem;
   line-height: 1.2;
   color: #1a1a1a;
-  margin-bottom: 0.625rem;
 }
 .fivecols-list__annotation {
   font-weight: 400;
   font-size: 0.94rem;
   color: #b1b1b1;
+  margin-top: 10px;
 }
 .fivecols-list__body {
   display: -webkit-box;
@@ -7740,7 +7740,6 @@ PROFILE WALLET PAGE
   font-size: 2.12rem;
   line-height: 1.2;
   color: #1a1a1a;
-  margin-bottom: 0.625rem;
 }
 .fourth-list__annotation {
   font-weight: 400;
