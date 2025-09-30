@@ -1,0 +1,182 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+Banners and advertising elements
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------- long baner -----------------------------------------------------------*/
+.long-banner {
+	color: var(--white);
+
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+
+	padding: 53px 63px;
+	min-height: 200px;
+
+	display: flex;
+	justify-content: space-between;
+
+	&--red {
+		background-image: url("../../images/featured/banner.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+	h2 {
+		font-weight: 500;
+		font-size: 40px;
+
+		margin-bottom: 10px;
+	}
+
+	p {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 1.2;
+
+		max-width: 65%;
+		margin-bottom: 10px;
+	}
+}
+
+/*----------------------------------------------- Adv mini -----------------------------------------------------------*/
+.adv-mini {
+	border-radius: rem(10);
+	min-height: rem(107);
+
+	width: rem(289);
+	background: transparent;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* по горизонтали */
+	align-items: center; /* по вертикали */
+
+	overflow: hidden;
+	flex-shrink: 0;
+
+	border: 1px solid #e6e6e6;
+	border-radius: rem(10);
+
+	&:hover > * {
+		cursor: pointer;
+		transform: scale(1.1);
+	}
+
+	& > * {
+		transition: all 0.3s ease-in-out;
+	}
+
+	img {
+		height: 100%; /* растягиваем изображение по высоте контейнера */
+		width: auto; /* сохраняем пропорции изображения по ширине */
+		max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	&__title {
+		font-weight: 200;
+		font-size: rem(50);
+		text-align: center;
+		color: #aeaeae;
+	}
+	&__annotation {
+		font-weight: 300;
+		font-size: 14px;
+		text-align: center;
+		color: #aeaeae;
+	}
+}
+
+/*--------------------------------------------- Adv ------------------------------------------*/
+.adv {
+	border-radius: rem(10);
+	aspect-ratio: 400/370;
+	background: #f4f4f4;
+
+	display: flex;
+	justify-content: center; /* по горизонтали */
+	align-items: center; /* по вертикали */
+
+	overflow: hidden;
+	flex-shrink: 0;
+
+	font-weight: 200;
+	font-size: rem(96);
+	text-align: center;
+	color: #aeaeae;
+
+	&:hover > * {
+		cursor: pointer;
+		transform: scale(1.1);
+	}
+
+	& > * {
+		transition: all 0.3s ease-in-out;
+	}
+
+	img {
+		height: 100%; /* растягиваем изображение по высоте контейнера */
+		width: auto; /* сохраняем пропорции изображения по ширине */
+		max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
+		object-fit: cover;
+		object-position: center center;
+	}
+}
+
+/*--------------------------------------------- Adv expanded ------------------------------------------*/
+.adv-expanded {
+	border-radius: rem(10);
+	min-height: 100%;
+	background: #f4f4f4;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* по горизонтали */
+	align-items: center; /* по вертикали */
+
+	overflow: hidden;
+	flex-shrink: 0;
+
+	color: #aeaeae;
+
+	font-weight: 200;
+	font-size: rem(96);
+	text-align: center;
+
+	border: 1px solid rgb(0, 0, 0, 0.11);
+	
+
+	b {
+		font-weight: 200;
+		font-size: rem(96);
+		line-height: 100%;
+	}
+
+	p {
+		font-weight: 300;
+		font-size: 14px;
+	}
+
+	&--transparent {
+		background-color: transparent;
+	}
+
+	&:hover > * {
+		cursor: pointer;
+		transform: scale(1.1);
+	}
+
+	& > * {
+		transition: all 0.3s ease-in-out;
+	}
+
+	img {
+		height: 100%; /* растягиваем изображение по высоте контейнера */
+		width: auto; /* сохраняем пропорции изображения по ширине */
+		max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
+		object-fit: cover;
+		object-position: center center;
+	}
+}

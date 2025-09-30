@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
-	@@include('html/components/head.html', { 'title': 'Main-Catalog Proffessional' })
+	@@include('html/components/head.html', { 'title': 'Main-AUTO' })
 
 	<body>
 		<div class="site-overlay"></div>
 		<div class="wrapper">
 			@@include('html/sections/header.html')
-			<main id="primary" class="main home">
-			
+			<main id="primary" class="main">				 
+				<div class="auto container">
+					@@include('html/blocks/breadcrumbs.html')
 				
-
-                @@include('html/sections/main/main-ellipses.html') 
-
-			
-			
-                @@include('html/sections/main/main-2-featured.html')
+					@@include('html/sections/service-catalog/services-list.html') 											
+					
+				</div>						
+				
 			</main>
 			@@include('html/sections/footer-empty.html')
 		</div>

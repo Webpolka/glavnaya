@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+БЛОК - Catalog of Professional  Services and Companies (MAIN)
+--------------------------------------------------------------------------------------------------------------------------------*/
+.proffesional-search {
+	color: #1a1a1a;	
+
+	&__title {
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 1.2;
+       
+
+        margin-bottom: 20px;
+	}
+
+	&__description {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 1.2;
+		color: #b1b1b1;
+
+        margin-bottom: 20px;
+	}
+
+    &__field{
+        margin-bottom: 15px;
+    }
+
+	&__tags {
+        color: var(--accent);
+		.tags-label {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 1.2;
+			color: #b1b1b1;
+
+            margin-right: 5px;
+		}
+	}
+}

@@ -1,126 +1,6 @@
 /* ------------------------------------------------------------------------------------------------------------------------------
 COMPONENTS
 --------------------------------------------------------------------------------------------------------------------------------*/
-.adv-mini {
-	border-radius: rem(10);
-	min-height: rem(107);
-
-	width: rem(289);
-	background: transparent;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center; /* по горизонтали */
-	align-items: center; /* по вертикали */
-
-	overflow: hidden;
-	flex-shrink: 0;
-
-	border: 1px solid #e6e6e6;
-	border-radius: rem(10);
-
-	&:hover > * {
-		cursor: pointer;
-		transform: scale(1.1);
-	}
-
-	& > * {
-		transition: all 0.3s ease-in-out;
-	}
-
-	img {
-		height: 100%; /* растягиваем изображение по высоте контейнера */
-		width: auto; /* сохраняем пропорции изображения по ширине */
-		max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
-		object-fit: cover;
-		object-position: center center;
-	}
-
-	&__title {
-		font-weight: 200;
-		font-size: rem(50);
-		text-align: center;
-		color: #aeaeae;
-	}
-	&__annotation {
-		font-weight: 300;
-		font-size: 14px;
-		text-align: center;
-		color: #aeaeae;
-	}
-}
-
-/*--------------------------------------------- Adv ------------------------------------------*/
-.adv {
-	border-radius: rem(10);
-	aspect-ratio: 400/370;
-	background: #f4f4f4;
-
-	display: flex;
-	justify-content: center; /* по горизонтали */
-	align-items: center; /* по вертикали */
-
-	overflow: hidden;
-	flex-shrink: 0;
-
-	font-weight: 200;
-	font-size: rem(96);
-	text-align: center;
-	color: #aeaeae;
-
-	&:hover > * {
-		cursor: pointer;
-		transform: scale(1.1);
-	}
-
-	& > * {
-		transition: all 0.3s ease-in-out;
-	}
-
-	img {
-		height: 100%; /* растягиваем изображение по высоте контейнера */
-		width: auto; /* сохраняем пропорции изображения по ширине */
-		max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
-		object-fit: cover;
-		object-position: center center;
-	}
-}
-
-/*--------------------------------------------- Adv expanded ------------------------------------------*/
-.adv-expanded {
-	border-radius: rem(10);
-	min-height: 100%;
-	background: #f4f4f4;
-
-	display: flex;
-	justify-content: center; /* по горизонтали */
-	align-items: center; /* по вертикали */
-
-	overflow: hidden;
-	flex-shrink: 0;
-
-	font-weight: 200;
-	font-size: rem(96);
-	text-align: center;
-	color: #aeaeae;
-
-	&:hover > * {
-		cursor: pointer;
-		transform: scale(1.1);
-	}
-
-	& > * {
-		transition: all 0.3s ease-in-out;
-	}
-
-	img {
-		height: 100%; /* растягиваем изображение по высоте контейнера */
-		width: auto; /* сохраняем пропорции изображения по ширине */
-		max-width: 100%; /* чтобы не выйти за границы контейнера по ширине */
-		object-fit: cover;
-		object-position: center center;
-	}
-}
 
 /*--------------------------------------------- Shop Bullet ------------------------------------------*/
 
@@ -583,6 +463,31 @@ COMPONENTS
 		color: var(--accent);
 	}
 }
+
+
+.btn-white {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	padding-inline: rem(30);
+	min-height: rem(50);
+
+	border-radius: rem(5);
+
+	background: var(--white);
+
+	font-weight: 500;
+	font-size: rem(16);
+	color: #1a1a1a;
+
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	&:hover {
+		color: var(--accent);
+	}
+}
+
 
 /*-------------------------------------------- Rating ----------------------------------------------------*/
 [class*="_rating"] {

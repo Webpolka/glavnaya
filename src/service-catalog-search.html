@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+	@@include('html/components/head.html', { 'title': 'Catalog Proffessional Services' })
+
+	<body>
+		<div class="site-overlay"></div>
+		<div class="wrapper">
+			@@include('html/sections/header.html')
+			<main id="primary" class="main proffesional">
+				<div class="container">
+					<div class="row g-40">
+						<div class="col-sm-8">@@include('html/sections/service-catalog/proffesional-search.html')</div>
+						<div class="col-sm-4">
+							<div class="adv-expanded adv-expanded--transparent">
+								<b>ADV</b>
+								<p>мини баннер без фона</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				@@include('html/sections/main/main-ellipses.html') 
+				@@include('html/sections/service-catalog/featured-listing.html')
+				@@include('html/sections/service-catalog/companys-and-services.html')
+				@@include('html/sections/service-catalog/new-services-in-catalog.html')
+			</main>
+			@@include('html/sections/footer-empty.html')
+		</div>
+		@@include('html/sections/cats-overlay.html') @@include('html/sections/authorize-forms.html')
+		@@include('html/components/script.html')
+	</body>
+</html>

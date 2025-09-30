@@ -1,0 +1,73 @@
+/*-----------------------------------------------------------------------------------------------------------------
+MAIN COMPANYS AND SERVICES BLOCK
+ -------------------------------------------------------------------------------------------------------------------*/
+.companys-tile {
+	color: #1a1a1a;
+
+	border: 1px solid rgb(0, 0, 0, 0.1);
+	border-radius: 10px;
+	padding: 30px;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		margin-bottom: 15px;
+	}
+
+	&__image {
+		width: 50px;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		overflow: hidden;
+
+		background-color: var(--accent);
+
+		img {
+			display: block;
+			width: auto;
+			height: 100%;
+			object-fit: cover;
+			overflow: hidden;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.2;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+        margin-bottom: 20px;
+
+		li {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 1.2;
+		}
+	}
+
+	&__rect {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 100%;
+		color: #e60000;
+
+		
+		border-radius: rem(5);
+		border: 1px solid #e41b17;
+		min-height: rem(36);
+
+		padding-inline: rem(8);
+	}
+}

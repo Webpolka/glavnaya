@@ -9,7 +9,7 @@
 		align-items: center;
 		justify-content: space-between;
 
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 	}
 
 	&__container {
@@ -54,9 +54,9 @@
 	padding-bottom: rem(25);
 	border-bottom: 1px solid #efeaea;
 
-	&:last-child {
-		// border-bottom: 1px solid transparent;
-	}
+	// &:last-child {
+	// 	border-bottom: 1px solid transparent;
+	// }
 
 	&:hover {
 		.found-card_title {
