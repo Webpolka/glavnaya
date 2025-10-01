@@ -1,15 +1,8 @@
 /*-----------------------------------------------------------------------------------------------------------------
 БЛОК - Recommended listings (АВТОРАЗДЕЛ) 
  ------------------------------------------------------------------------------------------------------------------*/
-.recomended-listings {
-	&__title {
-		font-weight: 700;
-		font-size: 28px;
-		line-height: 1.2;
-		color: #1a1a1a;
-
-		margin-bottom: rem(20);
-	}
+.similar-listings,
+.recomended-listings {	
 	.product-card {
 		padding: 0;
 		&_spacebetween {
@@ -22,18 +15,18 @@
 		&_like {
 			right: 8px;
 			top: 15px;
-            svg{
-                width: 25px;
-                height: 25px;
-            }
+			svg {
+				width: 25px;
+				height: 25px;
+			}
 		}
 	}
-    .btn{
-        justify-content: center;
-        width: 100%;
-        min-height: 60px;
-        font-size: 16px;
+	.btn {
+		justify-content: center;
+		width: 100%;
+		min-height: 60px;
+		font-size: 16px;
 
-        margin-top: rem(40);
-    }
+		margin-top: rem(40);
+	}
 }

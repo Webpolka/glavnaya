@@ -1,8 +1,17 @@
 /*-----------------------------------------------------------------------------------------------------------------
 LAYOUTS
  ------------------------------------------------------------------------------------------------------------------*/
-.gap-20,
-.gap-x-20 {
+.fdc{
+	display: flex;
+	flex-direction: column;
+}
+.fdr{
+	display: flex;
+	flex-direction: row;
+}
+
+ .gap-20,
+.gap-x-20 {	
 	gap: 0 20px;
 }
 .gap-20,
@@ -30,19 +39,24 @@ LAYOUTS
 	gap: 40px 0;
 }
 
-
-
 .column_66 {
+	flex-shrink: 0;
 	width: 66.6%;
 
 	display: flex;
 	flex-direction: column;
+
+	&--spaceborder {
+		padding-bottom: 30px;
+		border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+	}
 }
 .column_33 {
+	flex-shrink: 0;
 	width: 33.3%;
 
 	display: flex;
-	flex-direction: column;	
+	flex-direction: column;
 }
 
 // .search-by-parametrs__adaptive {

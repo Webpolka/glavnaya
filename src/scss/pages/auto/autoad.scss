@@ -1,0 +1,157 @@
+/* ------------------------------------------------------------------------------------------------------------------------------
+Объявление в разделе АВТО
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.autoad {
+	color: #1a1a1a;
+
+	// Блок описание
+	&-desc {
+		&__text {
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 1.2;
+			color: #3d3d3d;
+
+			p:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+		&__notation {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 1.2;
+
+			padding-block: 30px;
+		}
+
+		&--borderbottom {
+			border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+		}
+	}
+
+	// Блок Equipment
+	&-equip {
+		&__tags-panel:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&-footer {
+		padding-bottom: 50px;
+		border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+	}
+
+	// Блок Основное
+	&-base {
+		&__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&-buttons {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+		}
+
+		&__price{
+			margin-bottom: 20px;
+		}
+
+		&__splitlist{
+			margin-bottom: 15px;
+		}
+
+		&__rate{
+			margin-bottom: 30px;
+		}
+
+		&__buttons{
+			margin-bottom: 20px;
+		}
+
+		&__metas {
+			margin-bottom: 15px;
+		}
+
+		&__notation {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 1.2;
+			color: #b1b1b1;
+
+			margin-bottom: 20px;
+		}
+
+		&__buttons {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+}
+
+
+.tup-35{
+	transform: translateY(-35px);
+	@include xl{
+		transform: translateY(0);
+	}
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+AUTO AD GALLERY
+--------------------------------------------------------------------------------------------------------------------------------*/
+
+.autoad-gallery {
+	&__full,
+	&__thumbnails {
+		img {
+			height: auto; /* растягиваем изображение по высоте контейнера */
+			width: 100%; /* сохраняем пропорции изображения по ширине */
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+
+	&__full {
+		border-radius: 10px;
+		overflow: hidden;
+
+		img {
+			transition: transform 0.2s ease; /* плавное смещение */
+			will-change: transform; /* оптимизация для transform */
+		}
+		a {
+			position: relative;
+			display: flex;
+			justify-content: center; /* по горизонтали */
+			align-items: center; /* по вертикали */
+			overflow: hidden;
+			aspect-ratio: 620/450;
+			&:hover {
+				cursor: url("../../icons/search-gallery.svg"), auto;
+			}
+		}
+		margin-bottom: rem(10);
+	}
+	&__thumbnails {
+		.swiper-slide a {
+			display: flex;
+			justify-content: center; /* по горизонтали */
+			align-items: center; /* по вертикали */
+			aspect-ratio: 110/80;
+
+			overflow: hidden;
+			border-radius: 5px;
+
+			&:hover {
+				cursor: url("../../icons/search-gallery.svg"), auto;
+			}
+		}
+	}
+}

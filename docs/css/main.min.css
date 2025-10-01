@@ -611,6 +611,15 @@ svg {
 .header-bottom {
   background-color: var(--accent);
   position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+}
+.header-bottom.hide {
+  visibility: hidden;
+  opacity: 0;
 }
 .header-bottom:after {
   content: "";
@@ -659,6 +668,26 @@ svg {
 /*-----------------------------------------------------------------------------------------------------------------
 LAYOUTS
  ------------------------------------------------------------------------------------------------------------------*/
+.fdc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fdr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .gap-20,
 .gap-x-20 {
   gap: 0 20px;
@@ -690,6 +719,8 @@ LAYOUTS
 }
 
 .column_66 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 66.6%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -699,8 +730,14 @@ LAYOUTS
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.column_66--spaceborder {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 .column_33 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 33.3%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1367,6 +1404,11 @@ Banners and advertising elements
 /* ------------------------------------------------------------------------------------------------------------------------------
 BOOTSTRAP EXTRA
 --------------------------------------------------------------------------------------------------------------------------------*/
+.spaceborder-40 {
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -2341,6 +2383,11 @@ COMPONENTS
 .btn:hover {
   opacity: 0.75;
 }
+.btn--short {
+  -ms-flex-item-align: start;
+      align-self: start;
+  padding-inline: 30px;
+}
 
 .btn-add {
   display: -webkit-box;
@@ -2692,11 +2739,187 @@ COMPONENTS
   color: var(--black);
   margin-right: 7px;
 }
-.price-old {
+.price-base--big {
+  font-size: 30px;
+}
+.price-convert, .price-old {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
   color: #b1b1b1;
+}
+
+/* ------------------------------------------------- tags-panel  --------------------------------------------------------------------*/
+.tags-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+.tags-panel > * {
+  border: 1px solid #d5d5d5;
+  border-radius: 40px;
+  padding-inline: 15px;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* ------------------------------------------------- metas  --------------------------------------------------------------------*/
+.metas {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.metas-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.5);
+}
+.metas-item svg {
+  fill: rgb(0, 0, 0);
+  opacity: 0.5;
+  width: 16px;
+  aspect-ratio: 1/1;
+}
+
+.btn-tile {
+  min-height: 44px;
+  aspect-ratio: 1/1;
+  border-radius: 0.3125rem;
+  background: rgba(177, 177, 177, 0.2);
+  font-weight: 500;
+  font-size: 1rem;
+  color: #b1b1b1;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.btn-tile svg {
+  stroke: #b1b1b1;
+  fill: #b1b1b1;
+  width: 22px;
+  aspect-ratio: 1/1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.btn-tile svg.icon--like {
+  margin-top: 3px;
+  stroke: #b1b1b1;
+  stroke-width: 2;
+  fill: none;
+}
+.btn-tile:hover svg {
+  fill: var(--accent);
+  stroke: var(--accent);
+}
+
+/* ------------------------------------------------- splitlist  --------------------------------------------------------------------*/
+.splitlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.splitlist li {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+.splitlist-col1 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 47%;
+  color: #b1b1b1;
+}
+.splitlist-col2 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 53%;
+  color: #1a1a1a;
+}
+
+/* ------------------------------------------------- seller  --------------------------------------------------------------------*/
+.seller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.seller-avatar {
+  position: relative;
+  width: 60px;
+  aspect-ratio: 1/1;
+}
+.seller-avatar:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("../icons/checked-ok.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 20px;
+  height: 20px;
+}
+.seller-avatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.seller-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.seller-info__name {
+  font-weight: 500;
+  font-size: 16px;
+  color: #1a1a1a;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
@@ -3911,6 +4134,59 @@ Review card
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
+TITLES
+--------------------------------------------------------------------------------------------------------------------------------*/
+.title-20 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.title-20--nomargin {
+  margin-bottom: 0;
+}
+
+.title-26 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.title-26--nomargin {
+  margin-bottom: 0;
+}
+
+.title-28 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.title-28--nomargin {
+  margin-bottom: 0;
+}
+
+.title-30 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.title-30--nomargin {
+  margin-bottom: 0;
+}
+
+.title-34 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.title-34--nomargin {
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
 CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 --------------------------------------------------------------------------------------------------------------------------------*/
 .catsadvert_title {
@@ -4318,6 +4594,154 @@ ADVERTISING CUSTOM FORM ELEMENTS
 }
 .advertising-used .advertising_breadcrumbs-block {
   margin-bottom: 1.875rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Объявление в разделе АВТО
+--------------------------------------------------------------------------------------------------------------------------------*/
+.autoad {
+  color: #1a1a1a;
+}
+.autoad-desc__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #3d3d3d;
+}
+.autoad-desc__text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.autoad-desc__notation {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  padding-block: 30px;
+}
+.autoad-desc--borderbottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.autoad-equip__tags-panel:not(:last-child) {
+  margin-bottom: 30px;
+}
+.autoad-footer {
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.autoad-base__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.autoad-base__header-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.autoad-base__price {
+  margin-bottom: 20px;
+}
+.autoad-base__splitlist {
+  margin-bottom: 15px;
+}
+.autoad-base__rate {
+  margin-bottom: 30px;
+}
+.autoad-base__buttons {
+  margin-bottom: 20px;
+}
+.autoad-base__metas {
+  margin-bottom: 15px;
+}
+.autoad-base__notation {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #b1b1b1;
+  margin-bottom: 20px;
+}
+.autoad-base__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.tup-35 {
+  -webkit-transform: translateY(-35px);
+      -ms-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+AUTO AD GALLERY
+--------------------------------------------------------------------------------------------------------------------------------*/
+.autoad-gallery__full img, .autoad-gallery__thumbnails img {
+  height: auto; /* растягиваем изображение по высоте контейнера */
+  width: 100%; /* сохраняем пропорции изображения по ширине */
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.autoad-gallery__full {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.625rem;
+}
+.autoad-gallery__full img {
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease; /* плавное смещение */
+  will-change: transform; /* оптимизация для transform */
+}
+.autoad-gallery__full a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* по горизонтали */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* по вертикали */
+  overflow: hidden;
+  aspect-ratio: 620/450;
+}
+.autoad-gallery__full a:hover {
+  cursor: url("../icons/search-gallery.svg"), auto;
+}
+.autoad-gallery__thumbnails .swiper-slide a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* по горизонтали */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* по вертикали */
+  aspect-ratio: 110/80;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.autoad-gallery__thumbnails .swiper-slide a:hover {
+  cursor: url("../icons/search-gallery.svg"), auto;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
@@ -5097,33 +5521,32 @@ ADVERTISING CUSTOM FORM ELEMENTS
 /*-----------------------------------------------------------------------------------------------------------------
 БЛОК - Recommended listings (АВТОРАЗДЕЛ) 
  ------------------------------------------------------------------------------------------------------------------*/
-.recomended-listings__title {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.2;
-  color: #1a1a1a;
-  margin-bottom: 1.25rem;
-}
+.similar-listings .product-card,
 .recomended-listings .product-card {
   padding: 0;
 }
+.similar-listings .product-card_spacebetween,
 .recomended-listings .product-card_spacebetween {
   padding-inline: 0;
 }
+.similar-listings .product-card_meta,
 .recomended-listings .product-card_meta {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 15px;
 }
+.similar-listings .product-card_like,
 .recomended-listings .product-card_like {
   right: 8px;
   top: 15px;
 }
+.similar-listings .product-card_like svg,
 .recomended-listings .product-card_like svg {
   width: 25px;
   height: 25px;
 }
+.similar-listings .btn,
 .recomended-listings .btn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -8385,6 +8808,11 @@ SERVICES COMPANY LAYOUT
 }
 
 @media (max-width: 1200px){
+  .tup-35 {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
   .new-vehicles__grow {
     gap: 2.5rem;
     -webkit-box-orient: horizontal;
@@ -8399,8 +8827,8 @@ SERVICES COMPANY LAYOUT
 }
 
 @media (max-width: 992px){
-  .header-bottom {
-    padding-bottom: 20px;
+  .header-bottom__nav {
+    padding-bottom: 5px;
   }
   .catsoverlay {
     top: 0;

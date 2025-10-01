@@ -615,3 +615,61 @@ new TabsByAnchor({
 	tab: "[data-tabAds]",
 	panel: "[data-panelAds]",
 });
+
+/* --------------------------------------------------------------------------------------------------------------------------
+Инициализация FANCYBOX
+-----------------------------------------------------------------------------------------------------------------------------*/
+Fancybox.bind("[data-fancybox]", {
+	Carousel: {
+		transition: "slide",
+	},
+	Images: {
+		zoom: false,
+	},
+	showClass: "f-fadeIn",
+});
+
+/* --------------------------------------------------------------------------------------------------------------------------
+Паралакс для галлереи AUTO AD
+-----------------------------------------------------------------------------------------------------------------------------*/
+import "./modules/autoad-gallery-paralax.js";
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Инициализация слайдера с миниатюрами в галлереи - SWIPER AUTO AD GALLERY THUMBNAILS
+--------------------------------------------------------------------------------------------------------------------------------*/
+import "./modules/autoad-thumbnails-slider.js";
+
+/* ------------------------------------------------------------------------------------------------------------------------------
+Скрытие нижнего блока ХЕДЕРА при скроле
+--------------------------------------------------------------------------------------------------------------------------------*/
+const header = document.querySelector(".header-bottom");
+let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+let scrollTimeout;
+
+function onScroll() {
+	if (scrollTimeout) {
+		clearTimeout(scrollTimeout);
+	}
+
+	scrollTimeout = setTimeout(() => {
+		// Здесь ваша логика проверки позиции блока
+		checkVisibility();
+	}, 300); // задержка 100 мс
+}
+
+window.addEventListener("scroll", onScroll);
+window.addEventListener("resize", onScroll);
+
+function checkVisibility() {
+	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+	if (scrollTop <= 0) {
+		header.classList.remove("hide");
+		header.style.maxHeight = header.scrollHeight + "px";
+	} else if (scrollTop > 250) {
+		header.classList.add("hide");
+		header.style.maxHeight = "0px";
+	}
+
+	lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}

@@ -442,6 +442,11 @@ COMPONENTS
 	&:hover {
 		opacity: 0.75;
 	}
+
+	&--short {
+		align-self: start;
+		padding-inline: 30px;
+	}
 }
 
 // Кнопка добавть в список
@@ -772,11 +777,172 @@ COMPONENTS
 		line-height: 120%;
 		color: var(--black);
 		margin-right: 7px;
+
+		&--big {
+			font-size: 30px;
+		}
 	}
+	&-convert,
 	&-old {
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 1.2;
 		color: #b1b1b1;
+	}
+}
+
+/* ------------------------------------------------- tags-panel  --------------------------------------------------------------------*/
+
+.tags-panel {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	& > * {
+		border: 1px solid #d5d5d5;
+		border-radius: 40px;
+		padding-inline: 15px;
+		min-height: 40px;
+
+		display: flex;
+		align-items: center;
+	}
+}
+
+/* ------------------------------------------------- metas  --------------------------------------------------------------------*/
+.metas {
+	display: inline-flex;
+	align-items: center;
+	gap: 20px;
+
+	&-item {
+		display: inline-flex;
+		align-items: center;
+		gap: 5px;
+
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 1.2;
+		color: rgb(0, 0, 0, 0.5);
+
+		svg {
+			fill: rgb(0, 0, 0);
+			opacity: 0.5;
+			width: 16px;
+			aspect-ratio: 1/1;
+		}
+	}
+}
+
+.btn-tile {
+	min-height: 44px;
+	aspect-ratio: 1/1;
+
+	border-radius: rem(5);
+
+	background: rgb(177, 177, 177, 0.2);
+
+	font-weight: 500;
+	font-size: rem(16);
+	color: #b1b1b1;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+
+	svg {
+		stroke: #b1b1b1;
+		fill: #b1b1b1;
+		width: 22px;
+		aspect-ratio: 1/1;
+		transition: all 0.3s ease-in-out;
+
+		&.icon--like {
+			margin-top: 3px;
+			stroke: #b1b1b1;
+			stroke-width: 2;
+			fill: none;
+		}
+	}
+	&:hover {
+		svg {
+			fill: var(--accent);
+			stroke: var(--accent);
+		}
+	}
+}
+
+
+/* ------------------------------------------------- splitlist  --------------------------------------------------------------------*/
+.splitlist {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	li {
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 1.2;
+
+		display: flex;
+		width: 100%;
+		gap: 15px;
+	}
+
+	&-col1 {
+		flex-shrink: 0;
+		width: 47%;
+		color: #b1b1b1;
+	}
+	&-col2 {
+		flex-shrink: 0;
+		width: 53%;
+		color: #1a1a1a;
+	}
+}
+
+/* ------------------------------------------------- seller  --------------------------------------------------------------------*/
+.seller {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+	&-avatar {
+		position: relative;
+		width: 60px;
+		aspect-ratio: 1/1;
+
+		&:before {
+			content: "";
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-image: url("../../icons/checked-ok.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			width: 20px;
+			height: 20px;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			overflow: hidden;
+			border-radius: 50%;
+		}
+	}
+
+	&-info {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		&__name {
+			font-weight: 500;
+			font-size: 16px;
+			color: #1a1a1a;
+		}
 	}
 }
