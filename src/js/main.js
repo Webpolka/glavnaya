@@ -139,7 +139,7 @@ if (dataSignedBtn) {
 
 	let timer;
 
-	innerSignInSlideBtn.addEventListener("click", () => {
+	innerSignInSlideBtn && innerSignInSlideBtn.addEventListener("click", () => {
 		signSlideForm.classList.remove("active");
 		removeNoScroll();
 
@@ -149,7 +149,7 @@ if (dataSignedBtn) {
 		}, 300);
 	});
 
-	innerSignUpSlideBtn.addEventListener("click", () => {
+	innerSignUpSlideBtn && innerSignUpSlideBtn.addEventListener("click", () => {
 		loginSlideForm.classList.remove("active");
 		removeNoScroll();
 
@@ -642,34 +642,37 @@ import "./modules/autoad-thumbnails-slider.js";
 /* ------------------------------------------------------------------------------------------------------------------------------
 Скрытие нижнего блока ХЕДЕРА при скроле
 --------------------------------------------------------------------------------------------------------------------------------*/
-const header = document.querySelector(".header-bottom");
-let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-let scrollTimeout;
+document.addEventListener("DOMContentLoaded", () => {
+	const header = document.querySelector(".header-bottom");
+	let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	let scrollTimeout;
 
-function onScroll() {
-	if (scrollTimeout) {
-		clearTimeout(scrollTimeout);
+	function onScroll() {
+		if (scrollTimeout) {
+			clearTimeout(scrollTimeout);
+		}
+
+		scrollTimeout = setTimeout(() => {
+			// Здесь ваша логика проверки позиции блока
+			checkVisibility();
+		}, 300); // задержка 100 мс
 	}
 
-	scrollTimeout = setTimeout(() => {
-		// Здесь ваша логика проверки позиции блока
-		checkVisibility();
-	}, 300); // задержка 100 мс
-}
+	window.addEventListener("scroll", onScroll);
+	window.addEventListener("resize", onScroll);
+	header.style.maxHeight = header.scrollHeight + "px";
 
-window.addEventListener("scroll", onScroll);
-window.addEventListener("resize", onScroll);
+	function checkVisibility() {
+		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-function checkVisibility() {
-	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		if (scrollTop <= 0) {
+			header.classList.remove("hide");
+			header.style.maxHeight = header.scrollHeight + "px";
+		} else if (scrollTop > 250) {
+			header.classList.add("hide");
+			header.style.maxHeight = "0px";
+		}
 
-	if (scrollTop <= 0) {
-		header.classList.remove("hide");
-		header.style.maxHeight = header.scrollHeight + "px";
-	} else if (scrollTop > 250) {
-		header.classList.add("hide");
-		header.style.maxHeight = "0px";
+		lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 	}
-
-	lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-}
+});
