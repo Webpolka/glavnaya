@@ -2739,6 +2739,24 @@ COMPONENTS
   color: var(--black);
   margin-right: 7px;
 }
+.price-base--top {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  min-height: 34px;
+  padding-top: 1px;
+  padding-inline: 10px;
+  border-radius: 5px;
+  background-color: var(--gold);
+  border: 1px solid var(--gold);
+  color: #1a1a1a;
+}
 .price-base--big {
   font-size: 30px;
 }
