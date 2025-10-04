@@ -263,19 +263,8 @@ COMPONENTS
 		svg {
 			width: 27px;
 			height: 27px;
-
-			stroke: var(--white);
 			stroke-width: 2;
-			fill: none;
 			transition: all 0.3s ease-in-out;
-		}
-		&.liked svg {
-			stroke: var(--accent);
-			fill: var(--accent);
-		}
-
-		&:hover svg {
-			stroke: var(--accent);
 		}
 	}
 
@@ -780,15 +769,15 @@ COMPONENTS
 
 		&--top {
 			align-self: flex-start;
-		
+
 			display: inline-flex;
 			align-items: center;
 			gap: 5px;
 			min-height: 34px;
 			padding-top: 1px;
 			padding-inline: 10px;
-			border-radius: 5px;					
-			
+			border-radius: 5px;
+
 			background-color: var(--gold);
 			border: 1px solid var(--gold);
 			color: #1a1a1a;
@@ -866,23 +855,13 @@ COMPONENTS
 	transition: color 0.3s ease-in-out;
 
 	svg {
-		stroke: #b1b1b1;
-		fill: #b1b1b1;
 		width: 22px;
 		aspect-ratio: 1/1;
 		transition: all 0.3s ease-in-out;
 
 		&.icon--like {
 			margin-top: 3px;
-			stroke: #b1b1b1;
 			stroke-width: 2;
-			fill: none;
-		}
-	}
-	&:hover {
-		svg {
-			fill: var(--accent);
-			stroke: var(--accent);
 		}
 	}
 }
@@ -959,5 +938,25 @@ COMPONENTS
 			font-size: 16px;
 			color: #1a1a1a;
 		}
+	}
+}
+
+/*------------------------------------------------- like ---------------------------------------------*/
+[data-shared="false"],
+[data-liked="false"] {
+	svg {
+		stroke: #b1b1b1;
+		fill: transparent;
+	}
+	&:hover svg {
+		stroke: var(--accent);
+	}
+}
+
+[data-shared="true"],
+[data-liked="true"] {
+	svg {
+		stroke: var(--accent) !important;
+		fill: var(--accent) !important;
 	}
 }

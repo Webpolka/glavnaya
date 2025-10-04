@@ -102,14 +102,33 @@ allShopBullets.forEach((shopBullet) => {
 /*--------------------------------------------------------------------------------------------------------------
 FAVOURS LIKED
 ----------------------------------------------------------------------------------------------------------------*/
-const allFavoursLiked = document.querySelectorAll(".product-card_like");
-allFavoursLiked.forEach((like) => {
-	like.addEventListener("click", function (e) {
-		e.preventDefault();
-		e.stopPropagation();
-		this.classList.toggle("liked");
+// const allFavoursLiked = document.querySelectorAll(".product-card_like");
+// allFavoursLiked.forEach((like) => {
+// 	like.addEventListener("click", function (e) {
+// 		e.preventDefault();
+// 		e.stopPropagation();
+// 		this.classList.toggle("liked");
+// 	});
+// });
+document.addEventListener("DOMContentLoaded", () => {
+	const allFavours = document.querySelectorAll("[data-liked]");
+	allFavours.forEach((like) => {
+		like.addEventListener("click", function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			console.log(like);
+
+			this.classList.toggle("liked");
+
+			if (this.classList.contains("liked")) {
+				this.dataset.liked = "true";
+			} else {
+				this.dataset.liked = "false";
+			}
+		});
 	});
 });
+
 /*--------------------------------------------------------------------------------------------------------------
 DATA-HREF LISTENER
 ----------------------------------------------------------------------------------------------------------------*/
@@ -139,25 +158,27 @@ if (dataSignedBtn) {
 
 	let timer;
 
-	innerSignInSlideBtn && innerSignInSlideBtn.addEventListener("click", () => {
-		signSlideForm.classList.remove("active");
-		removeNoScroll();
+	innerSignInSlideBtn &&
+		innerSignInSlideBtn.addEventListener("click", () => {
+			signSlideForm.classList.remove("active");
+			removeNoScroll();
 
-		setTimeout(() => {
-			addNoScroll();
-			loginSlideForm.classList.add("active");
-		}, 300);
-	});
+			setTimeout(() => {
+				addNoScroll();
+				loginSlideForm.classList.add("active");
+			}, 300);
+		});
 
-	innerSignUpSlideBtn && innerSignUpSlideBtn.addEventListener("click", () => {
-		loginSlideForm.classList.remove("active");
-		removeNoScroll();
+	innerSignUpSlideBtn &&
+		innerSignUpSlideBtn.addEventListener("click", () => {
+			loginSlideForm.classList.remove("active");
+			removeNoScroll();
 
-		setTimeout(() => {
-			addNoScroll();
-			signSlideForm.classList.add("active");
-		}, 300);
-	});
+			setTimeout(() => {
+				addNoScroll();
+				signSlideForm.classList.add("active");
+			}, 300);
+		});
 
 	let signedBoolean;
 	if (dataSignedBtn) {

@@ -2185,18 +2185,9 @@ COMPONENTS
 .product-card_like svg {
   width: 27px;
   height: 27px;
-  stroke: var(--white);
   stroke-width: 2;
-  fill: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-.product-card_like.liked svg {
-  stroke: var(--accent);
-  fill: var(--accent);
-}
-.product-card_like:hover svg {
-  stroke: var(--accent);
 }
 .product-card_spacebetween {
   display: -webkit-box;
@@ -2835,8 +2826,6 @@ COMPONENTS
   transition: color 0.3s ease-in-out;
 }
 .btn-tile svg {
-  stroke: #b1b1b1;
-  fill: #b1b1b1;
   width: 22px;
   aspect-ratio: 1/1;
   -webkit-transition: all 0.3s ease-in-out;
@@ -2844,13 +2833,7 @@ COMPONENTS
 }
 .btn-tile svg.icon--like {
   margin-top: 3px;
-  stroke: #b1b1b1;
   stroke-width: 2;
-  fill: none;
-}
-.btn-tile:hover svg {
-  fill: var(--accent);
-  stroke: var(--accent);
 }
 
 /* ------------------------------------------------- splitlist  --------------------------------------------------------------------*/
@@ -2938,6 +2921,23 @@ COMPONENTS
   font-weight: 500;
   font-size: 16px;
   color: #1a1a1a;
+}
+
+/*------------------------------------------------- like ---------------------------------------------*/
+[data-shared=false] svg,
+[data-liked=false] svg {
+  stroke: #b1b1b1;
+  fill: transparent;
+}
+[data-shared=false]:hover svg,
+[data-liked=false]:hover svg {
+  stroke: var(--accent);
+}
+
+[data-shared=true] svg,
+[data-liked=true] svg {
+  stroke: var(--accent) !important;
+  fill: var(--accent) !important;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
