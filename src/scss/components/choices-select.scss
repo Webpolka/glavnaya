@@ -167,8 +167,8 @@ CUSTOM CHOICES SELECT
 
 	.choices__inner {
 		font-size: rem(14);
-		border: 1px solid #efeaea;
-		border-radius: 5px;
+		border: 1px solid #efeaea !important;
+		border-radius: 5px !important;
 		min-height: rem(40);
 	}
 }

@@ -1923,8 +1923,8 @@ CUSTOM CHOICES SELECT
 }
 .small-select-label .choices__inner {
   font-size: 0.875rem;
-  border: 1px solid #efeaea;
-  border-radius: 5px;
+  border: 1px solid #efeaea !important;
+  border-radius: 5px !important;
   min-height: 2.5rem;
 }
 
