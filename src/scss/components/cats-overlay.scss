@@ -2,6 +2,8 @@
 CATEGORIES OVERLAY
 --------------------------------------------------------------------------------------------------------------------------------*/
 .catsoverlay {
+	--base-top: 130px;
+
 	opacity: 0;
 	visibility: hidden;
 
@@ -12,7 +14,8 @@ CATEGORIES OVERLAY
 	z-index: 90;
 	background-color: rgba(0, 0, 0, 0.35);
 	width: 100%;
-	top: 136px;
+
+	top: var(--base-top);
 
 	transition: all 0.3s ease-in-out;
 
@@ -98,7 +101,7 @@ CATEGORIES OVERLAY
 				width: 100%;
 				padding: 0 15px rem(15) 0;
 
-				&:after{
+				&:after {
 					border-right: none;
 				}
 			}

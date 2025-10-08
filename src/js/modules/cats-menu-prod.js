@@ -15,7 +15,28 @@ export default class CatsMenu {
 
 		this.allCatButtons = this.parent.querySelectorAll(`[${this.options.catButton}]`);
 		this.allCatBlocks = this.parent.querySelectorAll(`[${this.options.catBlock}]`);
+
+		this.timer;
 		this.init();
+	}
+
+	removeNoScroll() {
+		const catOverlay = document.querySelector(".catsoverlay-wrapper");
+		document.documentElement.classList.remove("no-scroll");		
+
+		if (catOverlay) {
+			catOverlay.style.paddingRight = "";
+		}
+	}
+	addNoScroll() {
+		const catOverlay = document.querySelector(".catsoverlay-wrapper");
+		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+		
+		document.documentElement.classList.add("no-scroll");
+		if (catOverlay) {
+			catOverlay.style.paddingRight = `${scrollbarWidth}px`;
+		}
+		
 	}
 
 	closeAnotherLists(currentList, button) {
@@ -108,6 +129,12 @@ export default class CatsMenu {
 			this.openBtn.addEventListener("click", () => {
 				this.parent.classList.toggle("active");
 				this.openBtn.classList.toggle("active");
+
+				if (this.openBtn.classList.contains("active")) {
+					this.addNoScroll();
+				} else if (!this.openBtn.classList.contains("active")) {
+					this.removeNoScroll();
+				}
 			});
 
 		// Общее событие для всей области parent
@@ -138,6 +165,7 @@ export default class CatsMenu {
 			if (target.closest(`[${this.options.closeButton}]`)) {
 				this.parent.classList.remove("active");
 				this.openBtn && this.openBtn.classList.remove("active");
+				this.removeNoScroll();
 				this.allCatBlocks.forEach((block) => block.classList.remove("active-lg"));
 				setTimeout(() => {
 					this.parent.querySelector(`${this.options.parent}-zindex`) &&

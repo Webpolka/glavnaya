@@ -381,6 +381,7 @@ html.loaded {
 }
 
 body {
+  overflow-y: scroll;
   text-wrap: balance;
 }
 
@@ -613,13 +614,14 @@ svg {
   position: relative;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  height: 100%;
   visibility: visible;
   opacity: 1;
-  height: 100%;
 }
 .header-bottom.hide {
   visibility: hidden;
   opacity: 0;
+  min-height: 0;
 }
 .header-bottom:after {
   content: "";
@@ -1511,6 +1513,7 @@ BOOTSTRAP EXTRA
 CATEGORIES OVERLAY
 --------------------------------------------------------------------------------------------------------------------------------*/
 .catsoverlay {
+  --base-top: 130px;
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -1520,7 +1523,7 @@ CATEGORIES OVERLAY
   z-index: 90;
   background-color: rgba(0, 0, 0, 0.35);
   width: 100%;
-  top: 136px;
+  top: var(--base-top);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -3254,7 +3257,18 @@ HEADER
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
-  min-height: 2.875rem;
+  height: 100%;
+  min-height: 46px;
+  max-height: 46px;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.header-top.hide {
+  min-height: 0;
+  visibility: hidden;
+  opacity: 0;
 }
 .header-top:after {
   content: "";

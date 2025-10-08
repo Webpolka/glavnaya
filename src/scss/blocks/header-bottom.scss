@@ -5,13 +5,15 @@
 	background-color: var(--accent);
 	position: relative;
 	transition: all 0.3s ease-in-out;
+
+	height: 100%;	
 	visibility: visible;
 	opacity: 1;
-	height: 100%;
 
 	&.hide {
 		visibility: hidden;
 		opacity: 0;
+		min-height: 0;
 	}
 
 	&:after {

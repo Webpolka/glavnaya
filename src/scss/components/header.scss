@@ -6,6 +6,7 @@ HEADER
 	top: 0;
 	background-color: #fff;
 	z-index: 50;
+
 	// Верхняя часть хедера
 	&-top {
 		position: relative;
@@ -16,8 +17,19 @@ HEADER
 
 		gap: 20px;
 
-		min-height: rem(46);
+		height: 100%;
+		min-height: 46px;
+		max-height: 46px;
+		visibility: visible;
+		opacity: 1;
+
+		transition: all 0.3s ease-in-out;
 		
+		&.hide {
+			min-height: 0;
+			visibility: hidden;
+			opacity: 0;			
+		}
 
 		&:after {
 			content: "";
@@ -50,7 +62,7 @@ HEADER
 
 				transition: all 0.3s ease-in-out;
 
-				@include sm{
+				@include sm {
 					font-size: 12px;
 				}
 				&:hover {
@@ -66,7 +78,7 @@ HEADER
 
 			gap: rem(50);
 
-			@include sm{
+			@include sm {
 				gap: 20px;
 			}
 		}
@@ -227,7 +239,7 @@ HEADER
 			gap: rem(20);
 
 			@include lg {
-				width: 100%;				
+				width: 100%;
 				justify-content: flex-end;
 			}
 		}
@@ -314,12 +326,11 @@ HEADER
 
 		margin-right: rem(40);
 		transition: all 0.3s ease-in-out;
-		@include md{
+		@include md {
 			display: none;
 		}
 
 		@include sm {
-			
 			margin-right: 0;
 		}
 
@@ -337,7 +348,6 @@ HEADER
 			color: var(--black);
 		}
 	}
-
 
 	// Кнопка войти
 	&-sign-in {
