@@ -1598,7 +1598,7 @@ CATEGORIES OVERLAY
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   overflow-y: auto;
-  max-height: calc(100vh - 200px);
+  max-height: calc(100vh - var(--base-top) - 30px);
   padding-left: 15px;
 }
 .catsoverlay-menu_cats::-webkit-scrollbar {
