@@ -6,14 +6,23 @@ html {
 	opacity: 0.2;
 	transition: opacity 0.75s ease-in-out;
 
-	&.loaded{
+	&.loaded {
 		opacity: 1;
 	}
 }
 
-body {
-	overflow-y: scroll;
+body {	
+	position: relative;
 	text-wrap: balance;
+
+	.fake-scrollbar {
+		position: fixed; /* или absolute, если нужно внутри контейнера */
+		top: 0;
+		right: 0;	
+		height: 100%;
+		background-color: var(--scrollbar-track); /* цвет скроллбара */
+		z-index: 9999; /* чтобы был сверху */			
+	}
 }
 
 * {
@@ -171,8 +180,7 @@ body {
 	color: var(--accent);
 }
 
-
-svg{
+svg {
 	max-width: 50px;
 	max-height: 50px;
 }

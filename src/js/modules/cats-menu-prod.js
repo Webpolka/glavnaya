@@ -18,11 +18,19 @@ export default class CatsMenu {
 
 		this.timer;
 		this.init();
+
+		this.fakeScrollBar = document.createElement("div");
+		this.fakeScrollBar.className = "fake-scrollbar";
+		document.body.insertBefore(this.fakeScrollBar, document.body.lastChild);
 	}
 
 	removeNoScroll() {
 		const catOverlay = document.querySelector(".catsoverlay-wrapper");
-		document.documentElement.classList.remove("no-scroll");		
+
+		document.documentElement.classList.remove("no-scroll");
+		document.documentElement.style.paddingRight = "";
+
+		this.fakeScrollBar.style.width = 0;
 
 		if (catOverlay) {
 			catOverlay.style.paddingRight = "";
@@ -31,12 +39,14 @@ export default class CatsMenu {
 	addNoScroll() {
 		const catOverlay = document.querySelector(".catsoverlay-wrapper");
 		const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-		
 		document.documentElement.classList.add("no-scroll");
+
+		this.fakeScrollBar.style.width = scrollbarWidth + "px";	
+
 		if (catOverlay) {
 			catOverlay.style.paddingRight = `${scrollbarWidth}px`;
 		}
-		
+		document.documentElement.style.paddingRight = `${scrollbarWidth}px`;
 	}
 
 	closeAnotherLists(currentList, button) {

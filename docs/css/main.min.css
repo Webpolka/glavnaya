@@ -381,8 +381,16 @@ html.loaded {
 }
 
 body {
-  overflow-y: scroll;
+  position: relative;
   text-wrap: balance;
+}
+body .fake-scrollbar {
+  position: fixed; /* или absolute, если нужно внутри контейнера */
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: var(--scrollbar-track); /* цвет скроллбара */
+  z-index: 9999; /* чтобы был сверху */
 }
 
 *::-webkit-scrollbar {
