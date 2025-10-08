@@ -296,20 +296,19 @@ categoriesOverlayMenu &&
 	new CatsMenu({
 		parent: ".catsoverlay",
 		openBtn: "#burger",
-		catButton: "data-catIDoverlay",
-		catBlock: "data-blockIDoverlay",
-		backButton: "data-subcatback='overlay'",
-		closeButton: "data-catsclose='overlay'",
-		openSubListButton: "data-subcatslist='overlay'",
 	});
+	
 categoriesAdvertisingStartPage &&
 	new CatsMenu({
 		parent: ".catsadvert",
-		catButton: "data-catIDpage",
-		catBlock: "data-blockIDpage",
-		backButton: "data-subcatback='page'",
-		closeButton: "data-catsclose='page'",
-		openSubListButton: "data-subcatslist='page'",
+		openBtn: false,
+
+		cat: "data-catsadvert-cat",
+		sub: "data-catsadvert-sub",
+		back: "data-catsadvert-back",
+		close: "data-catsadvert-close",
+	
+		openSubBtn: "data-catsadvert-subbtn",
 	});
 
 /*--------------------------------------------------------------------------------------------------------------
@@ -666,7 +665,7 @@ Manager for header blocks hidden by scroll
 import HeaderScrollManager from "./modules/header-scroll-manager.js";
 new HeaderScrollManager({
 	header: ".header",
-	headerTop: ".header-top",	
+	headerTop: ".header-top",
 	headerBottom: ".header-bottom",
 	catalogOverlay: ".catsoverlay",
 	delay: 300,

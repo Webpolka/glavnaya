@@ -1759,6 +1759,7 @@ CATEGORIES OVERLAY
   display: none;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  cursor: pointer;
   width: 1.5625rem;
   height: 1.5625rem;
   background-image: url("../icons/down.svg");
@@ -1784,11 +1785,15 @@ CATEGORIES OVERLAY
   display: none;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 1.25rem;
-  height: 1.25rem;
+  -webkit-transform: translateX(10px);
+      -ms-transform: translateX(10px);
+          transform: translateX(10px);
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
   background-image: url("../icons/down.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 50%;
   background-position: center center;
 }
 
@@ -3476,8 +3481,10 @@ HEADER
 .header-burger span, .header-burger::before, .header-burger::after {
   display: block;
   content: "";
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   position: absolute;
   left: 0;
   width: 100%;
@@ -4309,6 +4316,7 @@ CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
   display: none;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  cursor: pointer;
   width: 1.875rem;
   height: 1.875rem;
   background-image: url("../icons/down.svg");
@@ -4433,6 +4441,7 @@ CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
   display: none;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  cursor: pointer;
   width: 1.25rem;
   height: 1.25rem;
   background-image: url("../icons/down.svg");
@@ -8902,9 +8911,6 @@ SERVICES COMPANY LAYOUT
     border: 1px solid rgba(0, 0, 0, 0.05);
     margin-bottom: 0.3125rem;
   }
-  .catsoverlay-menu_cats-link {
-    pointer-events: none;
-  }
   .catsoverlay-menu_cats-arrow {
     display: block;
   }
@@ -8977,7 +8983,6 @@ SERVICES COMPANY LAYOUT
     color: var(--accent);
   }
   .catsoverlay-menu_subcats-link.title--subcats-link {
-    pointer-events: none;
     margin-bottom: 0;
   }
   .catsoverlay-menu_subcats-back {
@@ -9023,9 +9028,6 @@ SERVICES COMPANY LAYOUT
   .catsadvert-menu_cats-item {
     border: 1px solid rgba(0, 0, 0, 0.05);
     margin-bottom: 0.3125rem;
-  }
-  .catsadvert-menu_cats-link {
-    pointer-events: none;
   }
   .catsadvert-menu_cats-arrow {
     display: block;
@@ -9105,7 +9107,6 @@ SERVICES COMPANY LAYOUT
     color: var(--accent);
   }
   .catsadvert-menu_subcats-link.title--subcats-link {
-    pointer-events: none;
     margin-bottom: 0;
   }
   .catsadvert-menu_subcats-back {
@@ -9113,7 +9114,7 @@ SERVICES COMPANY LAYOUT
   }
   .catsadvert-menu_subcats-close {
     display: block;
-    margin-right: 0.3125rem;
+    margin-right: 1.5rem;
   }
   .catsadvert-menu_subcats-arrow {
     display: block;

@@ -183,10 +183,7 @@ CATEGORIES OVERLAY
 				color: #262626;
 				transition: color 0.2s ease-in-out;
 				font-weight: 500;
-
-				@include lg {
-					pointer-events: none;
-				}
+				
 			}
 			&-arrow {
 				display: none;
@@ -359,8 +356,7 @@ CATEGORIES OVERLAY
 					font-weight: 700;
 					margin-bottom: rem(10);
 
-					@include lg {
-						pointer-events: none;
+					@include lg {						
 						margin-bottom: 0;
 					}
 				}
@@ -368,6 +364,7 @@ CATEGORIES OVERLAY
 			&-back {
 				display: none;
 				flex-shrink: 0;
+				cursor: pointer;
 
 				width: rem(25);
 				height: rem(25);
@@ -402,11 +399,14 @@ CATEGORIES OVERLAY
 				display: none;
 				flex-shrink: 0;
 
-				width: rem(20);
-				height: rem(20);
+				transform: translateX(10px);
+				cursor: pointer;
+
+				width: rem(40);
+				height: rem(40);
 				background-image: url("../../icons/down.svg");
 				background-repeat: no-repeat;
-				background-size: 100%;
+				background-size: 50%;
 				background-position: center center;
 
 				@include lg {

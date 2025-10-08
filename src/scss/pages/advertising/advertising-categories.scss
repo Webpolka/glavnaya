@@ -122,14 +122,12 @@ CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 				font-weight: 500;
 				color: #262626;
 				transition: color 0.2s ease-in-out;
-
-				@include lg {
-					pointer-events: none;
-				}
+				
 			}
 			&-arrow {
 				display: none;
 				flex-shrink: 0;
+				cursor: pointer;
 
 				width: rem(30);
 				height: rem(30);
@@ -192,7 +190,7 @@ CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 				background-color: white;
 
 				transition: all 0.3s ease-in-out;
-
+			
 				// для планшетов и мобилок работает класс active-lg
 				&.active-lg {
 					left: 0;
@@ -306,8 +304,7 @@ CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 					font-weight: 700;
 					margin-bottom: rem(10);
 
-					@include lg {
-						pointer-events: none;
+					@include lg {						
 						margin-bottom: 0;
 					}
 				}
@@ -341,13 +338,14 @@ CATEGORIES IN SUBMIT AND ADWERTISING START PAGE
 
 				@include lg {
 					display: block;
-					margin-right: rem(5);
+					margin-right: rem(24);
 				}
 			}
 
 			&-arrow {
 				display: none;
 				flex-shrink: 0;
+				cursor: pointer;
 
 				width: rem(20);
 				height: rem(20);
