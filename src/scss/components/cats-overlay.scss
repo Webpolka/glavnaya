@@ -45,7 +45,7 @@ CATEGORIES OVERLAY
 		margin: 0 auto;
 
 		max-width: var(--container-width);
-		padding-right: rem(18);
+		padding-right: rem(5);
 
 		@include lg {
 			display: block;
@@ -394,7 +394,7 @@ CATEGORIES OVERLAY
 
 				@include lg {
 					display: block;
-					margin-right: rem(5);
+					margin-right: 24px;
 				}
 			}
 

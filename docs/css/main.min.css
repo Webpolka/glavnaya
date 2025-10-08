@@ -1556,7 +1556,7 @@ CATEGORIES OVERLAY
   background-color: #fff;
   margin: 0 auto;
   max-width: var(--container-width);
-  padding-right: 1.125rem;
+  padding-right: 0.3125rem;
 }
 .catsoverlay-menu_lg-header {
   display: none;
@@ -8867,6 +8867,9 @@ SERVICES COMPANY LAYOUT
 }
 
 @media (max-width: 992px){
+  body .fake-scrollbar {
+    display: none;
+  }
   .header-bottom__nav {
     padding-bottom: 5px;
   }
@@ -8982,7 +8985,7 @@ SERVICES COMPANY LAYOUT
   }
   .catsoverlay-menu_subcats-close {
     display: block;
-    margin-right: 0.3125rem;
+    margin-right: 24px;
   }
   .catsoverlay-menu_subcats-arrow {
     display: block;
