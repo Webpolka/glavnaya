@@ -65,7 +65,7 @@ export default class HeaderScrollManager {
 				setTimeout(() => {
 					setTopForOverlayMenu();
 				}, delay + 10);
-			} else if (scrollTop > 250) {
+			} else if (scrollTop > 150) {
 				headerBottom.classList.add("hide");
 				headerBottom.style.maxHeight = "0px";
 
